@@ -1,0 +1,58 @@
+{
+  "language": {
+	"Help": {
+	"title": "సహాయం"
+	},
+	"Filter": {
+     "title": "వడపోత"
+	},	
+  	"Forward": {
+     "title": "ఎదురు"
+	},	
+	"Backward": {
+     "title": "వెనుకబడిన"
+	},
+	"Refresh": {
+     "title": "రిఫ్రెష్"
+	},
+	"Search types": "శోధన రకాలు",
+	"Search Results": "శోధన ఫలితాలు",
+	"Search with in results": "ఫలితాల్లో శోధించండి",
+	"Show": "షో ",
+	"entries": "ఎంట్రీలు",
+	"Columns": "కాలమ్",
+	"More Insights": "మరింత అంతర్దృష్టులు",
+	"Localize Defect": "డిఫాల్ట్ స్థానీకరించండి",
+	"Search Results of Similar Search": "సారూప్య శోధన యొక్క శోధన ఫలితాలు",
+	"Search Results of Context Search":"సందర్భోచిత శోధన యొక్క శోధన ఫలితాలు",
+	"Search Results of Advanced Search":"అధునాతన శోధన యొక్క శోధన ఫలితాలు",
+	"Search Results of File Search":"ఫైల్ శోధన యొక్క శోధన ఫలితాలు",
+	"File Change History":"ఫైల్ మార్పు చరిత్ర--",
+	"No data Available for Searched File":"శోధన డేటా కోసం డేటా అందుబాటులో లేదు",
+	"Please Enter File Name":"దయచేసి ఫైల్ పేరును నమోదు చేయండి",
+	"Rate It":"రేట్ చేయండి ",
+	"Submit":"సమర్పించండి",
+	"Cancel":"రద్దు",
+	"Search":"శోధన",
+	"File Name":"ఫైల్ పేరు",
+	"Close":"మూయు"
+	
+	 
+  },
+
+
+    "defectmanagementdata":{
+	 "sLengthMenu": "షో  _MENU_ రికార్డులు",
+	 "sEmptyTable": "పట్టికలో డేటా అందుబాటులో లేదు",
+	 "sInfo": "చూపిస్తున్న_START_ కు _END_ ఆఫ్ _TOTAL_ ఎంట్రీలు",
+	 "sInfoEmpty": "ఎంట్రీలు కనుగొనబడలేదు",
+	 "sInfoFiltered": "(వడపోత 1 నుండి _MAX_ మొత్తం ఎంట్రీలు)",
+	 "sSearch": "ఫలితాలతో శోధించండి:",
+	 "sZeroRecords": "సరిపోలే రికార్డ్లు కనుగొనబడలేదు",
+	 "Print":"ప్రింట్",
+	 "Copy":"కాపీ",
+	 "0 characters remaining (15 max)":"0 అక్షరాలు మిగిలి ఉన్నాయి (15 మాక్స్)"
+}
+
+
+}

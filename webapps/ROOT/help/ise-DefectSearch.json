@@ -1,0 +1,61 @@
+{
+	"footer" : "'<hr/> <small>Context help injected by ISE</small>",
+	"steps"	 : 4,
+	"title"  : "Single Window Search",
+	"tooltips":[
+			
+			{
+				"selector" : "#gQuery", 
+				"help"  : "You can enter text here to perfrom the single widnow search",
+				"title" : "Single Window Search"
+			},			
+			{
+				"selector" : "#searchID", 
+				"class"	: "qtip-rounded qtip-blue qtip-shadow",
+				"help"  : "Enter the DefectID/TestcaseId/KbId to perform the searchhhhh",
+				"title" : "Single Window Search",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},
+			{
+				"selector" : "#resultTab_Defects > a" ,
+				"class"	: "qtip-rounded qtip-green qtip-shadow",
+				"help"  : "Similar defects results",
+				"title" : "Single Window Search"
+			},				
+			{
+				"selector" : "#contextSearch_searchTitle" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Enter the title to perform the defect search",
+				"title" : "Single Window Search",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},				
+			{
+				"selector" : "#contextSearch_searchDescription" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Enter the description to perform the defect search",
+				"title" : "Single Window Search",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},				
+			{
+				"selector" : "#mainSearchTypeTabs > li:nth-child(1) > a" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Search by DefectID/TestcaseId/KbId",
+				"title" : "Single Window Search"
+			},				
+			{
+				"selector" : "#mainSearchTypeTabs > li:nth-child(2) > a" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Search by Title and/or Description",
+				"title" : "Single Window Search"
+			},				
+			{
+				"selector" : "#mainSearchTypeTabs > li:nth-child(3) > a" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Search by query",
+				"title" : "Single Window Search"
+			}			
+	]
+}

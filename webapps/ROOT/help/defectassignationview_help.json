@@ -1,0 +1,73 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 4,
+	"tooltips": [
+		{
+			"selector": "#collectionsData",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#startDate INPUT",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#startDate I",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#endDate BUTTON",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#endDate INPUT",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#endDate INPUT",
+			"help": "Select the date from which the data should be considered",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "End date"
+		},
+		{
+			"selector": "#featureData",
+			"step": "4",
+			"help": "Enter the feature for which you want to consider the test cases/defects for clustering",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Feature "
+		},
+		{
+			"selector": "#priorityData",
+			"help": "Select the Status of the defect/ test case  which you want to consider.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Status"
+		},
+		{
+			"selector": "#viewTable",
+			"help": "Click on this to see the table view of thew clusters",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Table View"
+		},
+		{
+			"selector": "#viewGraph",
+			"help": "Click on this to see the graph view of thew clusters",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Graph view"
+		}
+	],
+	"title": "ISE"
+}

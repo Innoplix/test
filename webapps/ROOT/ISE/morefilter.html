@@ -1,0 +1,121 @@
+<div id="moreFilterContainerData">
+
+			<div class="input-fixed">
+			   <ul class="nav nav-tabs">
+				  <li class="active">
+					 <a href="#filters_quicktags_tabs" data-toggle="tab" >General</a>
+				  </li>
+				  <li>
+					 <a href="#filters_date_tabs" data-toggle="tab" >Time</a>
+				  </li>
+				  <li>
+					 <a href="#filters_contenttype_tabs" data-toggle="tab" >Content</a>
+				  </li>
+			   </ul>
+			   <div class="tab-content">
+				  <div class="tab-pane active general-tab" id="filters_quicktags_tabs">
+					 <div class="row" id="basicfilterRows">
+						<div class="col-md-4" id="releaseControl">
+						</div>
+						<div class="col-md-4" id="featureControl">
+						</div>
+						<div class="col-md-4" id="technologyControl">
+						</div>
+					 </div>
+					 <div class="row">
+						<div class="col-md-2" id="streamControl">
+						</div>
+						<div class="col-md-2" id="activitieControl">
+						</div>
+						<div class="col-md-2" id="ratingControls">
+						</div>
+						<div class="col-md-3" id="StatusControls">
+						</div>
+					 </div>
+				  </div>
+				  <div class="tab-pane time-tab" id="filters_date_tabs">
+					 <div id="timeFilters">
+						<span class="">
+						   <label>
+							  <input type="radio" name="daysContainerRadios" value="QuickTimeSpan" id="daysContainerRadios" checked=""> Quick Time Span</label
+						</span>
+						<span class="margin-right-10"><label> <input type="radio" name="daysContainerRadios" value="DateRange" id="dateContainerRadios"> Date Range</label</span>
+					 </div>
+					 <div class="radio-list row col-md-9" id="daysContainer">
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Today"> Today </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label><input type="radio"  name="dateFilteroptionsRadios" value="Yesterday"> Yesterday </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Day before Yesterday"> Day before Yesterday </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="This week"> This week </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Previous Week"> Previous Week </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="This day last week"> This day last week </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="This month"> This month </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Previous month"> Previous month </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Last 7 days"> Last 7 days </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="This year"> This year </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Previous year"> Previous year </label></div>
+					 <div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Year to date"> Year to date </label></div>
+					 </div>
+					 <div class="row col-md-8" id="dateContainer">
+						<div class="row  form-group col-md-6 ">
+						   <label class="control-label col-md-12">From Date</label>
+						   <div class="col-md-12">
+							  <div class="input-group date-picker date form_datetime" id="fromDate">
+								 <input type="text" size="16" readonly="" class="form-control form-filter" readonly="" placeholder="From">
+								 <span class="input-group-btn">
+								 <button class="btn default date-set" type="button">
+								 <i class="fa fa-calendar"></i>
+								 </button>
+								 </span>
+							  </div>
+						   </div>
+						</div>
+						<div class="row form-group col-md-6">
+						   <label class="control-label col-md-12">To Date</label>
+						   <div class="col-md-12">
+							  <div class="input-group date date-picker form_datetime"  id="toDate">
+								 <input type="text" size="16" readonly="" class="form-control form-filter" readonly="" placeholder="To">
+								 <span class="input-group-btn">
+								 <button class="btn default date-set" type="button">
+								 <i class="fa fa-calendar"></i>
+								 </button>
+								 </span>
+							  </div>
+						   </div>
+						</div>
+					 </div>
+				  </div>
+				  <div class="tab-pane content-tab" id="filters_contenttype_tabs">
+					 <div class="form-group">
+						<div class="col-md-8 row">
+						   <span class="col-md-12 margin-bottom-10"> Search content by:</span>
+						   <div class="checkbox-list">
+							  <div class="col-md-4">
+								 <label><input type="checkbox" name="type" value="Knowledge"><i class="fa fa-search"></i> Knowledge </label>
+								 <label><input type="checkbox" name="type" value="Dashboard"><i class="fa fa-dashboard"></i> Dashboard </label>
+								 <label><input type="checkbox" name="type" value="Documents"><i class="fa fa-file-text-o"></i> Documents </label>
+								 <label><input type="checkbox" name="type" value="Video"><i class="fa fa-video-camera"></i> Video </label>
+							  </div>
+							  <div class="col-md-4">
+								 <label><input type="checkbox" name="type" value="Images"><i class="fa fa-image"></i>Images </label>
+								 <label><input type="checkbox" name="type" value="Audio"><i class="fa fa-music"></i> Audio </label>
+								 <label><input type="checkbox" name="type" value="Visualization"><i class="fa fa-eye"></i> Visualization </label>
+								 <label><input type="checkbox" name="type" value="URL"><i class="fa fa-flash"></i> URL </label>
+							  </div>
+						   </div>
+						</div>
+					 </div>
+				  </div>
+			   </div>
+			</div>
+			
+			<div class="modal-footer">
+			   <div class="col-md-7 error-msg-container">
+				  <div class="alert alert-danger text-left margin-bottom-5" style="display:none;"><strong>Error!</strong><span class="error-msg"></span> </div>
+			   </div>
+			   <div class="col-md-4 pull-right">				
+				  <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+				  <button type="button" class="btn blue" id="submit-Form" onclick="morefilter.saveChanges()">SAVE CHANGES</button>
+			   </div>
+          </div>
+
+</div>

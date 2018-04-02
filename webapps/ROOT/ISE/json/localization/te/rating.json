@@ -1,0 +1,73 @@
+[
+  {
+    "project": "mozillFirefox1",
+    "formelements": {
+      "questionselements": {
+        "singleselect": [
+          {
+            "type": "radio",
+            "label": "దానిని ఉపయోగించలేదు"
+          },
+          {
+            "type": "radio",
+            "label": "ఉపయోగకరంగా"
+          },
+          {
+            "type": "radio",
+            "label": "అభివృద్ధి అవసరం"
+          }
+        ],
+        "commentelement": {
+          "type": "textarea",
+          "label": "మీ వ్యాఖ్యానాలు"
+        }
+      }
+    }
+  },
+  {
+    "project": "iSE1",
+    "formelements": {
+      "questionselements": {
+        "multiselect": [
+          {
+            "type": "checkbox",
+            "label": "దానిని ఉపయోగించలేదు"
+          },
+          {
+            "type": "checkbox",
+            "label": "ఉపయోగకరంగా"
+          },
+          {
+            "type": "checkbox",
+            "label": "అభివృద్ధి అవసరం"
+          }
+        ],
+        "commentelement": {
+          "type": "textarea",
+          "label": "మీ వ్యాఖ్యానాలు"
+        }
+      }
+    }
+  },
+  {
+    "project": "default",
+    "formelements": {
+      "questionselements": {
+        "multiselect": [
+          {
+            "type": "checkbox",
+            "label": "దానిని ఉపయోగించలేదు"
+          },
+          {
+            "type": "checkbox",
+            "label": "ఉపయోగకరంగా"
+          }
+        ],
+        "commentelement": {
+          "type": "textarea",
+          "label": "మీ వ్యాఖ్యానాలు"
+        }
+      }
+    }
+  }
+]

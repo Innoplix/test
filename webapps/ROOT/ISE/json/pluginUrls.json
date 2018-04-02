@@ -1,0 +1,4 @@
+{
+    "urls"      : ["https://mitelcc3.mitel.com/cqweb/", "http://10.98.100.119/pss/bugzilla/", "http://54.254.100.149/pi/bugzilla/"],
+	"scripts"	: [cqScript.js, "bugzillaScript.js", "bugzillaScript.js"]
+}

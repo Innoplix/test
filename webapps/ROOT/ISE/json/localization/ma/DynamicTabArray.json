@@ -1,0 +1,741 @@
+{
+    "commonSearches": "platformIndipendant",
+	"deployment":"",
+    "TabArray":         {
+            "defects": {
+                "displayName": "വൈകല്യങ്ങൾ",
+                "similarsearchdisplayName": "CR ID",
+                "enable": "yes",
+                "indexName": "defect_collection",
+                "additionalFilters":"(_missing_:cr_id OR cr_id:\"\")",
+                "allowedroles": [
+                    "Admin",
+                    "Test_Manager",
+                    "Tester",
+					"Developer"
+                ],
+                "defaultView": [
+                    "ദെഫെച്തിദ്",
+                    "തലക്കെട്ട്",
+                    "സാമം",
+                    "റിലീസ്"
+                
+                ],
+                "mobileView": [
+                    "ദെഫെച്തിദ്",
+                     "സാമം"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "ദെഫെച്തിദ്",
+                            "SourceName": "_id",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "തലക്കെട്ട്",
+                            "SourceName": "title",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "വിവരണം",
+                            "SourceName": "description",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "സാമം",
+                            "SourceName": "similarity",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "റിലീസ്",
+                            "SourceName": "release",
+                             "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "yes"
+                        },
+                        {
+                            "displayName": "പദവി",
+                            "SourceName": "status",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "boolean",
+                            "filter": "yes"
+                        },
+                        {
+                            "displayName": "ഉത്പന്നം",
+                            "SourceName": "product",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "കുത്തിവയ്പ്പ്",
+                            "SourceName": "injection",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "ഇംതെര്നല്ദെഫെച്ത്",
+                            "SourceName": "internaldefect",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester",
+								"Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "തീവ്രത",
+                            "SourceName": "severity",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        
+                        {
+                            "displayName": "കണ്ടുപിടിക്കല്",
+                            "SourceName": "detection",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "മുൻഗണന",
+                            "SourceName": "priority",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "രെക്_ത്യ്പെ",
+                            "SourceName": "req_type",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                         {
+                            "displayName": "പ്രിമര്യ്_ഫെഅതുരെ",
+                            "SourceName": "primary_feature",
+                            "dervied": "",
+                            "enable": "no",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                         {
+                            "displayName": "സെചൊംദര്യ്ഫെഅതുരെ",
+                            "SourceName": "secondaryfeature",
+                            "dervied": "",
+                            "enable": "no",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                         {
+                            "displayName": "ഫയല്",
+                            "SourceName": "file",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "array",
+                            "filter": "yes"
+                        },
+                        {
+                            "displayName": "തീയതി",
+                            "SourceName": "date",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "date",
+                            "filter": "yes"
+                        },
+
+                        {
+                            "displayName": "അഷിഗ്നെഎ",
+                            "SourceName": "assignedto",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "assignee",
+                            "filter": "yes"
+                        },
+                        
+                        {
+                            "displayName": "ച്ര്_ഇദ്",
+                            "SourceName": "cr_id",
+                            "dervied": "",
+                            "enable": "no",
+                            "type": "expansion",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "expansion",
+                            "filter": "yes",
+                            "fields":[
+                            {
+
+                                "displayName": "ദെഫെച്തിദ്",
+                                "SourceName": "_id",
+                                "dervied": "",
+                                "enable": "yes",
+                                "type": "string",
+                                "allowedroles": [
+                                    "Admin",
+                                    "Test_Manager",
+                                    "Tester","Developer"
+                                ],
+                                "displayType": "string",
+                                "filter": "no"
+                            },
+                            {
+                                "displayName": "ഫയല്",
+                                "SourceName": "file",
+                                "dervied": "",
+                                "enable": "yes",
+                                "type": "array",
+                                "allowedroles": [
+                                    "Admin",
+                                    "Test_Manager",
+                                    "Tester","Developer"
+                                ],
+                                "displayType": "array",
+                                "filter": "no"
+                            },
+                            {
+                                "displayName": "തലക്കെട്ട്",
+                                "SourceName": "title",
+                                "dervied": "",
+                                "enable": "no",
+                                "type": "array",
+                                "allowedroles": [
+                                    "Admin",
+                                    "Test_Manager",
+                                    "Tester","Developer"
+                                ],
+                                "displayType": "string",
+                                "filter": "no"
+                            },
+                            {
+                                "displayName": "തലക്കെട്ട്",
+                                "SourceName": "title",
+                                "dervied": "",
+                                "enable": "yes",
+                                "type": "expansion",
+                                "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                                ],
+                                "displayType": "expansion",
+                                "filter": "yes",
+                                "fields":[
+                                    {
+                                        "displayName": "ദെഫെച്തിദ്",
+                                        "SourceName": "_id",
+                                        "dervied": "",
+                                        "enable": "yes",
+                                        "type": "string",
+                                        "allowedroles": [
+                                            "Admin",
+                                            "Test_Manager",
+                                            "Tester","Developer"
+                                        ],
+                                        "displayType": "string",
+                                        "filter": "no"
+                                    },
+                                    {
+                                        "displayName": "ഫയല്",
+                                        "SourceName": "file",
+                                        "dervied": "",
+                                        "enable": "yes",
+                                        "type": "array",
+                                        "allowedroles": [
+                                            "Admin",
+                                            "Test_Manager",
+                                            "Tester","Developer"
+                                        ],
+                                        "displayType": "array",
+                                        "filter": "no"
+                                    },
+                                    {
+                                        "displayName": "തലക്കെട്ട്",
+                                        "SourceName": "title",
+                                        "dervied": "",
+                                        "enable": "no",
+                                        "type": "array",
+                                        "allowedroles": [
+                                            "Admin",
+                                            "Test_Manager",
+                                            "Tester","Developer"
+                                        ],
+                                        "displayType": "string",
+                                        "filter": "yes"
+                                    }
+                                ]
+                            }
+                           ]
+
+                        }
+                         
+                    ]
+                }         
+               
+              
+            },
+            "testcase": {
+                "displayName": "തെസ്ത്ചസെ",
+                "enable": "yes",
+                "indexName": "testcase_collection",
+                "additionalFilters":"",
+                "allowedroles": [
+                    "Admin",
+                    "Test_Manager",
+                    "Tester","Developer"
+                ],
+                "defaultView": [
+                    "തെസ്ത്ചസെഇദ്",
+                    "തലക്കെട്ട്",
+                    "സാമം"
+                  
+                ],
+                "mobileView": [
+                    "തെസ്ത്ചസെഇദ്",
+                    "തലക്കെട്ട്"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "തെസ്ത്ചസെഇദ്",
+                            "SourceName": "_id",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "തലക്കെട്ട്",
+                            "SourceName": "title",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "വിവരണം",
+                            "SourceName": "description",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "സാമം",
+                            "SourceName": "similarity",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "മുൻഗണന",
+                            "SourceName": "priority",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "yes"
+                        }
+                    ]
+                }
+               
+            },
+
+            "Source": {
+                "displayName": "സോഴ്സ്കോഡ്",
+                "enable": "yes",
+                "indexName": "sourcecode_collection",
+                 "additionalFilters":"",
+                "allowedroles": [
+                    "Admin",
+                    "Test_Manager",
+                    "Tester","Developer"
+                ],
+                "defaultView": [
+                    "തലക്കെട്ട്",
+                    "ഫയലുകൾ"
+                  
+                ],
+                "mobileView": [
+                    "തലക്കെട്ട്",
+                    "ഫയലുകൾ"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "തലക്കെട്ട്",
+                            "SourceName": "title",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "വിവരണം",
+                            "SourceName": "description",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                               
+                       
+
+                        {
+                            "displayName": "ഫയലുകൾ",
+                            "SourceName": "files",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "date",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "popup",
+                            "filter": "yes"
+                        },
+						{
+                            "displayName": "സാമം",
+                            "SourceName": "similarity",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        }
+
+                                ]
+                           }
+                },
+            
+            "Support": {
+                "displayName": "ComcastSupport",
+                "enable": "no",
+                "indexName": "its_tickets_collection",
+                "allowedroles": [
+                    "Admin",
+                    "Test_Manager",
+                    "Tester","Developer"
+                ],
+                "defaultView": [
+                    "device_detail",
+                    "device_type",
+                     "updated_by"
+                  
+                ],
+                "mobileView": [
+                    "device_detail",
+                    "device_type",
+                    "updated_by"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "device_detail",
+                            "SourceName": "device_detail",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "device_type",
+                            "SourceName": "device_type",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                                {
+                            "displayName": "updated_by",
+                            "SourceName": "updated_by",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        }
+                                ]
+                           }
+                },
+				 "Filediff": {
+                "displayName": "FileDiff",
+                "enable": "no",
+                "indexName": "defect_files_collection",
+                 "additionalFilters":"",
+                "allowedroles": [
+                    "Admin",
+                    "Test_Manager",
+                    "Tester","Developer"
+                ],
+                "defaultView": [
+                    "Files",
+                    "FileDiff"
+                  
+                ],
+                "mobileView": [
+                    "Files",
+                    "FileDiff"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "Files",
+                            "SourceName": "fileslist",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "FileDiff",
+                            "SourceName": "filediff",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                               
+                       
+                       
+						{
+                            "displayName": "Similarity",
+                            "SourceName": "similarity",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Test_Manager",
+                                "Tester","Developer"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        }
+
+                                ]
+                           }
+                }
+
+
+        }
+
+}

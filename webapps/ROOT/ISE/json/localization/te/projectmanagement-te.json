@@ -1,0 +1,23 @@
+{
+  "language": {
+	"Project Management": "ప్రాజెక్ట్ నిర్వహణ",
+	"Switch View": "వీక్షణను మార్చండి",
+	"Add New": "కొత్తది జత పరచండి",
+	"Project Name": "ప్రాజెక్ట్ పేరు",
+	"Description": "వివరణ",
+	"Organization": "సంస్థ",
+	"Set as Current": "ప్రస్తుతంగా సెట్ చేయండి",
+	"Delete": "తొలగించండి"
+	
+  },
+  "projectmanagementdata":{
+	 "sLengthMenu": "_MENU_ రికార్డులు",
+	 "sEmptyTable": "పట్టికలో డేటా అందుబాటులో లేదు",
+	 "sInfo": "చూపిస్తున్న_START_ కు _END_ ఆఫ్ _TOTAL_ ఎంట్రీలు",
+	 "sInfoEmpty": "ఎంట్రీలు కనుగొనబడలేదు",
+	 "sInfoFiltered": "(వడపోత 1 నుండి _MAX_ మొత్తం ఎంట్రీలు)",
+	 "sSearch": "ఫలితాలతో శోధించండి:",
+	 "sZeroRecords": "సరిపోలే రికార్డ్లు కనుగొనబడలేదు"
+}
+
+}

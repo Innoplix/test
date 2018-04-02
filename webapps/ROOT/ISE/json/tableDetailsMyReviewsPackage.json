@@ -1,0 +1,166 @@
+{
+  "TableDetails": {
+    "KnowledgeDocs": {
+      "displayName": "KnowledgeDocs",
+      "enable": "yes",
+      "indexName": "kb_docs_collection",
+      "additionalFilters": "",
+      "allowedroles": [
+        "Admin",
+        "Test_Manager",
+        "Tester",
+        "Developer"
+      ],
+      "defaultView": [
+        "Title",
+        "Assets",
+        "published_at"
+      ],
+      "mobileView": [
+        "Title",
+        "Assets",
+        "published_at"
+      ],
+      "Details": {
+        "fields": [
+          {
+            "displayName": "KnowledgeId",
+            "SourceName": "_id",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "id",
+            "filter": "no"
+          },
+          {
+            "displayName": "Title",
+            "SourceName": "title",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "url",
+            "filter": "no"
+          },
+          {
+            "displayName": "Description",
+            "SourceName": "description",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "string",
+            "filter": "no"
+          },
+          {
+            "displayName": "Tags",
+            "SourceName": "tags",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "array",
+            "filter": "no"
+          },
+          {
+            "displayName": "Assets",
+            "SourceName": "knowledgeAssets",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+			"displayType": "array",
+            "propertyName": "assetName",
+            "filter": "yes"
+          },
+          {
+            "displayName": "published_at",
+            "SourceName": "published_at",
+            "dervied": "",
+            "enable": "yes",
+            "type": "date",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "date",
+            "filter": "no"
+          },
+          {
+            "displayName": "Sender",
+            "SourceName": "sentBy",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "string",
+            "filter": "no"
+          },
+          {
+            "displayName": "Receiver",
+            "SourceName": "receivedBy",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "string",
+            "filter": "no"
+          },
+          {
+            "displayName": "Similarity",
+            "SourceName": "similarity",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "number",
+            "filter": "no"
+          }
+        ]
+      }
+    }
+  }
+}

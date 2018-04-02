@@ -1,0 +1,159 @@
+<div class="page-toolbar display-inline-block pull-right"></div>
+	<div class="row background-white search-holder">
+		<div id="searchContainer" class="col-md-12 col-sm-12 col-xs-12">
+			  <div class="input-group col-xs-6 col-md-6 col-sm-6 pull-left">
+				<div class="form-group has-feedback has-clear">
+				  <input type="text"  class="form-control" id="searchDoc" placeholder="Search">
+				  
+				</div>
+				<span class="input-group-btn">
+				  <button id="searchKDoc" class="btn grey-mint" type="button">
+						<i class="fa fa-search fa-fw"></i></button>
+				</span>
+			  </div>
+			  <div class="col-md-6 col-sm-6 col-xs-6">
+				<button type="button" id="addttopicBtn" class="btn blue btn-primary" data-toggle="modal" href="#AddTopicPopup">Add a Topic...</button>
+			  </div>
+		</div>
+	<div class="row col-md-12"> 
+	<div class="portlet light">
+		<div class="portlet-body">
+			<div style="font-size:13`px;color:gray" >
+				Pinned Topics
+			</div>
+			
+			<div class="row kd-table-conatainer" id="grid1">
+				 
+			</div>
+		</div>
+		
+		<div id="documentcontent">			
+										
+		</div>
+		<div class="divElement">
+			<img id="ViewCollapse" style="height:30px;width:30px;" src="images/up.png" onclick="ikeforums._advanceSearchFunc(3)"/>
+			<img id="ViewExpand" style="height:30px;width:30px;" src="images/down.png" onclick="ikeforums._advanceSearchFunc(1)"/>
+		</div>
+		
+	</div>
+		
+	
+	 
+	 <div class="portlet light">
+		<div class="portlet-body">
+			<div style="font-size:13px;color:gray" >
+				All Topics
+			</div>
+			<div class="row kd-table-conatainer" id="grid2" >
+				 
+			</div>
+		</div>
+		
+		<div id="documentcontent1">			
+										
+		</div>
+		
+	</div>
+	
+	  <!-- Popu over Data Start-->
+	<div id="popover_container">
+	<div id="a2" class="hidden">
+	   <div class="popover-heading"> </div>
+	   
+	</div>
+	</div>
+	 <!-- Popu over Data Start-->
+	 <!-- Pop over for more inof start -->
+	  <div class="modal fade bs-modal-lg" id="showMoreTextInfoModal" tabindex="-1" role="basic"  >
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+					<h4 class="modal-title" id="moreInfoModalTitle"></h4>
+				</div>
+				<div class="modal-body"   > 
+					<div id="modelInfo"  style="height:450px;overflow-y:auto;overflow-x:auto" ></div>  </div>
+				<div class="modal-footer">
+					<button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+				   
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	
+		<div class="modal fade bs-modal-lg" id="AddTopicPopup" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" id="Closeformx" onclick="ikeforums.closeques()"  class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Add Topic</h4>
+				</div>
+				
+				<div class="modal-body" id="modalBodyElement">
+					
+			<div class="form-group">
+				<label class="control-label">Title</label>
+				<input type="text" class="form-control" id="ikeforum_title">
+				<div id="results" class="did-you-mean-conatiner">
+                    </div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Description</label>
+				<div name="summernote" id="ikeforum_description"></div>
+			</div>
+		
+			<div class="form-group">
+						<label class="control-label">Tags</label>
+						<div id="addTagsContainer" >
+							  <div class="input-group col-xs-9 col-md-9 col-sm-9 pull-left">
+								<div class="form-group has-feedback has-clear">
+								  <input type="text" class="form-control" id="addTagInput" placeholder="Type here...">
+								 <!-- <span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>-->
+								</div>
+								
+							  </div>
+							  <div class="col-md-3 col-sm-3 col-xs-3">
+								<button type="button" id="addTagBtn" class="btn blue btn-primary" data-toggle="modal">ADD TAG</button>
+							  </div>
+							  <span>&nbsp;</span>
+						</div>
+						<div id="filterTagsHolder" class="tagsinput" style="display: none">			
+														
+						</div>
+			</div>
+	</div>
+						 <div class="modal-footer">
+				   <div class="col-md-6 error-msg-container">
+					  <div class="alert alert-danger text-left margin-bottom-5" style="display:none;"><strong>Error!</strong><span class="error-msg"></span> </div>
+				   </div>
+					
+				   <div class="col-md-4 pull-right">				
+					  <button type="button" class="btn blue" id="submit-Form" onclick="ikeforums.saveforum()">Post</button>
+					  <button type="button" id="Closeform" onclick="ikeforums.closeques()" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+					  
+				   </div>
+				</div>
+						
+							
+						
+					
+						</div>
+				 
+				 
+			
+				
+				</div>
+			
+			</div>
+			<!-- /.modal-content -->
+
+		<!-- /.modal-dialog -->
+
+	
+<!-- END PAGE CONTENT-->	
+
+	
+
+</div>

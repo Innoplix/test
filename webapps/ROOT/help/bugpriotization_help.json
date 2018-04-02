@@ -1,0 +1,27 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#s2id_autogen1",
+			"help": "Enter the details of the builds,releases and feature for which you want to know the priority of the defects",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Inputs Tab"
+		},
+		{
+			"selector": "A[href='javascript:;']A:contains('\n\t\t\t\t\t\t\tColumns \n\t\t\t\t\t\t\t')",
+			"help": "TODO .. Please fill your content ",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "#btn_657621",
+			"help": "The Priority Column shows us the priority which have beed assigned to this defect in this release/build. The suggested priority is recommended by the tool based on how the defects was prioritised in previous release/builds",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Submit the priority of the defect"
+		}
+	],
+	"title": "ISE"
+}

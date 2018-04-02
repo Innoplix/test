@@ -1,0 +1,164 @@
+{
+	"TableDetails": {
+		"assignation_collection": {
+			"displayName": "assignation",
+			"enable": "yes",
+			"indexName": "assignation_collection",
+			"additionalFilters":"",
+			"allowedroles": [
+				"Admin",
+				"Test_Manager",
+				"Tester","Developer"
+			],
+			"defaultView": [		
+				"title" 				
+			],
+			"mobileView": [
+				"title"
+			],
+			"Details": {
+				"fields": [
+					{
+						"displayName": "title",
+						"SourceName": "packagename",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+					}
+					
+				]
+			}
+		}
+	},	
+	"SubTableDetails": {
+		"Knowledge_Details": {
+			"displayName": "Knowledge_Details",
+			"enable": "yes",
+			"indexName": "assignation_collection",
+			"additionalFilters": "",
+			"allowedroles": [
+				"Admin",
+				"Test_Manager",
+				"Tester",
+				"Developer"
+			],
+			"defaultView": [
+				"KnowledgeId",
+				"Title"        
+			],
+			"mobileView": [
+				"KnowledgeId",
+				"Title"        
+			],
+			"Details": {
+				"fields": [  
+					
+					{
+						"displayName": "title",
+						"SourceName": "title",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+					},
+					{
+						"displayName": "Assigned to",
+						"SourceName": "assignedto",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+          },
+		  {
+						"displayName": "Assigned date",
+						"SourceName": "assigneddate",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+          },
+		   {
+						"displayName": "Assigned by",
+						"SourceName": "user",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+          },
+					
+					
+					{
+						"displayName": "status",
+						"SourceName": "status",
+						"dervied": "",
+						"enable": "yes",
+						"type": "combo",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+						],
+						"displayType": "combo",
+						"filter": "no"
+          },
+		  {
+						"displayName": "Completeness",
+						"SourceName": "completeness",
+						"dervied": "",
+						"enable": "yes",
+						"type": "combo",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+            ],
+            "displayType": "combo",
+            "filter": "no"
+          }					
+		 
+		 	
+		  
+		  					
+				]
+			}
+		}
+	}
+}

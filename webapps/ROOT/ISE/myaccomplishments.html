@@ -1,0 +1,102 @@
+<!-- BEGIN PAGE CONTENT-->
+<h1 class="page-title display-inline-block"> My Accomplishments</h1>
+<div class="page-toolbar display-inline-block pull-right"></div>
+	<div class="portlet light">
+		<div class="portlet-title">
+			<div class="row">
+					<div id="docActionContainer" class="col-md-12">
+						<!-- <h4 class="inline pull-left kwdg-store-doc-count">0 Results</h4> -->
+						<div class="subDocActionContainer pull-right">
+							
+							<div class="btn-group coloumn-toggler" style="display:none" >
+								<a class="btn default column-toggler-btn" href="javascript:;" data-toggle="dropdown" aria-expanded="false">
+								Columns <i class="fa fa-angle-down"></i>
+								</a>
+								<div id="MAPColumnTogglerDropdown" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right"></div>
+							</div>
+						</div>
+						<select class="form-control input-small inline-block margin-right-10 pull-right" name="select" id="myAssignationDropdown" onchange="myaccomplishments.refreshdata()">
+							<option value="">Select...</option>
+							<option value = "Completed">Completed</option>
+							<option value = "Not-Started">Not-Started</option>
+							<option value = "In-Progress">In-Progress</option>
+						<option value = "Not-Applicable">Not-Applicable</option>
+						<option value = "My-Approvals">My-Approvals</option>
+						<option value = "Refer-Back">Referred-Back</option>
+						<option value = "Sign-Off">Signed-Off</option>
+						</select>
+						<div id="searchContainer" class="col-md-3 pull-right">
+							<div class="input-group col-xs-9 col-md-12 col-sm-9 pull-left1">
+								<div class="form-group has-feedback has-clear">
+								  <input type="text" class="form-control" id="searchLocalDoc" placeholder="Search">
+								</div>
+							 
+							  </div>
+						</div>
+						
+					</div>
+				 
+			</div>
+		</div>
+		<div class="portlet-body">
+			<div class="row margin-top-10 map-table-conatainer">
+				
+			</div>
+		</div>
+	</div>
+		
+	 <!-- Popu over Data Start-->
+	 <!-- Pop over for more inof start -->
+<div class="modal fade in" id="prvRemarksModalContainer" tabindex="-1" role="basic" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content col-md-12">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Previous Remarks</h4>
+			</div>
+			<div class="modal-body row">
+				<div id="prvRemarksListContainer">
+				</div>
+				</div>
+			<div class="modal-footer">
+				<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>				
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+</div>
+	 <!-- Pop over for more inof end -->
+	 
+<div class="modal fade in" id="addAttachmentModalContainer" tabindex="-1" role="basic" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content col-md-12">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Add Attachments</h4>
+			</div>
+			<div class="modal-body row">
+				<div class="url-search-container" id="addAssetsCoantainer">				 				 
+					<div class="input-group">
+						<!--<input type="text" id="txtDisplay" class="form-control" placeholder="Display Text...">-->
+						<span class="input-group-btn" style="vertical-align:bottom;">
+							<button class="btn blue" id="addAttachmentBtn" type="button" data-toggle="modal"><i class="fa fa-plus"></i> ADD FILE(s)</button>
+						</span>
+					</div>				 
+				</div>
+				<div id="attachmentListContainer" class="margin-top-10">
+				</div>				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+				<button type="button" id="uploadAttachmentBtn" class="btn blue" onclick="myaccomplishments._attachmentHandler(this)" data-toggle="modal">UPLOAD FILE(s)</button>
+			</div>
+		<!-- /.modal-content -->
+		</div>
+	<!-- /.modal-dialog -->
+	</div>
+</div>	 
+<!-- END PAGE CONTENT-->	
+
+	
+

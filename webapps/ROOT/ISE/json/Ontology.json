@@ -1,0 +1,62 @@
+{
+	"defects": {
+		"fields": [{
+			"name": "_id",
+			"type": "string"
+		}, {
+			"name": "primary_feature",
+			"type": "string"
+		}]
+	},
+	"defect": {
+		"fields": [{
+			"parent": "_id",
+			"type": "string"
+		},  {
+			"name": "primary_feature",
+			"type": "string"
+		}, {
+			"name": "file",
+			"type": "arraystring"
+		},  {
+			"name": "reporter",
+			"type": "string"
+		}]
+	},
+	"sourcecode": {
+		"fields": [{
+			"parent": "files",
+			"type": "string"
+		}, {
+			"name": "primary_feature",
+			"type": "string"
+		}]
+	},
+	"feature": {
+		"fields": [{
+			"parent": "primary_feature",
+			"type": "string"
+		}, {
+			"name": "sourcecode_collection",
+			"type": "count"
+		}, {
+			"name": "defect_collection",
+			"type": "count"
+		}, {
+			"name": "testcase_collection",
+			"type": "count"
+		}]
+	},
+	"testcase": {
+		"fields": [{
+			"parent": "_id",
+			"type": "string"
+		}, {
+			"name": "testtype",
+			"type": "string"
+		}, {
+			"name": "primary_feature",
+			"type": "string"
+		}]
+	}
+}

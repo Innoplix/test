@@ -1,0 +1,84 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "A[href='javascript:querySearchFunc();']",
+			"help": "TODO .. Please fill your content ",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "#TC_Defects",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Test Case Count"
+		},
+		{
+			"selector": "#IntDef_Defects",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#IntOrph_Defects",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#ExtDef_Defects",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#ExtOrph_Defects",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#TC_upload",
+			"help": "This shows the number of test cases associated with this particular feature",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Test Case Count"
+		},
+		{
+			"selector": "#IntDef_upload",
+			"help": "This is the list of internal defects associated with this particular feature. Click on it to get the details of the defects",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Internal Defects"
+		},
+		{
+			"selector": "#IntOrph_upload",
+			"help": "This is the list of internal defects associated within this particular feature for which the test cases has not been assigned. Click on it to get the details of the orphan defects",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Internal Orphans"
+		},
+		{
+			"selector": "#ExtDef_upload",
+			"help": "This is the list of external defects associated with this particular feature. Click on it to get the details of the defects",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Customer Reported Defects"
+		},
+		{
+			"selector": "#ExtOrph_upload",
+			"help": "This is the list of internal defects associated with this particular feature. Click on it to get the details of the defects",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#ExtOrph_upload",
+			"help": "This is the list of external defects associated within this particular feature for which the test cases has not been assigned. Click on it to get the details of the orphan defects",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Customer reported orphan defects"
+		}
+	],
+	"title": "ISE"
+}

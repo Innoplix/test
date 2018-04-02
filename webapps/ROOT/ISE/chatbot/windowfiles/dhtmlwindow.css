@@ -1,0 +1,86 @@
+.add-chat-Window-btn{
+ background-color:#50afa9;
+  width:40px;
+  height:40px;
+  border-radius:100% !important;
+  background:#50afa9;
+  border:none;
+  outline:none;
+  color:#FFF;
+  font-size:25px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition:.3s;  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.add-chat-Window-btn:focus {
+  transform:scale(1.1);
+  transform:rotate(45deg);
+  -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+}
+.dhtmlwindow{
+    position: fixed;   
+    max-width: 800px;     
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+    overflow: hidden;
+	min-width:300px;
+}
+
+.drag-handle{ /*CSS for Drag Handle*/
+	text-indent: 3px;
+    font: normal 14px;
+    background-color: #50afa9;
+    color: white;
+    cursor: move;
+    overflow: hidden;
+    width: auto;
+    padding: 2px 2px 4px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+	font-family: Segoe UI,'SegoeUIWF',Arial,sans-serif;
+}
+
+.drag-handle .drag-controls{ /*CSS for controls (min, close etc) within Drag Handle*/
+position: absolute;
+right: 3px;
+top: 2px;
+cursor: hand;
+cursor: pointer;
+}
+
+* html .drag-handle{ /*IE6 and below CSS hack. Width must be set to 100% in order for opaque title bar to render*/
+width: 100%;
+}
+
+
+.drag-contentarea{ /*CSS for Content Display Area div*/
+    background-color: white;
+    color: black;
+    height: 150px;
+    padding: 2px;
+    overflow: auto;
+}
+
+.drag-statusarea{ /*CSS for Status Bar div (includes resizearea)*/
+height: 10px; /*height of resize image*/
+}
+
+
+.drag-resizearea{ /*CSS for Resize Area itself*/
+float: right;
+width: 13px; /*width of resize image*/
+height: 13px; /*height of resize image*/
+cursor: nw-resize;
+font-size: 0;
+}
+.hide-window{
+	display: none;
+}
+.show-window{
+	display: block;
+}

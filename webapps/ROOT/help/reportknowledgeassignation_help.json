@@ -1,0 +1,31 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 3,
+	"tooltips": [
+		{
+			"selector": "#searchLocalDoc",
+			"step": "1",
+			"help": "Search for the knowledge package For ex-:TDMA",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Search Knowledge here"
+		},
+		{
+			"selector": "#selectUsers",
+			"step": "2",
+			"help": "Select the user whose information you want to view from the dropdown",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Select the resource name"
+		},
+		{
+			"selector": "#sortDropdown",
+			"step": "3",
+			"help": "Select the status of trainings from the list",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Training Status"
+		}
+	],
+	"title": "ISE"
+}

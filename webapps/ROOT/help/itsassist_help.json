@@ -1,0 +1,37 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 3,
+	"tooltips": [
+		{
+			"selector": "#CollectionDList",
+			"step": "1",
+			"help": "Select the category from the drop down menu ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Category or Domain"
+		},
+		{
+			"selector": "#txtAnalyzes",
+			"help": "TODO .. Please fill your content ",
+			"position": "right bottom",
+			"positionAt": "left top"
+		},
+		{
+			"selector": "#txtAnalyzes",
+			"step": "2",
+			"help": "Enter your query here!For ex-: \"The firewall is not working\"  ",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Query or Question"
+		},
+		{
+			"selector": "#btn_Assist",
+			"step": "3",
+			"help": "Click on this button to get answers",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Ask"
+		}
+	],
+	"title": "ISE"
+}

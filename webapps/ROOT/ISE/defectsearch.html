@@ -1,0 +1,772 @@
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+		<div class="col-md-12 ">
+			<!-- BEGIN PORTLET-->
+			<div class="portlet box green seraching-tab-conatainer">
+							<div class="portlet-title">
+								<div class="caption">
+									
+
+									<div class="btn-group">
+										<a class="btn default" href="javascript:;" data-toggle="dropdown">
+										<span data-localize="language.Search types">Search types</span> <i class="fa fa-angle-down"></i>
+										</a>
+										 
+										<div id="searchFilterDropdown" class="dropdown-menu hold-on-click dropdown-checkboxes ">
+										</div>										
+									</div>
+								</div>
+
+
+								
+
+								<div class="actions pull-left" style="width:90%;padding-left:5px;margin-top:4px;">
+									<div id="divFilterTags" class=" tagsinput pull-left" >			
+
+										
+									</div>
+
+									<a class="btn btn-circle btn-icon-only btn-default pull-right" 
+									onclick="defectsearch.displayAdvacnedSearchHelp()" data-localize="language.Help" value="" title="Help">
+									<i class="glyphicon glyphicon-info-sign"></i>
+									</a>
+									
+									
+									<a class="btn btn-circle btn-icon-only btn-default pull-right" 
+									data-toggle="modal" href="#large" data-localize="language.Filter" title="Filter">
+									<i class="glyphicon glyphicon-filter"></i>
+									</a>
+
+
+									<a class="btn btn-circle btn-icon-only btn-default pull-right" href="javascript:;"
+									onclick="defectsearch._onForwardButtonClick()"
+									style="margin-left:5px;" data-localize="language.Forward" title="Forward">
+									<i class="glyphicon glyphicon-arrow-right"></i>
+									</a>
+
+									<a class="btn btn-circle btn-icon-only btn-default pull-right" href="javascript:;"
+									onclick="defectsearch._onBackButtonClick()" data-localize="language.Backward" title="Backward"
+									>
+									<i class="glyphicon glyphicon-arrow-left"></i>
+									</a>
+
+									<a class="btn btn-circle btn-icon-only btn-default pull-right" 
+									onclick="defectsearch._onRefreshButtonClick()" data-localize="language.Refresh" title="Refresh"
+									>
+									<i class="glyphicon glyphicon-refresh"></i>
+									</a>
+									
+						
+								</div>
+							</div>
+							<div class="portlet-body">
+								<ul id="mainSearchTypeTabs" class="nav nav-tabs">
+									<!-- <li class="active">
+										<a href="#tab_1_1" data-toggle="tab" tabid="0" >
+										Similar Search </a>
+									</li>
+									<li>
+										<a href="#tab_1_2" data-toggle="tab" tabid="1" >
+										Context Search </a>
+									</li>
+									<li>
+										<a href="#tab_1_3" data-toggle="tab" tabid="2" >
+										Advanced Search </a>
+									</li>
+								<li>
+										<a href="#tab_1_4" data-toggle="tab" tabid="3" >
+										File Search </a>
+									</li> -->
+								</ul>
+								<div class="tab-content" id="searchTabContainer">
+									<!-- <div class="tab-pane fade active in" id="tab_1_1">
+										<form  class="form-horizontal">
+												<div class="form-body">
+													<div class="form-group">
+														<label class="col-md-3 control-label"
+														 id="similarSearchID"></label>
+														<div class="col-md-9">
+															<input type="text" class="form-control "
+															 id="searchID" title="Enter DefectID E.g:MN00406852">		
+														</div>
+											
+													</div>
+													<div class="form-group hide" id="titleFormGroup">
+														<label class="col-md-3 control-label">Title</label>
+														<div class="col-md-9">
+															<input type="text" class="form-control "
+															id="similarSearch_searchTitle" readonly>								
+														</div>
+													</div>
+													<div class="form-group hide" id="descriptionFormGroup">
+														<label class="col-md-3 control-label">Description</label>
+														<div class="col-md-9">
+															<textarea id="similarSearch_searchDescription" class="form-control" 
+															readonly></textarea>				
+														</div>
+													</div>												
+												</div>
+												
+											</form>
+											
+											
+									</div>
+									<div class="tab-pane fade" id="tab_1_2">
+
+										<div  class="form-horizontal" >
+												<div class="form-body">
+
+													<div class="form-group " id="titleFormGroup">
+														<label class="col-md-3 control-label">Title</label>
+														<div class="col-md-9">
+															<input type="text" class="form-control "
+															id="contextSearch_searchTitle" title="Enter search string in title,will perform Wildcard Search. E.g:. Test">								
+														</div>
+													</div>
+
+													<div class="form-group" id="descriptionFormGroup">
+														<label class="col-md-3 control-label">Description</label>
+														<div class="col-md-9">
+															<textarea id="contextSearch_searchDescription" class="form-control" 
+															 style="height:95px" title="Enter search string in Description,will perform Wildcard Search. E.g:. Test"></textarea>				
+														</div>
+													</div>		
+																								
+												</div>
+												
+											</div>
+										
+									</div>
+
+									<div class="tab-pane fade" id="tab_1_3">
+
+                                    	<div  class="form-horizontal">
+												<div class="form-body">
+                                                <div class="form-group " id="titleFormGroup">
+														<label class="col-md-3 control-label">Search Here</label>
+														<div class="col-md-9">
+															<input type="text" class="form-control "
+															id="advancedSearch_searchInput" title="Enter any Wildcard search string contains in DefectID, title (or) description. E.g: *">							
+														</div>
+													</div>
+													 <div class="form-group " id="titleFormGroup">
+														<label class="col-md-3 control-label"></label>
+														<div class="col-md-2">
+															<a href="javascript:;" 
+															onClick="defectsearch.advancedSearchKeyUpFunc()" class="btn btn-xs blue"><i class="icon-magnifier-add"></i> Search </a>
+																			
+														</div>
+													</div>
+													</div>
+												
+											</div>
+									</div>
+									<div class="tab-pane fade" id="tab_1_4">
+
+                                    	<div  class="form-horizontal">
+												<div class="form-body">
+                                                <div class="form-group " id="titleFormGroup">
+														<label class="col-md-3 control-label">File Name:</label>
+														<div class="col-md-9">
+															
+															<input type="text" style="float:left;margin-top:10px" id="defectsearch_filesearchInput" class="form-control " size="100" title="Enter partial file name (or) full filename as search string in fileslist. E.g: vobs"></input>
+															&nbsp;&nbsp;&nbsp;
+															<a data-target="#defectsearch_filediffmodal" data-toggle="modal" 
+															onClick="defectsearch._fileSearchKeyUpFunc()" class="btn btn-xs blue"><i class="icon-magnifier-add"></i> Search </a>
+										
+														</div>
+													</div>
+													
+													</div>
+												
+											</div>
+										</div> -->
+								</div>	
+
+									<!-- BEGIN SAMPLE TABLE PORTLET-->
+						<div class="portlet box red hide" id="helpPortlet">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="glyphicon glyphicon-hand-down"></i>Guide
+								</div>					
+							</div>
+							<div class="portlet-body">		
+								<div class="table-scrollable">
+								<h4 style="text-align:center;font-weight:bold">Similar search</h4>
+									<table class="table table-hover">
+									<thead>								
+									<tr>
+										<th style="width: 200px">
+											 Query Type
+										</th>
+										<th style="width: 500px">
+											 Query Expresson
+										</th>
+										<th>
+											 Search Results
+										</th>
+										
+									</tr>
+									</thead>				
+									 <tbody>
+									<tr>
+										<td>
+											 Defect Search
+										</td>
+										<td>
+											 ih_cell_cr54554
+										</td>
+										<td>
+											 Displays the similar id
+										</td>
+										
+									</tr>
+									
+										</tbody>
+									</table>
+								</div>
+								
+								
+								<div class="table-scrollable">
+								<h4 style="text-align:center;font-weight:bold">Context search</h4>
+									<table class="table table-hover">
+										<thead style="width: 230px">
+									
+									<tr>
+										<th style="width: 200px">
+											 Query Type
+										</th>
+										<th style="width: 500px">
+											 Query Expresson
+										</th>
+										<th>
+											 Search Results
+										</th>
+										
+									</tr>
+									</thead>
+									 <tbody>
+									<tr>
+										<td>
+											 Phrase Search for title field
+										</td>
+										<td>
+											 regression
+										</td>
+										<td>
+											 Contains the term "regression" in title field.
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 Phrase Search for description field
+										</td>
+										<td>
+											 testcase
+										</td>
+										<td>
+											 Contains the term "testcase" in  description field.
+										</td>
+										
+									</tr>
+									
+										</tbody>
+									</table>
+								</div>
+							
+							
+							  
+								<div class="table-scrollable">
+								 <h4 style="text-align:center;font-weight:bold">Advance search</h4>
+									<table class="table table-hover">
+									<thead>
+									
+									<tr>
+										<th style="width: 200px">
+											 Query Type
+										</th>
+										<th style="width: 500px">
+											 Query Expresson
+										</th>
+										<th>
+											 Search Results
+										</th>
+										
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>
+											 Keyword Search
+										</td>
+										<td>
+											 MPCA NODEB
+										</td>
+										<td>
+											 Contains the terms "MPCA" or/and "NODEB" in default fields
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 Wildcard Search
+										</td>
+										<td>
+											 NB*, SOFTWA??
+										</td>
+										<td>
+											 Wildcard matches
+										</td>
+										
+									</tr>
+									<tr>
+											<td rowspan="9" style="vertical-align: middle;">
+												 Field Level Search
+											</td>
+											<td>
+												 title:MPCA
+											</td>
+											<td>
+												 Contains the term MPCA in the title field
+											</td>
+										
+									</tr>
+
+                                     <tr>
+											
+											<td>
+												 description:1.0
+											</td> 
+											<td>
+												 Contains the term 1.0 in the description field
+											</td>
+										
+									 </tr>
+                                     <tr>
+											
+											<td>
+												release:LR14.2
+											</td>
+											<td>
+												Contains the term LR14.2 in the release field
+											</td>
+										
+									 </tr>
+                                      
+                                      <tr>
+										   
+
+										    <td>
+											 injection:PH06-Verification (STP1)
+										    </td>
+										     <td>
+												Contains the term PH06-Verification (STP1) in the injection field
+											</td>
+										
+									  </tr>
+
+
+			                           <tr>
+										  
+
+											<td>
+											  internaldefect:1
+											</td>
+			                                 <td>
+											  Contains the term 1 in the internaldefect field
+											</td>
+										
+									  </tr>
+
+
+
+                                     
+			                         <tr>
+										
+										<td>
+											severity:3 - Major
+										</td>
+                                       <td>
+										Contains the term 3 - Major in the severity field
+									   </td>
+										
+								    </tr>
+                                      
+			                         <tr>
+									      
+										<td>
+											detection:Feature Testing
+										</td>
+										<td>
+											 Contains the term Feature Testing in the detection field
+										</td>
+										
+									</tr>
+
+
+
+			                         <tr>
+									      
+										<td>
+											 priority:0 - Unspecified
+										</td>
+										<td>
+											 Contains the term 0 - Unspecified in the priority field
+										</td>
+										
+									</tr>
+										
+										<tr>
+									      
+										<td>
+											 req_Type:Feature (FEAT)
+										</td>
+
+
+										<td>
+											 Contains the term Feature (FEAT)in the eq_Type field
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 Phrase Search
+										</td>
+										<td>
+											 title:"Software dump"
+										</td>
+										<td>
+											 Phrase matches in title
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 Fuzzy matches
+										</td>
+										<td>
+											 Sftware~, Sftware~1
+										</td>
+										<td>
+											 Fuzzy macthes i.e. close to software
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 Boost search
+										</td>
+										<td>
+											 MPCA^2
+										</td>
+										<td>
+											 Weightage to "MPCA" in default fields
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 Conditional search
+										</td>
+										<td>
+											 +MPCA
+										</td>
+										<td>
+											 MPCA must exist in default fields
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 Conditional search
+										</td>
+										<td>
+											 title:MPCA and NODEB
+										</td>
+										<td>
+											 Contains both MPCA and NODEB in title field
+										</td>
+										
+									</tr>
+										</tbody>
+									</table>
+								</div>
+								
+								
+								
+								<div class="table-scrollable">
+								<h4 style="text-align:center;font-weight:bold">File search</h4>
+									<table class="table table-hover">
+									<thead>
+									
+									<tr>
+										<th style="width: 200px">
+											 Query Type
+										</th>
+										<th style="width: 500px">
+											 Query Expresson
+										</th>
+										<th>
+											 Search Results
+										</th>
+										
+									</tr>
+									</thead>
+									 <tbody>
+									<tr>
+										<td>
+											 Phrase Search
+										</td>
+										<td>
+											 test
+										</td>
+										<td>
+											 Contains the terms "test" in file name
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 wildcard Search
+										</td>
+										<td>
+											 *.js
+										</td>
+										<td>
+											 Contains the file with extension .js
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											 Type ahead Search
+										</td>
+										<td>
+											 /vob
+										</td>
+										<td>
+											 Contains the file which starts with /vob
+										</td>
+										
+									</tr>
+									
+										</tbody>
+									</table>
+								</div>
+								
+							</div>
+						</div>
+						<!-- END SAMPLE TABLE PORTLET-->
+								
+								
+							</div>
+						</div>
+			<!-- END PORTLET-->
+		</div>	
+		
+	</div>
+	<div class="clearfix">
+	</div>
+	<div class="row">
+
+		<div  class="col-md-12 hide" id="searchResultsTable">
+			<div class="portlet box red-intense">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="fa fa-globe"></i><span data-localize="language.Search Results">Search Results</span>
+								</div>
+								<div class="actions">
+								<div class="serach-result-filters-container hidden-xs hidden-sm">
+									<div id="filter_global" class="dataTables_filte1">
+										<label data-localize="language.Search with in results">Search with in results:<input type="search" class="global_filter form-control input-small input-inline" placeholder=""</label>
+									</div>
+									<div class="headerDivider"></div>
+									<div class="dataTables_length1" id="dataTablePageChange">
+										<label data-localize="language.Show">Show</label>
+										<select class="input-xsmall input-inline">
+											<option value="15">15</option><option value="20">20</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="-1">All</option>
+										</select> 
+										<label data-localize="language.entries">entries</label>
+									</div>
+									 <div class="headerDivider"></div>
+									<div class="btn-group coloumn-toggler">
+										<a class="btn default column-toggler-btn" href="javascript:;" data-toggle="dropdown" aria-expanded="false">
+										<span data-localize="language.Columns">Columns</span> <i class="fa fa-angle-down"></i>
+										</a>
+										<div id="columnTogglerDropdown" class="dropdown-menu hold-on-click dropdown-checkboxes "></div>
+									</div>
+									<div class="headerDivider"></div>
+									
+									<button  id="btnLocalizeDefect" type="button" class="btn green btn-xs" onclick="defectsearch.displayLocalizeDefectWindow()" data-localize="language.Localize Defect">Localize Defect</button>
+									<button  id="btnLocalizeDefect1" type="button" class="btn green btn-xs" onclick="defectsearch.displayDefectLocalizationWindow()"; style= "display:none">Localizaiton</button>
+									<!--<button id="btnShowDashboard" type="button" class="btn green btn-xs" onclick="defectsearch.btnShowDashboard()" data-localize="language.More Insights">More Insights</button>-->
+									<div class="headerDivider"></div>
+									<a class="btn btn-circle btn-icon-only btn-default fullscreen" onclick="general.onFullscreen(general.internalDefectmeter)" href="javascript:;">
+									</a>
+								</div>
+								<div class="mobile-more-opt-conatainer">
+									<a class="btn btn-circle btn-icon-only btn-default mobile-more-opt-btn visible-xs visible-sm" href="javascript:;">
+									<i class="fa fa-ellipsis-v"></i></a>
+								</div>									 
+								</div>
+							</div>
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs">							
+								</ul>
+							
+
+		                        <div class="tab-content" id="resultTabContent">		                        
+								</div>
+							</div>
+		</div>
+	</div>	
+	<div id="defectsearch_filediffmodal" class="modal fade bs-modal-lg in" tabindex="-1" data-width="800">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<div style="width:100%;font-weight:bold;">
+													<table>
+														<tr>
+															<td style="padding-right:10px;">
+																Please Enter File Name  :
+															</td>
+															<td style="width:70%;">
+																<input type="text" id="defectsearch_txt_FileName" style="width:100%;padding-right:20px;" /> 
+															</td>
+															<td style="padding-left:20px;" valign="middle">
+																<i class="fa fa-arrow-circle-right" style="color:green;font-size:20px;cursor:pointer" onclick="defectsearch._onFileSearchNew()"></i>
+															</td>
+														</tr>
+													</table>
+												</div>-->
+												<div class="clearfix">
+												<p></p>
+												</div>
+												<div class="row">
+													<label class="modal-title" id="defectsearch_filediffmodalLabel"></<label>
+												</div>
+											</div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-12" id="defectsearch_filediffmodalfilter">
+														
+													</div>
+												</div>
+												<div class="clearfix">
+												<p></p>
+												</div>
+												<div class="row">
+													<div class="col-md-12" id="defectsearch_filediffmodalheader">
+														
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12" id="defectsearch_filediffmodaldata">
+														
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div id="defectsearch_defectIdmodal" class="modal fade bs-modal-lg in" tabindex="-1" data-width="800">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+											<div class="row">
+												<label class="modal-title" id="defectsearch_defectIdmodalLebel">Please select one defect Id out of below Suggested defect Id's</<label>
+											</div>
+										</div>
+										<div class="modal-body">
+											<div class="row">
+												<div class="col-md-12" id="defectsearch_defectIdmodaldata">
+													
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+						</div>
+
+	<div class="modal fade bs-modal-lg" id="large" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				
+				<div class="modal-body" id="modalBodyElement">
+					 
+				</div>
+			
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+   </div>
+
+   <div class="modal fade in" id="developerWorkFlowWindow" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; >
+		<div class="modal-dialog modal-full">
+			<div class="modal-content">
+				
+				<div class="modal-body" id="developerWorkFlowBodyElement">
+					 
+				</div>
+			
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+   </div>
+
+
+
+
+
+   <div class="modal fade bs-modal-lg" id="showMoreTextInfoModal" tabindex="-1" role="basic"  >
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                    <h4 class="modal-title" id="moreInfoModalTitle"></h4>
+                                                </div>
+                                                <div class="modal-body"   > 
+                                                	<div id="modelInfo"  style="height:450px;overflow-y:auto;overflow-x:auto" ></div>  </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn dark btn-outline" data-dismiss="modal" data-localize="language.Close">Close</button>
+                                                   
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+			<div class="modal fade bs-modal-lg" id="showDashboard" tabindex="-1" role="basic"  >
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                    <h4 class="modal-title" id="showDashboardTitle"></h4>
+                                                </div>
+                                                <div class="showDashboard-modal-body"   > 
+												<iframe id="dashboardUrl" name="dashboardUrlName" height="600" width="890"></iframe>
+                                                	<div id="modelInfo"  style="overflow-y:auto;overflow-x:auto" ></div>  </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+                                                   
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+
+
+         <div class="hide" id="noDataDisplay"><h5 style="color:red;text-align:center;font-weight:bold">No results found for this search</h5></div>
+
+	    					

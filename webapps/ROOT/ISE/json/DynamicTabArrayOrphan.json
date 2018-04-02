@@ -1,0 +1,584 @@
+{
+	"commonSearches": "platformIndipendant",
+    "TabArray":         {
+            "defects": {
+                "displayName": "Defects",
+                "enable": "yes",
+                "indexName": "defect_collection",
+                "allowedroles": [
+                    "Admin",
+                    "Manager",
+                    "Tester"
+                ],
+                "defaultView": [
+                    "DefectID",
+                    "Title",
+                    "Similarity",
+                    "Release"
+                
+                ],
+                "mobileView": [
+                    "DefectID",
+                     "Similarity"
+                ],
+				"orphansView": [
+                    "DefectID",
+                     "Title",
+					 "Release",
+					 "PrimaryFeature"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "DefectID",
+                            "SourceName": "_id",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Title",
+                            "SourceName": "title",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Description",
+                            "SourceName": "description",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Similarity",
+                            "SourceName": "similarity",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Release",
+                            "SourceName": "release",
+                             "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "yes"
+                        },
+                        {
+                            "displayName": "Status",
+                            "SourceName": "status",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "boolean",
+                            "filter": "yes"
+                        },
+                        {
+                            "displayName": "Product",
+                            "SourceName": "product",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Injection",
+                            "SourceName": "injection",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "InternalDefect",
+                            "SourceName": "internaldefect",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Severity",
+                            "SourceName": "severity",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Resolution",
+                            "SourceName": "resolution",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Detection",
+                            "SourceName": "detection",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Priority",
+                            "SourceName": "priority",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Req_Type",
+                            "SourceName": "req_type",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                         {
+                            "displayName": "PrimaryFeature",
+                            "SourceName": "primary_feature",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                         {
+                            "displayName": "SecondaryFeature",
+                            "SourceName": "secondaryfeature",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                         {
+                            "displayName": "file",
+                            "SourceName": "file",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "array",
+                            "filter": "yes"
+                        },
+                        {
+                            "displayName": "Date",
+                            "SourceName": "date",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "date",
+                            "filter": "yes"
+                        }
+                         
+                    ]
+                }         
+               
+              
+            },
+            "testcase": {
+                "displayName": "TestCase",
+                "enable": "yes",
+                "indexName": "testcase_collection",
+                "allowedroles": [
+                    "Admin",
+                    "Manager",
+                    "Tester"
+                ],
+                "defaultView": [
+                    "TestcaseId",
+                    "Title",
+                    "Similarity"
+                  
+                ],
+                "mobileView": [
+                    "TestcaseId",
+                    "Title"
+                ],
+				"orphansView": [
+                    "TestcaseId",
+                     "Title",
+					 "PrimaryFeature"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "TestcaseId",
+                            "SourceName": "_id",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Title",
+                            "SourceName": "title",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Description",
+                            "SourceName": "description",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Similarity",
+                            "SourceName": "similarity",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+						{
+                            "displayName": "PrimaryFeature",
+                            "SourceName": "primary_feature",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Priority",
+                            "SourceName": "priority",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "yes"
+                        }
+                    ]
+                }
+               
+            },
+			"Source": {
+                "displayName": "Source",
+                "enable": "yes",
+                "indexName": "sourcecode_collection",
+                 "additionalFilters":"",
+                "allowedroles": [
+                    "Admin",
+                    "Test_Manager",
+                    "Tester","Developer"
+                ],
+                "defaultView": [
+                    "Title",
+                    "Files"
+                  
+                ],
+                "mobileView": [
+                   "SourceId",
+                    "Title",
+                    "Files"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "SourceId",
+                            "SourceName": "_id",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Title",
+                            "SourceName": "title",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Description",
+                            "SourceName": "description",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Sourceline",
+                            "SourceName": "sourceline",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+						{
+                            "displayName": "PrimaryFeature",
+                            "SourceName": "primary_feature",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "string",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "Files",
+                            "SourceName": "files",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "yes"
+                        }
+                    ]
+                           }
+                },
+            "Support": {
+                "displayName": "ComcastSupport",
+                "enable": "no",
+                "indexName": "its_tickets_collection",
+                "allowedroles": [
+                    "Admin",
+                    "Manager",
+                    "Tester"
+                ],
+                "defaultView": [
+                    "device_detail",
+                    "device_type",
+                     "updated_by"
+                  
+                ],
+                "mobileView": [
+                    "device_detail",
+                    "device_type",
+                    "updated_by"
+                ],
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "device_detail",
+                            "SourceName": "device_detail",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                        {
+                            "displayName": "device_type",
+                            "SourceName": "device_type",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        },
+                                {
+                            "displayName": "updated_by",
+                            "SourceName": "updated_by",
+                            "dervied": "",
+                            "enable": "yes",
+                            "type": "array",
+                            "allowedroles": [
+                                "Admin",
+                                "Manager",
+                                "Tester"
+                            ],
+                            "displayType": "string",
+                            "filter": "no"
+                        }
+                                ]
+                           }
+                }
+
+
+        }
+
+}

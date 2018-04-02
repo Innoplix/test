@@ -1,0 +1,41 @@
+[
+  {
+    "title": "General",
+        "options": [
+          {  
+            "displayName": "Streams",
+            "displayType": "checkBox",
+			"enable": "yes",
+			"subOpts":["All","Hardware","Software","Mechanical"],
+			"fieldName": "Stream_Name"
+          },
+		 {
+            "displayName": "Activities",
+            "displayType": "checkBox",
+			"enable": "yes",
+			"subOpts":["All","Coding","Designing","Fabrication"],
+			"fieldName": "Activity_Name"
+          },
+		  {
+            "displayName": "Rating",
+            "displayType": "starSel",
+			"enable": "yes",
+			"fieldName": "avgRating"
+          },
+		  {
+            "displayName": "Status",
+            "displayType": "checkBox",
+			"enable": "yes",
+			"subOpts":["Reviewed", "Not-Reviewed"],
+			"fieldName": "Status_Name"
+          },
+		  {
+            "displayName": "Technology",
+            "displayType": "multiSelect",
+			"enable": "yes",
+			"subOpts":["C#", "C++", "CDMA", "JAVA", "CQ"],
+			"fieldName": "Technology_Name"
+          }
+        ]
+  }
+]

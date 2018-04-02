@@ -1,0 +1,81 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 4,
+	"tooltips": [
+		{
+			"selector": "A[href='#tab_1_1']",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "A[href='#tab_1_1']",
+			"step": "1",
+			"help": "Enter the defect ID in the test box. The result shows defects which are similar to the defect. Also you related test cases,source code and knweledge documents can be seen\nexample : Enter defect no\"2746\"",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Similar search Tab"
+		},
+		{
+			"selector": "A[href='#tab_1_2']",
+			"step": "2",
+			"help": "Please fill in the description or key words of title of the defects.\nExample\" enter \"upload feature not working\"\nYou can get the details of defects which are similar to these.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Context Search Tab"
+		},
+		{
+			"selector": "A[href='#tab_1_3']",
+			"help": "Search the context of the defects using advanced connectors like AND / OR",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"step": "3",
+			"title": "advance search Tab"
+		},
+		{
+			"selector": "A[href='#tab_1_4']",
+			"help": "Please enter the file name to search for similar files",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#btnLocalizeDefect",
+			"help": "TODO .. Please fill your content ",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "#btnLocalizeDefect",
+			"help": "Click on this tab to find the files which should be focus for debugging.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Localize defect"
+		},
+		{
+			"selector": "A[href='#resultsTab_InnerContainer_TestCase']",
+			"help": "This shows the list of test cases which are similar to the defects entered.",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "A[href='#resultsTab_InnerContainer_Defects']",
+			"help": "This shows the list of defects which are similar to the defects entered.",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "A[href='#resultsTab_InnerContainer_SourceCode']",
+			"help": "This shows the source code which are relevant to the defects entered.",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "A[href='#resultsTab_InnerContainer_KnowledgeDoc']",
+			"help": "Get the knowledge documents to know more about the defects and how is was resolved earlier ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Knowledge Doc Tab"
+		}
+	],
+	"title": "ISE"
+}

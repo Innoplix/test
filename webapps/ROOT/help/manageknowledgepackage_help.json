@@ -1,0 +1,31 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 3,
+	"tooltips": [
+		{
+			"selector": "#searchLocalDoc",
+			"step": "1",
+			"help": "Enter the Text to search for the required Knowledge Package.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Search_Textbox_manageknowledgepackage"
+		},
+		{
+			"selector": "A[href='javascript:;']A:contains('\n\t\t\t\t\t\tColumns \n\t\t\t\t\t\t')",
+			"step": "2",
+			"help": "Select the columns from the dropdown that need to be displayed.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Columns_Dropdown_manageknowledgepackage"
+		},
+		{
+			"selector": "#mkpTitleRow",
+			"step": "3",
+			"help": "Click on the Package Title to navigate to Knowledge Package.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "PackageTitle_Link_manageknowledgepackage"
+		}
+	],
+	"title": "ISE"
+}

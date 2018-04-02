@@ -1,0 +1,103 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#v22_component",
+			"step": "1",
+			"help": "Please Select the component from the List.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Component_List_Bugzilla"
+		},
+		{
+			"selector": "OPTION:contains('1.5          ')",
+			"step": "2",
+			"help": "Please Select the Version from the Dropdown.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Version_Dropdown_Bugzilla"
+		},
+		{
+			"selector": "#bug_severity",
+			"step": "3",
+			"help": "Please Select Severity of the bug from the Dropdown.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Severity_Dropdown_Bugzilla"
+		},
+		{
+			"selector": "#rep_platform",
+			"step": "4",
+			"help": "Please Select Hardware from the Dropdown.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "HardwareDropdown_Bugzilla"
+		},
+		{
+			"selector": "#op_sys",
+			"step": "5",
+			"help": "Please Select OS from the Dropdown.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "OS_Dropdown_Bugzilla"
+		},
+		{
+			"selector": "#cf_deployment",
+			"step": "6",
+			"help": "Please Select Deployment type from the Dropdown.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "DeploymentType_Dropdown_Bugzilla"
+		},
+		{
+			"selector": "#cf_defecttype",
+			"step": "7",
+			"help": "Please Select Defect Type from the Dropdown.",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "DefectType_Dropdown_Bugzilla"
+		},
+		{
+			"selector": "#cf_environment",
+			"step": "8",
+			"help": "Please Select the Environment of the Bug.",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Environment_Dropdown_Bugzilla"
+		},
+		{
+			"selector": "#short_desc",
+			"step": "9",
+			"help": "Please enter the Defect Summary. ",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Summary_Textbox_Bugzilla"
+		},
+		{
+			"selector": "#comment",
+			"step": "10",
+			"help": "Please enter the defect Description.",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Description_TextBox_Bugzilla"
+		},
+		{
+			"selector": "#attachment_false INPUT",
+			"step": "11",
+			"help": "Click on Add an Attachment Button to attach the file related to the Bug.",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "AddAnAttachment_Button_Bugzilla"
+		},
+		{
+			"selector": "#commit",
+			"step": "12",
+			"help": "Click on Submit Bug Button to submit the bug.",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "SubmitBug_Button_Bugzilla"
+		}
+	],
+	"title": "Enter Bug: CESS"
+}

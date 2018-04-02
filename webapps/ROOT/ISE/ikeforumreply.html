@@ -1,0 +1,161 @@
+<h1 id="title" class="page-title display-inline-block">Forum reply</h1>
+<button class="btn btn-circle btn-icon-only btn-default margin-bottom-10 edit-knowledge-btn fa fa-edit" id="editquesBtn" class="btn blue" data-toggle="modal" href="#ikeforumreplyaskQuestionPopup"></button>
+<div style="float:right;">
+	<div  style="text-align:center;"><span id="spnImagetitle">click image to pin/Unpin title </span><img id="kdUnPinnedRow" style="height:30px;width:30px;" src="images/pin1.png" onclick="ikeforumreply._processSearchRequestforPinupdate()" /></div>				
+</div>
+<div id="QuesDescription">Q and A reply</div><br>
+<div id="divTags"></div>
+<div class="page-toolbar display-inline-block pull-right"></div>
+
+<div class="row background-white">
+		<div class="portlet light">
+		<div class="portlet-title">
+			<div id="docActionContainer" class="col-md-12">
+				<h4 class="inline pull-left kwdg-store-doc-count">0 Replys</h4>
+				<button type="button" style="float:right" id="replyBtn" class="btn blue" data-toggle="modal" href="#replyPopup">Add a reply...</button>
+				<div class="subDocActionContainer pull-right">
+				
+				</div>
+			</div>
+		</div>
+		<div  class="portlet-body">
+			<div style="overflow:auto;height:500px;border:1px solid gray;width:100%; margin:0 auto;;" >
+				<div class="row kd-table-conatainer">
+				 
+				</div>
+			</div>
+		</div>
+		
+		<div id="documentcontent">			
+										
+		</div>
+		
+	</div>
+	
+		<div class="modal fade in" id="replyPopup" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Reply</h4>
+				</div>
+				
+				<div class="modal-body" id="modalBodyElement">
+					
+			<div class="form-group">
+				<label class="control-label">Description</label>
+				<div name="summernote" id="answer_description"></div>
+			</div>
+			
+				</div>
+						 <div class="modal-footer">
+				   <div class="col-md-6 error-msg-container">
+					  <div class="alert alert-danger text-left margin-bottom-5" style="display:none;"><strong>Error!</strong><span class="error-msg"></span> </div>
+				   </div>
+					
+				   <div class="col-md-4 pull-right">				
+					  <button type="button" class="btn blue" id="submit-Form" onclick="ikeforumreply.savereply()">Post</button>
+					  <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+				   </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade in" id="commentsPopup" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Comments</h4>
+				</div>
+				
+				<div class="modal-body" id="modalBodyElement">
+					
+			<div class="form-group">
+				<label class="control-label">Description</label>
+				<div name="summernote" id="comments_description"></div>
+			</div>
+			
+				</div>
+						 <div class="modal-footer">
+				   <div class="col-md-6 error-msg-container">
+					  <div class="alert alert-danger text-left margin-bottom-5" style="display:none;"><strong>Error!</strong><span class="error-msg"></span> </div>
+				   </div>
+					
+				   <div class="col-md-4 pull-right">				
+					  <button type="button" class="btn blue" id="submit-Form" onclick="ikeforumreply.savecomments()">Post</button>
+					  <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+				   </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade in" id="ikeforumreplyaskQuestionPopup" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Edit Title</h4>
+				</div>
+				
+				<div class="modal-body" id="modalBodyElement">
+					
+			<div class="form-group">
+				<label class="control-label">Title</label>
+				<input type="text" class="form-control" id="forum_qtitle">
+				<div id="results" class="did-you-mean-conatiner">
+                    </div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Description</label>
+				<div name="summernote" id="forum_qdescription"></div>
+			</div>
+			<br>
+			<br>
+			<div class="form-group">
+						<label class="control-label">Tags</label>
+						<div id="addTagsContainer" >
+							  <div class="input-group col-xs-9 col-md-9 col-sm-9 pull-left">
+								<div class="form-group has-feedback has-clear">
+								  <input type="text" class="form-control" id="addTagInput" placeholder="Type here...">
+								 <!-- <span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>-->
+								</div>
+								
+							  </div>
+							  <div class="col-md-3 col-sm-3 col-xs-3">
+								<button type="button" id="addTagBtn" class="btn blue btn-primary" data-toggle="modal">ADD TAG</button>
+							  </div>
+							  <span>&nbsp;</span>
+						</div>
+						<div id="ReplyfilterTagsHolder" class="qtagsinput" style="display: inline">			
+														
+						</div>
+			</div>
+	</div>
+						 <div class="modal-footer">
+				   <div class="col-md-6 error-msg-container">
+					  <div class="alert alert-danger text-left margin-bottom-5" style="display:none;"><strong>Error!</strong><span class="error-msg"></span> </div>
+				   </div>
+					
+				   <div class="col-md-4 pull-right">				
+					  <button type="button" class="btn blue" id="submit-Form" onclick="ikeforumreply.savequestion()">Post</button>
+					  <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+					   
+				   </div>
+				</div>
+						
+							
+						
+					
+						</div>
+				 
+				 
+			
+				
+				</div>
+			
+			</div>
+		
+</div>

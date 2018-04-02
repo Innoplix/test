@@ -1,0 +1,34 @@
+{
+  "language": {
+	"Defect Localization": "दोष स्थानीयकरण",
+	"File Name": "फ़ाइल का नाम",
+	"Score": "स्कोर",
+	"Change configurations":"(कॉन्फ़िगरेशन बदलें)",
+	"Display the results from" :"से परिणामों को प्रदर्शित करें",
+	"to":"सेवा मेरे",
+	"days past":"दिन पहले",
+	"Days to display the files":"फ़ाइलें प्रदर्शित करने के लिए दिन",
+	"Bug Reported Date":"बग रिपोर्ट की गई तारीख",
+	"Days to consider associated":"संबंधित विचार करने के लिए दिन",
+	"Weightage for similar defect score":"समान दोष स्कोर के लिए वजन",
+	"Weightage for file match score":"फ़ाइल मिलान स्कोर के लिए वजन",
+	"Weightage for buggy score":"छोटी गाड़ी के स्कोर के लिए वजन",
+	"Cut off % for similarity":"समानता के लिए% कट ऑफ करें",
+	"Close":"बंद करे",
+	"Submit":" जमा करें",
+	"SaveToFile":"फाइल को बचाएं",
+	"Configuration Values":"कॉन्फ़िगरेशन मान",
+	"Data is not available for existing  configuration Please change configuration and check again":"मौजूदा कॉन्फ़िगरेशन के लिए डेटा उपलब्ध नहीं है कृपया कॉन्फ़िगरेशन बदलें और दोबारा जांच करें"
+	 
+  },
+  "developerworkflowdata":{
+	 "sLengthMenu": "रिकॉर्ड्स _MENU_ दिखाने",
+	 "sEmptyTable": "कोई डेटा पर उपलब्ध है",
+	 "sInfo": "START_ cupistunna _TOTAL_ लिए प्रविष्टियों में से _END_",
+	 "sInfoEmpty": "प्रविष्टियां पाया",
+	 "sInfoFiltered": "(1 से सभी प्रविष्टियों को फिल्टर करने के _MAX_)",
+	 "sSearch": "खोज परिणाम:",
+	 "sZeroRecords": "मिलान रिकॉर्ड नहीं मिला"
+}
+
+}

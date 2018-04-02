@@ -1,0 +1,387 @@
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>ISE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="Cache-Control" content="no-store" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="shortcut icon" href="/DevTest/images/favicon.ico" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="metronics/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="metronics/admin/pages/css/login.css" rel="stylesheet" type="text/css" />
+	 <link href="css/iselogin.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME STYLES -->
+    <link href="metronics/global/css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/admin/layout/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="metronics/admin/layout/css/custom.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME STYLES -->
+    <link href="css/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/plugins/jquery.qtip.min.js" type="text/javascript"></script>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+
+<body class="login">
+    <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+    <div class="menu-toggler sidebar-toggler">
+    </div>
+    <!-- END SIDEBAR TOGGLER BUTTON -->
+    <!-- BEGIN LOGO -->
+    <div class="logo">
+       <!--  <img style="height: 37px;padding-right:15px;display:none" alt="" src="metronics/admin/layout2/img/ise.png" /> -->
+	   <div class="logo-container"> <div class="logo-name-container"><span class="common-heading-title">Intelligent</span><span class="dynamic-heading-title"></span><span class="common-heading-title">Engineering</span></div>
+	   
+	    <div class="language-selection-container dropdown click-trigger">
+   <div class="current-language" id="site-language-btn">Site language: <strong>English</strong><span class="icon icon-arrow-down-white"></span></div>
+    <ul id="site-language-modal" class="double dropdown-menu arrow-top" style="">
+       <li class="ui-language-option" data-id="en" data-abbrev="en"><a data-bypass=""><span class="flag flag-svg-micro flag-en"></span>English</a></li>
+      <li class="ui-language-option" data-id="el" data-abbrev="el"><a data-bypass=""><span class="flag flag-svg-micro flag-el"></span>Ελληνικά</a></li>
+      <li class="ui-language-option" data-id="vi" data-abbrev="vi"><a data-bypass=""><span class="flag flag-svg-micro flag-vi"></span>Tiếng Việt</a></li>
+      <li class="ui-language-option" data-id="it" data-abbrev="it"><a data-bypass=""><span class="flag flag-svg-micro flag-it"></span>Italiano</a></li>
+      <li class="ui-language-option" data-id="ar" data-abbrev="ar"><a data-bypass=""><span class="flag flag-svg-micro flag-ar"></span>العربية</a></li>
+      <li class="ui-language-option" data-id="cs" data-abbrev="cs"><a data-bypass=""><span class="flag flag-svg-micro flag-cs"></span>Čeština</a></li>
+      <li class="ui-language-option" data-id="id" data-abbrev="id"><a data-bypass=""><span class="flag flag-svg-micro flag-id"></span>Bahasa Indonesia</a></li>
+      <li class="ui-language-option" data-id="es" data-abbrev="es"><a data-bypass=""><span class="flag flag-svg-micro flag-es"></span>Español</a></li>
+      <li class="ui-language-option" data-id="zh-CN" data-abbrev="zs"><a data-bypass=""><span class="flag flag-svg-micro flag-zs"></span>中文</a></li>
+      <li class="ui-language-option" data-id="ru" data-abbrev="ru"><a data-bypass=""><span class="flag flag-svg-micro flag-ru"></span>Русский</a></li>
+      <li class="ui-language-option" data-id="pt" data-abbrev="pt"><a data-bypass=""><span class="flag flag-svg-micro flag-pt"></span>Português</a></li>
+      <li class="ui-language-option" data-id="tr" data-abbrev="tr"><a data-bypass=""><span class="flag flag-svg-micro flag-tr"></span>Türkçe</a></li>
+      <li class="ui-language-option" data-id="ro" data-abbrev="ro"><a  data-bypass=""><span class="flag flag-svg-micro flag-ro"></span>Română</a></li>
+      <li class="ui-language-option" data-id="pl" data-abbrev="pl"><a  data-bypass=""><span class="flag flag-svg-micro flag-pl"></span>Polski</a></li>
+      <li class="ui-language-option" data-id="nl-NL" data-abbrev="dn"><a  data-bypass=""><span class="flag flag-svg-micro flag-dn"></span>Nederlands (Nederland)</a></li>
+      <li class="ui-language-option" data-id="fr" data-abbrev="fr"><a  data-bypass=""><span class="flag flag-svg-micro flag-fr"></span>Français</a></li>
+      <li class="ui-language-option" data-id="de" data-abbrev="de"><a  data-bypass=""><span class="flag flag-svg-micro flag-de"></span>Deutsch</a></li>
+      <li class="ui-language-option" data-id="ma" data-abbrev="ma"><a  data-bypass=""><span class="flag flag-svg-micro flag-hu"></span>മലയാളം</a></li>
+      <li class="ui-language-option" data-id="hi" data-abbrev="hi"><a  data-bypass=""><span class="flag flag-svg-micro flag-hi"></span>हिंदी</a></li>
+	   <li class="ui-language-option" data-id="te" data-abbrev="te"><a  data-bypass=""><span class="flag flag-svg-micro flag-hi"></span>తెలుగు</a></li>
+      <li class="ui-language-option" data-id="ja" data-abbrev="ja"><a  data-bypass=""><span class="flag flag-svg-micro flag-ja"></span>日本語</a></li>
+      <li class="ui-language-option" data-id="ko" data-abbrev="ko"><a  data-bypass=""><span class="flag flag-svg-micro flag-ko"></span>한국어</a></li>
+      <li class="ui-language-option" data-id="uk" data-abbrev="uk"><a data-bypass=""><span class="flag flag-svg-micro flag-uk"></span>Українською</a></li>
+   </ul>
+</div>
+	  
+	   </div>
+	   
+    </div>
+    <!-- END LOGO -->
+    <!-- BEGIN LOGIN -->
+	<div class="login-form-conatiner">
+	<div class="login-form-holder">
+    <div class="content">
+        <!-- BEGIN LOGIN FORM -->
+        <form class="login-form form-horizontal" id="login-form" name="frmLogin" novalidate="novalidate">
+            <div class="form-title" style="display:none">
+                <span class="form-title"></span>
+                <span class="form-subtitle"></span>
+            </div>
+            <div class="alert alert-danger display-hide">
+                <button class="close" data-close="alert"></button>
+                <span id="alertBtn">
+            Enter your Username and Password</span>
+            </div>
+			<div class="alert alert-success display-hide">
+                <button class="close" data-close="alert"></button>
+                <span id="alertBtn">
+            </span>
+            </div>
+			<div class="alert alert-info display-hide">
+                <button class="close" data-close="alert"></button>
+                <span id="alertBtn">
+            </span>
+            </div>
+			<div class="login-inputs">
+            
+					<div class="form-group form-md-line-input has-info">
+						<div>
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="fa fa-user"></i>
+								</span>
+								<input data-localize="language.Username" type="text" class="form-control" name="username" id="username" placeholder="Username" tabindex="1">
+								<div class="form-control-focus"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group form-md-line-input has-info">
+						<div>
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="fa fa-lock"></i>
+								</span>
+								<input data-localize="language.password" type="password" class="form-control" name="password" id="password" placeholder="Password" tabindex="2">
+								<div class="form-control-focus"> </div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group form-md-line-input form-md-floating-label has-info">
+						<select name="organization" class="form-control edited" id="organization" style="border-bottom: none;"></select>
+						<input class="form-control form-control-solid placeholder-no-fix hide" type="text"
+						 autocomplete="off"  id="singleOrganizationTextInput" readonly tabindex="3"/>
+					</div>
+			</div>
+           <!--  <div class="form-actions">
+                <button type="button" id="loginBtn" class="btn btn-primary btn-block uppercase">Login</button>
+            </div> -->
+			
+            <div class="form-actions" style="display:none">
+                <div class="pull-left">
+                    <label class="rememberme check">
+                        <input type="checkbox" name="remember" value="1" />Remember me </label>
+                </div>
+                <div style="pointer-events:none" class="pull-right forget-password-block">
+                    <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+                </div>
+            </div>
+            
+        </form>
+        <!-- END LOGIN FORM -->
+    </div>
+	<div class="col-md-12">
+	<!-- <div class="md-checkbox-list pull-left">
+	   <div class="md-checkbox has-success">
+		  <input type="checkbox" id="checkbox1" class="md-check" >
+		  <label for="checkbox1" tabindex="4">
+		  <span class="inc"></span>
+		  <span class="check"></span>
+		  <span class="box"></span>I accept terms & conditions</label>
+	   </div>
+	</div> -->
+	<div class="alert alert-success display-hide">
+		<button class="close" data-close="alert"></button>
+		<span id="alertBtn">
+		</span>
+	</div>
+	<div class="mt-checkbox-list  pull-left" ><input  type="checkbox" id="checkbox1" tabindex="4"  class="checkbox-inline"> <label data-localize="language.I accept terms & conditions"class="mt-checkbox">I accept terms & conditions</label>
+	
+	</div>
+	
+	   <a data-localize="language.Read agreement" href="javascript:;" id="termsAndConditions" class="pull-right" tabindex="5">Read agreement.</a>
+	
+	</div>
+	 <div class="form-actions text-center login-btn-conatiner">
+                <button  data-localize="language.Login" type="button" id="loginBtn" tabindex="6" class="btn blue btn-block uppercase">Login</button>
+     </div>
+     </div>
+   </div>
+	 <!-- BEGIN SIGNUP -->
+    <div class="modal fade" id="signupdivid" style="background-color:#364150">
+        <!-- BEGIN SIGNUP FORM -->
+        <form class="login-form" id="signup-form" name="frmsignup" novalidate="novalidate" style="width: 100%;padding-left: 413px; padding-right: 420px; padding-top: 112px; background-color:#364150;">
+         <div style="background-color:#ADD8E6;padding:20px;">
+            <div class="form-title" style="display">
+                <span class="form-title"></span>
+                <span class="form-subtitle"></span>
+            </div>
+            
+			 <div class="form-group">
+				<h style="color:blue;padding-left: 106px;"><b data-localize="language.Welcome to iSE"> Welcome to iSE</b> </h>
+			</div>
+			 <div class="form-group">
+				<!--<h style="color:blue;padding-left: 53px;"> Sign up is required for first time user. </h>-->
+				<h style="color:blue;padding-left: 53px;" data-localize="language.Project details required for first time user"> Project details required for first time user. </h>
+             </div>
+			
+			<div class="alert alert-danger display-hide">
+                <button class="close" data-close="alert"></button>
+                <span id="alertBtn" data-localize="language.Please fill Mandatory fileds">
+            Please fill Mandatory fileds</span>
+            </div>
+		   <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+				<span>&nbsp;&nbsp;</span>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="signinusername" id="signinusername" style="width:97%;height:30px;display:inline" data-required="1" readonly />
+            </div>
+           <!-- <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="signinpassword" id="signinpassword" />
+            </div> -->
+			
+			 <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">full Name</label>
+				<span>&nbsp;&nbsp;</span>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" data-localize="language.full Name" placeholder="full Name" name="fullName" id="fullName" style="width:97%;height:30px;display:inline" data-required="1" />
+            </div>
+			
+			<!--<div class="form-group">
+                <select name="org" class="form-control" id="org"></select>
+            </div> -->
+			
+			<div class="form-group">
+				<span>&nbsp;&nbsp;</span>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Organization" name="org" id="org" data-required="1" style="width:97%;height:30px;display:inline" readonly />
+            </div>
+			
+			<div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">email</label>
+				<span id = "emailMandatory" class="control-label" style="color:red">*</span>
+				<!--<span>&nbsp;&nbsp;</span>-->
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" data-localize="language.email" placeholder="email" name="emailId" id="emailId" data-required="1" style="width:97%;height:30px;display:inline"/>
+            </div>
+			
+			<div class="form-group">
+				<span class="control-label" style="color:red">*</span>
+               <!-- <select name="project" class="form-control" id="project" ></select>-->
+			   <select id="project" class="controls form-inline form-control-solid form-control" data-localize="language.selectproject" name="project" style="width:97%;height:30px;display:inline"></select>
+            </div>
+			
+						
+			 <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">Role</label>
+				<span class="control-label" style="color:red">*</span>
+				<!--<select name="role" class="form-control" id="role"></select>-->
+				<select id="role" class="controls form-inline form-control-solid form-control" name="role" style="width:97%;height:30px;display:inline"></select>
+            </div>
+			
+			 <div class="form-group" style="display:none">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">department</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="department" name="department" id="department" data-required="1" />
+            </div>
+			
+            <div class="form-actions">
+				
+				<button type="button" id="signupBtn" class="btn btn-primary" data-localize="language.signup">signup</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left: 20px;"  data-localize="language.Close">Close</button>
+			</div>
+        </div>
+          </form>
+        <!-- END SIGNUP FORM -->
+    </div>
+	
+    <div class="content hide">
+        <div class="tab-pane fontawesome-demo" id="tab_1_1">
+            <div class="note note-success">
+                <p>
+                    Do you know, iSE can be accessed from
+                </p>
+            </div>
+            <div class="row margin-bottom-20">
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-automobile"></i> fa-automobile <span class="text-muted">(alias)</span>
+                </div>
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-bank"></i> fa-bank <span class="text-muted">(alias)</span>
+                </div>
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-behance"></i> fa-behance
+                </div>
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-behance-square"></i> fa-behance-square
+                </div>
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-bomb"></i> fa-bomb
+                </div>
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-building"></i> fa-building
+                </div>
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-cab"></i> fa-cab <span class="text-muted">(alias)</span>
+                </div>
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-car"></i> fa-car
+                </div>
+                <div class="fa-item col-md-3 col-sm-4">
+                    <i class="fa fa-child"></i> fa-child
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright hide">
+        2015 © HCL Technologies Ltd.
+    </div>
+	   <div class="modal fade bs-modal-lg" id="agreementInfoModal" tabindex="-1" role="basic"  >
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+					<h4 class="modal-title" id="moreInfoModalTitle"></h4>
+				</div>
+				<div class="modal-body"   > 
+					<div id="agreementModalInfo"  style="height:450px;overflow-y:auto;overflow-x:auto" >
+							
+					</div>  
+					
+					</div>
+				<div class="modal-footer">
+					<!-- <button type="button" data-dismiss="modal" class="btn blue save-doc-popup-btn">Save</button> -->
+					<button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+			<!-- /.modal-dialog -->
+		</div>
+    <!-- END LOGIN -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+	<script>
+	//SIMY update this as required
+	localStorage.mVersion 		= 4.1;
+	localStorage.jqVesion 		= 1;
+	localStorage.iSEUIVersion 	= 0.9;
+	localStorage.iSEAPIVersion  = 1.0;
+	
+	
+	</script>
+	<script>
+	var scripts = document.createDocumentFragment();
+	var s;
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "metronics/global/plugins/jquery.min.js?v="+localStorage.jqVesion ;
+	scripts.appendChild(s);
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "js/plugins/jquery-migrate-1.2.1.min.js?v="+localStorage.jqVesion;
+	scripts.appendChild(s);
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "metronics/metronics-utils.js?v="+localStorage.mVersion;
+	scripts.appendChild(s);
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "ISE-API/ise-utils.js?v="+localStorage.iSEAPIVersion;
+	scripts.appendChild(s);
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "js/login.js?v="+localStorage.iSEUIVersion;
+	scripts.appendChild(s);
+	
+	document.head.appendChild(scripts);
+					
+	</script>
+<script language='javascript'>
+
+
+
+    var loc = window.location;
+    var pathName = loc.pathname.substring(1, loc.pathname.lastIndexOf('/'));
+    document.title=pathName;
+
+
+
+</script>
+     <script language="javascript" type="text/javascript" src="chatbot/HCLchatbot.js" botUrl="ws://localhost:8889/" height="350" width="300" left="-110" bottom="-80" ></script>
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="chatbot/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div>
+</body>
+<!-- END BODY -->
+
+</html>

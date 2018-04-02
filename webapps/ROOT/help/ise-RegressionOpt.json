@@ -1,0 +1,117 @@
+{
+	"footer" : "'<hr/> <small>Context help injected by ISE</small>",
+	"steps"	 : 4,
+	"title"  : "Regression and Optimization",
+	"tooltips":[
+			{
+				"selector" : "#page_regressionOptimization > div.portlet.box.grey-cascade > div.portlet-title > div.caption", 
+				"help"  : "Description about Regression Optimization.....",
+				"title" : "Regression and Optimization"
+			},	
+			{
+				"selector" : "#inputsSettingsTab > div:nth-child(2) > div:nth-child(1) > div > div.portlet-title > div.caption", 
+				"help"  : "Select the builds",
+				"title" : "Regression and Optimization"
+			},			
+			{
+				"selector" : "#inputsSettingsTab > div:nth-child(2) > div:nth-child(2) > div > div.portlet-title > div.caption", 
+				"class"	: "qtip-rounded qtip-blue qtip-shadow",
+				"help"  : "Here, we can search defects and add",
+				"title" : "Regression and Optimization"
+			},
+			{
+				"selector" : "#inputsSettingsTab > div:nth-child(2) > div:nth-child(3) > div > div.portlet-title > div.caption" ,
+				"class"	: "qtip-rounded qtip-green qtip-shadow",
+				"help"  : "Features can be selected here and set the priority of the feature",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},				
+			{
+				"selector" : "#inputsSettingsTab > input:nth-child(3)" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Click here to get the recommended test cases based on provided inputs",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},				
+			{
+				"selector" : "#buckets > div:nth-child(1) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended Sanity Testcases for given input",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},				
+			{
+				"selector" : "#buckets > div:nth-child(2) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended Golden Testcases for given input",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},			
+			{
+				"selector" : "#buckets > div:nth-child(3) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended High Priority Feature Testcases for given input",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},	
+			{
+				"selector" : "#buckets > div:nth-child(4) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended Low Priority Feature Testcases for given input",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},
+			{
+				"selector" : "#buckets > div:nth-child(5) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended Defect Testcases for given input",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},
+			{
+				"selector" : "#buckets > div:nth-child(6) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended New Feature(s) Testcases, which may added recently",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},
+			{
+				"selector" : "#buckets > div:nth-child(7) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended Unstable Testcases, which has more risk for given input",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},
+			{
+				"selector" : "#buckets > div:nth-child(8) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended Environment based Testcases for given input",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},
+			{
+				"selector" : "#buckets > div:nth-child(9) > div > div.portlet-title > div.caption" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Recommended Change based Testcases for given input",
+				"title" : "Regression and Optimization",
+				"positionAt" : "left top",
+				"position" : "left bottom"
+			},
+			{
+				"selector" : "#mainSearchTypeTabs > li:nth-child(3) > a" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Search by query",
+				"title" : "Single Window Search"
+			}			
+	]
+}

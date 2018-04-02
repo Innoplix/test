@@ -1,0 +1,137 @@
+{
+	
+    "DocsData":         {
+            "TableData": { 
+
+                "indexName": "kb_docs_collection",                           
+                "defaultView": [
+                    "Type",
+                    "Title",
+                    "File"
+                ],
+                "mobileView": [
+                     "Type",
+                     "Title",
+                    "File"
+                   
+                ],
+				
+                "columns": {
+                    "fields": [
+                      
+                        {
+                            "displayName": "Type",
+                            "SourceName": "name",                            
+                            "enable": "yes"
+                        },
+                        {
+                            "displayName": "Title",
+                            "SourceName": "title",                            
+                            "enable": "yes"
+                        },
+                        {
+                            "displayName": "Description",
+                            "SourceName": "description",                            
+                            "enable": "no"
+                        },
+                        {
+                            "displayName": "Tags",
+                            "SourceName": "tags",                            
+                            "enable": "no"
+                        },
+                         {
+                            "displayName": "File",
+                            "SourceName": "fileName",                            
+                            "enable": "yes" 
+                        },
+                        {
+                            "displayName": "URL",
+                            "SourceName": "url",                            
+                            "enable": "no"
+                        },
+                        {
+                            "displayName": "Published",
+                            "SourceName": "published_at",                            
+                            "enable": "no"
+                        },
+                         {
+                            "displayName": "Expiry Date",
+                            "SourceName": "expiryDate",                            
+                            "enable": "no"
+                        }
+                       
+                         
+                    ]
+                },
+
+                "documentviewoptions": {
+                    "fields": [
+                        {
+                            "displayName": "Type",
+                            "SourceName": "type",                            
+                            "enable": "yes" ,
+                            "control":"label"
+                        },
+                         {
+                            "displayName": "Name",
+                            "SourceName": "name",                            
+                            "enable": "yes",
+                            "control":"textinput"
+                        },
+                        {
+                            "displayName": "Title",
+                            "SourceName": "title",                            
+                            "enable": "yes",
+                            "control":"textinput"
+                        },
+                        
+                        {
+                            "displayName": "Description",
+                            "SourceName": "description",                            
+                            "enable": "yes",
+                            "control":"textarea"
+                        },
+                        {
+                            "displayName": "Tags",
+                            "SourceName": "tags",                            
+                            "enable": "yes",
+                            "control":"multitags"
+                        },
+                        {
+                            "displayName": "URL",
+                            "SourceName": "url",                            
+                            "enable": "yes",
+                            "control":"textinput"
+                        },
+                        {
+                            "displayName": "Published",
+                            "SourceName": "published_at",                            
+                            "enable": "no",
+                            "control":"textinput"
+                        },
+                        {
+                            "displayName": "Document",
+                            "SourceName": "document",                            
+                            "enable": "yes",
+                            "control":"attachment"
+                        },
+                         {
+                            "displayName": "Expiry Date",
+                            "SourceName": "expiryDate",                            
+                            "enable": "yes",
+                            "control":"date"
+                        }
+                       
+                         
+                    ]
+                }           
+               
+              
+            }
+           
+          
+
+
+        }
+
+}

@@ -1,0 +1,71 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#prediction",
+			"step": "1",
+			"help": "Enter predict value.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Predictvalue_TextBox__Forecast"
+		},
+		{
+			"selector": "#releases",
+			"step": "2",
+			"help": "Select Builds",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Builds_RadioButton_Forecast"
+		},
+		{
+			"selector": "#year",
+			"step": "3",
+			"help": "Select Months",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Months_RadioButton_Forecast"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div:nth-child(2) > div:nth-child(1) > table > tbody:nth-child(2) > tr > td:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(1) > span > button > i",
+			"step": "4",
+			"help": "Select Start date",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "StartDate_DatePicker__Forecast"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div:nth-child(2) > div:nth-child(1) > table > tbody:nth-child(2) > tr > td:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(2) > span > button > i",
+			"step": "5",
+			"help": "Select end date",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "EndDate_DatePicker_Forecast"
+		},
+		{
+			"selector": "#s2id_autogen2",
+			"step": "6",
+			"help": "Select Priority",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Priority_Dropdown_Forecast"
+		},
+		{
+			"selector": "#s2id_autogen3",
+			"step": "7",
+			"help": "Select Feature",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Feature_Dropdown_Forecast"
+		},
+		{
+			"selector": "#submitForm",
+			"step": "8",
+			"help": "Click on Forecast to forecast the defects.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Forecast_Button_Forecast"
+		}
+	],
+	"title": "ISE"
+}

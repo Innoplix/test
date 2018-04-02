@@ -1,0 +1,139 @@
+<div class="row ">
+    <div class="col-md-12 ">
+        <div class="portlet box blue-hoki">
+            <div class="portlet-title">
+                <div class="caption">
+						<div class="btn-group">
+										<i class="fa fa-gift"></i>Ontology
+																			
+									</div>
+                </div>
+               
+
+                    <a class="btn btn-circle btn-icon-only btn-default pull-right" onclick="developerworkflow._closeme()"  id="developerWorkFlowComponentClose"
+                                    style="margin-left:5px;padding-top:6px;padding-left:6px;"
+                                    href="javascript:;"  >
+                                   <i  class="glyphicon glyphicon-remove " ></i>
+                                    </a>
+
+
+                    
+               </div>
+            </div>
+			 <div class="portlet-body" >
+           <table   id="canvastable" border= "1" >
+                    <tr>
+                        <td id="canvastd">
+                            <div  style="padding-left: 20px;border:1px" id="div_Defects">
+                                <canvas id="viewport" height="400" width="800">[No canvas support]</canvas>
+                            </div>
+							 </td>
+							  <td style="padding-left:14px">
+                           <div id="append" style="height:350px;overflow:scroll;width:310px">
+						   </div>
+						    </td>
+                       
+						
+                    </tr>
+                </table>
+               </div>
+            </div>
+        </div>
+   
+	   <!-- <div class="modal fade bs-moappenddal-lg" id="showMoreTextInfoModal12" tabindex="-1" role="basic"  >
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content" style="height: 500px;width: 630px;left:131px">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close"  onclick="developerworkflow._closeClick()" aria-hidden="true"></button>
+                                                    <h4 class="modal-title" id="moreInfoModalTitle12"></h4>
+                                                </div>
+                                                <div class="modal-body"> 
+                                                	<div id="modelInfo"  ></div>  </div>
+                                                <div class="modal-footer" style="text-align:center;">
+                                                    <button type="button"   onclick = "developerworkflow._closeClick()" class="btn dark btn-outline" >Close</button>
+													
+                                                    <button type="button" onclick= "developerworkflow._submitClick()" class="btn dark btn-outline">Submit</button>
+                                                   <button type="button" onclick= "developerworkflow._SaveToFile()" class="btn dark btn-outline">SaveToFile</button>
+                                                </div>
+                                            </div>
+                                            /.modal-content -->
+                                        <!-- </div>
+                                        <!-- /.modal-dialog
+                                    </div> -->
+									 <div class="modal fade bs-modal-lg" id="showMoreTextInfoModal12" tabindex="-1" role="basic"  >
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content" style="height: 530px;width: 630px;left:131px">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close"  onclick="developerworkflow._closeClick()" aria-hidden="true"></button>
+                                                    <h4 class="modal-title" id="moreInfoModalTitle12"></h4>
+                                                </div>
+                                                <div class="modal-body"> 
+                                                	<div id="modelInfo"  ></div>  </div>
+                                                <div class="modal-footer" style="text-align:center;">
+                                                    <button type="button"   onclick = "developerworkflow._closeClick()" class="btn dark btn-outline" >Close</button>
+													
+                                                    <button type="button" onclick= "developerworkflow._submitClick()" class="btn dark btn-outline">Submit</button>
+                                                   <button type="button" onclick= "developerworkflow._SaveToFile()" class="btn dark btn-outline">SaveToFile</button>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+									<div id="similardefectdrilldown" class="modal fade bs-modal-lg in" tabindex="-1" data-width="800">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close"  onclick="developerworkflow._defectcloseClick()"></button>
+												<!--<div style="width:100%;font-weight:bold;">
+													<table>
+														<tr>
+															<td style="padding-right:10px;">
+																Please Enter File Name  :
+															</td>
+															<td style="width:70%;">
+																<input type="text" id="defectsearch_txt_FileName" style="width:100%;padding-right:20px;" /> 
+															</td>
+															<td style="padding-left:20px;" valign="middle">
+																<i class="fa fa-arrow-circle-right" style="color:green;font-size:20px;cursor:pointer" onclick="defectsearch._onFileSearchNew()"></i>
+															</td>
+														</tr>
+													</table>
+												</div>-->
+												<div class="clearfix">
+												<p></p>
+												</div>
+												<div class="row">
+													<label class="modal-title" id="similardefectdrilldown_filediffmodalLabel"></<label>
+												</div>
+											</div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-12" id="similardefectdrilldown_filediffmodalfilter">
+														
+													</div>
+												</div>
+												<div class="clearfix">
+												<p></p>
+												</div>
+												<div class="row">
+													<div class="col-md-12" id="similardefectdrilldown_filediffmodalheader">
+														
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12" id="similardefectdrilldown_filediffmodaldata">
+														
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<!-- rgraph code starts  -->
+											
+					
+</div>
+</div>

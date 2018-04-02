@@ -1,0 +1,412 @@
+[
+	{
+		"icon": "icon-home",
+		"title": "ഡാഷ്ബോർഡ്",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#general",
+				"landingpage": "Admin",
+				"tooltip": "General graphs",
+				"display": "പൊതുവായ"
+			},
+			{
+				"href": "#DSB_defectsinsight",
+				"landingpage": "Developer",
+				"display": "എന്റെ ബഗുകൾ"
+			},
+			{
+				"href": "#DSB_defectsinsightrep",
+				"display": "എന്റെ ബഗ്"
+			},
+			{
+				"href": "#DSB_defectsinsightopen",
+				"landingpage": "Admin",
+				"display": "തുറക്കുക ബഗുകൾ"
+			},
+			{
+				"href": "#DSB_defectsinsightclosed",
+				"display": "അടച്ച ബഗുകൾ"
+			},	
+			{
+				"href": "#DSB_defectsinsighteamcont",
+				"display": "ടീം സംഭാവന"
+			},				
+			{
+				"href": "#DSB_defectsinsightall",
+				"landingpage": "Test_Manager",								
+				"display": "എല്ലാ ബഗുകൾ"
+			},				
+			{
+				"display": "ഉറപ്പ്",
+				"submenu": [
+					{
+						"href": "#stabilityDefects",
+						"display": "ദെഫെച്ത്സ്ഗ്രഫ് "
+					},
+					{
+						"href": "#stabilityDefectsDetail",
+						"display": "ദെതൈലെദ്ദെഫെച്ത്സ്ഗ്രഫ് "
+					},
+					{
+						"href": "#stabiltyTestcases",
+						"display": "തെസ്ത്ചസെഗ്രഫ് "
+					},
+					{
+						"href": "#StabiltyDefTc",
+						"display": "ഫെഅതുരെസ്തബില്ത്യ് "
+					}
+				]
+			},
+			{
+				"href": "#IF_sourcemetrics",
+				"display": "ഉറവിട അളവുകൾ"
+			},
+			{
+				"href": "#IF_casadashboard",
+				"display": "സ്റ്റാറ്റിക് അനാലിസിസ്"
+			},
+			{
+				"href": "#IF_grading",
+				"landingpage": "Test_Manager",
+				"display": "വിഭവ തരംതിരിക്കൽ"
+			},
+			{
+				"href": "#testingmetrics",
+				"display": "അളവുകൾ",
+				"submenu": [
+					{
+						"display": "പരിശോധിക്കുന്നു",
+						"submenu": [
+							{
+								"href": "#releasevstestcases",
+								"display": "Vs ടെസ്റ്റ് കേസുകൾ റിലീസ്"
+							},
+							{
+								"href": "#IF_testbankgrowthrate",
+								"display": "ടെസ്റ്റ് ബാങ്ക് വളർച്ച നിരക്ക്"
+							},
+							{
+								"href": "#IF_featurewisetestcasedistribution",
+								"display": "ഫീച്ചർ ജ്ഞാനികൾ ടെസ്റ്റ് കേസ് വിതരണം"
+							},
+							{
+								"href": "#IF_testprogresstrend",
+								"display": "ടെസ്റ്റ് പുരോഗതി ട്രെൻഡ്"
+							},
+							{
+								"href": "#IF_featurewisetestresults",
+								"display": "ഫീച്ചർ ജ്ഞാനികൾ പരിശോധനാ ഫലങ്ങൾ"
+							}
+						]
+					},
+					{
+						"display": "വൈകല്യങ്ങൾ",
+						"submenu": [
+							{
+								"href": "#IF_defectsprioritydistribution",
+								"display": "വൈകല്യങ്ങൾ മുൻഗണന ഡിസ്ട്രിബ്യൂഷൻ (പ്രവണത എല്ലാ റിലീസുകൾ)"
+							},
+							{
+								"href": "#IF_internalandexternalbugstrend",
+								"display": "ആന്തരിക, ബാഹ്യ ബഗുകൾ ട്രെൻഡ്"
+							},
+							{
+								"href": "#IF_defectsseveritydistribution",
+								"display": " വൈകല്യങ്ങൾ വീണവരിൽ ഡിസ്ട്രിബ്യൂഷൻ (പ്രവണത എല്ലാ റിലീസുകൾ)"
+							},
+							{
+								"href": "#IF_defectdistibutionbydetection",
+								"display": " കണ്ടെത്തൽ (പ്രവണത എല്ലാ റിലീസുകൾ) പ്രകാരം ഊനമില്ലാത്ത ദിസ്തിബുതിഒന്"
+							},
+							{
+								"href": "#IF_defectcausedistribution",
+								"display": "  കേട് കാരണം വിതരണം (പ്രവണത എല്ലാ റിലീസുകൾ)"
+							}
+						]
+					},
+					{
+						"href": "#IF_oldgraphs",
+						"display": "പഴയ ഗ്രാഫുകൾ"
+					}
+				]
+			},
+			
+			{
+				"href": "#devdashboard",
+				"display": "ദേവ് ഡാഷ്ബോർഡ്"
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "വികസനം",
+		"icon": "glyphicon glyphicon-wrench",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_analysechanges",
+				"display": "മാറ്റങ്ങൾ വിശകലനം ചെയ്യുക"
+			},
+			{
+				"href": "#sourcebrowse",
+				"display": "ഉറവിടം ബ്രൗസ്"
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"icon": "glyphicon glyphicon-search",
+		"title": "പരിശോധിക്കുന്നു",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_testbuilds",
+				"display": "ടെസ്റ്റ് പണിയുന്നു"
+			},
+			{
+				"href": "#regressionOptimization",
+				"display": "റിഗ്രഷൻ ഒപ്റ്റിമൈസേഷൻ",
+				"landingpage": "Tester"
+			},
+			{
+				"href": "#IF_teststep",
+				"display": "ടെസ്റ്റ് സ്റ്റെപ്പ് ഒപ്റ്റിമൈസേഷൻ"
+			},
+			{
+				"href": "#testinformation",
+				"display": "ടെസ്റ്റ് വിവരങ്ങൾ"
+			}
+		]
+	},
+	{
+		"icon": "glyphicon glyphicon-adjust",
+		"title": "വൈകല്യങ്ങൾ",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#defectsearch",
+				"landingpage": "Developer",
+				"display": "കേട് തിരയൽ"
+			},
+			{
+				"href": "#defectsLocalization",
+				"display": "കേട് ലോക്കലൈസേഷൻ"
+			},
+			{
+				"href": "#orphans",
+				"display": "അനാഥയായി വൈകല്യങ്ങൾ"
+			},
+			{
+				"href": "#bugpriotization",
+				"display": "ബഗ് മുൻഗണിക്കൽ"
+			},
+			{
+				"href": "#defectcount",
+				"display": "പ്രവചനം"
+			},
+			{
+				"href": "#defectassignationview",
+				"display": "സമാനമായ / ഡ്യൂപ്ലിക്കേറ്റ് വൈകല്യങ്ങൾ അഷിഗ്നതിഒന് കാണുക"
+			}
+		]
+	},
+	
+	{
+		"roles": "^(Admin)$",
+		"title": "ക്രമീകരണങ്ങൾ",
+		"icon": "icon-settings",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#projectManagement",
+				"display": "പദ്ധതി "
+			},
+			{
+				"href": "#ontology",
+				"display": "ഓന്റോളജി "
+			},
+			{
+				"href": "#fileupload",
+				"display": "ഫയൽ അപ്ലോഡ്"
+			},
+			{
+				"href": "#IF_import",
+				"display": "ഇറക്കുമതി "
+			},
+			{
+				"href": "#jsonconfiguration",
+				"display": "JSON കോൺഫിഗറേഷൻ"
+			},
+			{
+				"display": "ഉപയോഗം & ഡാറ്റ",
+				"submenu": [
+					{
+						"href": "#IF_usageevents",
+						"display": " ഇവന്റ് വിശകലനം"
+					},
+					{
+						"href": "#IF_dataanalysis",
+						"display": " ഡാറ്റ വിശകലനം"
+					}
+				]
+			},
+			{
+				"href": "#IF_dashboardadmin",
+				"display": "ഡാഷ്ബോർഡ് അഡ്മിനിസ്ട്രേഷൻ"
+			},
+			{
+				"href": "#knowledgedocuments",
+				"display": "അറിവ് പ്രമാണങ്ങൾ"
+			},
+			{
+				"href": "#jsonconfiguration",
+				"display": "JSON കോൺഫിഗറേഷൻ"
+			},
+			{
+				"href": "#userManagement",
+				"display": "ഉപയോക്താവ് "
+			},
+			{
+				"href": "#roleManagement",
+				"display": "റോളുകൾ "
+			},
+			{
+				"href": "#organizationManagement",
+				"display": "സംഘടന "
+			},
+			{
+				"href": "#featuremapping",
+                 "display": "ഫീച്ചർ മാപ്പിംഗ്"
+
+			},
+			{
+                "href": "#featurekeys",
+                "display": "ഫീച്ചർ കീകൾ "
+            },
+
+			{
+				"href": "#IF_buildmapping",
+				"display": "മാപ്പിംഗ് ബിൽഡ് "
+			},
+			{
+				"href": "#IF_settingfeature",
+				"display": "സവിശേഷതകൾ "
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "ഇൻസ്ട്രുമെന്റേഷൻ",
+		"icon": "icon-docs",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_buildanalysis",
+				"display": "അനാലിസിസ് ബിൽഡ്"
+			},
+			{
+				"href": "#IF_impacttestcase",
+				"display": "സ്വാധീനം തെസ്ത്ചസെ"
+			},
+			{
+				"href": "#IF_analysesummary",
+				"display": "അനാലിസിസ് ചുരുക്കം"
+			}
+		]
+	},
+{
+		"roles": "^((?!Support).)*$",
+		"title": "അറിവ് സ്റ്റോർ",
+		"icon": "glyphicon glyphicon-user",
+		"type": "ike",
+		"type_name": "Knowledge",
+		"submenu": [
+			{
+				"href": "#knowledgestore",
+				"display": "അറിവ് സ്റ്റോർ"
+			},
+			{
+				"href": "#myreviews",
+				"display": "എന്റെ അവലോകനങ്ങൾ"
+			},
+			{
+				"href": "#myaccomplishments",
+				"display": "എന്റെ നേട്ടങ്ങൾ"
+			},
+			{
+				"href": "#knowledgereadandedit",
+				"display": "അറിവ് ചേർക്കുക"
+			},
+			{
+				"href": "#knowledgeaddpackage",
+				"display": "അറിവ് പാക്കേജ് ചേർക്കുക"
+			},
+			{
+				"href": "#manageknowledgepackage",
+				"display": "അറിവ് പാക്കേജ് നിയന്ത്രിക്കുക"
+			},
+			{
+				"href": "#reportknowledgeassignation",
+				"display": "അറിവ് അഷിഗ്നതിഒന് ചരിത്രം"
+			}
+		]
+	},
+	{
+		"roles": "^(Support|Admin)$",
+		"title": "പിന്തുണ",
+		"icon": "icon-earphones-alt",
+		"type": "its",
+		"type_name": "Technical",
+		"submenu": [
+			{
+				"href": "#IF_createcollection",
+				"display": "അഡ്മിൻ"
+			},
+			{
+				"href": "#IF_viewconfiguration",
+				"display": "കാണുക അഡ്മിൻ"
+			},
+			{
+				"href": "#itsassist",
+				"display": "അതിൻറെ അസിസ്റ്റ്"
+			},
+			{
+				"href": "#itsanalyzesearch",
+				"display": "തിരയൽ വിശകലനം ചെയ്യുക"
+			},
+			{
+				"href": "#itsfaqsearch",
+				"display": "സ്മാർട്ട് സ്ഥിരം"
+			},			
+			{				
+				"href": "#itssupportinsight",
+				"display": "പിന്തുണ ഇൻസൈറ്റ്"
+			},
+			{
+				"landingpage": "Support",
+				"href": "#IF_issueidentification",
+				"display": "ഇഷ്യൂ ഐഡന്റിഫിക്കേഷൻ"
+			},
+			{
+				"href": "#IF_patternmatch",
+				"display": "പാറ്റേൺ പൊരുത്തപ്പെടുന്നില്ല"
+			},
+			{
+				"href": "#IF_supportforecast",
+				"display": "പ്രവചനം"
+			},
+			{
+				"href": "#alterJson",
+				"display": "അല്തെര്ജ്സൊന്"
+			}
+
+		]
+	}
+]

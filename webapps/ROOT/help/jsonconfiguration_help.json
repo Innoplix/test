@@ -1,0 +1,23 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#update_btn",
+			"step": "1",
+			"help": "Click on the update button to update your changes.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "update_Button_JSON Configuration"
+		},
+		{
+			"selector": "#ta",
+			"step": "2",
+			"help": "JSON Data will be loaded here",
+			"position": "left top",
+			"positionAt": "center bottom",
+			"title": "JSONDATA_Textbox_JSONConfiguration"
+		}
+	],
+	"title": "ISE"
+}

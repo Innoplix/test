@@ -1,0 +1,56 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 6,
+	"tooltips": [
+	
+		{
+			"selector": "#questionText",
+			"step": "1",
+			"help": "Enter your question here to get personalised answers! Just type in a few words and it will autocomplete your question",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Question"
+		},
+		{
+			"selector": "#searchfaq I",
+			"step": "2",
+			"help": "Click here to know the solution to your problem",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Click here"
+		},
+		
+		{
+			"selector": "A[href='#common_tab']",
+			"step": "3",
+			"help": "This shows you all the relevant result as per your question.Click on topmost results to know more",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Consolidated Results"
+		},
+		{
+			"selector": "A[href='#splitted_tab']",
+			"step": "4",
+			"help": "TODO .. Please fill your content ",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "A:contains(' Is there any way for me to get the list of Approved Senders from my office computer onto my home computer?')",
+			"step": "5",
+			"help": "This shows all the related issues that you might have and you can refer these accordingly",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Related Questions"
+		},
+		{
+			"selector": "#911 SPAN[title='How to disable Personal Firewall 2010/Version 7']SPAN:contains('How to disable Personal Firewall 201...')",
+			"step": "6",
+			"help": "This shows the category your problem belongs to, you can look at other questions asked as well!",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Topic Category"
+		}
+	],
+	"title": "ISE"
+}

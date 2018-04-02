@@ -1,0 +1,265 @@
+<!-- BEGIN PAGE CONTENT-->
+<!--<h1 class="page-title display-inline-block"> Knowledge Store</h1>-->
+<div class="page-toolbar display-inline-block pull-right"></div>
+ 
+	<div class="row background-white search-holder">
+	
+		<div class="row col-md-12"> 
+		<div id="FAQContainer" class="col-md-6">
+			
+				<label class="control-label" id="lblsmartfaq">Search Smart FAQ</label>
+						<input type="checkbox" class="strChkBox checkbox-inline" style="margin-top: 0px"
+                                                        name="SmartFaq" id="chksmartfaq">
+					
+			
+		</div>
+		</div>
+		<div class="row col-md-12"> 
+		
+		<div id="searchContainer" class="col-md-6">
+			  <div class="input-group col-xs-9 col-md-9 col-sm-9 pull-left">
+				<div class="form-group has-feedback has-clear">
+				  <input type="text" class="form-control" id="searchDoc" placeholder="Search">
+				  <span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>
+				</div>
+				<span class="input-group-btn">
+				  <!-- <button type="button" class="btn btn-primary" id="exampleButton1">Search</button> -->
+				  <button id="searchKDoc" class="btn grey-mint" type="button">
+						<i class="fa fa-search fa-fw"></i></button>
+				</span>
+			  </div>
+			  <div class="col-md-3 col-sm-3 col-xs-3">
+				<button type="button" id="moreFiltersBtn" class="btn blue btn-primary" data-toggle="modal" href="#moreFiltersPopup">More Filter</button>
+			  </div>
+		</div>
+		<div id="filterTagsContainer" class="col-md-7 tagsinput pull-left" >			
+										
+		</div>
+		</div>
+		 
+			
+		 
+	</div>
+	<div class="clearfix">
+	</div>
+	<div class="portlet light">
+		<div class="portlet-title">
+			<div id="docActionContainer" class="col-md-12">
+				<h4 class="inline pull-left kwdg-store-doc-count">0 Results</h4>
+				<div class="subDocActionContainer pull-right">
+					<a href="#" id="docEleAddPackage" class="btn blue btn-primary disabled" data-toggle="modal"><i class="fa fa-folder-o"></i> ADD TO KNOWLEDGE PACKAGE </a>
+					<!-- <a href="javascript:;" id="docEleDelete" class="btn grey-cascade disabled confirmation-callback" data-placement="top" data-title="Are you sure?" data-toggle='confirmation' data-content="This action will delete selected Document/s"><i class="fa fa-remove"></i> DELETE </a> -->
+					<!-- <a href="javascript:;" id="docEleDelete" class="btn btn default disabled" ><i class="fa fa-remove"></i> DELETE </a> -->
+					<select class="form-control input-small inline-block margin-left-10" name="select" id="sortDropdown">
+						<option value="">Select...</option>
+						<option value = "published">Published</option>
+						<option value = "mostviewed">Most Viewed</option>
+						<option value = "recentlyviewed">Recently Viewed</option>
+						<option value = "lastviewed">Last Viewed</option>
+						<option value = "newlyuploaded">Newly Uploaded</option>
+					</select>
+					<div class="btn-group coloumn-toggler">
+						<a class="btn default column-toggler-btn" href="javascript:;" data-toggle="dropdown" aria-expanded="false">
+						Columns <i class="fa fa-angle-down"></i>
+						</a>
+						<div id="KDColumnTogglerDropdown" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="portlet-body">
+			<div class="row kd-table-conatainer">
+				 
+			</div>
+		</div>
+	</div>
+	<div class="modal fade bs-modal-lg" id="moreFiltersPopup" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">More Filters</h4>
+				</div>
+				<div class="modal-body" id="modalBodyElement">
+					 <div class="input-fixed"> 
+						<ul class="nav nav-tabs">
+
+						    <li class="active">
+								<a href="#filters_quicktags_tab" data-toggle="tab" >General</a>
+							</li>
+							<li>
+								<a href="#filters_date_tab" data-toggle="tab" >Time</a>
+							</li>
+							<li>
+								<a href="#filters_contenttype_tab" data-toggle="tab" >Content</a>
+							</li>
+						   	
+						</ul>
+						<div class="tab-content">
+						<div class="tab-pane active general-tab" id="filters_quicktags_tab">
+						</div>
+						<div class="tab-pane time-tab" id="filters_date_tab">
+						<div id="timeFilters">
+								<span class=""><label> <input type="radio" name="daysContainerRadios" value="QuickTimeSpan" id="daysContainerRadios" checked=""> Quick Time Span</label</span>
+								<span class="margin-right-10"><label> <input type="radio" name="daysContainerRadios" value="DateRange" id="dateContainerRadios"> Date Range</label</span>
+						</div>
+						 
+							<div class="radio-list row col-md-9" id="daysContainer">							
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Today"> Today </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label><input type="radio"  name="dateFilteroptionsRadios" value="Yesterday"> Yesterday </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Day before Yesterday"> Day before Yesterday </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="This week"> This week </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Previous Week"> Previous Week </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="This day last week"> This day last week </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="This month"> This month </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Previous month"> Previous month </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Last 7 days"> Last 7 days </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="This year"> This year </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Previous year"> Previous year </label></div>
+								<div class="fa-item1 margin-bottom-10 col-md-4 col-sm-3"><label> <input type="radio" name="dateFilteroptionsRadios" value="Year to date "> Year to date </label></div>
+							</div>
+					 
+							
+							<div class="row col-md-8" id="dateContainer">				 
+									<div class="row  form-group col-md-6 ">
+										<label class="control-label col-md-12">From Date</label>
+										<div class="col-md-12">
+											<div class="input-group date-picker date form_datetime">
+												<input type="text" size="16" readonly="" id="fromDate" class="form-control form-filter" readonly="" placeholder="From">
+												<span class="input-group-btn">
+													<button class="btn default date-set" type="button">
+														<i class="fa fa-calendar"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+									</div>
+							 
+									<div class="row form-group col-md-6">
+										<label class="control-label col-md-12">To Date</label>
+										<div class="col-md-12">
+											<div class="input-group date date-picker form_datetime"  >
+												<input type="text" size="16" readonly="" id="toDate" class="form-control form-filter" readonly="" placeholder="To">
+												<span class="input-group-btn">
+													<button class="btn default date-set" type="button">
+														<i class="fa fa-calendar"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+									</div>
+						</div>
+							
+						</div>
+						<div class="tab-pane content-tab" id="filters_contenttype_tab">
+						  <div class="form-group">
+                                                    
+                                          <div class="col-md-8 row">
+										  <span class="col-md-12 margin-bottom-10"> Search content by:</span>
+												<div class="checkbox-list">
+												 <div class="col-md-4">
+													<label><input type="checkbox" name="type" value="Dashboard"><i class="fa fa-dashboard"></i> Dashboard </label>
+													<label><input type="checkbox" name="type" value="Documents"><i class="fa fa-file-text-o"></i> Documents </label>
+													<label><input type="checkbox" name="type" value="Visualization"><i class="fa fa-eye"></i> Visualization </label>
+												        <label><input type="checkbox" name="type" value="Url"><i class="fa fa-flash"></i> URL </label>
+												 </div>
+												</div>
+											</div>
+                          </div> 
+				</div>
+						</div>
+				 </div> 
+				 
+				 <div class="modal-footer">
+				   <div class="col-md-6 error-msg-container">
+					  <div class="alert alert-danger text-left margin-bottom-5" style="display:none;"><strong>Error!</strong><span class="error-msg"></span> </div>
+				   </div>
+					<div class="col-md-2">				
+					  <button type="button" class="btn blue" id="submit-Form" onclick="knowledgestore.clearFilter(this)">CLEAR ALL FILTERS</button>					  
+				   </div>
+				   <div class="col-md-4 pull-right">				
+					  <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+					  <button type="button" class="btn blue" id="submit-Form" onclick="knowledgestore.saveChanges()">SAVE CHANGES</button>
+				   </div>
+				</div>
+				
+				</div>
+			
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+   </div>
+	  <!-- Popu over Data Start-->
+	<div id="popover_container">
+	<div id="a2" class="hidden">
+	   <div class="popover-heading"> </div>
+	   
+	</div>
+	</div>
+	 <!-- Popu over Data Start-->
+	 <!-- Pop over for more inof start -->
+	  <div class="modal fade bs-modal-lg" id="showMoreTextInfoModal" tabindex="-1" role="basic"  >
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+					<h4 class="modal-title" id="moreInfoModalTitle"></h4>
+				</div>
+				<div class="modal-body"   > 
+					<div id="modelInfo"  style="height:450px;overflow-y:auto;overflow-x:auto" ></div>  </div>
+				<div class="modal-footer">
+					<button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+				   
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	 <!-- Pop over for more inof end -->
+	 
+	  <!-- Pop over for Addknowledge package Start -->
+	 <div class="modal fade in" id="knowledgePackageInfoModal" tabindex="-1" role="basic" aria-hidden="true" style="display:none; padding-right: 17px;">
+	   <div class="modal-dialog">
+		  <div class="modal-content col-md-10">
+			 <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h3 class="modal-title">Add to knowledge package</h3>
+			 </div>
+			 <div class="modal-body">
+				<div id="">
+				   <span class="">
+					  <label>
+						 <input type="radio" name="newPackageContainerRadios" value="New" id="newContainerRadios" checked=""> New</label>				   </span>
+				   <span class="" style="padding-left:30px"><label> <input type="radio" name="newPackageContainerRadios" value="Addtoexisting" id="addContainerRadios"> Add to existing</label></span>
+				</div>
+				<div class="input-group col-xs-10 col-md-10 col-sm-10 " id="nameContainer" style="height:110px">
+				<label>Name</label> 
+				<div class="form-group has-feedback has-clear">
+				<input type="text" class="form-control" id="packageName" >
+				</div>
+				</div>
+				<div class="input-group col-xs-10 col-md-10 col-sm-10"  id="selectPackageContainer" style="height:110px; display:none">
+				   <label>Select package</label>
+				   <div class="existingPackageContainer">
+				   
+					  <select id="existingPackageList" class="form-control">
+					  </select>
+				   </div>
+				</div>
+				<div class="modal-footer">
+				   <button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+				   <button type="button" class="btn blue" onclick="knowledgestore._AddKnowledgeToPackage();">ADD</button>
+				</div>
+			 </div>
+			 <!-- /.modal-content -->
+		  </div>
+		  <!-- /.modal-dialog -->
+	   </div>
+	</div>
+	<!-- Pop over for Addknowledge package end -->
+<!-- END PAGE CONTENT-->	
+
+	
+

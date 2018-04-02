@@ -1,0 +1,25 @@
+[
+	{
+		"title": "General",
+		"options": [{
+			"displayName": "Streams",
+			"type": "multiSelect",
+			"enable": "yes",
+			"subOptions": ["Hardware", "Software", "Mechanical","Hardware1"],
+			"field_name": "Stream_Name"
+		},
+		{
+			"displayName": "Activities",
+			"type": "multiSelect",
+			"enable": "yes",
+			"subOptions": ["Designing", "HW Architecture", "Coding", "HW Layout Routing"],
+			"field_name": "Activity_Name"
+		}, {
+			"displayName": "Technology",
+			"type": "multiSelect",
+			"enable": "yes",
+			"subOptions": ["C#", "JAVA", "COBAL", "PCB Thermal design"],
+			"field_name": "Technology_Name"
+		}]
+	}
+]

@@ -1,0 +1,109 @@
+    <div class="pretty-split-pane-frame"><!-- This div is added for styling purposes only. It's not part of the split-pane plugin. -->
+            <div class="split-pane vertical-percent" style="min-height:520px;">
+                <div class="split-pane-component" id="left-component">
+                    <div class="pretty-split-pane-component-inner"><!-- This div is added for styling purposes only. It's not part of the split-pane plugin. -->
+                       <div id="documentsjstree" >
+                                </div>
+                    </div>
+                </div>
+                <div class="split-pane-divider" id="my-divider"></div>
+                <div class="split-pane-component" id="right-component">
+                    <div class="pretty-split-pane-component-inner" style="padding-top:4px;"><!-- This div is added for styling purposes only. It's not part of the split-pane plugin. -->
+                      
+                      
+                        <div class="portlet green-meadow box" >
+                    <div class="portlet-title">
+                        <div class="caption" style="width:50%;" id="captionDiv">
+                            
+                        </div>
+
+                         <div class="actions pull-left" style="width:50%;">
+
+                                
+                           
+                            
+                              <div class="col-md-3" >  
+                              <div class="btn-group hidden-sm hidden-xs ">
+                                <a class="btn default " href="javascript:;" data-toggle="dropdown">
+                                Columns <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div id="treegrid_4_column_toggler" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">                                           
+                                </div>
+                                 </div>
+                               </div>  
+
+
+                               <div class="col-md-9 pull-right" >   
+                                <div class="col-md-12 input-group ">
+                                   <input type="text" class="form-control input-circle-left" 
+                                      id="contextSearchInput" placeholder="Search Here">
+                                      <span class="input-group-addon input-circle-right">
+                                      <i class="glyphicon glyphicon-search"></i>
+                                      </span>
+                                </div>
+                           
+                            </div>  
+                             
+                            </div>
+
+
+
+                       
+                        
+                    </div>
+
+                    <div class="portlet-body">                               
+                        
+                                   
+
+                                <table class="table table-striped table-bordered table-hover dataTable no-footer"
+                                 id="knowledgedocuments_4">
+                                <thead>
+                                    <tr id="tableheaderRow">
+                                    </tr>
+                                
+                                </thead>
+                                <tbody id="tableBody">
+                                
+                                </tbody>
+                                </table>
+                               
+                                                
+                        </div>
+               </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="modal fade" id="documentinfoModal" tabindex="-1" role="basic" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title" id="moreInfoModalTitle"></h4>
+            </div>
+            <div class="modal-body"> 
+                 <!-- BEGIN FORM-->
+                    <div  class="form-horizontal">
+                        <div class="form-body" id="ktmodalbody" style="height:300px;overflow-y:auto;overflow-x:hidden;">                       
+                            
+                                                                            
+                        </div>
+                        
+                    </div>
+                 <!-- END FORM-->
+                                      
+                
+              </div>
+            <div class="modal-footer">
+                 <button type="submit" class="btn btn-circle blue" onClick="knowledgedocuments.onSubmitClickForDocument()">Submit
+                                    </button>
+                <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+               
+            </div>
+      </div>
+     <!-- /.modal-content -->
+    </div>
+  <!-- /.modal-dialog -->
+</div>        

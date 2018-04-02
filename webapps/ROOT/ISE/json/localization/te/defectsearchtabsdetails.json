@@ -1,0 +1,37 @@
+[
+ 
+  {
+    
+    "defectsearchtabs": {
+       
+        "tabdetails": [
+          {
+            "tabid": "tab_1_1",
+            "label": "Similar Search",
+			"active": "yes",
+			"labelname":"ఇలాంటి శోధన"
+          },
+          {
+            "tabid": "tab_1_2",
+            "label": "Context Search",
+			"active": "no",
+			"labelname":"కాంటెక్స్ట్ శోధన"
+          },
+          {
+            "tabid": "tab_1_3",
+            "label": "Advanced Search",
+			"active": "no",
+			"labelname":"అధునాతన శోధన"
+          },
+          {
+            "tabid": "tab_1_4",
+            "label": "File Search",
+			"active": "no",
+			"labelname":"ఫైలు శోధన"
+          }
+        ]
+      
+    }
+  }
+  
+]

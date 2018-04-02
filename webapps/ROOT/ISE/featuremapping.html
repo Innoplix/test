@@ -1,0 +1,594 @@
+<div class="row">
+					<div class="col-md-12">
+						<div class="portlet box blue-hoki">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="fa fa-gift"></i>Feature Mapping
+								</div>
+								<div class="tools">
+									
+									<a href="javascript:;" class="collapse">
+									</a>
+									<a href="javascript:;" class="reload">
+									</a>
+									<a href="javascript:;" class="fullscreen">
+									</a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<!-- <div class="row" id="featuremapping_Buckets">
+								</div> -->
+								<div  id="featuremapping_Table">
+                                     
+                                     	<div id="sample_2_wrapper1" class="dataTables_wrapper no-footer"><div class=""><table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_2" role="grid" aria-describedby="sample_2_info">
+								<thead>
+								<tr role="row"><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Features 
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Testcases 
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Defects
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										 
+									: activate to sort column ascending" >
+										Sources
+									</th>
+								
+								</tr>
+								</thead>
+								<tbody id="featuremappingTablebody">
+							
+										
+							</tbody>
+
+								<!--  <div class="DTTT btn-group">
+									    <a class="btn btn-default DTTT_button_copy" id="ToolTables_sample_4_orphansDDefects_0">
+											<span>Copy</span>
+											<div style="position: absolute; left: 0px; top: 0px; width: 55px; height: 31px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_5" src="metronics/global/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="55" height="31" name="ZeroClipboard_TableToolsMovie_5" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=5&amp;width=55&amp;height=31" wmode="transparent">
+											</div>
+										</a>
+						 <a class="btn btn-default DTTT_button_csv"id="ToolTables_sample_4_orphansDDefects_1">
+													<span>CSV</span>
+													<div style="position: absolute; left: 0px; top: 0px; width: 50px; height: 31px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_6" src="metronics/global/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="50" height="31" name="ZeroClipboard_TableToolsMovie_6" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=6&amp;width=50&amp;height=31" wmode="transparent"></div>
+											</a>
+										<a class="btn btn-default DTTT_button_xls" id="ToolTables_sample_4_orphansDDefects_2"><span>Excel</span><div style="position: absolute; left: 0px; top: 0px; width: 54px; height: 31px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_7" src="metronics/global/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="54" height="31" name="ZeroClipboard_TableToolsMovie_7" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=7&amp;width=54&amp;height=31" wmode="transparent"></div>
+										</a>
+										<a class="btn btn-default DTTT_button_pdf" id="ToolTables_sample_4_orphansDDefects_3"><span>PDF</span><div style="position: absolute; left: 0px; top: 0px; width: 49px; height: 31px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_8" src="metronics/global/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="49" height="31" name="ZeroClipboard_TableToolsMovie_8" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=8&amp;width=49&amp;height=31" wmode="transparent"></div></a>
+										<a class="btn btn-default DTTT_button_print" id="ToolTables_sample_4_orphansDDefects_4" title="View print view"><span>Print</span>
+										</a>
+							</div>-->
+								</table></div></div>
+
+
+								
+								</div>
+							</div>
+</div>
+
+<div class="modal fade bs-modal-lg" id="largefeature" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title">Orphan Defects</h4>-->
+											</div>
+											<!--<div id="featuremapping_BucketsPopup" class="modal-body">
+												 
+											</div> -->
+
+											   <div  id="featuremapping_TablePopup">
+                                     
+                                     	<div id="sample_21_wrapper1" class="dataTables_wrapper no-footer hide"><div class=""><table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_21FM" role="grid" aria-describedby="sample_21_info">
+								<thead>
+								<tr role="row"><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Features 
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Testcases 
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Defects
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										 
+									: activate to sort column ascending" >
+										Sources
+									</th>
+								
+								</tr>
+								</thead>
+								<tbody id="featuremappingPopupTablebody">
+							
+										
+							</tbody>
+
+
+				 
+
+
+								</table></div></div>
+
+
+								
+								</div>
+
+	 <div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingD">
+			<div class="portlet box">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingD">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="overflow-y:auto !important" id="resultTabContent_featuremappingD">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+
+<!--source starts-->
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingS">
+			<div class="portlet box">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingS">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="overflow-y:auto !important" id="resultTabContent_featuremappingS">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+<!--source End-->
+
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingT">
+			<div class="portlet box">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingT">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="overflow-y:auto !important" id="resultTabContent_featuremappingT">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+											<div class="modal-footer">
+												<button type="button" class="btn default pull-left" id = "btn_change" data-dismiss="modal" onClick="featuremapping.changeFeatureBtnHandler()">Change Feature</button>
+												<button type="button" class="btn default pull-left" id = "addModel" data-dismiss="modal" onClick="">Apply Mapping Model</button>
+												<button type="button" class="btn default" data-dismiss="modal">Close</button>
+												<!--<button type="button" class="btn blue">Save changes</button>-->
+											</div>
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+								
+								<div class="modal fade bs-modal-lg" id="largefeatureP" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title">Orphan Defects</h4>-->
+											</div>
+											<!--<div id="featuremapping_BucketsPopup" class="modal-body">
+												 
+											</div> -->
+											
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingDP">
+			<div class="portlet box ">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingDP">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="overflow-y:auto !important" id="resultTabContent_featuremappingDP">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingTP">
+			<div class="portlet box ">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingTP">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="overflow-y:auto !important" id="resultTabContent_featuremappingTP">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+
+<!--featuremapping sp-->
+
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingSP">
+			<div class="portlet box ">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingSP">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="overflow-y:auto !important" id="resultTabContent_featuremappingSP">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+
+											<div class="modal-footer">
+												<button type="button" class="btn default pull-left" id = "btn_change" data-dismiss="modal" onClick="featuremapping.changeFeatureBtnHandler()">Change Feature</button>
+												<button type="button" class="btn default pull-left" id = "addMapping" data-dismiss="modal" onClick="">Add  To Mapping Model</button>
+                                                <button type="button" class="btn default pull-left" id = "mappingModel" data-dismiss="modal" onClick="">Feature Mapping Model</button>
+												<button type="button" class="btn default" data-dismiss="modal">Close</button>
+												<!--<button type="button" class="btn blue">Save changes</button>-->
+											</div>
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+
+
+
+    <div class="modal fade bs-modal-lg" id="largefeature" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title">Orphan Defects</h4>-->
+											</div>
+											<!-- <div id="featuremapping_BucketsPopup" >
+												 
+											</div> -->
+
+											   <div  id="featuremapping_TablePopup" class="modal-body">
+                                     
+                                     	<div id="sample_21_wrapper1" class="dataTables_wrapper no-footer hide"><div class=""><table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_21FM" role="grid" aria-describedby="sample_21_info">
+								<thead>
+								<tr role="row"><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Features 
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Testcases 
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Defects
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										 
+									: activate to sort column ascending" >
+										Sources
+									</th>
+								
+								</tr>
+								</thead>
+								<tbody id="featuremappingPopupTablebody">
+							
+										
+							</tbody>
+
+
+				 
+
+
+								</table></div></div>
+
+
+								
+								</div>
+
+	 <div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingD">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingD">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_featuremappingD">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingT">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingT">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_featuremappingT">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingS">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingS">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_featuremappingS">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+											<div class="modal-footer">
+												<button type="button" class="btn default pull-left" id = "btn_change" data-dismiss="modal" onClick="featuremapping.changeFeatureBtnHandler()">Change Feature</button>
+												<button type="button" class="btn default pull-left" id = "addMapping" data-dismiss="modal" onClick="">Add  To Mapping Model</button>
+                                                <button type="button" class="btn default pull-left" id = "mappingModel" data-dismiss="modal" onClick="">Feature Mapping Model</button>
+												<button type="button" class="btn default" data-dismiss="modal">Close</button>
+												<!--<button type="button" class="btn blue">Save changes</button>-->
+											</div>
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+
+								<div class="modal fade bs-modal-lg" id="largefeature" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title">Orphan Defects</h4>-->
+											</div>
+											<!--<div id="featuremapping_BucketsPopup" class="modal-body">
+												 
+											</div> -->
+
+											   <div  id="featuremapping_TablePopup">
+                                     
+                                     	<div id="sample_21_wrapper1" class="dataTables_wrapper no-footer hide"><div class=""><table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_21FM" role="grid" aria-describedby="sample_21_info">
+								<thead>
+								<tr role="row"><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Features 
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Testcases 
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Defects
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										 
+									: activate to sort column ascending" >
+										Sources
+									</th>
+								
+								</tr>
+								</thead>
+								<tbody id="featuremappingPopupTablebody">
+							
+										
+							</tbody>
+
+
+				 
+
+
+								</table></div></div>
+
+
+								
+								</div>
+
+	 <div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingD">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingD">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_featuremappingD">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingT">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingT">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_featuremappingT">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	
+	
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_featuremappingS">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_featuremappingS">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_featuremappingS">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	
+	
+											<div class="modal-footer">
+												<button type="button" class="btn default pull-left" id = "btn_change" data-dismiss="modal" onClick="featuremapping.changeFeatureBtnHandler()">Change Feature</button>
+												<button type="button" class="btn default" data-dismiss="modal">Close</button>
+												<!--<button type="button" class="btn blue">Save changes</button>-->
+											</div>
+
+                            
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+
+
+								<div class="modal fade bs-modal-lg" id="large2" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="featuremapping.clearCheckboxes()"></button>
+												
+											</div>
+							<div class="modal-body">
+							  <div>
+                                <div class="portlet light ">
+                                  <div class="portlet-title">
+                                     <div class="caption">
+                                        <i class="icon-bubble font-green-sharp"></i>
+                                        <span class="caption-subject font-green-sharp bold uppercase">Checkable Tree</span>
+                                      </div>
+                                    
+                                   </div>
+                                  
+
+						            <div class="portlet-body" style = "overflow-y: auto;height: 396px;">
+
+
+						                    <div id="tree_21" class="tree-demo jstree jstree-2 jstree-default jstree-checkbox-selection"    role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j2_1" aria-    busy="false" aria-selected="false">
+
+
+							                <ul class="jstree-container-ul jstree-children jstree-wholerow-ul jstree-no-dots" role="group" id="jsonULElement">
+							                            
+						                     </ul>
+										    </div>
+
+										    
+
+										    </div>
+
+								 </div>
+								</div> 
+
+							    </div>
+
+											<div class="modal-footer">
+												<button type="button" class="btn default" data-dismiss="modal" onclick="featuremapping.clearCheckboxes()">Close</button>
+												<button type="button" class="btn blue" onclick="featuremapping.saveChanges()">Save changes</button>
+											</div>
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+
+								</div>
+										
+									</div>
+									

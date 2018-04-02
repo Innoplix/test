@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<server className="net.sf.j2ep.servers.BaseServer" 
+		domainName="tb.hclt.corp.hcl.in" 
+		isRewriting="true">
+		
+		<rule className="net.sf.j2ep.rules.DirectoryRule"
+	  		directory="/pi"
+	  	/>
+	</server>
+	
+	<server className="net.sf.j2ep.servers.BaseServer"
+		domainName="tb.hclt.corp.hcl.in"
+		isRewriting="true">
+	
+		<rule className="net.sf.j2ep.rules.AcceptEverythingRule"/>
+  	</server>
+
+</config>

@@ -1,0 +1,39 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 4,
+	"tooltips": [
+		{
+			"selector": "#searchLocalDoc",
+			"step": "1",
+			"help": "Here you can search for knowledge trainings completed by you ",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Search for Knowledge "
+		},
+		{
+			"selector": "#myAssignationDropdown",
+			"step": "2",
+			"help": "Use this to filter the training's according to the completion status",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Training Status"
+		},
+		{
+			"selector": "#mkpTitleRow",
+			"step": "3",
+			"help": "This is the training name ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Training Name"
+		},
+		{
+			"selector": "A[href='javascript:;']A:contains('Save')",
+			"step": "4",
+			"help": "Click here to save your training status",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Click here to save"
+		}
+	],
+	"title": "ISE"
+}

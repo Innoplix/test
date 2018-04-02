@@ -1,0 +1,113 @@
+[{
+        "title": "Quick Filter",
+        "options": [{
+                "displayName": "All open tickets",
+                "displayPage": ["defectsLocalization","defectsearch"],
+                "enable": "yes",
+                "filter": "-status:Active",
+                "isDateFilter":"no",
+				"displayId": "All open tickets"
+
+            }, {
+                "displayName": "Opened in last 30 days",
+                "displayPage": ["defectsLocalization","defectsearch"],
+                "enable": "yes",
+                "filter": "last_30_days to *",
+                "isDateFilter":"yes",
+				"displayId": "Opened in last 30 days"
+
+            }
+
+        ]
+    }, {
+        "title": "Basic Filter",
+        "options": [{
+                "displayName": "Build",
+                "elementId" : "buildControl",
+                "displayPage": ["defectsLocalization","defectsearch"],
+                "enable": "no",
+				"displayId": "Build"
+            }
+
+            , {
+                "displayName": "Release",
+                "elementId" : "releaseControl",
+                "displayPage": ["defectsLocalization","defectsearch"],
+                "enable": "yes",
+				"displayId": "Release"
+
+            }, {
+                "displayName": "Feature",
+                "elementId" : "featureControl",
+                "displayPage": ["defectassignationview","defectsearch"],
+                "enable": "yes",
+				"displayId": "Feature"
+
+            }, {
+                "displayName": "Status",
+                "elementId" : "statusControls",
+                "displayPage": ["defectassignationview","defectsearch"],
+                "enable": "yes",
+				"displayId": "Status"
+
+            },
+            {
+                "displayName": "DefectSearch",
+                "elementId" : "DefectSearchControl",
+                "displayPage": ["defectsLocalization"],
+                "enable": "yes",
+				"displayId": "DefectSearch"
+
+            }, {
+                "displayName": "DefectId",
+                "elementId" : "defectIdControl",
+                "displayPage": ["defectsLocalization"],
+                "enable": "yes",
+				"displayId": "DefectId"
+
+            }, {
+                "displayName": "Status",
+                "elementId" : "statusControl",
+                "displayPage": ["defectassignationview"],
+                "enable": "no",
+				"displayId": "Status"
+
+            }, {
+                "displayName": "Percentage",
+                "elementId" : "percentageControl",
+                "displayPage": ["defectassignationview"],
+                "enable": "no",
+				"displayId": "Percentage"
+
+            }
+
+        ]
+    },
+    {
+        "title": "datatimefields",
+
+        "options": [
+            {
+                "displayName": "Create Date",
+                "field": "create_date",
+                "displayPage": ["defectassignationview","defectsearch"],
+                 "enable": "yes",
+				 "displayId": "Create Date"
+            },
+            {
+                "displayName": "Closed Date",
+                "field": "close_date",
+                 "displayPage": ["defectassignationview","defectsearch"],
+                 "enable": "yes",
+				 "displayId": "Closed Date"
+            },
+            {
+                "displayName": "Fixed Date",
+                "field": "fix_date",
+                 "displayPage": ["defectassignationview","defectsearch"],
+                 "enable": "yes",
+				 "displayId": "Fixed Date"
+            }
+        ]
+    }
+]

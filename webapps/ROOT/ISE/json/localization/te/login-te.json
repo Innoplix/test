@@ -1,0 +1,28 @@
+{
+  "language": {
+	"Please provide username":"దయచేసి వినియోగదారు పేరు అందించండి.",
+	"You are the new user":"మీరు క్రొత్త యూజర్",
+	"click here":"ఇక్కడ నొక్కండి..",
+	"to signup":"సైన్ అప్ చేయడానికి",
+	"Welcome to iSE":"ISE కు స్వాగతం",
+	"full Name":"పూర్తి పేరు",
+	"email":"ఇమెయిల్",
+	"Project details required for first time user":"మొదటిసారి వినియోగదారు ప్రాజెక్ట్ వివరాలు అవసరం",
+	"signup":"చేరడం",
+	"Close":"మూయు",
+	"Please fill Mandatory fileds":"తప్పనిసరి ఫిల్డ్స్ నింపండి",
+	"Please provide password":"దయచేసి పాస్వర్డ్ను అందించండి.",
+	"You have to accept terms & conditions":"మీరు నియమ నిబంధనలను అంగీకరించాలి.",
+	"Username": "యూజర్ పేరు",
+    "password": "పాస్వర్డ్",
+	"I accept terms & conditions": "షరతులు మరియు నిబంధనలు",
+	"Read agreement": "ఒప్పందం చదవండి.",
+	"Login": "లాగిన్",
+	  
+	  "selectproject": {
+	   "option": "ప్రాజెక్ట్ ఎంచుకోండి"
+	                }
+
+  }
+
+}

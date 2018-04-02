@@ -1,0 +1,219 @@
+{
+  "TableDetails": {
+    "KnowledgePackage": {
+      "displayName": "KnowledgePackage",
+      "enable": "yes",
+      "indexName": "kb_docs_collection",
+      "additionalFilters": "",
+      "allowedroles": [
+        "Admin",
+        "Test_Manager",
+        "Tester",
+        "Developer"
+      ],
+      "defaultView": [
+        "Title",
+		"Start-Date",
+		"End-Date",
+		"Training-Mode",
+		"Evaluation-Mode",
+		"Reviewer"
+      ],
+      "mobileView": [
+        "Title",
+		"Start-Date",
+		"End-Date",
+		"Training-Mode",
+		"Evaluation-Mode",
+		"Reviewer"
+      ],
+      "Details": {
+        "fields": [
+          {
+            "displayName": "KnowledgeId",
+            "SourceName": "_id",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "id",
+            "filter": "no"
+          },
+          {
+            "displayName": "Title",
+            "SourceName": "title",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "url",
+            "filter": "no"
+          },
+          {
+            "displayName": "Description",
+            "SourceName": "description",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "string",
+            "filter": "no"
+          },
+          {
+            "displayName": "Tags",
+            "SourceName": "tags",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "array",
+            "filter": "no"
+          },
+          {
+            "displayName": "Assets",
+            "SourceName": "knowledgeAssets",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "array",
+			"propertyName": "assetName",
+            "filter": "yes"
+          },
+          {
+            "displayName": "Modified",
+            "SourceName": "published_at",
+            "dervied": "",
+            "enable": "yes",
+            "type": "date",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "date",
+            "filter": "no"
+          },
+          {
+            "displayName": "Contributor",
+            "SourceName": "user",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "string",
+            "filter": "no"         
+          },
+		  {
+            "displayName": "Start-Date",
+            "SourceName": "startDate",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "datePicker",
+            "filter": "no"         
+          },
+		  {
+            "displayName": "End-Date",
+            "SourceName": "endDate",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "datePicker",
+            "filter": "no"         
+          },
+		  {
+            "displayName": "Training-Mode",
+            "SourceName": "trainingMode",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "multiSelect",
+			"subOptions": ["Classroom", "On-line", "Mentor", "External-Training"],
+            "filter": "no"         
+          },
+		  {
+            "displayName": "Evaluation-Mode",
+            "SourceName": "evaluationMode",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "multiSelect",
+			"subOptions": ["POC", "Interview", "Certification", "Understanding-Document"],
+            "filter": "no"         
+          },
+		  {
+            "displayName": "Reviewer",
+            "SourceName": "reviewerName",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "comboBox",
+            "filter": "no"         
+          }		
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,672 @@
+<!-- BEGIN PAGE CONTENT-->
+<h1 class="page-title display-inline-block"> Knowledge Title</h1>
+<a class="btn btn-circle btn-icon-only btn-default margin-bottom-10 edit-knowledge-btn" onclick="knowledgereadandedit._editKnowledge()" title="Edit">
+					<i class="fa fa-edit"></i>
+</a>				
+<div class="page-toolbar display-inline-block pull-right"></div>
+	<div class="portlet light">
+		<div class="portlet-title"> 
+			<div class="top-save-cancel-btn-grp form-group margin-top-10">
+				<label class="control-label" id="lblsmartfaq" >Is Smart Faq?</label>
+						<input type="checkbox" class="strChkBox checkbox-inline" style="margin-top: 0px"
+                                                        name="SmartFaq" id="chksmartfaq">
+						<button type="button" id="btnAddMoreFaq" class="btn blue" data-toggle="modal"><i class="fa fa-plus"></i>Add more FAQ</button>
+				
+				<div class="pull-right save-cancel-btn-grp margin-left-10" style="display:none">
+					<button type="button" class="btn default cancel-knowledge-doc">Cancel</button>
+					<button type="button" class="btn blue save-knowledge-doc">Save</button>
+				</div>
+			</div>
+		</div>
+		<div class="portlet-body">
+			<div class="row background-white">
+			
+				<div class="col-md-12 action-edit-view-container"> 
+					
+					<div class="form-group" id="divTitle">
+						<label class="control-label">Title</label>&nbsp;&nbsp;
+						<input type="checkbox" class="checkbox-inline" style="margin-top:0px" name="MultiLingual" id="chkMultiLingual"> <span id="HMultilingual">Non-English</span>						
+						<input type="text" class="form-control" id="knowledge_title" readonly>
+					</div>
+                    <div id="results" class="did-you-mean-conatiner">
+                    </div>
+					<div class="form-group">
+						<label class="control-label" id="labelDescription">Description</label>
+						<div id="knowledgeDescription" style="display:none"></div>				
+						<div class="summernote" id="knowledge_new_edit_description"></div>
+					</div>
+					<div class="form-group overflow-hidden">
+						<label class="control-label">Attachments</label>
+						<div id="addAssetsCoantainer" style="display:none">
+
+						<table id="table1" border="0">                                                                                                                
+						<tbody>
+						<tr> 
+						<td>
+							 <button type="button" id="addFilesBtn" class="btn blue" data-toggle="modal"><i class="fa fa-plus"></i> ADD FILES</button>
+						</td>
+						<td>&nbsp;&nbsp;&nbsp;</td>
+						<td>
+									   <button type="button" id="addUrlsFileBtn" class="btn blue" data-toggle="modal"><i class="fa fa-plus"></i> ADD URL(S)</button>
+						</td>
+						<td>&nbsp;&nbsp;&nbsp;</td>
+						<td>
+									   <button type="button" id="addDashboardBtn" class="btn blue" data-toggle="modal"><i class="fa fa-plus"></i> ADD DASHBOARD</button>
+						</td>
+						<td>&nbsp;&nbsp;&nbsp;</td>
+						<td>
+									   <button type="button" id="addVisualizationBtn" class="btn blue" data-toggle="modal"><i class="fa fa-plus"></i> ADD VISUALIZATION</button>
+						</td>
+						</tr>
+						</tbody>
+						</table>
+						</div>
+						<div id="knowledgeAssetsContainer">
+							<div id="filesAssetContainer" class="margin-top-10">
+							
+							</div>
+							<div id="urlAssetContainer" class="margin-top-10">
+							
+							</div>
+							<div id="mediaAssetContainer" class="margin-top-10">
+							
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Tags</label>
+						<div id="addTagsContainer" style="display:none">
+							  <div class="input-group col-xs-6 col-md-2 col-sm-6 pull-left">
+								<div class="form-group has-feedback has-clear">
+								  <input type="text" class="form-control" id="addTagInput" placeholder="Type here...">
+								  <span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>
+								</div>
+								
+							  </div>
+							  <div>
+								<button type="button" id="addTagBtn" class="btn blue btn-primary" data-toggle="modal">ADD TAG</button>
+							  </div>
+						</div>
+						<div id="filterTagsHolder" class="tagsinput" style="display: none">			
+														
+						</div>
+					</div>
+                <div class="row">
+				<div class="panel-group accordion col-md-12 margin-top-10" id="metadatacontainer4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse"
+                                    data-parent="#metadatacontainer4" href="#ocrtextContainer" aria-expanded="false">
+                                    OCR text info </a>
+                            </h4>
+                        </div>
+                        <div id="ocrtextContainer" class="panel-collapse collapse" aria-expanded="false">
+                            <div class="panel-body">
+					<div class="form-group overflow-hidden">
+						<div id="OCRContainer" style="overflow-y: scroll;height:70px;">
+						  
+						</div>
+					</div>
+					<div class="form-group overflow-hidden">
+				
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+				
+					</div>
+					
+                <div class="panel-group accordion col-md-12 margin-top-10" id="metadatacontainer">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse"
+                                    data-parent="#metadatacontainer" href="#streamactivitiesContainer" aria-expanded="false">
+                                    Other information </a>
+                            </h4>
+                        </div>
+                        <div id="streamactivitiesContainer" class="panel-collapse collapse" aria-expanded="false">
+                            <div class="panel-body">
+					<div class="form-group overflow-hidden">
+						<div class="streamsContainer">
+						  
+						</div>
+					</div>
+					<div class="form-group overflow-hidden">
+				
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+				
+					</div>
+			
+			<div class="panel-group accordion col-md-12 margin-top-10" id="metadatacontainer3">	
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse"
+                                    data-parent="#metadatacontainer3" href="#ReviewdetailsContainer" aria-expanded="false">
+                                    Reviewer Details </a>
+                            </h4>
+                        </div>
+				
+                        <div id="ReviewdetailsContainer" class="panel-collapse collapse" aria-expanded="false">
+						 <div class="panel-body">
+						 
+						 <div class="form-group overflow-hidden">
+							<div class="ReviewContainer">								
+								
+								<label class="control-label display-block">Reviewer Name</label>
+								<div class="form-group col-md-4"><select id="dds_Reviewer" class="form-control single-select-Reviewer"> 
+									</select>
+				</div>
+								
+									<div class="form-group col-md-4" style="margin-top: 5px;" id="ReviewerChkbox">
+										<label class="mt-checkbox">
+										  <input type="checkbox" class="strChkBox checkbox-inline" style="margin-top:0px" name="Status" id="chkstatus"> <span>Reviewed</span>
+										</label>
+									</div>
+							 
+							 
+							 
+
+								<label class="control-label col-md-12 row" id="reviewerCommentsHeading">Comments</label>
+				<div class="form-group col-md-12">
+								
+					<div id="reviewerComments" ></div>	
+					<div class="summernote" id="knowledge_reviewer_comments"></div>
+				</div>		
+								
+								
+								
+							</div>
+						</div>
+							
+						 </div>
+						 </div>
+						</div>
+                           
+				</div> 
+			
+					<div class="panel-group accordion col-md-12 margin-top-10" id="metadatacontainer2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse"
+                                    data-parent="#metadatacontainer2" href="#SecuritydetailsContainer" aria-expanded="false">
+                                    Security </a>
+                            </h4>
+                        </div>
+				
+                        <div id="SecuritydetailsContainer" class="panel-collapse collapse" aria-expanded="false">
+						 <div class="panel-body">
+						 
+						 <div class="form-group overflow-hidden">
+							<div class="securityContainer">								
+								<label class="control-label display-block">Security level</label>
+								<div class="form-group col-md-4">
+									<select id="dds_securitylevel" class="form-control single-select-Reviewer"> 
+									</select>
+								</div>							
+							 
+							 
+							</div>
+				</div> 
+							
+						 </div>
+						 </div>
+						</div>
+                           
+				
+					
+				</div> 
+					
+				 
+				
+			</div>
+			<div class="clearfix">
+			</div>
+			<div class="row background-white accordion-history-comments">
+				<div class="panel-group accordion col-md-12 margin-top-10" id="historyRatingCommentsContainer">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#historyRatingCommentsContainer" href="#changeHistoryContainer" aria-expanded="false">
+							Change History </a>
+							</h4>
+						</div>
+						<div id="changeHistoryContainer" class="panel-collapse collapse" aria-expanded="false">
+							<div class="panel-body">
+								<div class="change-history-conatainer">
+									<label class="control-label bold">History</label>
+									 <div class="table-responsive">
+										<table id="changehistoryDataTable" class="table">
+											<thead>
+												<tr>
+											
+													<th>Modified</th>
+													<th>Modified by</th>
+													<th>No. of attachments</th>
+													 <th>Status</th>
+													 <th>Comments</th>
+											
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+								 
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#historyRatingCommentsContainer" href="#ratingCommentsContainer">
+							Ratings and Comments</a>
+							</h4>
+						</div>
+						<div id="ratingCommentsContainer" class="panel-collapse collapse">
+							<div class="panel-body" style="max-height:500px; overflow-y:auto;overflow-x: hidden;">
+								<div class="rating-comments-holder">
+								
+									<div class="current-user-comment-wrapper col-md-12" style="display:none;">
+										<label class='margin-bottom-10 comment-heading pull-right' style='display:none'>My Ratings and Comments</label>
+										<div></div>	
+									</div>
+									<!-- Rating Start -->
+									<div class="container margin-bottom-20">
+											 <label>Ratings & Comments</label>
+											 <div class="ratings-block col-md-12 col-xs-12 col-sm-12">
+												<div class="rating-left-block col-md-2 col-sm-10 col-xs-10">
+												   <div class="avgrating"></div>
+												   <div id="rateYo"></div>
+												   <div class="avgrating-total"></div>
+												</div>
+												<div class="rating-right-block col-md-6 col-sm-10 col-xs-10">
+												   <div class="ratings-graph">
+													  <div class="glyphicon glyphicon-star"></div>
+													  <div class="ratingnum">5</div>
+													  <div id="5stardata" class="rating-bar" style="background-color:green"></div>
+												   </div>
+												   <div class="ratings-graph">
+													  <div class="glyphicon glyphicon-star"></div>
+													  <div class="ratingnum">4</div>
+													  <div id="4stardata" class="rating-bar" style="background-color:lightgreen"></div>
+												   </div>
+												   <div class="ratings-graph">
+													  <div class="glyphicon glyphicon-star"></div>
+													  <div class="ratingnum">3</div>
+													  <div id="3stardata" class="rating-bar" style="background-color:yellow"></div>
+												   </div>
+												   <div class="ratings-graph">
+													  <div class="glyphicon glyphicon-star"></div>
+													  <div class="ratingnum">2</div>
+													  <div id="2stardata" class="rating-bar" style="background-color:orange"></div>
+												   </div>
+												   <div class="ratings-graph">
+													  <div class="glyphicon glyphicon-star"></div>
+													  <div class="ratingnum">1</div>
+													  <div id="1stardata" class="rating-bar" style="background-color:pink"></div>
+												   </div> 
+												</div>
+											 </div>
+										  </div>
+										  <!-- Rating Ends -->
+									<div id="comment_wrapper" class="comments-wrapper">
+										<div></div>	
+									</div>
+										
+									
+								</div>  
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row bottom-ctrl-container">
+		<div class="col-md-12">
+			
+			<div class="pull-right bottom-save-cancel-btn-grp" style="display:none">
+				<button type="button" class="btn default cancel-knowledge-doc">Cancel</button>
+				<button type="button" class="btn blue save-knowledge-doc">Save</button>
+			</div>
+			<button type="button" class="btn default close-doc-view pull-right">Cancel</button>
+		</div>
+    </div>
+	<div id="documentcontent">			
+	
+	</div>
+	
+	 
+<!-- END PAGE CONTENT-->	
+<!-- Add knoweledge package popup-->
+<div class="modal fade in" id="addURLsModalContainer" tabindex="-1" role="basic" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content col-md-12">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Add URLs</h4>
+			</div>
+			<div class="modal-body row">
+			<div class="url-search-container">
+				 
+				 
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Url...">
+                        <input type="text" id="txtDisplay" class="form-control" placeholder="Display Text...">
+						<span class="input-group-btn" style="vertical-align:bottom;">
+							<button class="btn blue" id="addURLBtn" type="button">ADD</button>
+						</span>
+					</div>
+				 
+			</div>
+			<div id="urlResultListContainer">
+			</div>
+				
+			</div>
+		<div class="modal-footer">
+				<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+				<button type="button" class="btn blue" onclick="knowledgereadandedit.addUrlsHandler()">ADD Url(s)</button>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+</div>
+<!-- END PAGE CONTENT-->	
+
+<div class="modal fade bs-modal-lg in" id="ViewHtmlContainer" tabindex="-1" role="basic" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content col-md-12">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">View and Create Document</h4>
+			</div>
+			<div class="modal-body row">
+				<div class="viewhtml-search-container col-md-6" id="divDocumentViewer">
+				<!--<div class="search-comp-container">
+				</div>-->
+				<div id="searchContainer">
+					<div class="input-group col-xs-9 col-md-6 col-sm-9">
+						<div class="form-group has-feedback has-clear">
+						  <input type="text" class="form-control" id="searchhtmlDoc" placeholder="Search">
+						</div>
+				  </div>
+				</div>
+					&nbsp;&nbsp;
+					<div class="table-container" id="divfileview1" tabindex="1" >
+				</div>
+			</div>
+				<div class="viewhtml-seleted-container col-md-6" id="divNewKnowledgeCreator">					
+			  <div class="table-right-container" style="min-height: 377px;">
+				<div class="form-group">
+					<input type="text" class="form-control" id="Newknowledgetitle" placeholder="Title">
+					<div class="summernote" id="knowledge_new_know_description" width="420px" height="500px" ></div>
+				</div>
+				</div>
+			</div>
+			</div>
+		<div class="modal-footer">
+
+				<button type="button" class="btn dark btn-default" id="btnSave" onclick="knowledgereadandedit.savetexteditor()">Save</button>
+				<button type="button" class="btn dark btn-default" id="btnClear" onclick="knowledgereadandedit.cleartexteditor()" >Clear</button>
+				<button type="button" class="btn dark btn-default" id="btnCreate" onclick="knowledgereadandedit.createnewknowledge()" >Create new knowledge</button>			
+				<button type="button" class="btn dark btn-default" id="btnClose" data-dismiss="modal">CLOSE</button>
+	
+	</div>
+		 
+	</div>
+	 
+</div>
+</div>
+
+
+
+
+<!-- Add Visualization popup-->
+<div class="modal fade bs-modal-lg in" id="addVisualizationModalContainer" tabindex="-1" role="basic" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content col-md-12">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Add Visualization</h4>
+			</div>
+			<div class="modal-body row">
+			<div class="visualization-search-container col-md-6">
+				<!--<div class="search-comp-container">
+				</div>-->
+				<div id="searchContainer">
+					<div class="input-group col-xs-9 col-md-12 col-sm-9">
+						<div class="form-group has-feedback has-clear">
+						  <input type="text" class="form-control" id="searchLocalDoc" placeholder="Search">
+						</div>
+				  </div>
+				</div>
+				<div class="table-container">
+				</div>
+				 
+				<button class="btn blue btn-block add-docs-btn">ADD <i class="fa fa-angle-right"></i></button>
+                <h1></h1>
+                <br />
+                <div style="display: none;" id="divStability">
+                    <div style="float: left;" id="dvStabilitycontent">
+                    </div>
+                    <div style="float: left;" id="dvHostspotcontent">
+                    </div>
+                </div>
+				 
+			</div>
+			<div class="visualization-seleted-container col-md-6">
+				
+			  <div class="table-right-container" style="min-height: 377px;">
+				</div>
+			<button class="btn blue btn-block remove-docs-btn"><i class="fa fa-angle-left"></i> Remove </button>
+			</div>
+				
+			</div>
+		<div class="modal-footer">
+				<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+				<button type="button" class="btn blue add-visulation-dashboard-btn" onclick="knowledgereadandedit._addLiveKnowledgeHandler()">ADD VISUALIZATION</button>
+		</div>
+		 
+	</div>
+	 
+</div>
+</div>
+<div class="modal fade bs-modal-lg" id="knowledgeReadEditMoreFilterCompModal" tabindex="-1" role="basic" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Filters</h4>
+			</div>
+			<div class="modal-body">
+			 
+				
+			</div>
+		<!-- <div class="modal-footer">
+				<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+				<button type="button" class="btn blue" onclick="knowledgeaddpackage.addMoreFilterHandler()">SAVE</button>
+		</div> -->
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+</div>
+
+<!-- Add knoweledge package popup-->
+<div class="modal fade in" id="knowledgeReadEditAddMoreFAQModal" tabindex="-1" role="basic" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content col-md-12">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Alternate questions</h4>
+			</div>
+			<div class="modal-body row">
+			<div class="faq-search-container">
+				 	<div class="input-group">
+						<input type="text" id="txtDisplayquestion" class="form-control" placeholder="Question...">
+						<span class="input-group-btn" style="vertical-align:bottom;">
+							<button class="btn blue" id="addFAQBtn" type="button">ADD</button>
+						</span>
+					</div>
+				 
+			</div>
+			<div id="FAQResultListContainer">
+			</div>
+				
+			</div>
+		<div class="modal-footer">
+				<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+</div>
+
+
+<!-- Pop over for Addknowledge package Start -->
+ <div class="modal fade in" id="knowledgeReadandEditModal" tabindex="-1" role="basic" aria-hidden="true" style="display:none; padding-right: 17px;">
+   <div class="modal-dialog">
+	  <div class="modal-content col-md-10">
+		 <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+			<h3 class="modal-title popup-title">New Review</h3>
+		 </div>
+		 <div class="modal-body">
+			<div class="popup-wrapper">		
+				<div class="popup-container">  
+					<div>
+						<div>								
+							<div>
+								<div class="margin-bottom">Comment</div>
+								<textarea class="description-container"></textarea>
+							</div>
+							<div class="rating-container">				
+								  
+							</div>
+							<!-- <div class="pop-btn-container">
+								<button class="close-button" value="close">CLOSE</button>
+								<button value="submit" class="submit-button">SUBMIT</button>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>							
+		 </div>
+		 <div class="modal-footer pop-btn-container">
+			   <button type="button" value="close" class="btn dark btn-default close-button" data-dismiss="modal">CLOSE</button>
+			   <button type="button" value="submit" class="btn blue submit-button">SUBMIT</button>
+			</div>	
+		 <!-- /.modal-content -->
+	  </div>
+	  <!-- /.modal-dialog -->
+   </div>
+</div>
+<div class="modal fade in" id="addVisualizationPreviewModalContainer" tabindex="-1" role="basic" aria-hidden="true" style="display:none;">
+	<div class="modal-dialog">
+			<div class="modal-content col-md-12">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+					<h4 class="modal-title">Visualization Preview</h4>
+				</div>
+				<div class="modal-body row">
+				<div class="visualization-container">
+					<label class="visualization-name">  </label>
+					 
+				</div>
+				
+					
+				</div>
+			<div class="modal-footer">
+					<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+					<button type="button" class="btn blue" onclick="knowledgereadandedit.addVisualizationFromPopupHandler()">ADD</button>
+			</div>
+			 
+		</div>
+	</div>
+ 
+</div>
+
+<div class="modal fade in" id="addVisualizationFilterModalContainer" tabindex="-1" role="basic" aria-hidden="true" style="display:none;">
+	<div class="modal-dialog">
+			<div class="modal-content col-md-12">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+					<h4 class="modal-title">Visualization Filter</h4>
+				</div>
+				<div class="modal-body row">
+				<div class="visualization-container">
+					<label class="visualization-name">  </label>
+					<div class="form-group">
+						<label class="control-label">Filter</label>
+						<input type="text" id="txtVisualizationFilter" class="form-control"> 
+					</div>
+					<!--<div class="form-group">
+						<label class="control-label">Filter 2</label>
+						<input type="text" class="form-control"> 
+					</div>
+					<div class="form-group">
+						<label class="control-label">Filter 2</label>
+						<input type="text" class="form-control"> 
+					</div>-->
+				</div>
+				
+					
+				</div>
+			<div class="modal-footer">
+					<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+					<button type="button" class="btn blue" onclick="knowledgereadandedit._addLiveKnowledgeFilterHandler()">ADD</button>
+			</div>
+			 
+		</div>
+	</div>
+ 
+</div>
+
+<div id="confirmationSaveChanges" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Confirmation</h4>
+			</div>
+			<div class="modal-body">
+				<p> Want to save your changes to this knowledge document? </p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn blue save-doc-popup-btn">Save</button>
+				<button type="button" data-dismiss="modal" class="btn green donot-save-doc-popup-btn">Don't Save</button>
+				<button type="button" data-dismiss="modal" class="btn dark btn-outline cancel-doc-popup-btn">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- Pop over for Addknowledge package end -->
+<!-- <div id="addVisualizationModalContainer" class="modal container fade" tabindex="-1">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Add Visualization</h3>
+  </div>
+  <div class="modal-body">
+    <div class="visualization-search-container col-md-6">
+		<div class="search-comp-container">
+		</div>
+		<div class="table-container">
+		</div>
+	</div>
+	<div class="visualization-seleted-container col-md-6">
+	</div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn">CLOSE</button>
+    <button type="button" class="btn btn-primary" onclick="knowledgereadandedit.addUrlsHandler()">ADD Url(s)</button>
+  </div>
+</div> -->
+

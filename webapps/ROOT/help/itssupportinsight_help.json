@@ -1,0 +1,159 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 7,
+	"tooltips": [
+		{
+			"selector": "#CollectionDList",
+			"step": "1",
+			"help": "Select the category from the drop down menu ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Category or Domain"
+		},
+		{
+			"selector": "#txtAnalyzes",
+			"help": "TODO .. Please fill your content ",
+			"position": "right bottom",
+			"positionAt": "left top"
+		},
+		{
+			"selector": "#txtAnalyzes",
+			"step": "2",
+			"help": "Enter your query here!For ex-: \"The firewall is not working\"  ",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Query or Question"
+		},
+		{
+			"selector": "#btn_Assist",
+			"step": "3",
+			"help": "Click on this button to get answers",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Ask"
+		},
+		{
+			"selector": "#questionText",
+			"step": "1",
+			"help": "Enter your question here to get personalised answers! Just type in a few words and it will autocomplete your question",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Question"
+		},
+		{
+			"selector": "#searchfaq I",
+			"step": "2",
+			"help": "Click here to know the solution to your problem",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Click here"
+		},
+		{
+			"selector": "A[href='#common_tab']",
+			"help": "TODO .. Please fill your content ",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "A[href='#common_tab']",
+			"step": "3",
+			"help": "This shows you all the relevant result as per your question.Click on topmost results to know more",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Consolidated Results"
+		},
+		{
+			"selector": "A[href='#splitted_tab']",
+			"help": "TODO .. Please fill your content ",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "A:contains(' Is there any way for me to get the list of Approved Senders from my office computer onto my home computer?')",
+			"step": "4",
+			"help": "This shows all the related issues that you might have and you can refer these accordingly",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Related Questions"
+		},
+		{
+			"selector": "#911 SPAN[title='How to disable Personal Firewall 2010/Version 7']SPAN:contains('How to disable Personal Firewall 201...')",
+			"step": "5",
+			"help": "This shows the category your problem belongs to, you can look at other questions asked as well!",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Topic Category"
+		},
+		{
+			"selector": "#txtIssue",
+			"step": "1",
+			"help": "Enter the issue/ticket number here so that we can identify the problem for you",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Issue Number"
+		},
+		{
+			"selector": "#btnSearch",
+			"step": "2",
+			"help": "Click here to know the details for customer and issue raised.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Search Customer"
+		},
+		{
+			"selector": "#txtContext",
+			"help": "TODO .. Please fill your content ",
+			"position": "left bottom",
+			"positionAt": "center top"
+		},
+		{
+			"selector": "A[href='#tab_1_1']",
+			"step": "3",
+			"help": "This tab tells you what are the product details that the customer is using. It also tell you what all issues are faced by customers with a similar product usage ",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Product Usage"
+		},
+		{
+			"selector": "A[href='#tab_1_2']",
+			"step": "3",
+			"help": "This shows you the previous interactions with a particular customer.",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Customer History"
+		},
+		{
+			"selector": "A[href='#tab_1_3']",
+			"step": "4",
+			"help": "This shows you the existing issues with the product. So look for these before even starting your investigation  ",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Known Issue"
+		},
+		{
+			"selector": "A[href='#tab_1_5']",
+			"step": "5",
+			"help": "This will show you all the applications that you can ask the user to update.It shows you the problematic applications as well which have led to the problem",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Patches"
+		},
+		{
+			"selector": "A[href='#tab_1_6']",
+			"step": "6",
+			"help": "Refer the articles here to solve the problem at hand. They are handy and give you the most updated suggestions.",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Knwoledge Article"
+		},
+		{
+			"selector": "A[href='#tab_1_8']",
+			"step": "7",
+			"help": "Don't know how to go about this? Don't worry, Raise it with your internal teams by creating a ticket.",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Report"
+		}
+	],
+	"title": "ISE"
+}

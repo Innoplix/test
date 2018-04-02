@@ -1,0 +1,23 @@
+{
+  "language": {
+	"Project Management": "परियोजना प्रबंधन",
+	"Switch View": "दृश्य स्विच करें",
+	"Add New": "नया जोड़ें",
+	"Project Name": "परियोजना का नाम",
+	"Description": "विवरण",
+	"Organization": "संगठन",
+	"Set as Current": "वर्तमान के रूप में सेट करें",
+	"Delete": "हटाएं"
+	
+  },
+  "projectmanagementdata":{
+	 "sLengthMenu": "_MENU_अभिलेख",
+	 "sEmptyTable": "कोई डेटा पर उपलब्ध है",
+	 "sInfo": "दिखा रहा है_START_ को _END_ की_TOTAL_प्रविष्टियां",
+	 "sInfoEmpty": "प्रविष्टियां मिली",
+	 "sInfoFiltered": "(फ़िल्टर 1 से _MAX_ संपूर्णप्रविष्टियां)",
+	 "sSearch": "खोज परिणाम:",
+	 "sZeroRecords": "मिलान रिकॉर्ड नहीं मिला"
+}
+
+}

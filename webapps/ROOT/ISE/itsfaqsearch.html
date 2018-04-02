@@ -1,0 +1,212 @@
+<div id="its-faq-search">
+
+	<div class="row">
+		<div class="col-md-12 ">
+			<div class="portlet box purple" id="faqInfoTab">
+				<div class="portlet-title">
+					<div class="caption faqInfoTabCaption">
+						<i class="fa fa-cogs"></i>Smart FAQ
+					</div>
+					<div class="tools faqInfoTabTools">
+						<a href="javascript:;" class="collapse" data-original-title="" title="">
+						</a>
+						 
+						<a href="javascript:;" class="reload" data-original-title="" title="">
+						</a>
+						 
+					</div>
+				</div>
+				<div class="portlet-body form" id="its-form-view">
+					<div class="col-md-3 faq-conatiner"> 
+						<div class="portlet light">
+							<div class="faq-heading-conatiner">
+								<h2 class="faq-title uppercase font-blue">Faq's</h2>
+							</div> 
+							<div class="faq-body-conatiner">
+							<div class="faq-list-conatiner">
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> Registering with Consumer</a>
+								</h4>
+								 
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> Why do I need a Firewall?</a>
+								</h4>
+								 
+								 
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> Corrupt File Error After Downloading</a>
+								</h4>
+								 
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> How to obtain an Ethereal capture</a>
+								</h4>
+								
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> How do I delete System Restore Virus from the computer?</a>
+								</h4>
+								
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> Corrupt File Error After Downloading</a>
+								</h4>
+								
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> What is an Exploit?</a>
+								</h4>
+								
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> How do I get a Screenshot?</a>
+								</h4>
+								
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> How do viruses spread?</a>
+								</h4>
+								
+								<h4 class="panel-title">
+									<i class="fa fa-circle"></i>
+									<a class="faq-heading-title"> What is heuristic scanning?</a>
+								</h4>
+								
+							</div> 
+							</div> 
+						</div> 
+					</div> 
+					<div class="col-md-6"> 
+						<div class="portlet light query-textfield-conatiner">
+							<div class="portlet-title">
+								<div class="input-group">	
+									<!-- <input type="text" id="questionText" class="form-control" placeholder="Enter query"> -->
+									<textarea id="questionText" name="content" rows="1" class="form-control md-input" style="width: 99.9%;"></textarea>
+									<span class="input-group-btn">
+										<button id="searchfaq" class="btn btn-success" type="button">
+											<i class="fa fa-arrow-right fa-fw"></i></button>
+									</span>
+								</div>
+								<div class="did-you-mean-conatiner"></div>
+							</div>
+							 
+							 
+						</div>
+						<div class="portlet light query-result-conatiner" style="padding-top: 0px;">
+                                <div class="portlet-title tabbable-line">
+                                    <div class="caption">
+                                        <i class="icon-globe font-dark hide"></i>
+                                        <span class="caption-subject font-dark bold uppercase">Results</span>
+                                    </div>
+									 
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a href="#common_tab" class="active" data-toggle="tab" aria-expanded="false">Consolidated</a>
+											</li>
+											<li>
+												<a href="#splitted_tab" data-toggle="tab" aria-expanded="true">Split</a>
+											</li>
+										</ul>
+									 
+                                </div>
+                                <div class="portlet-body">
+									 
+                                    <!--BEGIN TABS-->
+                                    <div class="tab-content">
+										
+                                        <div class="tab-pane active" id="common_tab">
+                                            
+                                        </div>
+                                        <div class="tab-pane" id="splitted_tab">
+                                            
+                                        </div>
+                                    </div>
+                                    <!--END TABS-->
+                                </div>
+                            </div>
+						
+					</div>
+					<div class="col-md-3 cluster-main-conatiner"> 
+						<div class="portlet light">
+							<div class="faq-cluster-heading-conatiner">
+									<h2 class="faq-title font-blue">Topic List</h2>
+							</div>
+							<div class="cluster-list-container"> 
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="documentinfoModal" tabindex="-1" role="basic" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <div class="modal-title" id="moreInfoModalTitle"> </div>
+            </div>
+            <div class="modal-body"> 
+                 <!-- BEGIN FORM-->
+                    <div  class="form-horizontal">
+						<div class="nav-tabs"><b>Description</b></div>
+                        <div class="form-body" id="faqsearchchmodalbody" style="height:240px;overflow-y:auto;overflow-x:hidden; white-space: pre-wrap;">                       
+                            
+                                                                            
+                        </div>
+						
+                        <div class="form-body" id="faqsearchmodalsubbody" style="display:none; padding-top: 20px;">                       
+							<div class="nav-tabs"><b>Resolution</b></div> 
+							<div id="container" style="height:55px;overflow-y:auto;overflow-x:hidden;"></div>
+                                                                            
+                        </div>
+                        
+                    </div>
+                 <!-- END FORM-->
+                                      
+                
+              </div>
+            <div class="modal-footer">
+                 
+                <button type="button" class="btn dark btn-outline" data-dismiss="modal">OK</button>
+               
+            </div>
+      </div>
+     <!-- /.modal-content -->
+    </div>
+  <!-- /.modal-dialog -->
+</div> 
+
+<div id="stack2" class="modal fade" tabindex="-1" data-width="400">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<!--<h4 class="modal-title" id="defectTableHeader">Defect Details</h4>-->
+				<h4 class="modal-title" id="defectTableHeader">
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12" id="defectTable" style="background-color: #edf6fb">
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+					

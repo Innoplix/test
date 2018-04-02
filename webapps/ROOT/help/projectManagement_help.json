@@ -1,0 +1,71 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#sample_editable_project_new",
+			"step": "1",
+			"help": "To create new project,Click on Add New Button",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "AddNewButton_ProjectManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(1) > input",
+			"step": "2",
+			"help": "Please enter Project Name",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "ProjectName_Textbox_ProjectManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(2) > input",
+			"step": "3",
+			"help": "Please enter Description",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Description_TextBox_ProjectManagement"
+		},
+		{
+			"selector": "#orglist",
+			"step": "4",
+			"help": "Select Orgainzation ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Organization_Dropdown_ProjectManagement"
+		},
+		{
+			"selector": "A[href='']A:contains('Save')",
+			"step": "5",
+			"help": "Click on Save button to save the project.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Save_Link_ProjectManagement"
+		},
+		{
+			"selector": "A[href='']A:contains('Cancel')",
+			"step": "6",
+			"help": "Click on Cancel link to cancel the Project",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Cancel_Link_ProjectManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(5) > a",
+			"step": "7",
+			"help": "Clcik on Delete link to Delete the Project",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Delete_Link_ProjectManagement"
+		},
+		{
+			"selector": "#sample_editable_project_filter INPUT",
+			"step": "8",
+			"help": "Enter Text to search with in the results",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "SearchResults_TextBox_ProjectManagement"
+		}
+	],
+	"title": "ISE"
+}

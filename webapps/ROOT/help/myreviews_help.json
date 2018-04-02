@@ -1,0 +1,39 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 4,
+	"tooltips": [
+		{
+			"selector": "#approveKnowledgeDoc",
+			"step": "1",
+			"help": "Please click on Approve button to approve a SELECTED Knowledge Document.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Approve_Button_myreviews"
+		},
+		{
+			"selector": "#rejectKnowledgeDoc",
+			"step": "2",
+			"help": "Please click on Reject button to Reject a SELECTED Knowledge Document.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Reject_Button_myreviews"
+		},
+		{
+			"selector": "A[href='javascript:;']A:contains('\n\t\t\t\tColumns \n\t\t\t\t')",
+			"step": "3",
+			"help": "Please select columns from the Dropdown which are to be Displayed.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Columns_Dropdown_myreviews"
+		},
+		{
+			"selector": "#kdTitleRow",
+			"step": "4",
+			"help": "Please click on the Title link to view the Knowledge Document.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Title_Link_myreviews"
+		}
+	],
+	"title": "ISE"
+}

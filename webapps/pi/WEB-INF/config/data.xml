@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<server className="net.sf.j2ep.servers.BaseServer"
+		domainName="tb.hclt.corp.hcl.in"
+		path="/pi/bugzilla"
+		isRewriting="false">
+
+		<rule className="net.sf.j2ep.rules.DirectoryRule" 
+		directory="/bugzilla"
+		/> 
+	
+  	</server>
+</config>

@@ -1,0 +1,124 @@
+<div class="portlet box grey-cascade">
+		<div class="portlet-title">
+			<div class="caption">
+				<i class="fa fa-gift"></i>DetailedDefectsGraph
+			</div>
+			<div class="tools">
+			<div class="divRefreshBtn_Heatmaps" style="display: inline;">
+						<img style="margin-top: -10px" id="btnRefreshFeatureMapping" onclick="stabilityDefectsDetail.onRefreshFeatureMapping(false)" onmouseover="stabilityDefectsDetail.onRefreshImgHover(event)"
+							onmouseout="stabilityDefectsDetail.onRefreshImgout(event)" alt="" title="Refresh" src="images/refresh_1_16.png" />
+					</div>
+				<a href="javascript:;" class="collapse">
+				</a>
+				<!--<a href="#portlet-config" data-toggle="modal" class="config">
+				</a>-->
+			</div>
+		</div>
+		<div class="portlet-body">
+			
+		<div id="divDefectPopupBackGrd1">
+		</div>
+		<div class="row">			
+			<div class="col-md-12 "  id="divFeature">
+				<div style="padding-left: 30px;">
+					</br>				
+					<div class="form-group futureRelease-dropdown">
+					    <label class="control-label">Selected Releases :</label>
+						<select id="cmb_FeatureReleases" tabindex="4" data-placeholder="Select Releases..." style="height:40px; width: 500px;" class="form-control select2" multiple>
+						</select>
+						<button class="btn btn-sm yellow filter-submit margin-bottom pull-right" onclick="stabilityDefectsDetail.onFilterFeatureReleasesClick()" style="width: 50px;">
+                    <i class="fa fa-search"></i>Go</button>
+					<button class="btn btn-sm red filter-cancel pull-right" onclick="stabilityDefectsDetail.onSetDefaultFeatureReleases()" style="width: 80px;margin-right:10px;">
+						<i class="fa fa-times"></i>Clear</button>
+				</div>
+				</div>
+				<table>
+					<tr>
+						<td style="padding-right: 20px;">
+							<fieldset class="fieldSetFeaturesLegend">
+								<legend style="background-color: white;">Internal Defects</legend>
+								<div>
+									<canvas style="background-color: #349BFF;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_IntSev1">
+									</label>
+									&nbsp;
+									<canvas style="background-color: #62B1FF;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_IntSev2">
+									</label>
+									&nbsp;
+									<canvas style="background-color: #8EC8FF;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_IntSev3">
+									</label>
+									&nbsp;
+									<canvas style="background-color: #BCDEFF;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_IntSev4">
+									</label>
+									&nbsp;
+									<canvas style="background-color: #E8F4FF;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_IntSev5">
+									</label>
+								</div>
+							</fieldset>
+						</td>
+						<td>
+							<fieldset class="fieldSetFeaturesLegend">
+								<legend style="background-color: white;">External Defects</legend>
+								<div>
+									<canvas style="background-color: #FF5819;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_ExtSev1">
+									</label>
+									&nbsp;
+									<canvas style="background-color: #FF6A33;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_ExtSev2">
+									</label>
+									&nbsp;
+									<canvas style="background-color: #FF8F66;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_ExtSev3">
+									</label>
+									&nbsp;
+									<canvas style="background-color: #FFB599;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_ExtSev4">
+									</label>
+									&nbsp;
+									<canvas style="background-color: #FFC7B2;" width="10" height="10" style="border: 1px solid #000000;"></canvas>
+									<label id="lbl_ExtSev5">
+									</label>
+								</div>
+							</fieldset>
+						</td>
+					</tr>
+				</table>
+				<div class="divFeatureMapping" style="overflow: auto;display: inline-block;width: 100%;min-height: 400px;max-height: 600px;" id="div_FeatureReleaseDefectsMapping">
+					<table class="tblFeatureMapping" cellpadding="0" cellspacing="0">
+						<thead id="tblHead_FeatureReleaseDefectsMapping">
+						</thead>
+						<tbody id="tblBody_FeatureReleaseDefectsMapping">
+						</tbody>
+					</table>
+				</div>
+				<div class="divRefresh_Heatmaps">
+					<div class="divGeneratedOn_Heatmaps">
+						<label class="LblGeneratedOn" style="font-weight: bold">
+							Generated On :</label>
+						<label class="LblGeneratedOn" id="lbl_UpdatedOnFeatureMapping">
+						</label>
+					</div>
+					
+				</div>
+				<div id="div_NoPermissions" class="divNoPermissions" style="display:none">
+					You are not authorized to View this Page
+				</div>
+			</div>
+			
+			<!-- END PORTLET-->
+		</div>				
+		</div>
+		
+	</div>
+	
+ <!--Violations Popup-->
+ 
+	
+	<!--generic code strts -->
+	
+							

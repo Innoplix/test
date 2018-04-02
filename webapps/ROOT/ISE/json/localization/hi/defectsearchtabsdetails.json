@@ -1,0 +1,37 @@
+[
+ 
+  {
+    
+    "defectsearchtabs": {
+       
+        "tabdetails": [
+          {
+            "tabid": "tab_1_1",
+            "label": "Similar Search",
+			"active": "yes",
+			"labelname":"समान खोज"
+          },
+          {
+            "tabid": "tab_1_2",
+            "label": "Context Search",
+			"active": "no",
+			"labelname":"संदर्भ खोज"
+          },
+          {
+            "tabid": "tab_1_3",
+            "label": "Advanced Search",
+			"active": "no",
+			"labelname":"उन्नत खोज"
+          },
+          {
+            "tabid": "tab_1_4",
+            "label": "File Search",
+			"active": "no",
+			"labelname":"फ़ाइल की खोज"
+          }
+        ]
+      
+    }
+  }
+  
+]

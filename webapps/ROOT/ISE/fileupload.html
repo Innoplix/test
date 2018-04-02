@@ -1,0 +1,175 @@
+<div class="portlet light form-fit bordered">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="icon-settings font-green"></i>
+			<span data-localize="language.File Uploads" class="caption-subject font-green sbold uppercase">File Uploads</span>
+		</div>
+		<div class="actions">
+			<div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-small bootstrap-switch-animate" style="width: 88px;">
+				<div class="bootstrap-switch-container" style="width: 129px; margin-left: 0px;">
+				</div>
+			</div>  
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form id="uploadform" method="POST" enctype="multipart/form-data" class="form-horizontal form-bordered" style="clear: both;">
+			<div class="form-body">                                            
+				<div class="form-group">
+					<div class="col-md-3">				
+						<select name="filetype" id="filetype"  class="bs-select form-control" tabindex="-98" onchange="fileupload.chooseFileTypeFunc()">
+							<option data-localize="language.Select File Type" >--Select File Type --</option>
+							<option data-localize="language.Code Elements" value="1"><b >1. Code Elements<b></value>
+							<option data-localize="language.TestCase Info"value="3"><b>2. TestCase Info</b></value>
+							<option data-localize="language.TestCase Executions"value="2"><b>3. TestCase Executions</b></value>						
+							<option data-localize="language.Feature Mapping"value="8"><b>4. Feature Mapping</b></value>
+							<option data-localize="language.Defect Info"value="4"><b>5. Defect Info</b></value>
+							<option data-localize="language.Defects Files Info"value="9"><b>6. Defects Files Info</b></value>
+							<!-- <option data-localize="language.Defect TestCases Info"value="10"><b>7. Defect TestCases Info</b></value>
+							<option data-localize="language.Defects Properties"value="11"><b>8. Defects Properties</b></value>
+							<option data-localize="language.Release Details"value="6"><b>9. Release Details</b></value>
+							<option data-localize="language.Knowledge Base"value="7"><b>10. Knowledge Base</b></value>	
+							<option data-localize="language.Build Details"value="15"><b>11. Build Details</b></value>
+							<option data-localize="language.Method-Testcase Mapping"value="16"><b>12. Method-Testcase Mapping</b></value>			
+							<option data-localize="language.collection"value="17"><b>13. collection </b></value>
+							<option data-localize="language.ITS Ticktes"value="18"><b>14. ITS Ticktes </b></value>
+							<option data-localize="language.CBT PIMS Testcases"value="51"><b>15. CBT PIMS Testcases </b></value>
+							<option data-localize="language.TestCase Steps"value="100"><b>16.TestCase Steps </b></value>
+							<option data-localize="language.Resource Data"value="19"><b>17.Resource Data </b></value>
+							<option data-localize="language.support Data"value="999"><b>18.support Data </b></value>	 -->
+						</select>
+					</div>					
+					<div class="col-md-5">
+						<span class="btn green fileinput-button">
+						<i class="fa fa-plus"></i>
+						<span data-localize="language.Add file">Add file... </span>
+						<input name="file"  type="file" id="file" onclick="fileupload.enableUploadButton();" />
+						</span>					
+						 <input type="hidden" name="project_name" id="project_name" value=""/>
+						 &nbsp;&nbsp;
+						 <input type="checkbox" name="isdelta" title="Applicable only for Defects. It will Merge/Add extra data without disturbing existing Columns/Mappings." id="isdelta" value="true"><label data-localize="language.is Delta"> is Delta</label></input> 
+						&nbsp;&nbsp;
+						<input data-localize="language.dryrun" type="checkbox" name="dryrun" id="dryrun" title=' To check  "Field Level Validations" before uploading data.' value="true"> <label data-localize="language.Dry Run">Dry Run</label></input>										
+						<input data-localize="language.Upload" type="button" class="btn blue-hoki pull-right" id="uploadBtnId"  value="Upload" onclick="return fileupload.fileUpload();">							
+					</div>
+					<div class="col-md-4">
+                  <div class="col-md-9">
+						<select name="modeltype"  class="bs-select form-control" tabindex="-98" id="modeltype"  onchange="fileupload.chooseFileTypeFunc()">
+							<option data-localize="language.Select Model">--Select Model--</option>
+							<option title="Need to be triggered for builds and Releases "data-localize="language.Generate Builds & Testbeds"value="100" ><b>1. Generate Builds & Testbeds</b></value>
+							<!-- <option data-localize="language.SVD Model"value="2"><b>1. SVD Model<b></value>-->										
+							<option title="This model already trigered by default on project creation " data-localize="language.Defect Indexing Model" value="12"style="background-color:white;color:green;"><b>2. Defect Indexing Model</b></value>
+							<option title="This model already trigered by default on project creation " data-localize="language.TestCase Indexing Model"value="3"style="background-color:white;color:green;"><b>3. TestCase Indexing Model</b></value>
+							<option title="Need to be triggered for KnowledgeBase use cases. "data-localize="language.KnowledgeBase Indexing Model"value="7"><b>4. KnowledgeBase Indexing Model</b></value>
+							<!-- 
+							<option data-localize="language.Backup DB" value="17"><b>. Backup DB</b></value> -->
+							<option title="Need to be triggered for Defects,Feaqtures,Testcase mapping. "data-localize="language.Mapping Model"value="18"><b>5. Mapping Model</b></value>
+							<option title="Need to be triggered for Source Search." data-localize="language.Source Analyser" value="19"><b>6. Source Analyser</b></value>
+							<option title="Need to be triggered for Source Search." data-localize="language.Source Parsing Model"value="21"><b>7. Source Parsing Model</b></value>	
+							<option title="Need to be triggered for Source Search." data-localize="language.Source Indexing Model"value="22"><b>8. Source Indexing Model</b></value>	
+							<!-- <option data-localize="language.Issue Indexing Model"value="20"><b>10. Issue Indexing Model</b></value>
+							<option data-localize="language.Developer Grading Model" value="23"><b>11. Developer Grading Model</b></value>
+							<option data-localize="language.Support Grading Model" value="24"><b>12. Support Grading Model </b></value>				
+							<option data-localize="language.Issue Indexing Model" value="20"><b>13. Issue Indexing Model</b></value>
+							<option data-localize="language.Defect Localization" value="51"><b>14. Defect Localization</b></value> -->
+							<option title="This model already trigered by default on project creation " data-localize="language.Defects Files Indexing Model" value="50"style="background-color:white;color:green;"><b>9. Defects Files Indexing Model</b></value>
+							<option title="This model already trigered by default on project creation "data-localize="language.TestExecutions Indexing Model" value="52"style="background-color:white;color:green;"><b>10. TestExecutions Indexing Model</b></value>
+						<option title="This model already trigered by default on project creation "data-localize="language.FeaturesMapping Indexing Model" value="53"style="background-color:white;color:green;"><b>11. FeaturesMapping Indexing Model</b></value>
+							<option title="This model already trigered by default on project creation " data-localize="language.Files Testcase Indexing Model"value="54"style="background-color:white;color:green;"><b>12. Files Testcase Indexing Model</b></value>
+							<option title="This model already trigered by default on project creation " data-localize="language.Codeelements Indexing Model"value="55"style="background-color:white;color:green;"><b>13. Codeelements Indexing Model</b></value>
+							<option title="This model is already trigered by default on project creation." data-localize="language.Builds Indexing Model" style="background-color:white;color:green;" value="56"><b>14. Builds Indexing Model</b></value>
+							<option  title="Need to be trigered for Regression Optimization " data-localize="language.Testbeds Indexing Model"value="57"><b>15. Testbeds Indexing Model</b></value>
+							<option title="This model is already trigered by default on project creation." data-localize="language.Regression plan Indexing Model" style="background-color:white;color:green;" value="58"><b>16. Regression plan Indexing Model</b></value>
+							<option title="This model is already trigered by default on project creation." data-localize="language.Regression Options Mapping Indexing Model" style="background-color:white;color:green;" value="59"><b>17. Regression Options Mapping Indexing Model</b></value>
+							<option title="Need to be trigered for Regression Optimization "data-localize="language.Regression Testcases  Indexing Model"value="60"><b>18. Regression Testcases  Indexing Model</b></value>
+							<option title="Need to be trigered for Regression Optimization "data-localize="language.Golden Testcase Model"value="61"><b>19.Golden Testcase Model </b></value>	
+							<option title="Need to be trigered for Regression Optimization "data-localize="language.Environment Testcase Model"value="62"><b>20.Environment Testcase Model</b></value>
+							<option title="Need to be trigered for Regression Optimization "data-localize="language.Change Based Testcase Model"value="69"><b>21.Change Based Testcase Model </b></value>
+							<option title="Need to be trigered for Regression Optimization " data-localize="language.NEW Testcase Model"value="70"><b>22.NEW Testcase Model </b></value>
+							<option title="Need to be trigered for Regression Optimization " data-localize="language.Sanity Testcase Model"value="71"><b>23.Sanity Testcase Model </b></value>
+							<option title="Need to be trigered for Regression Optimization " data-localize="language.Stability Testacase  Indexing Model"value="72"><b>24.RAG Model </b></value>
+							<option title="Need to be trigered for stability graphs " data-localize="language.Stability Defects Model"value="63"><b>25.Stability Defects Model</b></value>	
+							<option  title="Need to be trigered for stability graphs " data-localize="language.Stability DefectsDetail Model"value="64"><b>26.Stability DefectsDetail Model </b></value>	
+							<option  title="Need to be trigered for stability graphs " data-localize="language.Stability Testacase Model"value="65"><b>27.Stability Testacase Model </b></value>
+							<option title="This model already trigered by default on project creation " data-localize="language.Stability Defects Indexing Model"value="66"style="background-color:white;color:green;"><b>28.Stability Defects Indexing Model</b></value>	
+							<option title="This model already trigered by default on project creation " data-localize="language.Stability DefectsDetail Indexing  Model"value="67"style="background-color:white;color:green;"><b>29.Stability DefectsDetail Indexing  Model </b></value>	
+							<option title="This model already trigered by default on project creation " data-localize="language.Stability Testacase  Indexing Model"value="68"style="background-color:white;color:green;"><b>30.Stability Testacase  Indexing Model </b></value>
+							
+							<!-- <option data-localize="language.Stability Testacase  Indexing Model"value="91"><b>36.Package Indexing Model </b></value>
+							<option data-localize="language.Stability Testacase  Indexing Model"value="92"><b>37.Assignation Indexing Model </b></value>
+							<option data-localize="language.Stability Testacase  Indexing Model"value="93"><b>38.Knowledge History Indexing Model </b></value>
+							<option data-localize="language.Stability Testacase  Indexing Model"value="94"><b>39.Q and A Indexing Model </b></value>
+							<option data-localize="language.Stability Testacase  Indexing Model"value="95"><b>40.Forums Indexing Model </b></value>
+							<option data-localize="language.Stability Testacase  Indexing Model"value="72"><b>41.RAG Model </b></value>
+							-->
+							
+						</select>													
+					</div>	
+					<div class="col-md-3">
+					<input data-localize="language.Model" type="button" class="btn blue" id="modBtnId" value="Model" onclick="fileupload.invokeModel();">
+					</div>
+					<div class=" row col-md-12 pull-right text-right margin-top-10">
+						<span class="error-msg" style=""></span>
+						<span class="success-msg" style=""></span>
+					</div>
+					
+				</div> 
+			</div>
+			
+		<!-- END FORM-->			
+		</form>		
+		<!--
+		<div id="pwidget1" style="display:none;">
+				<div id="progressbar1">  
+					<div id="indicator1"></div>
+				</div>
+				<div id="progressnum1">0 </div>
+		</div>
+		-->
+		<div id="pwidget" style="display:none;"><b data-localize="language.Upload Status">Upload Status : </b>
+			<div id="progressbar">  
+				<div id="indicator"></div>
+			</div>
+			<div id="progressnum">0 </div>
+		</div>
+		<!--<div id="table-rows-count" style="height:150px;width:900px;overflow:auto;margin-left:10px"></div>-->
+		
+		<div class="portlet box purple">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-cogs"></i><span data-localize="language.Upload Files Info" >Upload Files Info</span> </div>				
+				<div class="tools">										
+				<a href="javascript:;" onclick="fileupload.displayCollectionsCount()" class="reload" data-original-title="" title="reload">
+				</a>				
+			</div>
+			
+			</div>
+			
+			<div class="portlet-body">
+				<div class="table-scrollable" id="table-rows-count" style="overflow-x:auto;overflow-y:auto;height:200px;">
+				</div>
+			</div>
+		</div>
+		
+		<div class="portlet box blue">
+			<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-cogs"></i> <span data-localize="language.Upload Logger" >Upload Logger</span> </div>				
+			</div>
+			<div class="portlet-body">
+				<div id="console-container">		
+					<div id="console"></div>
+				</div>
+			</div>
+		</div>		
+		
+	</div>	
+	
+	
+ </div> 
+
+</div>
+
+</div>
+</div>
+</div>

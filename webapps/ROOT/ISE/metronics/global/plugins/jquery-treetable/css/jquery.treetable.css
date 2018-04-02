@@ -1,0 +1,35 @@
+.treetable-expanded > td:first-child,
+.treetable-collapsed > td:first-child {
+	padding-left: 2em;
+}
+
+.treetable-expanded > td:first-child > .treetable-expander,
+.treetable-collapsed > td:first-child > .treetable-expander {
+	top: -0.04em;
+    position: relative;
+    margin-left: -1.5em;
+    margin-right: 0.25em;
+    right: 0.3em;
+	width: 0.9em;
+}
+
+.treetable-expanded .treetable-expander, 
+.treetable-expanded .treetable-expander {
+	width: 1em;
+	height: 1em;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+}
+
+.treetable-depth-1 > td:first-child {
+	padding-left: 3em;
+}
+
+.treetable-depth-2 > td:first-child {
+	padding-left: 4.5em;
+}
+
+.treetable-depth-3 > td:first-child {
+	padding-left: 6em;
+}

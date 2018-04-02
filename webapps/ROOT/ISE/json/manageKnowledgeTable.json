@@ -1,0 +1,130 @@
+{
+	"TableDetails": {
+		"Package_Collection": {
+			"displayName": "Packages",
+			"enable": "yes",
+			"indexName": "package_collection",
+			"additionalFilters":"",
+			"allowedroles": [
+				"Admin",
+				"Test_Manager",
+				"Tester","Developer"
+			],
+			"defaultView": [
+			    "Package_Id",		
+				"Package Title", 
+				"Description"
+			],
+			"mobileView": [
+				 "Package_Id",		
+				"Package Title", 
+				"Description"
+			],
+			"Details": {
+				"fields": [
+					{
+						"displayName": "Package_Id",
+						"SourceName": "_id",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "id",
+						"filter": "no"
+					},
+					{
+						"displayName": "Package Title",
+						"SourceName": "package_title",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "url",
+						"filter": "no"
+					},
+					{
+						"displayName": "Description",
+						"SourceName": "description",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester","Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+					}
+				]
+			}
+		}
+	},	
+	"SubTableDetails": {
+		"Knowledge_Details": {
+			"displayName": "Knowledge_Details",
+			"enable": "yes",
+			"indexName": "package_collection",
+			"additionalFilters": "",
+			"allowedroles": [
+				"Admin",
+				"Test_Manager",
+				"Tester",
+				"Developer"
+			],
+			"defaultView": [
+				"KnowledgeId",
+				"Title"        
+			],
+			"mobileView": [
+				"KnowledgeId",
+				"Title"        
+			],
+			"Details": {
+				"fields": [ 
+{
+						"displayName": "Id",
+						"SourceName": "_id",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "id",
+						"filter": "no"
+					} ,				
+					{
+						"displayName": "Title",
+						"SourceName": "title",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "url",
+						"filter": "no"
+					}
+					
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+{
+  "language": {
+	"Help": {
+	"title": "मदद"
+	},
+	"Filter": {
+     "title": "फ़िल्टर"
+	},	
+  	"Forward": {
+     "title": "आगे"
+	},	
+	"Backward": {
+     "title": "पिछड़ा"
+	},
+	"Refresh": {
+     "title": "ताज़ा करना"
+	},
+	"Search types": "खोज प्रकार",
+	"Search Results":"खोज परिणाम",
+	"Search with in results": "परिणाम के साथ में खोजें",
+	"Show": "दिखाना ",
+	"entries": "प्रविष्टियां",
+	"Columns": "कॉलम",
+	"More Insights": "अधिक अंतर्दृष्टि",
+	"Localize Defect": "दोष को स्थानीय बनाना",
+	"Search Results of Similar Search": "समान खोज के खोज परिणाम",
+	"Search Results of Context Search":"संदर्भ खोज के खोज परिणाम",
+	"Search Results of Advanced Search":"उन्नत खोज के खोज परिणाम",
+	"Search Results of File Search":"फ़ाइल खोज के खोज परिणाम",
+	"File Change History":"फ़ाइल बदलें इतिहास",
+	"No data Available for Searched File":"खोजा फाइल के लिए कोई डेटा उपलब्ध नहीं है",
+	"Please Enter File Name":"कृपया फ़ाइल नाम दर्ज करें",
+	"Rate It":"इसे रेट करें ",
+	"Submit":"जमा करें",
+	"Cancel":"रद्द करना"
+	
+	 
+  },
+
+
+    "defectmanagementdata":{
+	 "sLengthMenu": "रिकॉर्ड्स _MENU_ दिखाने",
+	 "sEmptyTable": "कोई डेटा पर उपलब्ध है",
+	 "sInfo": "START_ cupistunna _TOTAL_ लिए प्रविष्टियों में से _END_",
+	 "sInfoEmpty": "प्रविष्टियां पाया",
+	 "sInfoFiltered": "(1 से सभी प्रविष्टियों को फिल्टर करने के _MAX_)",
+	 "sSearch": "खोज परिणाम:",
+	 "sZeroRecords": "मिलान रिकॉर्ड नहीं मिला",
+	 "Print":"छाप",
+	 "Copy":"प्रतिलिपि",
+	 "0 characters remaining (15 max)":"0 वर्ण शेष (15 अधिकतम)"
+}
+
+
+}

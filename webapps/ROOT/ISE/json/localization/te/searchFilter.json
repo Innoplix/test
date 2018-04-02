@@ -1,0 +1,114 @@
+[{
+        "title": "Quick Filter",
+        "options": [{
+                "displayName": "అన్ని బహిరంగ టిక్కెట్లు",
+                "displayPage": ["defectsLocalization","defectsearch"],
+                "enable": "yes",
+                "filter": "-status:Active",
+                "isDateFilter":"no",
+				"displayId": "All open tickets"
+				 
+
+            }, {
+                "displayName": "గత 30 రోజులలో తెరవబడింది",
+                "displayPage": ["defectsLocalization","defectsearch"],
+                "enable": "yes",
+                "filter": "last_15_mins to *",
+                "isDateFilter":"yes",
+				"displayId": "Opened in last 30 days"
+
+            }
+
+        ]
+    }, {
+        "title": "Basic Filter",
+        "options": [{
+                "displayName": "బిల్డ్",
+                "elementId" : "buildControl",
+                "displayPage": ["defectsLocalization","defectsearch"],
+                "enable": "no",
+				"displayId": "Build"
+            }
+
+            , {
+                "displayName": "విడుదల",
+                "elementId" : "releaseControl",
+                "displayPage": ["defectsLocalization","defectsearch"],
+                "enable": "yes",
+				"displayId": "Release"
+
+            }, {
+                "displayName": "ఫీచర్",
+                "elementId" : "featureControl",
+                "displayPage": ["defectassignationview","defectsearch"],
+                "enable": "yes",
+				"displayId": "Feature"
+
+            }, {
+                "displayName": "స్థితి",
+                "elementId" : "statusControls",
+                "displayPage": ["defectassignationview","defectsearch"],
+                "enable": "yes",
+				"displayId": "Status"
+
+            },
+            {
+                "displayName": "శోధనను డిఫెండ్ చేయండి",
+                "elementId" : "DefectSearchControl",
+                "displayPage": ["defectsLocalization"],
+                "enable": "yes",
+				"displayId": "DefectSearch"
+
+            }, {
+                "displayName": "డిఫెక్ట్ ఐడి",
+                "elementId" : "defectIdControl",
+                "displayPage": ["defectsLocalization"],
+                "enable": "yes",
+				"displayId": "DefectId"
+
+            }, {
+                "displayName": "స్థితి",
+                "elementId" : "statusControl",
+                "displayPage": ["defectassignationview"],
+                "enable": "no",
+				"displayId": "Status"
+
+            }, {
+                "displayName": "శాతం",
+                "elementId" : "percentageControl",
+                "displayPage": ["defectassignationview"],
+                "enable": "no",
+				"displayId": "Percentage"
+
+            }
+
+        ]
+    },
+    {
+        "title": "datatimefields",
+
+        "options": [
+            {
+                "displayName": "తేదీని సృష్టించండి",
+                "field": "create_date",
+                "displayPage": ["defectassignationview","defectsearch"],
+                 "enable": "yes",
+				 "displayId": "Create Date"
+            },
+            {
+                "displayName": "మూసివేసిన తేదీ",
+                "field": "close_date",
+                 "displayPage": ["defectassignationview","defectsearch"],
+                 "enable": "yes",
+				 "displayId": "Closed Date"
+            },
+            {
+                "displayName": "స్థిర తేదీ",
+                "field": "fix_date",
+                 "displayPage": ["defectassignationview","defectsearch"],
+                 "enable": "yes",
+				 "displayId": "Fixed Date"
+            }
+        ]
+    }
+]

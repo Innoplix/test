@@ -1,0 +1,356 @@
+<div class="row ">
+    <div class="col-md-12 ">
+        <div class="portlet box blue-hoki">
+            <div class="portlet-title">
+                <div class="caption">
+
+                </div>
+                <div class="actions pull-left" style="width:98%;padding-left:5px;margin-top:4px;">
+                    <div id="divFilterTags" class=" tagsinput pull-left" >         
+                    </div>
+
+
+                    <a class="btn btn-circle btn-icon-only btn-default pull-right"  id="searchComponentClose" href="javascript:;"  >
+                                   <i  class="glyphicon glyphicon-remove " ></i>
+                    </a>
+
+
+                    
+               </div>
+            </div>
+            <div class="portlet-body" style="display: block;">
+                <ul class="nav nav-tabs" id="filterTabsUL">
+
+                     <li class="active">
+                        <a href="#tab_QuickFilter" data-toggle="tab" aria-expanded="false">
+                                        <span data-localize="language.Quick Filter">Quick Filter</span> </a>
+                    </li>
+                    <li>
+                        <a href="#tab_BasicFilter" data-toggle="tab" aria-expanded="false">
+                                        <span data-localize="language.Basic Filter">Basic Filter</span> </a>
+                    </li>
+                    <li>
+                        <a href="#tab_TimeFilter" data-toggle="tab" aria-expanded="true">
+                                        <span data-localize="language.Time Filter">Time Filter</span> </a>
+                    </li>
+                   
+                   
+                </ul>
+                <div class="tab-content" id="tabContent">
+
+                    <div class="tab-pane fade fontawesome-demo active in" id="tab_QuickFilter">
+                        
+                                <div class="row margin-bottom-20" id="quickView">
+                                </div>
+                         
+                     
+                    </div>
+
+                     <div class="tab-pane fade " id="tab_BasicFilter">
+                          <div  class="horizontal-form">
+                                                <div class="form-body">
+                                                  
+                                                    <div class="row" id="basicfilterRows">
+                                                        <div class="col-md-4" id="buildControl" jsonstring="build">
+                                                            <div class="form-group">
+                                                                <label class="control-label"><span data-localize="language.Build">Build</span></label>
+                                                                                                     
+                                                                   <select id="buildsDropdown" class="form-control select2" multiple>
+                                                                   </select>
+                                                                
+                                                               
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <!--/span-->
+                                                        <div class="col-md-4" id="releaseControl" 
+                                                        jsonstring="release">
+                                                            <div class="form-group">
+                                                                <label class="control-label"><span data-localize="language.Release">Release</span></label>
+                                                               <select id="releaseDropdown" class="form-control select2" multiple>
+                                                               </select>
+                                                               
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4" id="featureControl" 
+                                                        jsonstring="feature">
+                                                            <div class="form-group">
+                                                                <label class="control-label"><span data-localize="language.Feature">Feature</span></label>
+                                                                <select id="featuresDropdown" class="form-control select2" multiple>
+                                                                </select>
+                                                               
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4" id="statusControls" 
+                                                        jsonstring="status1">
+                                                            <div class="form-group">
+                                                                <label class="control-label"><span data-localize="language.Status">Status</span></label>
+                                                                <select id="statusDropdown" class="form-control select2" multiple>
+                                                                </select>
+                                                               
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4" id="DefectSearchControl"
+                                                        jsonstring="defectsearch">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Defect Search</label>
+                                                                <input type="text"  class="form-control"
+                                                                placeholder="Defect Search"
+                                                                 id="searchComponent_defectSearchText"
+                                                                 onchange="searchcomponent.getDefectsearchText()">
+                                                               
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4" id="defectIdControl"
+                                                        jsonstring="DefectId">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Defect Id</label>
+                                                                <input type="text"  class="form-control" placeholder="Defect Id" 
+                                                                id="searchComponent_DefectID"
+                                                                onchange="searchcomponent.getDefectId()">
+                                                               
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4" id="statusControl"
+                                                        jsonstring="status">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Status</label>
+                                                                <input type="text" id="firstName" class="form-control" placeholder="Status">
+                                                               
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-md-4" id="percentageControl"
+                                                         jsonstring="percentage">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Percentage</label>
+                                                                <input type="text" id="firstName" class="form-control" placeholder="Percentage">
+                                                               
+                                                            </div>
+                                                        </div>
+                                                      
+                                                    </div>
+                                                  
+                                                </div>
+                                                <div >
+                                                    <div class="row">
+                                                        <div class="col-md-offset-3 col-md-9">
+                                                            <button  class="btn btn-circle blue"
+                                                            onClick="searchcomponent.setBasicFilter()"><span data-localize="language.Set Filter">Set Filter</span></button>                                                
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                     </div>
+
+                     <div class="tab-pane fade " id="tab_TimeFilter">
+                        <div class="tabbable-custom ">
+
+                             
+
+
+
+                            <ul class="nav nav-tabs " style="margin-top:10px">
+                                <li class="active">
+                                    <a href="#tab_5_1" data-toggle="tab" aria-expanded="true">
+                                                        <span data-localize="language.Quick">Quick</span> </a>
+                                </li>
+                                <li class="">
+                                    <a href="#tab_5_2" data-toggle="tab" aria-expanded="false">
+                                                         <span data-localize="language.Absolute">Absolute</span></a>
+                                </li>
+                               
+                                <li>
+                                </li>
+                                <li>
+
+                                     <h4 data-localize="language.Filter by">Filter by</h4>
+                                </li>
+                                <li>
+
+                                    <select id="dateTimefields" onchange="searchcomponent.getSelectedDropdownValue()" style="margin-left:10px;margin-top:10px;">
+                             
+                             
+                            </select>
+                                </li>
+                            </ul>
+                            <!-- add code-->
+                            <div class="tab-content">
+                                <div class="tab-pane fontawesome-demo active" id="tab_5_1">
+                                    <div class="row margin-bottom-20">
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" href="javascript:;" displayName="Today"
+                                             onClick="searchcomponent.filterClickHandler('today','Today')"
+                                           ><span data-localize="language.Today">Today</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"
+                                            href="javascript:;" displayName="Yesterday" onClick="searchcomponent.filterClickHandler('yesterday','Yesterday')">
+                                            <span data-localize="language.Yesterday">Yesterday</span> </a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 15 minutes"
+                                             href="javascript:;" onClick="searchcomponent.filterClickHandler('last_15_mins','Last 15 minutes')"><span data-localize="language.Last 15 minutes">Last 15 minutes</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 30 days"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('last_30_days','Last 30 days')"><span data-localize="language.Last 30 days">Last 30 days</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="This week"
+                                             href="javascript:;" onClick="searchcomponent.filterClickHandler('this_week','This week')"><span data-localize="language.This week"> This week</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Day before yesterday"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('day_before_yesterday','Day before yesterday')"><span data-localize="language.Day before yesterday">Day before yesterday</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 30 minutes"
+                                            href="javascript:;" 
+                                            onClick="searchcomponent.filterClickHandler('last_30_mins','Last 30 minutes')"><span data-localize="language.Last 30 minutes">Last 30 minutes</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Last 60 days"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('last_60_days','Last 60 days')"><span data-localize="language.Last 60 days">Last 60 days</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="This month"
+                                             href="javascript:;" onClick="searchcomponent.filterClickHandler('this_month','This month')">
+                                             <span data-localize="language.This month">This month</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="This day last week"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('this_day_last_week','This day last week')"><span data-localize="language.This day last week">This day last week</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Last 1 hour"
+                                             href="javascript:;" onClick="searchcomponent.filterClickHandler('last_1_hr','Last 1 hour')"><span data-localize="language.Last 1 hour"> Last 1 hour</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Last 90 days"
+                                             href="javascript:;" onClick="searchcomponent.filterClickHandler('last_90_days','Last 90 days')"><span data-localize="language.Last 90 days">Last 90 days</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="This year"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('this_Year','This year')"><span data-localize="language.This year">This year</span> </a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Previous week"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('previous_week','Previous week')" ><span data-localize="language.Previous week">Previous week</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 4 hours"
+                                             href="javascript:;" onClick="searchcomponent.filterClickHandler('last_4_hr','Last 4 hours')" ><span data-localize="language.Last 4 hours"> Last 4 hours</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 6 months"
+                                             href="javascript:;" onClick="searchcomponent.filterClickHandler('last_6_months','Last 6 months')"><span data-localize="language.Last 6 months"> Last 6 months</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="The day so far"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('The day so far','The day so far')"><span data-localize="language.The day so far">The day so far</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Previous month"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('previous_month','Previous month')"><span data-localize="language.Previous month">Previous month</span> </a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Last 12 hours"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('last_12_hr','Last 12 hours')"><span data-localize="language.Last 12 hours">Last 12 hours</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Last 1 year"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('last_1_year','Last 1 year')"><span data-localize="language.Last 1 year"> Last 1 year</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Week to date"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('Week to date','Week to date')"><span data-localize="language.Week to date"> Week to date</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Previous year"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('previous_year','Previous year')"><span data-localize="language.Previous year">Previous year</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 24 hours"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('last_24_hr','Last 24 hours')"><span data-localize="language.Last 24 hours">Last 24 hours</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 2 years"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('last_2_year','Last 2 years')"><span data-localize="language.Last 2 years">Last 2 years</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Month to date"
+                                             href="javascript:;" onClick="searchcomponent.filterClickHandler('Month to date','Month to date')"> <span data-localize="language.Month to date">Month to date</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 7 days"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler(last_7_days','Last 7 days')"><span data-localize="language.Last 7 days">Last 7 days</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name" displayName="Last 5 years"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('last_5_years','Last 5 years')"><span data-localize="language.Last 5 years">Last 5 years</span></a>
+                                        </div>
+                                        <div class="fa-item col-md-3 col-sm-4">
+                                            <a class="name"  displayName="Year to date"
+                                            href="javascript:;" onClick="searchcomponent.filterClickHandler('Year to date','Year to date')"><span data-localize="language.Year to date">Year to date</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fontawesome-demo" id="tab_5_2">
+                                    <div  class="form-horizontal form-row-seperated">
+                                        <div class="form-body">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3"><span data-localize="language.From date">From date</span></label>
+                                                <div class="form-group">
+                                                    <div class="col-md-4">
+                                                        <div class="input-group date form_datetime">
+                                                            <input type="text" size="16" readonly="" class="form-control" id="fromDate">
+                                                            <span class="input-group-btn"> 
+                                                            <button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>   </div>
+                                                        <!-- /input-group -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3"><span data-localize="language.To date">To date<span></label>
+                                                <div class="form-group">
+                                                    <div class="col-md-4">
+                                                        <div class="input-group date form_datetime">
+                                                            <input type="text" size="16" readonly="" class="form-control" id="toDate">
+                                                            <span class="input-group-btn">
+                                                               <button class="btn default date-set" type="button"><i class="fa fa-calendar"></i></button>
+                                                            </span>
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div >
+                                                    <div class="row">
+                                                        <div class="col-md-offset-3 col-md-9">
+                                                            <button  class="btn btn-circle blue" 
+                                                            onClick="searchcomponent.setAbsoluteFilter()"><span data-localize="language.Set Filter">Set Filter</span></button>                                                
+                                                        </div>
+                                                    </div>
+                                          </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row hide">
+                    <div class="col-md-5">
+                        <button class="btn btn-sm yellow filter-submit margin-bottom" id="submitForm"
+                        ><i class="fa fa-search" ></i><span data-localize="language.Submit">Submit</span></button>
+                        <button class="btn btn-sm red filter-cancel" id="resetForm"><i class="fa fa-times"></i><span data-localize="language.Reset"> Reset &nbsp;&nbsp;</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

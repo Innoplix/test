@@ -1,0 +1,148 @@
+<div class="portlet-body" style="width:40%;">
+			<div class="table-responsive" style="overflow-x:visible;">
+				<table class="table table-striped table-bordered table-hover" id="datatable_search">
+					<thead>						
+						<tr role="row" class="heading">	
+							<th width="15%">
+								Automation
+							</th>						
+							<th width="15%">
+								Priority
+							</th>
+							<th width="10%">
+								Actions
+							</th>							
+						</tr>
+						<tr role="row" class="filter">	
+							<td>
+									<div class="form-group automation-dropdown">
+											<div class="col-md-30" style="width:130px">
+												<select id="automationDropdown" style="height:40px;" class="form-control select2" multiple>
+												</select>
+											</div>
+										</div>
+							</td>							
+							<td>
+									<div class="form-group priority-dropdown">
+											<div class="col-md-30" style="width:130px">
+												<select id="priorityDropdown" style="height:40px;" class="form-control select2" multiple>
+												</select>
+											</div>
+										</div>
+							</td>						
+							<td style="width:10%">
+								<div class="margin-bottom-5">
+								<button class="btn btn-sm yellow filter-submit margin-bottom" id="submitForm" ><i class="fa fa-search"></i> Submit</button>
+								</div>
+								<button class="btn btn-sm red filter-cancel" id="resetForm" ><i class="fa fa-times"></i>  Reset &nbsp;&nbsp;</button>
+							</td>
+						</tr>
+					</thead>
+				    <tbody>
+									
+					</tbody>
+				</table>				
+			</div> 
+		</div>
+
+<div class="portlet box blue">		
+							<div class="portlet-title">
+								<div class="caption">
+									<i></i>Dev Dashboard
+								</div>
+								<div class="actions">
+									<a class="btn btn-circle btn-icon-only btn-default fullscreen" onclick="general.onFullscreen(general.internalDefectmeter)" href="javascript:;">
+						            </a>
+								</div>
+							</div>
+							<div class="portlet-body">
+								
+								<table class="table table-striped table-hover table-bordered" id="devDashBoardTableId">
+								<thead>
+								<tr>
+									<th>
+										 
+									</th>
+									<th>
+										 TestcaseID
+									</th>
+									<th>
+										 Recent Status
+									</th>									
+									<th>
+										 Recent Passed Build
+									</th>
+									<th>
+										 Recent Failed Build
+									</th>
+									<th>
+										 Executions#
+									</th>
+									<th>
+										 Passed#
+									</th>
+									<th>
+										 Failed#
+									</th>
+									<th>
+										 Other Status Count#
+									</th>
+									<th>
+										 Priority
+									</th>
+								</tr>
+								</thead>
+								<tbody id="devDashBoardTableBody">							
+								
+								</tbody>
+								</table>
+							</div>
+						</div>
+
+
+
+<div class="modal fade bs-modal-lg in" id="detailedViewWindow" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">Testcase Details</h4>
+                        </div>
+                        <div class="modal-body" > 
+                        
+                        	<iframe  id="detailedViewIFrame" style="height:100%;width:100%;min-height: 450px;" frameborder="0" width="1255"
+                        	 height="800" ></iframe>
+                         
+
+                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>                          
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade bs-modal-lg in" id="kibanaViewWindow" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">Execution history across all releases</h4>
+                        </div>
+                        <div class="modal-body" > 
+                        
+                        	<iframe  id="showKibanaViewIframe" style="height:100%;width:100%;min-height: 450px;" frameborder="0" width="1455"
+                        	 height="800" ></iframe>
+                         
+
+                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>                          
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+</div>

@@ -1,0 +1,34 @@
+{
+  "language": {
+	"Defect Localization": "శోధన రకాలు",
+	"File Name": "ఫైల్ పేరు",
+	"Score": "స్కోరు",
+	"Change configurations":"(కాన్ఫిగరేషన్లను మార్చండి)",
+	"Display the results from" :"ఫలితాల నుండి ప్రదర్శించు",
+	"to":"కు",
+	"days past":"రోజుల గడువు",
+	"Days to display the files":"ఫైళ్ళను ప్రదర్శించడానికి రోజులు",
+	"Bug Reported Date":"బగ్ నివేదిక తేదీ",
+	"Days to consider associated":"అనుబంధించవలసిన రోజులు",
+	"Weightage for similar defect score":"ఇలాంటి లోపం స్కోరు కోసం బరువు",
+	"Weightage for file match score":"ఫైల్ మ్యాచ్ స్కోర్ కోసం బరువు",
+	"Weightage for buggy score":"బగ్గీ స్కోరు కోసం బరువు",
+	"Cut off % for similarity":"సారూప్యత కోసం% కత్తిరించండి",
+	"Close":"మూసుట",
+	"Submit":" లొంగుట",
+	"SaveToFile":"ఫైల్కు సేవ్ చేయండి",
+	"Configuration Values":"ఆకృతీకరణ విలువలు",
+	"Data is not available for existing  configuration Please change configuration and check again":"ఇప్పటికే ఉన్న కాన్ఫిగరేషన్కు డేటా అందుబాటులో లేదు. దయచేసి కాన్ఫిగరేషన్ను మార్చండి మరియు మళ్లీ తనిఖీ చేయండి"
+	 
+  },
+  "developerworkflowdata":{
+	 "sLengthMenu": " షో _MENU_ రికార్డులు",
+	 "sEmptyTable": "పట్టికలో డేటా అందుబాటులో లేదు",
+	 "sInfo": "చూపిస్తున్న_START_ కు _END_ ఆఫ్ _TOTAL_ ఎంట్రీలు",
+	 "sInfoEmpty": "ఎంట్రీలు కనుగొనబడలేదు",
+	 "sInfoFiltered": "(వడపోత 1 నుండి _MAX_ మొత్తం ఎంట్రీలు)",
+	 "sSearch": "ఫలితాలతో శోధించండి:",
+	 "sZeroRecords": "సరిపోలే రికార్డ్లు కనుగొనబడలేదు"
+}
+
+}

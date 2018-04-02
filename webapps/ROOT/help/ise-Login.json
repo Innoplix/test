@@ -1,0 +1,37 @@
+{
+	"footer" : "'<hr/> <small>Context help injected by iSE</small>",
+	"steps"	 : 4,
+	"title"  : "LOGIN",
+	"tooltips":[
+			
+			{
+				"step"		: 1,
+				"selector" : "#username", 
+				"help"  : "Please enter your HCLTECH userID<br/><br/>First part of your email-id is your user-id ex: <u>johan_m</u>@hcl.com<br/><br/> Contact 24x7 help desk @ 1-800-266-6701 if you do not remember your email ID"
+			},			
+			{
+				"step"		: 2,
+				"selector" : "#password", 
+				"class"	: "qtip-rounded qtip-blue qtip-shadow",
+				"help"  : "Your password ..please .."
+			},
+			{
+				"step"		: 3,
+				"selector" : "#singleOrganizationTextInput" ,
+				"class"	: "qtip-rounded qtip-green qtip-shadow",
+				"help"  : "Select Domain"
+			},				
+			{
+				"step"		: 4,
+				"selector" : "#loginBtn" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "Click here to login"
+			},				
+			{
+				"selector" : "body > div:nth-child(1) > a" , 
+				"class"	: "qtip-rounded qtip-red qtip-shadow",
+				"help"  : "To install the Chrome plugin",
+				"title" : "SURESH"
+			}			
+	]
+}

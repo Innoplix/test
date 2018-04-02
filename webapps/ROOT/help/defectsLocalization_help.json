@@ -1,0 +1,79 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#startDate",
+			"step": "1",
+			"help": "Select from Date",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "From_Date_DefectsLocalization"
+		},
+		{
+			"selector": "#endDate",
+			"step": "2",
+			"help": "Select To Date",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "To_Date__DefectsLocalization"
+		},
+		{
+			"selector": "#s2id_autogen1",
+			"step": "3",
+			"help": "Select Build",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Build_Dropdown__DefectsLocalization"
+		},
+		{
+			"selector": "#s2id_autogen2",
+			"step": "4",
+			"help": "Select Release",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Release_DropDown_DefectsLocalization"
+		},
+		{
+			"selector": "#s2id_autogen3",
+			"step": "5",
+			"help": "Select Feature",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Feature_DropDown_DefectsLocalization"
+		},
+		{
+			"selector": "#defect_searchDesc",
+			"step": "6",
+			"help": "Enter defect description.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "DefectSearchDesc_TextBox_DefectsLocalization"
+		},
+		{
+			"selector": "#defect_searchDefectID",
+			"step": "7",
+			"help": "Enter Defect ID",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "DefectId_TextBox_DefectsLocalization"
+		},
+		{
+			"selector": "#submitForm",
+			"step": "8",
+			"help": "Click on Submit Button to localize the defect.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Submit_Button_DefectsLocalization"
+		},
+		{
+			"selector": "#resetForm",
+			"step": "9",
+			"help": "Click on Reset button to reset all the Fields.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Reset_Button_DefectsLocalization"
+		}
+	],
+	"title": "ISE"
+}

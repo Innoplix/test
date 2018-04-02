@@ -1,0 +1,26 @@
+/*-------------------------------------------------------------------------
+ * ISE framework classes for the user login.
+ *
+ * DEPENDENCIES
+ *  - ise-utils.js
+ *  - metronic.js
+ *-------------------------------------------------------------------------*/
+var iseConstants = {
+    
+    /*  Common Constants    */
+    url: window.location.protocol + "//" + window.location.host + "/" + window.location.pathname.split("/")[1],
+    str_success : "success",
+
+    /*  Login.js Constants  */
+    str_login_ErrorMsg: "Login Details Provided are Incorrect",
+    str_login_Dropdown_Initialvalue: "-- Select Organization --",    
+    int_login_Dropdown_SetIndex: 0,
+    str_login_License_ErrorMsg: "Invalid License. Please contact System Admin",
+
+
+    /*  Elastic Search    */
+     elasticsearchHost	: "http://10.98.11.15:9200",
+
+	featureMapping	:	"defect_collection,testcase_collection,sourcecode_collection",
+	
+};

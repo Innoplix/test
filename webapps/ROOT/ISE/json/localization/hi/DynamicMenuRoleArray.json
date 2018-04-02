@@ -1,0 +1,50 @@
+{
+    "admin": [{
+        "displayName": "व्यवस्थापक",
+        "dicplayIcon": "icon-user-follow"
+       
+    }, {
+        "displayName": "टेस्ट_माइगर",
+         "dicplayIcon": "icon-user"
+        
+    }, {
+        "displayName": "समर्थन",
+         "dicplayIcon": "icon-earphones-alt"
+      
+    },{
+        "displayName": "डेवलपर",
+         "dicplayIcon": "icon-user"
+      
+    }],
+    "test_manager": [{
+        "displayName": "टेस्ट_माइगर",
+        "dicplayIcon": "icon-user"
+      
+    }, {
+        "displayName": "परीक्षक",
+         "dicplayIcon": "icon-magnifier-add"
+      
+    }, {
+        "displayName": "समर्थन",
+        "dicplayIcon": "icon-earphones-alt"
+       
+    }],
+    "tester": [{
+        "displayName": "परीक्षक",
+         "dicplayIcon": "icon-magnifier-add"
+       
+    }, {
+        "displayName": "समर्थन",
+        "dicplayIcon": "icon-earphones-alt"
+      
+    }],
+	"developer": [{
+        "displayName": "डेवलपर",
+         "dicplayIcon": "icon-magnifier-add"
+       
+    }, {
+        "displayName": "समर्थन",
+        "dicplayIcon": "icon-earphones-alt"
+      
+    }]
+}

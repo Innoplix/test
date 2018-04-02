@@ -1,0 +1,37 @@
+[
+ 
+  {
+    
+    "defectsearchtabs": {
+       
+        "tabdetails": [
+          {
+            "tabid": "tab_1_1",
+            "label": "സമാന തിരയൽ",
+			"active": "yes",
+			"tabname":"Similar Search"
+          },
+          {
+            "tabid": "tab_1_2",
+            "label": "സന്ദർഭ തിരയൽ",
+			"active": "no",
+			"tabname":"Context Search"
+          },
+          {
+            "tabid": "tab_1_3",
+            "label": "വിപുലമായ തിരയൽ",
+			"active": "no",
+			"tabname":"Advanced Search"
+          },
+          {
+            "tabid": "tab_1_4",
+            "label": "ഫയൽ തിരയൽ",
+			"active": "no",
+			"tabname":"File Search"
+          }
+        ]
+      
+    }
+  }
+  
+]

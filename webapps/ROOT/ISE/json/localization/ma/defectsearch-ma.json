@@ -1,0 +1,19 @@
+{
+  "language": {
+	"Search types": "തിരയൽ തരങ്ങൾ",
+	"Search Results": "തിരയൽ ഫലങ്ങൾ",
+	"Search with in results": "ഫലങ്ങൾക്കൊപ്പം തിരയുക",
+	"Show": "കാണിക്കുക ",
+	"entries": "എൻട്രികൾ",
+	"Columns": "നിരകൾ"
+	  
+  },
+  "defectsearchdata":{
+	 "Title": "ఫైలు",
+	 "Description": "కలెక్షన్",
+	 "Search Here": "సమయం ప్రారంభించండి",
+	 "File Name:": "ముగింపు సమయం"
+ 
+}
+
+}

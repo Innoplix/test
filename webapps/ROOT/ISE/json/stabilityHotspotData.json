@@ -1,0 +1,19 @@
+{
+	"TableDetails": {
+		"Stability": {
+			"displayName": "Stability",
+			"enable": "yes",
+			"defaultURL": "/DevTest/services/HeatMaps.html",
+                        "description" : "description here"
+			
+		},
+		"HotSpot": {
+			"displayName": "HotSpot",
+			"enable": "yes",
+			"defaultURL": "/DevTest/services/DevGraphs.html",
+                        "description" : "description here"
+			
+		}
+	}
+
+}

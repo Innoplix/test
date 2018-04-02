@@ -1,0 +1,50 @@
+{
+    "admin": [{
+        "displayName": "అడ్మిన్",
+        "dicplayIcon": "icon-user-follow"
+       
+    }, {
+        "displayName": "టెస్ట్_మేనేజర్",
+         "dicplayIcon": "icon-user"
+        
+    }, {
+        "displayName": "మద్దతు",
+         "dicplayIcon": "icon-earphones-alt"
+      
+    },{
+        "displayName": "డెవలపర్",
+         "dicplayIcon": "icon-user"
+      
+    }],
+    "test_manager": [{
+        "displayName": "టెస్ట్_మేనేజర్",
+        "dicplayIcon": "icon-user"
+      
+    }, {
+        "displayName": "టెస్టర్",
+         "dicplayIcon": "icon-magnifier-add"
+      
+    }, {
+        "displayName": "మద్దతు",
+        "dicplayIcon": "icon-earphones-alt"
+       
+    }],
+    "tester": [{
+        "displayName": "టెస్టర్",
+         "dicplayIcon": "icon-magnifier-add"
+       
+    }, {
+        "displayName": "మద్దతు",
+        "dicplayIcon": "icon-earphones-alt"
+      
+    }],
+	"developer": [{
+        "displayName": "డెవలపర్",
+         "dicplayIcon": "icon-magnifier-add"
+       
+    }, {
+        "displayName": "మద్దతు",
+        "dicplayIcon": "icon-earphones-alt"
+      
+    }]
+}

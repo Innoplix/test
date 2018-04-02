@@ -1,0 +1,51 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 3,
+	"tooltips": [
+		{
+			"selector": "#searchDoc",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Search for knowledge"
+		},
+		{
+			"selector": "#searchDoc",
+			"step": "1",
+			"help": "Please enter your search query here. It could be a text within your document,image or anything that you need ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Search for Knoowledge"
+		},
+		{
+			"selector": "#moreFiltersBtn",
+			"step": "2",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Filter"
+		},
+		{
+			"selector": "#moreFiltersBtn",
+			"step": "2",
+			"help": "You can filter the search on the type of information you need",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Apply Filter"
+		},
+		{
+			"selector": "BUTTON:contains(' Actions\n\t\t   \n\t\t   ')",
+			"help": "TODO .. Please fill your content ",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "#sortDropdown",
+			"step": "3",
+			"help": "Select from the dropdown on basis of the fields you want to explore",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Choose on what you need"
+		}
+	],
+	"title": "ISE"
+}

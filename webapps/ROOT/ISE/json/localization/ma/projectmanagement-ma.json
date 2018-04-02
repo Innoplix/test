@@ -1,0 +1,23 @@
+{
+  "language": {
+	"Project Management": "പദ്ധതി നിർവ്വഹണം",
+	"Switch View": "കാഴ്ച മാറുക",
+	"Add New": "പുതിയത് ചേർക്കുക",
+	"Project Name": "പദ്ധതിയുടെ പേര്",
+	"Description": "വിവരണം",
+	"Organization": "സംഘടന",
+	"Set as Current": "നിലവിലുള്ളത് ആയി സജ്ജമാക്കുക",
+	"Delete": "ഇല്ലാതാക്കുക"
+	
+  },
+  "projectmanagementdata":{
+	 "sLengthMenu": "_MENU_ രേഖകൾ",
+	 "sEmptyTable": "ഇല്ല ഡാറ്റ ലഭ്യമാണ്",
+	 "sInfo": "കാണിക്കുന്നത്_START_ ചെയ്യുക_END_ ഓഫ് _TOTAL_എൻട്രികൾ",
+	 "sInfoEmpty": "കണ്ടെത്തി എൻട്രികൾ",
+	 "sInfoFiltered": "(അരിപ്പ 1 നിന്നും _MAX_ ആകെ എൻട്രികൾ)",
+	 "sSearch": "തിരച്ചിൽ ഫലങ്ങൾ:",
+	 "sZeroRecords": "കണ്ടെത്തി കഴമ്പുള്ള"
+}
+
+}

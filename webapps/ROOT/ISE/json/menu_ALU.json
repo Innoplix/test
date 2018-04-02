@@ -1,0 +1,243 @@
+[
+	{
+		"icon": "icon-home",
+		"title": "Dashboard",
+		"submenu": [
+			{
+				"href": "#general",
+				"landingpage": "Admin",
+				"tooltip": "General graphs",
+				"display": "General"
+			},
+			
+			
+			{
+				"href": "#testingmetrics",
+				"display": "Metrics",
+				"submenu": [
+					{
+						"display": "Testing",
+						"submenu": [
+							{
+								"href": "#releasevstestcases",
+								"display": "Release Vs Testcases"
+							},
+							{
+								"href": "#IF_testbankgrowthrate",
+								"display": "Test bank growth rate"
+							},
+							{
+								"href": "#IF_featurewisetestcasedistribution",
+								"display": "Feature wise test case distribution"
+							},
+							{
+								"href": "#IF_testprogresstrend",
+								"display": "Test progress trend"
+							},
+							{
+								"href": "#IF_featurewisetestresults",
+								"display": "Feature wise test results"
+							}
+						]
+					},
+					{
+						"display": "Defects",
+						"submenu": [
+							{
+								"href": "#IF_defectsprioritydistribution",
+								"display": "Defects priority distribution (trend and all releases)"
+							},
+							{
+								"href": "#IF_internalandexternalbugstrend",
+								"display": "Internal and external bugs trend"
+							},
+							{
+								"href": "#IF_defectsseveritydistribution",
+								"display": " Defects severity distribution (trend and all releases)"
+							},
+							{
+								"href": "#IF_defectdistibutionbydetection",
+								"display": " Defect distibution by detection (trend and all releases)"
+							},
+							{
+								"href": "#IF_defectcausedistribution",
+								"display": "  Defect cause distribution (trend and all releases)"
+							}
+						]
+					},
+					{
+						"href": "#IF_oldgraphs",
+						"display": "Old Graphs"
+					}
+				]
+			}
+			
+			
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "Development",
+		"icon": "glyphicon glyphicon-wrench",
+		"submenu": [
+			
+			{
+				"href": "#sourcebrowse",
+				"display": "Source Browse"
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"icon": "glyphicon glyphicon-search",
+		"title": "Testing",
+		"submenu": [
+			{
+				"href": "#IF_testbuilds",
+				"display": "Test Builds"
+			},
+			{
+				"href": "#regressionOptimization",
+				"display": "Regression Optimization",
+				"landingpage": "Tester"
+			},
+			{
+				"href": "#IF_teststep",
+				"display": "TestStep Optimization"
+			}
+		]
+	},
+	{
+		"icon": "glyphicon glyphicon-adjust",
+		"title": "Defects",
+		"submenu": [
+			{
+				"href": "#defectsearch",
+				"landingpage": "Developer",
+				"display": "Defect Search"
+			}
+		
+			
+		]
+	},
+	
+	{
+		"roles": "^(Admin)$",
+		"title": "Settings",
+		"icon": "icon-settings",
+		"submenu": [
+			{
+				"href": "#IF_projects",
+				"display": "Project "
+			},
+			{
+				"href": "#IF_import",
+				"display": "Import "
+			},
+			{
+				"display": "Usage & Data",
+				"submenu": [
+					{
+						"href": "#IF_usageevents",
+						"display": " Event Analysis"
+					},
+					{
+						"href": "#IF_dataanalysis",
+						"display": " Data Analysis"
+					}
+				]
+			},
+			{
+				"href": "#IF_dashboardadmin",
+				"display": "Dashboard Administration "
+			},
+			{
+				"href": "#IF_users",
+				"display": "User "
+			},
+			{
+				"href": "#IF_roles",
+				"display": "Roles "
+			},
+			{
+				"href": "#IF_organization",
+				"display": "Organization "
+			},
+			{
+				"href": "#IF_buildmapping",
+				"display": "Build Mapping "
+			},
+			{
+				"href": "#IF_settingfeature",
+				"display": "Features "
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "Instrumentation",
+		"icon": "icon-docs",
+		"submenu": [
+			{
+				"href": "#IF_buildanalysis",
+				"display": "Build Analysis"
+			},
+			{
+				"href": "#IF_impacttestcase",
+				"display": "Impact Testcase"
+			},
+			{
+				"href": "#IF_analysesummary",
+				"display": "Analysis Summary"
+			}
+		]
+	},
+	{
+		"roles": "^(Support|Admin)$",
+		"title": "Support",
+		"icon": "icon-earphones-alt",
+		"submenu": [
+			{
+				"href": "#IF_createcollection",
+				"display": "Admin"
+			},
+			{
+				"href": "#IF_uploadcollection",
+				"display": "Upload Admin"
+			},
+			{
+				"href": "#IF_viewconfiguration",
+				"display": "View Admin"
+			},
+			{
+				"href": "#itsassist",
+				"display": "ITS Assist"
+			},
+			{
+				"href": "#itsanalyzesearch",
+				"display": "Analyze Search"
+			},			
+			{				
+				"href": "#itssupportinsight",
+				"display": "Support Insight"
+			},
+			{
+				"landingpage": "Support",
+				"href": "#IF_issueidentification",
+				"display": "Issue Identification"
+			},
+			{
+				"href": "#IF_patternmatch",
+				"display": "Pattern Match"
+			},
+			{
+				"href": "#IF_supportforecast",
+				"display": "Forecast"
+			},
+			{
+				"href": "#knowledgedocuments",
+				"display": "Knowledge Documents"
+			}
+		]
+	}
+]

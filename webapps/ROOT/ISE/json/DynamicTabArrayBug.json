@@ -1,0 +1,171 @@
+{
+    "TabArray":[
+        {
+            "defects": {
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "DefectID",
+                            "SourceName": "_id"
+                        },
+                        {
+                            "displayName": "Title",
+                            "SourceName": "title"
+                        },
+						{
+                            "displayName": "Feature",
+                            "SourceName": "primary_feature"
+                        },
+						{
+                            "displayName": "Priority",
+                            "SourceName": "priority"
+                        },
+						{
+                            "displayName": "SuggestedPriority",
+                            "SourceName": "suggested_priority"
+                        },						
+						{
+                            "displayName": "Calls",
+                            "SourceName": "calls"
+                        },
+						{
+                            "displayName": "TotalCalls",
+                            "SourceName": "total_calls"
+                        },
+						{
+                            "displayName": "Build",
+                            "SourceName": "build"
+                        },
+						{
+                            "displayName": "Release",
+                            "SourceName": "release"
+                        },
+						
+						{
+                            "displayName": "Submit",
+                            "SourceName": ""
+                        }
+												
+                    ]
+                },
+                "Features": {
+                    "fields": [
+                        {
+                            "displayName": "Feature",
+                            "SourceName": "primary_feature"
+                        },
+                        {
+                            "displayName": "SecondaryFeature",
+                            "SourceName": "secondary_feature"
+                        },
+                        {
+                            "displayName": "ParentFeature",
+                            "SourceName": "primary_feature_parent"
+                        }
+                    ]
+                },
+                "Testcases": {
+                    "fields": [
+                        {
+                            "displayName": "testcaseid",
+                            "SourceName": "test_case_id",
+                            "type": "obj",
+                            "name": "testcases",
+                            "clickevent": "getTestcaseDetails"
+                        }
+                    ]
+                },
+                "Files": {
+                    "fields": [
+                        {
+                            "displayName": "file",
+                            "SourceName": "file",
+                            "type": "array",
+                            "clickevent": "onShowCallGraphForFileClick12"
+                        }
+                    ]
+                }
+            },
+            "testcase": {
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "TestcaseId",
+                            "SourceName": "_id"
+                        },
+                        {
+                            "displayName": "Title",
+                            "SourceName": "title"
+                        },
+                        {
+                            "displayName": "Description",
+                            "SourceName": "description"
+                        },
+                        {
+                            "displayName": "Priority",
+                            "SourceName": "priority"
+                        }
+                    ]
+                },
+                "Features": {
+                    "fields": [
+                        {
+                            "displayName": "Feature",
+                            "SourceName": "primary_feature"
+                        },
+                        {
+                            "displayName": "SecondaryFeature",
+                            "SourceName": "secondary_feature"
+                        },
+                        {
+                            "displayName": "ParentFeature",
+                            "SourceName": "primary_feature_parent"
+                        }
+                    ]
+                }
+            },
+            "source": {
+                "Details": {
+                    "fields": [
+                        {
+                            "displayName": "File",
+                            "SourceName": "files"
+                        },
+                        {
+                            "displayName": "Title",
+                            "SourceName": "title"
+                        },
+                        {
+                            "displayName": "Description",
+                            "SourceName": "description"
+                        },
+                        {
+                            "displayName": "References",
+                            "SourceName": "ReferenceTo"
+                        },
+                        {
+                            "displayName": "Referencedby",
+                            "SourceName": "ReferencedBy"
+                        }
+                    ]
+                },
+                "Features": {
+                    "fields": [
+                        {
+                            "displayName": "Feature",
+                            "SourceName": "primary_feature"
+                        },
+                        {
+                            "displayName": "SecondaryFeature",
+                            "SourceName": "secondary_feature"
+                        },
+                        {
+                            "displayName": "ParentFeature",
+                            "SourceName": "primary_feature_parent"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

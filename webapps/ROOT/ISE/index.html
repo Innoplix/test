@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>ISE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+	<script>
+	if (localStorage.getItem("authtoken") === null) {
+		localStorage.setItem("redirectURL", window.location.href);
+        window.location.href = "login.html";
+	}
+	</script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/DevTest/images/favicon.ico" />
+    <link href="metronics/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+	
+	<!-- BEGIN PAGE LOAD PROGRESS BAR -->
+	<script src="metronics/global/plugins/pace/pace.min.js"  type="text/javascript"></script>
+    <link href="metronics/global/plugins/pace/themes/pace-theme-flash.css" rel="stylesheet" type="text/css"/>
+	<!-- END PAGE LOAD PROGRESS BAR -->
+	
+	
+	
+    <!-- BEGIN THEME STYLES -->
+    <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+    <link href="metronics/global/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+	 <link href="metronics/global/css/jquery.fileupload.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="metronics/global/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/admin/layout2/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="metronics/admin/layout2/css/themes/grey.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="metronics/admin/layout2/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/ise.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/select2/select2.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-editable/bootstrap-editable/css/bootstrap-editable.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-editable/inputs-ext/address/address.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" type="text/css" href="metronics/global/plugins/jquery-multi-select/css/multi-select.css" />
+    
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/clockface/css/clockface.css"/>	
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-colorpicker/css/colorpicker.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/jstree/dist/themes/default/style.min.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/typeahead/typeahead.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/star-rating/star-rating.min.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/jquery-notific8/jquery.notific8.min.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/noUiSlider/jquery.nouislider.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/noUiSlider/jquery.nouislider.pips.min.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-toastr/toastr.min.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/fSelect/fSelect.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/bootstrap-summernote/summernote.css"/>
+	<link rel="stylesheet" type="text/css" href="metronics/global/plugins/jquery-treetable/css/jquery.treetable.css"/>
+	
+	<link href="css/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
+	
+	<script language="javascript" type="text/javascript" src="js/plugins/arbor.js"></script>
+	
+	<script src="js/plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script><!-- RuleEngine javaScriptEditor -->
+ 
+	<!-- END THEME STYLES -->
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+<body class=" page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo page-sidebar-menu-closed page-sidebar-closed">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-static-top" id="headerPart">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner ">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a>
+					<div class="logo logo-default"> <div class="logo-container"><span class="common-heading-title">Intelligent</span><span class="dynamic-heading-title"></span><span class="common-heading-title">Engineering</span></div></div>
+                </a>
+                <div class="menu-toggler sidebar-toggler">
+                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                </div>
+            </div>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+            </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <!-- BEGIN PAGE ACTIONS -->
+            <!-- DOC: Remove "hide" class to enable the page header actions -->
+             <div class="page-actions col-md-4">
+			   <div class="hidden-sm hidden-xs logo"> <div class="logo-container"><span class="common-heading-title">Intelligent</span><span class="dynamic-heading-title"></span><span class="common-heading-title">Engineering</span></div></div>
+                <div class="hidden-sm hidden-xs caption-helper pageBreadCrumb">
+                    <ul class="caption-helper font-grey-cascade pageBreadCrumbUL">
+                        <li class="pageBreadCrumbLI">
+							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i id="icon"></i>
+                            <span id="currSelMenu"></span>
+							<i class="fa fa-angle-right"></i>
+							</a>
+							<ul id="dynamicMenu" class="dropdown-menu dropdown-menu-default" >
+                                <li>
+                                    <a name="aboutUs" id="aboutus">
+                                        <i class="icon-info"></i> About us </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="pageBreadCrumbLI dropdown">
+								<span id="currSelSubMenu"></span>
+                        </li>
+						
+                    </ul>
+                </div>
+				
+            </div> 
+            <!-- END PAGE ACTIONS -->
+            <!-- BEGIN PAGE TOP -->
+			
+            <div class="page-top">
+                <!-- BEGIN HEADER SEARCH BOX -->
+                <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                <div>
+                    <div class="search-form search-form-expanded font-grey-cascade">
+                        <div class="input-group font-grey-cascade">
+                            <input data-localize="language.Search"  type="text" class="form-control font-grey-cascade" placeholder="Search..." name="gQuery" id="gQuery">
+                            <span class="input-group-btn">
+                        <a href="javascript:querySearchFunc();" class="btn"><i class="icon-magnifier font-grey-cascade searchIcon" >
+                        </i></a>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- END HEADER SEARCH BOX -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right ">
+                        <!-- BEGIN  DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+                            <a href="javascript:;" class="dropdown-toggle caption-helper " data-toggle="dropdown" data-hover="dropdown" data-close-others="true" title="Projects">
+								<i class="fa fa-file" alt="Project Name" height="30" width="30"> </i>
+                                <span class="hidden-sm hidden-xs font-grey-cascade" id="headerProjNameElement"> </span>
+								<i class="fa fa-angle-down"></i>
+                                <span class="badge badge-default hide" id="totalProjectsCount"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="external">
+                                    <span class="bold" id="selectedProjNameElement"></span>
+                                </li>
+                                <li>
+                                    <ul class="dropdown-menu-list scroller dropDownMenuHeader" data-handle-color="#637283" id="projectListElement">
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END  DROPDOWN -->
+                        <!-- BEGIN TODO DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-extended dropdown-tasks" id="header_release">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" title="Versions">
+								<i class="fa fa-clock-o" alt="Project Name" height="30" width="30"></i>
+								<span class=" hidden-sm hidden-xs font-grey-cascade" id="headerVersionID"> </span>
+                               <i class="fa fa-angle-down"></i>
+                                <span class="badge badge-default hide" id="totalVersions"> </span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks">
+                                <li class="external">
+                                    <span class="bold" id="versionID"></span>
+                                </li>
+                                <li>
+                                    <ul class="dropdown-menu-list scroller dropDownMenuHeader" data-handle-color="#637283" id="versionListElement">
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END TODO DROPDOWN -->
+                        <li class="dropdown dropdown-extended hold-on-click dropdown-checkboxes hide " id="header_multirelease">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" title="Versions">
+                                <span class=" hidden-sm hidden-xs font-grey-cascade" id="headerVersionID">multi
+                            </span>
+                                <i class="icon-calendar font-grey-cascade"></i>
+                                <span class="badge badge-default" id="multiReleasetotalVersions">
+                            </span>
+                            </a>
+                            <ul class="dropdown-menu hold-on-click extended checkboxes ">
+                                <li class="external">
+                                    <span class="bold" id="multiReleaseVersionID">Select Multiple Releases</span>
+                                </li>
+                                <li>
+                                    <ul class="dropdown-menu-list scroller hold-on-click  dropDownMenuHeader" data-handle-color="#637283" id="multiReleaseVersionListElement">
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<span class="glyphicon glyphicon-user font-grey-cascade">
+                                            </span>
+                                <span class="username username-hide-on-mobile font-grey-cascade" id="usernameElement">
+                             </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default" id="rolesListUL">
+                                <li class="dropdown-submenu">
+                                    <a  onmouseover="loadRolesList()" >
+                                        <i class="icon-key"></i> <span data-localize="language.Change Role">Change Role</span></a>
+                                    <ul class="dropdown-menu" id="changeRoleLI">
+                                    </ul>
+                                </li>
+                               	 <!-- <li class="divider">
+                                </li> -->
+								<!--<li>								   
+									<a  href="javascript:displayAliasWindow();">
+                                        <i class="icon-key"></i> <span data-localize="language.Set Alias Name">Set Alias Name</span></a>
+                                </li>-->
+                                <li>
+                                    <!--<a href="login.html">-->
+									<a href="javascript:logoutUser();">
+                                        <i class="icon-key" ></i><span data-localize="language.Log Out">Log Out</span> </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:aboutUs();" name="aboutUs" id="aboutus">
+                                        <i  class="icon-info"></i><span data-localize="language.About us"> About us</span> </a>
+                                </li>
+                            </ul>
+                        </li>
+						<div class="fullscreen_box1 hidden-sm hidden-xs " id="fullscreenBtnDiv">
+							<a title="Fullscreen">
+								<i class="fa fa-expand" alt="Project Name" height="26" width="26" id="pageFullScreenBtn"></i>
+							</a>
+						</div>
+						<div class="hidden-sm hidden-xs hidden-md hidden-lg" id="helpBtnDiv">
+							<a title="Help">
+								<i class="fa fa-question-circle" alt="Project Name" height="26" width="26" id="pageFullScreenBtn1"></i>
+							</a>
+						</div>
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <div class="clearfix">
+    </div>
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper" id="menuBar">
+            <div class="page-sidebar navbar-collapse collapse">
+				<!-- BEGIN SIDEBAR MENU -->
+				<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+				<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+				<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+				<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+				<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+				<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+				<ul id="menuList" class="page-sidebar-menu page-sidebar-menu-hover-submenu page-sidebar-menu-closed" id="menuList" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+				</ul>
+			</div>
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                <!-- /.modal -->
+                <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                <!-- BEGIN PAGE HEADER-->
+                <div id="pageContainer">
+                </div>
+                <!-- END PAGE HEADER-->
+            </div>
+        </div>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <!--Cooming Soon...-->
+        <!-- END QUICK SIDEBAR -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer" id="footerPart">
+        <!-- BEGIN FOOTER CONTENT-->
+        <div class="page-footer-inner">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015 &copy; HCL Technologies.
+        </div>
+		<div class="page-footer-inner pull-right">
+           <img src="images/hcllogo.png"/>
+        </div>
+        <div class="scroll-to-top font-grey-cascade">
+            <i class="icon-arrow-up font-grey-cascade"></i>
+        </div>
+        <!-- END FOOTER CONTENT-->
+    </div>
+    <script>
+	var scripts = document.createDocumentFragment();
+	var s;
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "metronics/global/plugins/jquery.min.js?v="+localStorage.jqVesion ;
+	scripts.appendChild(s);
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "metronics/metronics-utils.js?v="+localStorage.mVersion;
+	scripts.appendChild(s);
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "ISE-API/ise-utils.js?v="+localStorage.iSEAPIVersion;
+	scripts.appendChild(s);
+	
+	s = document.createElement('script');s.async = false;
+	s.src = "js/index.js?v="+localStorage.iSEUIVersion;
+	scripts.appendChild(s);
+	
+	document.head.appendChild(scripts);
+					
+	</script>
+    <script language="javascript" type="text/javascript" src="chatbot/HCLchatbot.js" botUrl="ws://localhost:8889/" height="350" width="300" left="-110" bottom="-80" ></script>
+<iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="chatbot/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div>
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- <div class="fullscreen_box hidden-sm hidden-xs " id="fullscreenBtnDiv">
+        <a title="Fullscreen">
+             <i class="icon-size-fullscreen font-grey-cascade" id="pageFullScreenBtn"></i> 
+			<img src="images/project.png" alt="Project Name" height="26" width="30" id="pageFullScreenBtn">
+        </a>
+    </div> -->
+
+
+    <div class="modal fade bs-modal-lg in" id="large20" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                    <h4 class="modal-title">About Us - ISE Development</h4>
+                                                </div>
+                                                <div class="modal-body"> 
+                                                    <div class="portlet light">
+                    <div class="portlet-body">
+                        
+                        <!--/row-->
+                        <div class="table-scrollable">
+                                    <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                             #
+                                        </th>
+                                        <th>
+                                             Software
+                                        </th>
+                                        <th>
+                                             License
+                                        </th>
+                                        <th>
+                                             Redistributable
+                                        </th>
+                                        <th>
+                                             Modifiable
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                             1
+                                        </td>
+                                        <td>
+                                             Tomcat
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             2
+                                        </td>
+                                        <td>
+                                             Elasticsearch
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             3
+                                        </td>
+                                        <td>
+                                             MongoDB
+                                        </td>
+                                        <td>
+                                             AGPL3
+                                        </td>
+                                        <td>
+                                             No
+                                        </td>
+                                        <td>
+                                            NO
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             4
+                                        </td>
+                                        <td>
+                                             MongoDB drivers
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             5
+                                        </td>
+                                        <td>
+                                             Derby
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             6
+                                        </td>
+                                        <td>
+                                             R-Graph
+                                        </td>
+                                        <td class="danger">
+                                             Commercial
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             7
+                                        </td>
+                                        <td>
+                                             Kibana
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             8
+                                        </td>
+                                        <td>
+                                             Jquery
+                                        </td>
+                                        <td>
+                                             MIT
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             9
+                                        </td>
+                                        <td>
+                                             Mohout
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             10
+                                        </td>
+                                        <td>
+                                             dyn-web utils
+                                        </td>
+                                        <td>
+                                             ??
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             11
+                                        </td>
+                                        <td>
+                                             R
+                                        </td>
+                                        <td>
+                                             AGPL
+                                        </td>
+                                        <td>
+                                             No
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             12
+                                        </td>
+                                        <td>
+                                             Lucene
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             13
+                                        </td>
+                                        <td>
+                                             MongoDB-river
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             14
+                                        </td>
+                                        <td>
+                                             Dynatree
+                                        </td>
+                                        <td>
+                                             MIT
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             15
+                                        </td>
+                                        <td>
+                                             Jszip/XLS
+                                        </td>
+                                        <td>
+                                             GPL3/MIT
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             16
+                                        </td>
+                                        <td>
+                                             Datatables
+                                        </td>
+                                        <td>
+                                             MIT
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             17
+                                        </td>
+                                        <td>
+                                             Pivot/js
+                                        </td>
+                                        <td>
+                                             MIT
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            No
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             18
+                                        </td>
+                                        <td>
+                                             Quartz
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             19
+                                        </td>
+                                        <td>
+                                             Spring
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             20
+                                        </td>
+                                        <td>
+                                             CXF
+                                        </td>
+                                        <td>
+                                             Apache2
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             21
+                                        </td>
+                                        <td>
+                                             Metronics
+                                        </td>
+                                        <td class="danger">
+                                             Commercial
+                                        </td>
+                                        <td>
+                                             Yes
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    
+
+                                    </tbody>
+                                    </table>
+                                </div>
+                        <!--/thumbnails-->
+                        <!-- //End Meer Our Team -->
+                    </div>
+                </div>
+
+  
+                                                 </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+                                                   
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+									
+									<!-- To display and take user alias name -->
+									<div class="modal fade bs-modal-sm in" id="setAliasNameWindow" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                    <h4 class="modal-title">Set Alias Name</h4>
+                                                </div>
+                                                <div class="modal-body"> 
+                                                    <div class="portlet light">
+														<div class="portlet-body">
+															<div class="col-md-3">
+															<input type="text"  id="aliasNameInput">							
+															</div>				
+														</div>
+													</div>
+                                               </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn green" data-dismiss="modal">Cancel</button>
+													<button type="button" class="btn green" onclick="javascript:setUserAlias()">Save</button>
+                                                   
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+<script language='javascript'>
+
+
+
+    var loc = window.location;
+    var pathName = loc.pathname.substring(1, loc.pathname.lastIndexOf('/'));
+    document.title=pathName;
+
+
+
+</script>
+								
+
+</body>
+<!-- END BODY -->
+
+</html>

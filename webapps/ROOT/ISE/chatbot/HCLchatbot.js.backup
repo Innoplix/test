@@ -1,0 +1,89 @@
+
+// SIMY: No Jquery to avoid conflicts
+// SIMY: Checking for document ready
+(function(){
+    var tId = setInterval(function() {
+        if (document.readyState == "complete") __onComplete()
+    }, 250);
+    function __onComplete(){
+        clearInterval(tId);
+		HCLBot_OnDocumentLoad();
+           
+    };
+})()
+
+
+//All function names should be prefixed to avoid conflicts
+function HCLBot_OnDocumentLoad() {
+	var div = document.createElement("div");
+	div.style.position = "fixed";
+	div.style.right = "10px";
+	div.style.bottom = "10px";
+	div.style.height = "200px";
+	div.style.width = "250px";
+	div.style.border ="1px solid red";
+	div.style.background = "#000000";
+	
+	div.innerHTML = '<div style="overflow-y: auto;display:block;width:100%;height:160px;font-size:10pt;font-family: Courier New" id="HCLBot_console"></div><br/>' +
+					'<input type="text" id="HCLBot_text"/> <input type="submit" onclick="HCLBot_OnSend()" value="send" id="HCLBot_send"/>';
+	
+	var lastChild = document.body.lastChild;
+	document.body.insertBefore(div, lastChild.nextSibling); 
+}
+
+function HCLBot_OnSend() {
+	var msg = document.getElementById('HCLBot_text').value;
+	HCLBot_WebSocket(msg);
+	document.getElementById('HCLBot_text').value = "";
+}
+
+
+var HCLBot_ws;
+var HCLBot_url = "ws://localhost:8889/";
+
+function HCLBot_WebSocket(m) {
+        
+		
+		if( HCLBot_ws ) {
+			HCLBot_ws.send(m);
+			HCLBot_AppendConsole(m,'red');
+		} else {
+               // Let us open a web socket first time
+               HCLBot_ws = new WebSocket(HCLBot_url);
+				
+               HCLBot_ws.onopen = function()
+               {
+                  // Web Socket is connected, send data using send()
+                  HCLBot_ws.send(m);
+				  HCLBot_AppendConsole('Connected with bot','yellow');
+				  HCLBot_AppendConsole(m,'red');	
+               };
+				
+               HCLBot_ws.onmessage = function (evt) 
+               { 
+                  var received_msg = evt.data;
+                  HCLBot_AppendConsole(received_msg,'green');
+               };
+				
+               HCLBot_ws.onclose = function()
+               { 
+                  HCLBot_AppendConsole('Bye bot','yellow');
+				  HCLBot_ws = undefined;
+               };
+        }
+            
+}
+
+var HCLBot_timer;
+function HCLBot_AppendConsole(m, color) {
+	var s = document.createElement("span");
+	s.style.color = color;
+	s.innerHTML = m + "<br/>";
+	var element = document.getElementById("HCLBot_console");
+	element.appendChild(s);
+	element.scrollTop = element.scrollHeight; // SIMY: scroll down
+	
+	//inactive Timeout
+	clearTimeout(HCLBot_timer);
+	HCLBot_timer = setTimeout(function(){ eval ('HCLBot_ws.close()'); HCLBot_ws = undefined;},60000);
+}

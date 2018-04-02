@@ -1,0 +1,61 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 5,
+	"tooltips": [
+		{
+			"selector": "A[href='#inputsSettingsTab']",
+			"step": "1",
+			"help": "Please enter the build/release for which you want to optimize the test case executions then,click on next.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Input Tab "
+		},
+		{
+			"selector": "A[href='#testBedsTab']",
+			"step": "2",
+			"help": "Please select the test enviroment for which you want to perform the test executions then,click on next",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Test Bed Selection"
+		},
+		{
+			"selector": "A[href='#recomondationsTab']",
+			"step": "3",
+			"help": "These tab shows you what are the recommended test cases.Click on next to provide the contraints on optimizing the test case executions",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Recommended Test Cases"
+		},
+		{
+			"selector": "A[href='#testSettingsTab']",
+			"step": "4",
+			"help": "Please enter your constraints of time and resources for which you want to optimise the test case executions. Click on Fetch Test Cases to get the optimized test case executions",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Test Details Tab"
+		},
+		{
+			"selector": "A[href='#optimizationsTab']",
+			"step": "5",
+			"help": "This tab shows you the optimised test execution details given you constraints.The test cases are grouped into diiferent groups. Click on the numbers in the groups to get the detaiks of the test execution",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Optimised test results"
+		},
+		{
+			"selector": "A[href='#optimizationsTab']",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "A[href='#optimizationsTab']",
+			"step": "5",
+			"help": "These tab shows you the optimised test case executions given your constraints.\n",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Optimised test executions"
+		}
+	],
+	"title": "ISE"
+}

@@ -1,0 +1,95 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#sample_editable_user_new",
+			"step": "1",
+			"help": "To create new user,Click on Add New Button",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "AddNewButton_UserManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(1) > input",
+			"step": "2",
+			"help": "Please enter User Name",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "UserName_Textbox_UserManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(2) > input",
+			"step": "3",
+			"help": "Enter Password",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Password_Textbox_UserManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(3) > input",
+			"step": "4",
+			"help": "Enter FullName",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "FullName_Textbox_UserManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(4) > input",
+			"step": "5",
+			"help": "Enter Email",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Email_Textbox_UserManagement"
+		},
+		{
+			"selector": "#orglist",
+			"step": "6",
+			"help": "Select Organization from the dropdown",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Organization_Dropdown_UserManagement"
+		},
+		{
+			"selector": "#rolelist",
+			"step": "7",
+			"help": "Select Role from the dropdown",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Role_Dropdown_UserManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(7) > input",
+			"step": "8",
+			"help": "Enter Designation",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Designation_Textbox_UserManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(8) > input",
+			"step": "9",
+			"help": "Enter Department",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "\"Department_Textbox_UserManagement\""
+		},
+		{
+			"selector": "A[href='']A:contains('Save')",
+			"step": "10",
+			"help": "Click on Save link to save the User \",\n\t\t\t\"position\": \"right top\",",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Save_Link_UserManagement"
+		},
+		{
+			"selector": "A[href='']A:contains('Cancel')",
+			"step": "11",
+			"help": "Click on Cancel link to cancel the User",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Cancel_Link_UserManagement"
+		}
+	],
+	"title": "ISE"
+}

@@ -1,0 +1,87 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#sample_editable_new",
+			"step": "1",
+			"help": "To create new Role,click on Add New Button.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Addnew_Button__RoleManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(1) > input",
+			"step": "2",
+			"help": "Enter Role Name.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "RoleName_TextBox_RoleManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(2) > input",
+			"step": "3",
+			"help": "Enter Description.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Description_TextBox_RoleManagement"
+		},
+		{
+			"selector": "#orglist",
+			"step": "4",
+			"help": "Select Organization from the Dropdown.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Organization_DropDown_RoleManagement"
+		},
+		{
+			"selector": "A[href='']A:contains('Save')",
+			"step": "5",
+			"help": "To Save,Click on Save link.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Edit_Link_RoleManagement"
+		},
+		{
+			"selector": "A[href='']A:contains('Cancel')",
+			"step": "6",
+			"help": "Click on Cancel link to cancel the Role.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Cancel_Link_RoleManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(4) > a",
+			"step": "7",
+			"help": "Click on Edit link to edit the Role.",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Edit_Link_RoleManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(5) > a",
+			"step": "8",
+			"help": "Click on Delete link to delete the Role.",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Delete_Link_RoleManagement"
+		},
+		{
+			"selector": "#sample_editable_filter INPUT",
+			"step": "9",
+			"help": "Enter the Text to search with in the Search Results.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Search_TextBox_RoleManagement"
+		},
+		{
+			"selector": "SELECT[name='sample_editable_length']",
+			"step": "10",
+			"help": "Select number of Records to display from the Dropdown.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Records_Dropdown_RoleManagement"
+		}
+	],
+	"title": "ISE"
+}

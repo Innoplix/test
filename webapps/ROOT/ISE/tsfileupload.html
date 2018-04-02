@@ -1,0 +1,57 @@
+<div class="portlet light form-fit bordered">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="icon-settings font-green"></i>
+			<span class="caption-subject font-green sbold uppercase">Text Summarization</span>
+		</div>
+		<div class="actions">
+			<div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-small bootstrap-switch-animate" style="width: 88px;">
+				<div class="bootstrap-switch-container" style="width: 129px; margin-left: 0px;">
+				</div>
+			</div> 
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form id="tsuploadform" method="POST" enctype="multipart/form-data" class="form-horizontal form-bordered" style="clear: both;">
+			<div class="form-body">                                            
+				<div class="form-group">									
+					<div class="col-md-5">
+						<span class="btn green fileinput-button">
+						<i class="fa fa-plus"></i>
+						<span>
+						Add files... </span>
+						<input name="file1"  type='file' id="file1" />
+						</span>					
+						
+						<input type="button" class="btn blue-hoki pull-right" id="tsuploadBtnId"  value="Summarize" onclick="return tsfileupload.tsfileUpload();">							
+					</div>
+					
+			</div>
+			
+		<!-- END FORM-->			
+		</form>		
+		
+			
+		
+	</div>	
+	
+	
+ </div> 
+ <div class="portlet box blue">
+			<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-cogs"></i> Text Summerization Log</div>				
+			</div>
+			<div class="portlet-body">
+				<div id="textSummerization-container">		
+					<div id="textSummerization"></div>
+				</div>
+			</div>
+	</div>
+
+</div>
+
+</div>
+</div>
+</div>

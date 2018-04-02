@@ -1,0 +1,234 @@
+ .fullscreen_box{
+            position:fixed;
+            width:18px;
+            top:3%;
+            right:0.1%;
+            z-index: 999999;       
+            padding:1px;
+           
+        }
+
+ .pageBreadCrumb{
+ 	padding-top:12px;
+ } 
+
+ .pageBreadCrumbUL{
+ 	display: inline;
+ 	 padding-top:5px;
+ }
+ .pageBreadCrumbLI
+ {
+ 	display: inline;
+ }
+ .searchName
+{
+ 	padding-top:13px;
+ }
+
+ .searchIcon{
+ 	padding-top:11px;
+ }
+
+ .dropDownMenuHeader{
+ 	height: 275px;
+ }
+
+ @media screen and (max-width: 480px) {
+      td.ISEcompactAuto {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+            font-size: 11px !important;
+      }
+      th.ISEcompactAuto {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+            font-size: 11px !important;
+      }
+}
+
+@media screen and (min-width: 480px) {
+      th.ISEcompactAuto {
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
+            padding-right: 8px !important;
+            padding-left: 8px !important;
+      }
+      
+      th.ISEcompactAuto {
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
+            padding-right: 8px !important;
+            padding-left: 8px !important;
+      }
+}
+
+em.iseH {
+	font-style:normal;
+	border-bottom: 1px solid #800000 ;
+}
+
+/*!
+
+Split Pane v0.8.0
+
+*/
+.pretty-split-pane-frame {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      background: silver;
+}
+
+.pretty-split-pane-frame .split-pane > .split-pane-divider.dragged.touch {
+      background: blue;
+      opacity: 0.25;
+}
+
+.pretty-split-pane-component-inner {
+      box-sizing: border-box;
+      border: 1px solid gray;
+      background: white;
+      width: 100%;
+      height: 100%;
+      padding: 0 1em;
+      overflow: auto;
+}
+
+.split-pane {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+}
+
+.split-pane.fixed-top > .split-pane-component,
+.split-pane.fixed-bottom > .split-pane-component,
+.split-pane.horizontal-percent > .split-pane-component {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: auto;
+      top: auto;
+      bottom: 0;
+      z-index: 1;
+}
+
+.split-pane.fixed-top > .split-pane-component:first-child,
+.split-pane.fixed-bottom > .split-pane-component:first-child,
+.split-pane.horizontal-percent > .split-pane-component:first-child {
+      top: 0;
+      bottom: auto;
+}
+
+.split-pane.fixed-top > .split-pane-divider,
+.split-pane.fixed-bottom > .split-pane-divider,
+.split-pane.horizontal-percent > .split-pane-divider {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      cursor: row-resize;
+      z-index: 2;
+}
+
+.split-pane.fixed-top > .split-pane-divider > .split-pane-divider-inner,
+.split-pane.fixed-bottom > .split-pane-divider > .split-pane-divider-inner,
+.split-pane.horizontal-percent > .split-pane-divider > .split-pane-divider-inner {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      box-sizing: content-box;
+      width: 100%;
+      height: 100%;
+      padding: 5px 0;
+}
+
+.split-pane.fixed-left > .split-pane-component,
+.split-pane.fixed-right > .split-pane-component,
+.split-pane.vertical-percent > .split-pane-component {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      overflow: auto;
+      left: auto;
+      right: 0;
+      z-index: 1;
+}
+
+.split-pane.fixed-left > .split-pane-component:first-child,
+.split-pane.fixed-right > .split-pane-component:first-child,
+.split-pane.vertical-percent > .split-pane-component:first-child {
+      left: 0;
+      right: auto;
+}
+
+.split-pane.fixed-left > .split-pane-divider,
+.split-pane.fixed-right > .split-pane-divider,
+.split-pane.vertical-percent > .split-pane-divider {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      cursor: col-resize;
+      z-index: 2;
+}
+
+.split-pane.fixed-left > .split-pane-divider > .split-pane-divider-inner,
+.split-pane.fixed-right > .split-pane-divider > .split-pane-divider-inner,
+.split-pane.vertical-percent > .split-pane-divider > .split-pane-divider-inner {
+      position: absolute;
+      top: 0;
+      left: -5px;
+      box-sizing: content-box;
+      width: 100%;
+      height: 100%;
+      padding: 0 5px;
+}
+
+.split-pane-resize-shim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10000;
+      display: none;
+}
+
+.split-pane.fixed-left > .split-pane-resize-shim,
+.split-pane.fixed-right > .split-pane-resize-shim,
+.split-pane.vertical-percent > .split-pane-resize-shim {
+      cursor: col-resize;
+}
+
+.split-pane.fixed-top > .split-pane-resize-shim,
+.split-pane.fixed-bottom > .split-pane-resize-shim,
+.split-pane.horizontal-percent > .split-pane-resize-shim {
+      cursor: row-resize;
+}
+
+#left-component {
+      right: 80%;
+      margin-right: 5px;
+}
+
+#my-divider {
+      right: 80%;
+      width: 5px;
+}
+
+#right-component {
+      width: 80%;
+}
+
+.vakata-context { 
+     z-index:999 !important; 
+}
+
+
+
+
+

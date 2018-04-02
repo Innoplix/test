@@ -1,0 +1,12 @@
+{
+"kibanaURL"      : "/DevTest/dashboard/index.html#/dashboard/", 
+"defectsinsight" : {"kibanaDashboardName": "Defect Insights", "kibanaDashboardTimeFilter":"(from:now-15y,mode:quick,to:now)", 
+"kibanaDashboardFilter":"updated\\ by:%USERNAME%","kibanadDashboardDisplaySearchBar":"false", 
+                     "height": "2000px" },
+"defectsinsightall" : {"kibanaDashboardName": "Defect Insights", "kibanaDashboardTimeFilter":"(from:now-15y,mode:quick,to:now)", "kibanadDashboardDisplaySearchBar":"false", 
+                     "height": "2000px" },
+"defectsinsightopen" : {"kibanaDashboardName": "Defect Insights", "kibanaDashboardTimeFilter":"(from:now-15y,mode:quick,to:now)", "kibanaDashboardFilter":"(status:Investigate OR status:Answered OR status:Assigned OR status:Active OR status:In Progress)","kibanadDashboardDisplaySearchBar":"false", 
+                     "height": "2000px" },
+"defectsinsightclosed" : {"kibanaDashboardName": "Defect Insights", "kibanaDashboardTimeFilter":"(from:now-15y,mode:quick,to:now)", "kibanaDashboardFilter":"(status:Closed OR status:Resolved OR status:Delivered OR status:Resolved)","kibanadDashboardDisplaySearchBar":"false", 
+                     "height": "2000px" }
+}

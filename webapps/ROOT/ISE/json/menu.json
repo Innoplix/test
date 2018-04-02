@@ -1,0 +1,229 @@
+[
+	{
+		"icon": "icon-home",
+		"title": "Dashboard",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#general",
+				"tooltip": "General graphs",
+				"display": "General"
+			},
+			{
+				"href": "#DSB_defectsinsightall",
+				"landingpage": "Admin",
+				"display": "All Bugs"
+			},
+			{
+				"href": "#DSB_defectsinsight",
+				"landingpage": "Developer",
+				"display": "My Bugs"
+			},
+			{
+				"href": "#DSB_defectsinsightopen",
+				"display": "Open Bugs"
+			},
+			{
+				"href": "#DSB_defectsinsightclosed",
+				"display": "Closed Bugs"
+			},	
+						
+							
+			{
+				"display": "Stability",
+				"type": "ise",
+				"type_name": "Sustenance",
+				"submenu": [
+					{
+						"href": "#stabilityDefects",
+						"display": "DefectsGraph "
+					},
+					{
+						"href": "#stabilityDefectsDetail",
+						"display": "DetailedDefectsGraph "
+					},
+					{
+						"href": "#stabiltyTestcases",
+						"display": "TestcaseGraph "
+					},
+					{
+						"href": "#StabiltyDefTc",
+						"display": "FeatureStabilty "
+					}
+				]
+			},
+			
+			
+			
+			{
+				
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "Development",
+		"icon": "glyphicon glyphicon-wrench",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#analyzechanges",
+				"display": "Analyze Changes"
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"icon": "glyphicon glyphicon-search",
+		"title": "Testing",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			
+			{
+				"href": "#regressionOptimization",
+				"display": "Regression Optimization",
+				"landingpage": "Tester"
+			}
+		]
+	},
+	{
+		"icon": "glyphicon glyphicon-adjust",
+		"title": "Defects",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#defectsearch",
+				"landingpage": "Developer",
+				"display": "Defect Search"
+			},
+			
+			{
+				"href": "#orphans",
+				"display": "Orphan Defects"
+			},
+			{
+				"href": "#bugpriotization",
+				"display": "Bug Prioritization"
+			},
+			
+			{
+				"href": "#defectassignationview",
+				"display": "Similar/Duplicate Defects Assignation View "
+			}
+		]
+	},
+	
+	{
+		"roles": "^(Admin)$",
+		"title": "Settings",
+		"icon": "icon-settings",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#projectManagement",
+				"display": "Project "
+			},
+			
+			{
+				"href": "#fileupload",
+				"display": "File Upload"
+			},
+			{
+				"href": "#jsonconfiguration",
+				"display": "JSON Configuration"
+			},
+			
+			{
+				"href": "#IF_dashboardadmin",
+				"display": "Dashboard Administration"
+			},
+			{
+				"href": "#knowledgedocuments",
+				"display": "Knowledge Documents"
+			},
+			{
+				"href": "#userManagement",
+				"display": "User "
+			},
+			{
+				"href": "#roleManagement",
+				"display": "Roles "
+			},
+			{
+				"href": "#organizationManagement",
+				"display": "Organization "
+			},
+			{
+				"href": "#featuremapping",
+                 "display": "Feature Mapping"
+
+			},
+			{
+                "href": "#featurekeys",
+                "display": "Feature Keys "
+            }
+		]
+	},
+	
+{
+		"roles": "^((?!Support).)*$",
+		"title": "Knowledge Store",
+		"icon": "glyphicon glyphicon-user",
+		"type": "ike",
+		"type_name": "Knowledge",
+		"submenu": [
+			{
+				"href": "#knowledgestore",
+				"display": "Knowledge Store"
+			},
+			{
+				"href": "#myreviews",
+				"display": "My Reviews"
+			},
+			{
+				"href": "#myaccomplishments",
+				"display": "My Accomplishments"
+			},
+			{
+				"href": "#knowledgereadandedit",
+				"display": "Add Knowledge"
+			},
+			{
+				"href": "#knowledgeaddpackage",
+				"display": "Add Knowledge Package"
+			},
+			{
+				"href": "#manageknowledgepackage",
+				"display": "Manage Knowledge Package"
+			},
+			{
+				"href": "#reportknowledgeassignation",
+				"display": "Knowledge Assignation History"
+			},
+            {
+				"href": "#forums",
+				"display": "Q and A"
+			},
+			{
+				"href": "#forumreply",
+				"display": "Replies",
+				"IsNotActice" : true
+			},
+            {
+				 "href": "#ikeforums",
+        		 "display": "Forums"
+			},
+			{
+				"href": "#ikeforumreply",
+				"display": "Forum reply",
+				"IsNotActice" : true
+			}
+
+		]
+	}
+]

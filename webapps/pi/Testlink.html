@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+  <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+
+  <script type="text/javascript">
+
+                function sizeFrame(F) {
+                        F.height = F.contentDocument.documentElement.scrollHeight+30; 
+		}
+
+                function onFrameLoad() {
+                        var F = document.getElementById("f1");
+                        sizeFrame(F);
+                        var u = F.contentDocument.location.href;
+                        eval("window.clearInterval(timer);");// not sure whather this exists
+
+                        if ( u.indexOf("enter_bug.cgi?product=") > 0 ) {
+                                timer=setInterval(newBug,3000);
+
+                        } else if ( u.indexOf("show_bug.cgi?") > 0 ) {
+                          searchLSI(
+                                F.contentDocument.getElementById("short_desc_nonedit_display").textContent,
+                                F.contentDocument.getElementById("comment_text_0").textContent
+                                   );
+
+                        } else {
+                                var r = document.getElementById("r");
+                                r.style.display = 'none';
+                        }
+                }
+
+		
+		var searching = 0;	
+		function searchLSI(s1,s2) {
+
+			if( searching > 0 ) return; // to avoid two parallel searches
+			searching = 1;
+
+			var r = document.getElementById("r");
+			var s = s1 + ' ' + s2;
+			if( s.length < 3 ) { searching = 0; return ; }
+
+			r.style.display = 'block';
+			r.innerHTML = "Loading ...." ;
+
+    	    $.ajax({ 
+            type: "POST",
+            url: "/pi/BugSimilarityService.asmx/GetAnswers",
+            data: "{Qst: '" + s + "'}",
+            contentType: "application/json; charset=utf-8",
+	    crossDomain: true,
+            dataType: "json",
+            success: function (msg) {
+		searching = 0;
+                var response = msg.d;				
+				var rs='';				
+				 rs += '<table width="100%" cellspacing="1" cellpadding="2" style="color: #333;"><tr style="background-color:#E8E8E8"><td>Bug Id</td><td>Description</td><td>Similarity</td></tr>';
+                 $.each(response, function(index, ResultSet) {				 
+				 var title = ResultSet.Title;				 
+				 var titleSplit = title.split("-");
+				 var bugId = titleSplit[0];				 
+				 var description = titleSplit[1];				 
+                       rs += '<tr><td style="border-bottom:1px #E8E8E8 solid;padding:2px"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id='+bugId+'" target="_blank" style="text-decoration: none;font-size:12px;font-family:verdana">'+bugId+'</a></td><td style="color: #333;border-bottom:1px #E8E8E8 solid">'+description+'</td><td style="color: #333;border-bottom:1px #E8E8E8 solid">' + ResultSet.Similarity + '</td></tr>';                            
+                 });                                        
+                r.innerHTML = rs + '</table>';   
+
+            },
+            failure: function (msg) {
+                alert('failure');
+		searching = 0;
+            }
+	});
+
+
+		} // end searchLSI
+
+		var timer;
+		var l1;
+		var l2;
+
+		function newBug() {
+			var d = document.getElementById("f1").contentDocument;
+
+			var n1 = d.getElementById("short_desc").value;
+			var n2 = d.getElementById("comment").value;
+			if( n1 != l1  || n2 != l2 ) {
+				l1 = n1; l2 = n2;
+				searchLSI(l1,l2);
+			}
+			
+		}
+
+
+   </script>
+
+</head>
+
+    <body>
+	<div id="r" style="border:5px solid red;display:none;z-index:100;position:fixed;top:50px;right:50px;width:400px;height:350px;background-color:yellow;overflow:auto;overflow-y:auto;overflow-x:none;"> </div>
+        <iframe  id="f1" onload="onFrameLoad()" frameborder="0"  width="100%"  scrolling="auto" src="/pi/testlink/lib/testcases/tcEdit.php?containerID=2&create_tc=create"></iframe>
+    </body>
+</html>
+

@@ -1,0 +1,12 @@
+{
+   
+	"BugIntroducedDays": 30,
+	"Daystocalculatebugginessofafile": 90,
+	"Weightageforsimilardefectscore": 0.4,
+	"Weightageforfilematchscore": 0.4,
+	"Weightageforbuggyscore": 0.2,
+	"Cutoffforsimilarity": 75,
+	"featureMappingScore":0.1
+    
+
+}

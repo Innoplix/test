@@ -1,0 +1,582 @@
+<style>
+  #tablebody_orphansDDefects a[title='Confirmed'],
+#tablebody_orphansDDefects a[title='Mark for Update']{
+ display: none;
+}
+#tablebody_orphansDPDefects a[title='Confirmed'],#tablebody_orphansDPDefects a[title='Mark for Update']{
+ display: none;
+}
+</style>
+<div class="row">
+					<div class="col-md-12">
+						<div class="portlet box blue-hoki">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="fa fa-gift"></i>Orphan Defects
+								</div>
+								<div class="tools">
+										<!--<button type="button" class="btn blue default  margin-bottom-5" id="markAsCreate" onclick="orphans.markAsCreate()">Mark As Create</button>
+										<button type="button" class="btn blue default  margin-bottom-5" id="markAsUpdate" onclick="orphans.markAsUpdate()">Mark As Update</button>-->
+
+								
+									<a href="javascript:orphans.switchView();" style="color:#fff">Switch View</a>
+									<a href="javascript:;" class="collapse" title="collapse">
+									</a>
+									<!--<a href="javascript:;" class="reload" title="reload">
+									</a>-->
+									<a href="javascript:;" class="fullscreen" title="fullscreen">
+									</a>
+								</div>
+							</div>
+							<div class="portlet-body" style = "margin-top:-30px">
+								<div class="row" id="orphan_Buckets">
+								</div>
+								<div  id="orphan_Table">
+                                     
+                                     	<div id="sample_2_wrapper" class="dataTables_wrapper no-footer"><div class=""><table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_2" role="grid" aria-describedby="sample_2_info">
+								<thead>
+								<tr role="row"><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Feature Name
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Testcase Count
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Internal Defects
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										 
+									: activate to sort column ascending" >
+										Internal Orphans
+									</th><th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" aria-sort="ascending" >
+										 CRDs
+									</th>
+								<th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" aria-sort="ascending" >
+										 CRD Orphans
+									</th>
+								</tr>
+								</thead>
+								<tbody id="orphanTablebody">
+							
+										
+							</tbody>
+								
+								</table></div></div>
+
+
+								
+								</div>
+							</div>
+</div>
+
+<div class="modal fade bs-modal-lg" id="largeorph" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title">Orphan Defects</h4>-->
+											</div>
+											<div id="orphan_BucketsPopup" class="modal-body">
+												 
+											</div>
+
+											   <div  id="orphan_TablePopup">
+                                     
+                                     	<div id="sample_21_wrapper" class="dataTables_wrapper no-footer hide"><div class=""><table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_21" role="grid" aria-describedby="sample_21_info">
+								<thead>
+								<tr role="row"><th class="sorting" tabindex="0" aria-controls="sample_21" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Feature Name
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Testcase Count
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Internal Defects
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										 
+									: activate to sort column ascending" >
+										Internal Orphans
+									</th><th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" aria-sort="ascending" >
+										 CRDs
+									</th>
+								<th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" aria-sort="ascending" >
+										 CRD Orphans
+									</th>
+								</tr>
+								</thead>
+								<tbody id="orphanPopupTablebody">
+							
+										
+							</tbody>
+
+
+				 
+
+
+								</table></div></div>
+
+
+								
+								</div>
+
+	 <div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_orphansD">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body" style = "margin-top:-30px">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_orphansD">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_orphansD">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_orphansT">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body" style = "margin-top:-30px">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_orphansT">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_orphansT">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+											<div class="modal-footer">
+												<button type="button" class="btn default pull-left" id = "btn_change" data-dismiss="modal" onClick="orphans.changeFeatureBtnHandler()">Change Feature</button>
+												<button type="button" class="btn default" data-dismiss="modal">Close</button>
+												<!--<button type="button" class="btn blue">Save changes</button>-->
+											</div>
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+								
+								<div class="modal fade bs-modal-lg" id="largeorphP" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title">Orphan Defects</h4>-->
+											</div>
+											<div id="orphan_BucketsPopup" class="modal-body">
+												 
+											</div>
+											
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_orphansDP">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_orphansDP">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_orphansDP">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_orphansTP">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body" style = "margin-top:-30px">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_orphansTP">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_orphansTP">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+											<div class="modal-footer">
+												<button type="button" class="btn default pull-left" id = "btn_change" data-dismiss="modal" onClick="orphans.changeFeatureBtnHandler()">Change Feature</button>
+												<button type="button" class="btn default" data-dismiss="modal">Close</button>
+												<!--<button type="button" class="btn blue">Save changes</button>-->
+											</div>
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+
+
+
+    <div class="modal fade bs-modal-lg" id="largeorph" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title">Orphan Defects</h4>-->
+											</div>
+											<div id="orphan_BucketsPopup" class="modal-body">
+												 
+											</div>
+
+											   <div  id="orphan_TablePopup">
+                                     
+                                     	<div id="sample_21_wrapper" class="dataTables_wrapper no-footer hide"><div class=""><table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_21" role="grid" aria-describedby="sample_21_info">
+								<thead>
+								<tr role="row"><th class="sorting" tabindex="0" aria-controls="sample_21" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Feature Name
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Testcase Count
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Internal Defects
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										 
+									: activate to sort column ascending" >
+										Internal Orphans
+									</th><th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" aria-sort="ascending" >
+										 CRDs
+									</th>
+								<th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" aria-sort="ascending" >
+										 CRD Orphans
+									</th>
+								</tr>
+								</thead>
+								<tbody id="orphanPopupTablebody">
+							
+										
+							</tbody>
+
+
+				 
+
+
+								</table></div></div>
+
+
+								
+								</div>
+
+	 <div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_orphansD">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body" style = "margin-top:-30px">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_orphansD">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_orphansD">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_orphansT">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body" style = "margin-top:-30px">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_orphansT">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_orphansT">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+											<div class="modal-footer">
+												<button type="button" class="btn default pull-left" id = "btn_change" data-dismiss="modal" onClick="orphans.changeFeatureBtnHandler()">Change Feature</button>
+												<button type="button" class="btn default" data-dismiss="modal">Close</button>
+												<!--<button type="button" class="btn blue">Save changes</button>-->
+											</div>
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+
+								<div class="modal fade bs-modal-lg" id="largeorph" tabindex="-1" role="dialog" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title">Orphan Defects</h4>-->
+											</div>
+											<div id="orphan_BucketsPopup" class="modal-body">
+												 
+											</div>
+
+											   <div  id="orphan_TablePopup">
+                                     
+                                     	<div id="sample_21_wrapper" class="dataTables_wrapper no-footer hide"><div class=""><table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_21" role="grid" aria-describedby="sample_21_info">
+								<thead>
+								<tr role="row"><th class="sorting" tabindex="0" aria-controls="sample_21" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Feature Name
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Testcase Count
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" >
+										 Internal Defects
+									</th><th class="sorting" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										 
+									: activate to sort column ascending" >
+										Internal Orphans
+									</th><th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" aria-sort="ascending" >
+										 CRDs
+									</th>
+								<th class="sorting_asc" tabindex="0" aria-controls="sample_2" rowspan="1" colspan="1" aria-label="
+										
+									: activate to sort column ascending" aria-sort="ascending" >
+										 CRD Orphans
+									</th>
+								</tr>
+								</thead>
+								<tbody id="orphanPopupTablebody">
+							
+										
+							</tbody>
+
+
+				 
+
+
+								</table></div></div>
+
+
+								
+								</div>
+
+	 <div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_orphansD">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body" style = "margin-top:-30px">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_orphansD">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_orphansD">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div  class="col-md-12" id="searchResultsTable_orphansT">
+			<div class="portlet box red-intense">
+							
+							<div class="portlet-body" style = "margin-top:-30px">
+
+								<ul class="nav nav-tabs" id="searchResultsTabs_orphansT">							
+								</ul>
+							
+
+		                        <div class="tab-content" style ="height:380px;overflow-y:auto !important" id="resultTabContent_orphansT">		                        
+								</div>
+
+							</div>
+
+							
+		    </div>
+		</div>
+	</div>
+											<div class="modal-footer">
+												<button type="button" class="btn default pull-left" id = "btn_change" data-dismiss="modal" onClick="orphans.changeFeatureBtnHandler()">Change Feature</button>
+												<button type="button" class="btn default" data-dismiss="modal">Close</button>
+												<!--<button type="button" class="btn blue">Save changes</button>-->
+											</div>
+
+                            
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+
+
+								<div class="modal fade bs-modal-lg" id="large1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="orphans.clearCheckboxes()"></button>
+												
+											</div>
+							<div class="modal-body">
+							  <div>
+                                <div class="portlet light ">
+                                  <div class="portlet-title">
+                                     <div class="caption">
+                                        <i class="icon-bubble font-green-sharp"></i>
+                                        <span class="caption-subject font-green-sharp bold uppercase">Checkable Tree</span>
+                                      </div>
+                                    
+                                   </div>
+                                  
+
+						            <div class="portlet-body" style = "overflow-y: auto;height: 396px;">
+
+
+						                    <div id="tree_2" class="tree-demo jstree jstree-2 jstree-default jstree-checkbox-selection"    role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j2_1" aria-    busy="false" aria-selected="false">
+
+
+							                <ul class="jstree-container-ul jstree-children jstree-wholerow-ul jstree-no-dots" role="group" id="jsonULElement">
+							                            
+						                     </ul>
+										    </div>
+
+										    
+
+										    </div>
+
+								 </div>
+								</div> 
+
+							    </div>
+
+											<div class="modal-footer">
+												<button type="button" class="btn default" data-dismiss="modal" onclick="orphans.clearCheckboxes()">Close</button>
+												<button type="button" class="btn blue" onclick="orphans.saveChanges()">Save changes</button>
+											</div>
+										</div>
+										<!-- /.modal-content -->
+									</div>
+									<!-- /.modal-dialog -->
+								</div>
+
+								</div>
+										
+									</div>
+									
+									
+<div class="modal fade bs-modal-lg" id="orphanTestcasePopup" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+		    <h4 style="font-weight:bold;">Test Case Assignation</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <!--<h4 class="modal-title">Orphan Defects</h4>-->
+         </div>
+         <div class="modal-body" id="searchResultsTable_TCAA">
+		   <div style="text-align: left; font-size: 16px;">Defect Id <label style='padding-left: 10px;padding-right: 9px;'>:</label><span class="idValue"></span></div>
+		    <div  style="text-align: left; font-size: 16px;">Title<label style='padding-left: 10px;padding-right: 9px;'>:</label><span class="titleValue"></span></div>
+			<div style="margin-top: 10px;">
+				<input type="text" class="form-control" id="serachInput" title="Enter Text" style="width:550px;float: left;">
+				<button type="button" class="btn blue default" style="margin-left: 10px;"  id="searcID" onclick="orphans.searchResult()">Search</button>
+			</div>
+		 
+		
+		<div class="tab-content" style ="height:380px;overflow-y:auto !important; clear: both;" id="resultTabContent_TCAA">		                        
+		</div>
+		 
+         </div>
+         
+         
+        
+        
+         <div class="modal-footer">
+            <button type="button" class="btn default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn default blue pull-right" id = "testCaseSubmit" data-dismiss="modal" >Submit</button>
+            <!--<button type="button" class="btn blue">Save changes</button>-->
+         </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<div class="modal fade bs-modal-lg" id="showDashboardInfo" tabindex="-1" role="basic"  >
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                    <h4 class="modal-title" ></h4>
+                                                </div>
+                                                <div class="modal-body showDashboardInfoDetails" style="height:450px;overflow-y:auto;overflow-x:auto"> 
+                                                 <iframe src=""  id="markAscreate" style="height: 600px;width: 902px;"></iframe>  
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+                                                   
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+

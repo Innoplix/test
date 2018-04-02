@@ -1,0 +1,12 @@
+{
+  "language": {
+	"intelligent": "インテリジェントな",
+	"engineering": "エンジニアリング",
+	"username": "ユーザー名",
+    "password": "パスワード",
+	"login": "パスワード",
+	"termsandcondition": "私は利用規約に同意します",
+	"readagreement": "契約を読む."
+  }
+
+}

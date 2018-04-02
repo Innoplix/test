@@ -1,0 +1,50 @@
+{
+    "admin": [{
+        "displayName": "അഡ്മിൻ",
+        "dicplayIcon": "icon-user-follow"
+       
+    }, {
+        "displayName": "Test_Manager",
+         "dicplayIcon": "icon-user"
+        
+    }, {
+        "displayName": "പിന്തുണ",
+         "dicplayIcon": "icon-earphones-alt"
+      
+    },{
+        "displayName": "ഡെവലപ്പർ",
+         "dicplayIcon": "icon-user"
+      
+    }],
+    "test_manager": [{
+        "displayName": "Test_Manager",
+        "dicplayIcon": "icon-user"
+      
+    }, {
+        "displayName": "ടെസ്റ്റർ",
+         "dicplayIcon": "icon-magnifier-add"
+      
+    }, {
+        "displayName": "പിന്തുണ",
+        "dicplayIcon": "icon-earphones-alt"
+       
+    }],
+    "tester": [{
+        "displayName": "ടെസ്റ്റർ",
+         "dicplayIcon": "icon-magnifier-add"
+       
+    }, {
+        "displayName": "പിന്തുണ",
+        "dicplayIcon": "icon-earphones-alt"
+      
+    }],
+	"developer": [{
+        "displayName": "ഡെവലപ്പർ",
+         "dicplayIcon": "icon-magnifier-add"
+       
+    }, {
+        "displayName": "പിന്തുണ",
+        "dicplayIcon": "icon-earphones-alt"
+      
+    }]
+}

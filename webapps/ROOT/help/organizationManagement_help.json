@@ -1,0 +1,46 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#sample_editable_org_new",
+                        "step": "1",
+			"help": "To create new Organization,Click on Add New Button ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(1) > input",
+			"step": "2",
+			"help": "enter Organization Name",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "ProjectName_Textbox_OrganizationManagement"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > table > tbody > tr:nth-child(1) > td:nth-child(2) > input",
+			"step": "3",
+			"help": "Please enter Description",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Description_TextBox_OrganizationManagement"
+		},
+		{
+			"selector": "A[href='']A:contains('Save')",
+			"step": "4",
+			"help": "Click on Save button to save the Organization",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Save_Link_OrganizationManagement"
+		},
+		{
+			"selector": "A[href='']A:contains('Cancel')",
+			"step": "5",
+			"help": "Click on Cancel link to cancel the Organization.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Cancel_Link_OrganizationManagement"
+		}
+	],
+	"title": "ISE"
+}

@@ -1,0 +1,37 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "A[href='#general']",
+			"help": "General....",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "A:contains('\nDefects')",
+			"help": "Defect Related features....",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#menuList A[href='#defectsearch']A:contains(' Defect Search')",
+			"help": "Single window search...",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#headerProjNameElement",
+			"help": "Select project here",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "#headerVersionID",
+			"help": "Select release here",
+			"position": "right top",
+			"positionAt": "left bottom"
+		}
+	],
+	"title": "ISE"
+}

@@ -1,0 +1,318 @@
+/*login page styles*/
+ 
+.login div.logo, .page-actions div.logo{
+	padding: 0;
+    margin-top: 0px;
+    height: 10%;
+    display: table;
+    width: 100%;
+    text-align: left;
+}
+.login .logo .logo-container,.page-actions .logo .logo-container{
+	background: white;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 20px;
+    display: table-cell;
+}
+.login .logo .logo-container .common-heading-title, .page-actions .logo .logo-container .common-heading-title{
+	font-size:15px;
+	color: #0575c7;
+}
+.login .logo .logo-container .dynamic-heading-title,.page-actions .logo .logo-container .dynamic-heading-title {
+	background: #F48120;
+    padding: 3px 6px;
+    margin: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+#login-form .login-inputs .form-group.form-md-line-input{
+	margin: 0;
+}
+.login-form-conatiner{
+	height: 85%;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+	position: relative;
+}
+.login-form-conatiner .login-btn-conatiner{
+	padding-top: 10px;
+	width: 400px;
+	margin: 0 auto;
+}
+@media (max-width: 440px){
+	.login-form-conatiner .login-btn-conatiner {
+		width: 280px;
+		margin-top: 10px;
+	}
+}
+#loginBtn {
+	border-radius: 7px;
+    
+   display: inline-block;
+  
+}
+.login-form-holder{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.login .content
+{
+	padding: 0px;
+	background-color: #fff;
+	margin-top: 0;
+}
+/* .login .content .form-control {
+    border: none;
+    background-color: #dde3ec;
+     height: 43px; 
+  color: #8290a3;
+     border: 1px solid #dde3ec;
+} */
+.login .content .form-control:focus, .login .content .form-control:active {
+    border: 0px; 
+}
+body{
+   
+   background-color:#364150;
+}
+#singleOrganizationTextInput{
+	padding-left:17px;
+}
+#organization, #organization option{
+	color:#9999a5;
+}
+/* Salim Start */
+.login-form-conatiner .mt-checkbox-list  {
+	color: #5b9bd1;
+}
+.login-form-conatiner .checkbox-label.mt-checkbox{
+    outline: -webkit-focus-ring-color auto 5px;
+}
+ 
+/* Salim End */
+
+.logo-container .logo-name-container, 
+.logo-container .language-selection-container{
+	display:inline-block;
+}
+.logo-container .language-selection-container{
+	float:right;
+	cursor: pointer;
+}
+/* language dropdown end */
+.login .language-selection-container .icon {
+    background-image: url(../images/icon-sprite.svg);
+    display: inline-block;
+    vertical-align: middle;
+}
+.login .language-selection-container .icon-arrow-down-white,
+.login .language-selection-container .language-selection-container .icon-arrow-down-gray {
+    margin: 0 0 0 7px;
+}
+.login .language-selection-container .icon-arrow-down-white {
+    width: 14px;
+    height: 8px;
+    background-position: -210px -78px;
+}
+.login .language-selection-container .language-selection-container .icon-arrow-down,
+.login .language-selection-container .language-selection-container .icon-arrow-down-white,
+.login .language-selection-container .language-selection-container .icon-arrow-down-gray {
+    margin: 0 0 0 7px;
+}
+.login .language-selection-container .topbar-blue .topbar-right .language-selection-container {
+    color: #fff;
+}
+.login .language-selection-container ul#site-language-modal.double li a:hover {
+    background: #e3e3e3;
+    border-radius: 30px;
+}
+.login .language-selection-container a:active,
+.login .language-selection-container a:hover {
+    outline: 0;
+}
+.login .language-selection-container a:focus {
+    outline: thin dotted;
+}
+.login .language-selection-container .language-selection-container {
+    float: right;
+    position: relative;
+    display: inline-block;
+    padding: 0px 20px 0px 0;
+    color: #999;
+    cursor: pointer;
+}
+.login .language-selection-container ul#site-language-modal.double {
+    min-width: 200px;
+    right: 0;
+    left: auto;
+    margin-top: 0;
+    z-index: 101;
+    width: 470px;
+    margin-bottom: 20px;
+}
+.login .language-selection-container .dropdown-menu {
+    text-align: left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    float: left;
+    min-width: 200px;
+    padding: 10px 0;
+    margin: 5px 0 0;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+}
+.login .language-selection-container .topbar.dark-theme .language-selection-container .dropdown-menu.arrow-top:after {
+    right: 21px;
+    left: auto;
+}
+.login .language-selection-container .topbar-blue .language-selection-container .dropdown-menu.arrow-top:after {
+    left: 21px;
+    right: auto;
+}
+.login .language-selection-container .dropdown-menu.arrow-top:after {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -19px;
+    left: 21px;
+    content: "";
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    display: block;
+}
+.login .language-selection-container ul#site-language-modal.double li {
+    line-height: 1.5em;
+    float: left;
+    display: inline;
+    width: 47%;
+    margin: 0 5px;
+}
+.login .language-selection-container .dropdown-menu li {
+    cursor: pointer;
+}
+.login .language-selection-container li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.login .language-selection-container ul#site-language-modal.double li a {
+    color: #3c3c3c;
+}
+.login .language-selection-container .dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #3c3c3c;
+    white-space: nowrap;
+}
+.login .language-selection-container a {
+    color: #999;
+    text-decoration: none;
+}
+.login .language-selection-container .flag-svg-micro {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/flag-sprite12.svg);
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    width: 18px;
+    height: 18px;
+    background-size: 220px;
+    background-position: -88px -132px;
+}
+.login .language-selection-container .flag-svg-micro.flag-en {
+    background-position: -110px 0;
+}
+.login .language-selection-container .flag-svg-micro.flag-it {
+    background-position: -88px 0;
+}
+.login .language-selection-container .flag-svg-micro.flag-id {
+    background-position: -66px -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-de {
+    background-position: -44px 0;
+}
+.login .language-selection-container .flag-svg-micro.flag-hi {
+    background-position: 0 -88px;
+}
+.login .language-selection-container .flag-svg-micro.flag-el {
+    background-position: -154px -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-cs {
+    background-position: -132px -88px;
+}
+.login .language-selection-container .flag-svg-micro.flag-es {
+    background-position: -22px 0;
+}
+.login .language-selection-container .flag-svg-micro.flag-ru {
+    background-position: -176px 0;
+}
+.login .language-selection-container .flag-svg-micro.flag-tr {
+    background-position: -44px -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-pl {
+    background-position: -198px 0;
+}
+.login .language-selection-container .flag-svg-micro.flag-fr {
+    background-position: 0 0;
+}
+.login .language-selection-container .flag-svg-micro.flag-ja {
+    background-position: -88px -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-vi {
+    background-position: -66px -88px;
+}
+.login .language-selection-container .flag-svg-micro.flag-ar {
+    background-position: -198px -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-zs {
+    background-position: -110px -88px;
+}
+.login .language-selection-container .flag-svg-micro.flag-pt {
+    background-position: -66px 0;
+}
+.login .language-selection-container .flag-svg-micro.flag-ro {
+    background-position: 0 -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-dn {
+    background-position: -22px -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-ko {
+    background-position: -44px -88px;
+}
+.login .language-selection-container .flag-svg-micro.flag-ja {
+    background-position: -88px -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-uk {
+    background-position: -110px -44px;
+}
+.login .language-selection-container .flag-svg-micro.flag-en {
+    background-position: -110px 0;
+}
+ul#site-language-modal.double li .flag {
+    margin: 0 10px 0 -5px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+/* language dropdown end */

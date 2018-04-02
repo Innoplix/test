@@ -1,0 +1,158 @@
+<html>
+<header><title> ES export/import</title></header>
+<body style="background-color: lightgray;">
+<fieldset>
+    <legend>ElasticSearch</legend>
+    ES URL: <input id="esURL" value="http://10.98.11.18:9200/"text"/>
+	<input type="button" id="indexGet" value="List all awailable indexes" />
+	<pre id="indexList"></pre><br/>
+    Source Index : <input type="text" id="srcIndex" value=".kibana-4"/><br><br/>
+    Destination index : <input type="text" id="destIndex" value=".kibana-4.test"/>
+</fieldset>
+<br/><br/>
+<fieldset>
+    <legend>Schema/Mapping</legend>
+	Import JSON from file: <input type="file" id="schemaFile" />
+	<input type="button" id="schemaSave" value="Save Schema to a File" /><br/>
+    <textarea rows="15" wrap="soft" cols="500" id="schemaJSON" style="resize:both"></textarea><br/>
+	<input type="button" id="schemaGet" value="Get Schema from ES" />
+	<input type="button" id="schemaCommit" value="Write Schema to ES" /><br/>
+	
+</fieldset>
+
+<br/><br/>
+<fieldset>
+    <legend>Documents/Records</legend>
+	Import JSON from file: <input type="file" id="docsFile" /><input type="button" id="docsSave" value="Save Documents to a File" />
+	<br/>
+    <textarea rows="15" wrap="soft" cols="500" id="docsJSON" style="resize:both;"></textarea><br/>
+	<input type="button" id="docsGet" value="Get Documents from ES (1000 records maximum)" />
+	<input type="button" id="docsCommit" value="Write docs to ES" />
+	
+</fieldset>
+
+
+<script>
+var esURL 		=  document.getElementById('esURL');
+var srcIndex 	=  document.getElementById('srcIndex');
+var destIndex 	=  document.getElementById('destIndex');
+var indexGet 	=  document.getElementById('indexGet');
+var indexList 	=  document.getElementById('indexList');
+
+var schemaFile  =  document.getElementById('schemaFile');
+var schemaCommit=  document.getElementById('schemaCommit');
+var schemaJSON	=  document.getElementById('schemaJSON');
+var schemaGet	=  document.getElementById('schemaGet');
+var schemaSave	=  document.getElementById('schemaSave');
+
+var docsFile    =  document.getElementById('docsFile');
+var docsCommit	=  document.getElementById('docsCommit');
+var docsJSON	=  document.getElementById('docsJSON');
+var docsGet		=  document.getElementById('docsGet');
+var docsSave	=  document.getElementById('docsSave');
+
+//Importing schema JSON
+schemaFile.addEventListener('change', function(e) {
+							var file = e.target.files[0];
+							var reader = new FileReader();
+							reader.onload = function(e) {schemaJSON.value = reader.result;}
+							reader.readAsText(file);	
+							});
+//importing content JSON
+docsFile.addEventListener('change', function(e) {
+							var file = e.target.files[0];
+							var reader = new FileReader();
+							reader.onload = function(e) {docsJSON.value = reader.result;}
+							reader.readAsText(file);	
+							});
+							
+
+//Save options.
+schemaSave.addEventListener('click', function(e) { exportFile('Schema.JSON.txt',schemaJSON.value) } );
+docsSave.addEventListener  ('click', function(e) { exportFile('Documents.JSON.txt',docsJSON.value)} );
+
+							
+//Load index
+indexGet.addEventListener('click', function(e) { 
+						var xmlhttp = new XMLHttpRequest();
+						xmlhttp.onreadystatechange = function() { indexList.innerHTML = xmlhttp.responseText; }
+						xmlhttp.open("GET", esURL.value + "/_cat/indices", true);
+						xmlhttp.send();
+						});
+
+
+						//Getting schema
+schemaGet.addEventListener('click', function(e) { 
+						var xmlhttp = new XMLHttpRequest();
+						xmlhttp.onreadystatechange = function() { 
+								var results = {}
+								results.settings = {"number_of_shards":1,"number_of_replicas":1};
+								results.mappings = JSON.parse(xmlhttp.responseText + "\n")[srcIndex.value]['mappings'];
+								schemaJSON.value = JSON.stringify(results, null, '\t');
+						}
+						xmlhttp.open("GET", esURL.value + "/" + srcIndex.value + "/_mapping?pretty=true" , true);
+						xmlhttp.send();
+						});
+						
+schemaCommit.addEventListener('click', function(e) { 
+						var data = schemaJSON.value;
+						var xmlhttp = new XMLHttpRequest();
+						xmlhttp.onreadystatechange = function() { console.log(xmlhttp.responseText);  }
+						xmlhttp.open("DELETE", esURL.value + "/" + destIndex.value  , false);
+						xmlhttp.send();
+						
+						xmlhttp.open("POST", esURL.value + "/" + destIndex.value  , true);
+						xmlhttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+						xmlhttp.setRequestHeader("Content-Length", data.length);
+						xmlhttp.send(data);
+						});
+						
+docsCommit.addEventListener('click', function(e) { 
+						var data = JSON.parse(docsJSON.value);
+						var xmlhttp = new XMLHttpRequest();
+						xmlhttp.onreadystatechange = function() { return };
+						
+						 for(var i = 0; i < data.length ; i++ ) {
+							var type = data[i].metaData._type;
+							var id   = data[i].metaData._id;
+							
+							xmlhttp.open("PUT", esURL.value + "/" + destIndex.value + "/" + type + "/" + id , false);
+							xmlhttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+							var d = JSON.stringify(data[i].doc);
+							xmlhttp.setRequestHeader("Content-Length", d.length);
+							xmlhttp.send(d);
+						  }
+						});
+						
+						
+docsGet.addEventListener('click', function(e) { 
+						var xmlhttp = new XMLHttpRequest();
+						xmlhttp.onreadystatechange = function() { 
+								//docsJSON.value = xmlhttp.responseText;
+								var results = JSON.parse(xmlhttp.responseText + "\n"); 
+								var hits    = results.hits.hits;
+								var docs     = [];
+								for (var i = 0; i < hits.length; i++) { 
+									var hit = hits[i];
+									var meta = { "_type" : hit._type , "_id" : hit._id};
+									//console.log(meta);
+									var doc  = hit._source;
+									docs.push( { "metaData": meta, "doc" : doc });
+								}
+								docsJSON.value = JSON.stringify(docs, null, '\t');
+						}
+						xmlhttp.open("GET", esURL.value + "/" + srcIndex.value + "/_search/?size=1000" , true);
+						xmlhttp.send();
+						});
+
+						
+function exportFile(filename, content, mimeType) {
+    var link = document.createElement('a');
+    mimeType = mimeType || 'text/plain';
+    link.setAttribute('download', filename);
+    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(content));
+    link.click(); 
+}
+</script>
+</body>
+</html>

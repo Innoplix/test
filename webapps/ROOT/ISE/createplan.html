@@ -1,0 +1,53 @@
+<div class="plan-details-container">
+	<div id="Reg-Opt-Plan-Exec-Data">
+
+	</div>
+	<div class="row col-md-12 createplan-sub-container">
+		<div class="col-md-10">
+			<div class="form-group">
+				<label>Create Plan</label>
+				<div class="mt-radio-inline overflow-hidden margin-bottom-10" id="createPlanTabs">
+					<label class="mt-radio col-md-6">
+						<input type="radio" name="plansTypeRadios" id="plansNew" value="option1"> New Plan
+						<span></span>
+					</label>
+					<!--<label class="mt-radio col-md-6">
+						<input type="radio" name="plansTypeRadios" id="plansCopyExisting" value="option2"> Copy From Existing Plan
+						<span></span>
+					</label>-->
+				</div>
+				<div class="radio-list row col-md-10" id="plansNewContainer" style="display:none">
+					<div class="plans-new-container"><!--<b>Plan Name</b>
+						 <div class="input-group input-group-sm">
+							<input type="text" class="form-control plannew-value" placeholder="Enter Plan Name">
+							<span class="input-group-btn">
+								<button class="btn blue" type="button" id="createPlanSubmitBtn"> Submit</button>
+							</span>
+						</div> -->
+						<div class="col-md-7">
+							<label class="control-label">Plan Name</label>
+							<input type="text" placeholder="Enter Plan Name" class="form-control plannew-value">
+						</div>
+						<div class="col-md-5">
+							<a href="javascript:;" id="createPlanSubmitBtn" class="btn blue">Submit </a>
+							<a href="javascript:;" id="createPlanCancelBtn" class="btn default">Cancel </a>
+						</div>
+					</div> 
+				</div>
+				<div class="row col-md-5" id="plansCopyExistingContainer" style="display:none">
+				
+			 </div>
+			</div>
+		</div>
+		 <div class="col-md-12 error-msg-container margin-top-10 row">
+			  <div class="alert alert-danger text-left margin-bottom-5" style="display:none;"><strong>Error!</strong><span class="error-msg"></span> </div>
+		</div>
+	</div> 
+	</div>
+		   
+		<!-- <div id="radioBtn">
+			  <span><input type="radio" id="newPlan" value="New Paln" name="planRadio"/>New Plan</span>
+			  <span style="padding-left: 20px;"><input type="radio" id="existingPlan" value="Copy from existing plan" name="planRadio"/>Copy from existing plan</span>
+		</div>
+		<div id="newPlanVal"></div> -->
+      

@@ -1,0 +1,71 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 8,
+	"tooltips": [
+		{
+			"selector": "#knowledge_title",
+			"step": "1",
+			"help": "Please enter Title for the Knowledge Package. ",
+			"position": "left top",
+			"positionAt": "center bottom",
+			"title": "Title_TextBox_knowledgeaddpackage"
+		},
+		{
+			"selector": "#addKnowledgeDocument",
+			"step": "2",
+			"help": "Click on Add Knowledge Documents button to add Documents to the Knowledge Package.",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "AddKnowledgeDocuments_Button_knowledgeaddpackage"
+		},
+		{
+			"selector": "#removeKnowledgeDocument",
+			"step": "3",
+			"help": "Click on Remove button to remove the SELECTED documents from the Knowledge Package.",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Remove_Button_knowledgeaddpackage"
+		},
+		{
+			"selector": "#addRemovePackageCoantainer A[href='javascript:;']A:contains('\n\t\t\t\t\t\tColumns \n\t\t\t\t\t\t')",
+			"step": "4",
+			"help": "Please select the Columns from the Dropdown that need to be displayed.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Columns_DropDown_knowledgeaddpackage"
+		},
+		{
+			"selector": "A[href='#historyContainer']",
+			"step": "5",
+			"help": "Click on History link to see the History of Knowledge Documents.",
+			"position": "left bottom",
+			"positionAt": "center top",
+			"title": "History_Link_knowledgeaddpackage"
+		},
+		{
+			"selector": "A[href='#assignationContainer']",
+			"step": "6",
+			"help": "Click on Assignation link to see for the Assignations for Knowledge Package.",
+			"position": "left bottom",
+			"positionAt": "center top",
+			"title": "Assignations_Link_knowledgeaddpackage"
+		},
+		{
+			"selector": "#page_knowledgeaddpackage BUTTON:contains('Save')",
+			"step": "7",
+			"help": "Click on Save Button to save the current changes for the Knowledge Package.",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "Save_Button_knowledgeaddpackage"
+		},
+		{
+			"selector": "#cancelKnowledgePackage",
+			"step": "8",
+			"help": "Click on Cancel Button to Cancel the current changes for the Knowledge Package.",
+			"position": "right bottom",
+			"positionAt": "left top",
+			"title": "CancelButton_knowledgeaddpackage"
+		}
+	],
+	"title": "ISE"
+}

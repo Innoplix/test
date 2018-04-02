@@ -1,0 +1,412 @@
+[
+	{
+		"icon": "icon-home",
+		"title": "डैशबोर्ड",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#general",
+				"landingpage": "Admin",
+				"tooltip": "General graphs",
+				"display": "जनरल"
+			},
+			{
+				"href": "#DSB_defectsinsight",
+				"landingpage": "Developer",
+				"display": "मेरी कीड़े"
+			},
+			{
+				"href": "#DSB_defectsinsightrep",
+				"display": "मेरी रिपोर्ट की गई बग"
+			},
+			{
+				"href": "#DSB_defectsinsightopen",
+				"landingpage": "Admin",
+				"display": "ओपन कीड़े"
+			},
+			{
+				"href": "#DSB_defectsinsightclosed",
+				"display": "बंद कीड़े"
+			},	
+			{
+				"href": "#DSB_defectsinsighteamcont",
+				"display": "टीम योगदान"
+			},				
+			{
+				"href": "#DSB_defectsinsightall",
+				"landingpage": "Test_Manager",								
+				"display": "सभी कीड़े"
+			},				
+			{
+				"display": "स्थिरता",
+				"submenu": [
+					{
+						"href": "#stabilityDefects",
+						"display": "दोषग्रंथ "
+					},
+					{
+						"href": "#stabilityDefectsDetail",
+						"display": "विस्तृतगतिग्राहीग्राफ "
+					},
+					{
+						"href": "#stabiltyTestcases",
+						"display": "टेस्टकेस ग्राफ़ "
+					},
+					{
+						"href": "#StabiltyDefTc",
+						"display": "फ़ीचर स्थिरता "
+					}
+				]
+			},
+			{
+				"href": "#IF_sourcemetrics",
+				"display": "स्रोत मेट्रिक्स"
+			},
+			{
+				"href": "#IF_casadashboard",
+				"display": "स्थिर विश्लेषण"
+			},
+			{
+				"href": "#IF_grading",
+				"landingpage": "Test_Manager",
+				"display": "संसाधन ग्रेडिंग"
+			},
+			{
+				"href": "#testingmetrics",
+				"display": "मेट्रिक्स",
+				"submenu": [
+					{
+						"display": "परिक्षण",
+						"submenu": [
+							{
+								"href": "#releasevstestcases",
+								"display": "रिलीज बनाम टेस्ट मामले"
+							},
+							{
+								"href": "#IF_testbankgrowthrate",
+								"display": "टेस्ट बैंक विकास दर"
+							},
+							{
+								"href": "#IF_featurewisetestcasedistribution",
+								"display": "फ़ीचर वार टेस्ट केस डिस्ट्रीब्यूशन"
+							},
+							{
+								"href": "#IF_testprogresstrend",
+								"display": "टेस्ट प्रगति की प्रवृत्ति"
+							},
+							{
+								"href": "#IF_featurewisetestresults",
+								"display": "फ़ीचर वार परीक्षा परिणाम"
+							}
+						]
+					},
+					{
+						"display": "दोष के",
+						"submenu": [
+							{
+								"href": "#IF_defectsprioritydistribution",
+								"display": "दोष प्राथमिकता वितरण (प्रवृत्ति और सभी रिलीज)"
+							},
+							{
+								"href": "#IF_internalandexternalbugstrend",
+								"display": "आंतरिक और बाहरी कीड़े प्रवृत्ति"
+							},
+							{
+								"href": "#IF_defectsseveritydistribution",
+								"display": " दोष तीव्रता वितरण (प्रवृत्ति और सभी रिलीज़)"
+							},
+							{
+								"href": "#IF_defectdistibutionbydetection",
+								"display": " पता लगाने (प्रवृत्ति और सभी रिलीज) द्वारा दोष विचलन"
+							},
+							{
+								"href": "#IF_defectcausedistribution",
+								"display": "  दोष कारण वितरण (प्रवृत्ति और सभी रिलीज़)"
+							}
+						]
+					},
+					{
+						"href": "#IF_oldgraphs",
+						"display": "ओल्ड ग्राफ़"
+					}
+				]
+			},
+			
+			{
+				"href": "#devdashboard",
+				"display": "देव डैशबोर्ड"
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "विकास",
+		"icon": "glyphicon glyphicon-wrench",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_analysechanges",
+				"display": "परिवर्तन का विश्लेषण करें"
+			},
+			{
+				"href": "#sourcebrowse",
+				"display": "स्रोत ब्राउज़ करें"
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"icon": "glyphicon glyphicon-search",
+		"title": "परिक्षण",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_testbuilds",
+				"display": "टेस्ट बिल्ड"
+			},
+			{
+				"href": "#regressionOptimization",
+				"display": "प्रतिगमन अनुकूलन",
+				"landingpage": "Tester"
+			},
+			{
+				"href": "#IF_teststep",
+				"display": "टेस्ट स्टेप अनुकूलन"
+			},
+			{
+				"href": "#testinformation",
+				"display": "टेस्ट जानकारी"
+			}
+		]
+	},
+	{
+		"icon": "glyphicon glyphicon-adjust",
+		"title": "दोष के",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#defectsearch",
+				"landingpage": "Developer",
+				"display": "दोष खोज"
+			},
+			{
+				"href": "#defectsLocalization",
+				"display": "दोष स्थानीयकरण"
+			},
+			{
+				"href": "#orphans",
+				"display": "अनाथ दोष"
+			},
+			{
+				"href": "#bugpriotization",
+				"display": "बग प्राथमिकता"
+			},
+			{
+				"href": "#defectcount",
+				"display": "पूर्वानुमान"
+			},
+			{
+				"href": "#defectassignationview",
+				"display": "इसी प्रकार की / डुप्लिकेट डिम्यूट एग्नाइजेशन व्यू"
+			}
+		]
+	},
+	
+	{
+		"roles": "^(Admin)$",
+		"title": "सेटिंग्स",
+		"icon": "icon-settings",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#projectManagement",
+				"display": "परियोजना "
+			},
+			{
+				"href": "#ontology",
+				"display": "Ontology "
+			},
+			{
+				"href": "#fileupload",
+				"display": "फाइल अपलोड"
+			},
+			{
+				"href": "#IF_import",
+				"display": "आयात "
+			},
+			{
+				"href": "#jsonconfiguration",
+				"display": "JSON कॉन्फ़िगरेशन"
+			},
+			{
+				"display": "डेटा का उपयोग",
+				"submenu": [
+					{
+						"href": "#IF_usageevents",
+						"display": " घटना विश्लेषण"
+					},
+					{
+						"href": "#IF_dataanalysis",
+						"display": " डेटा विश्लेषण"
+					}
+				]
+			},
+			{
+				"href": "#IF_dashboardadmin",
+				"display": "डैशबोर्ड प्रशासन"
+			},
+			{
+				"href": "#knowledgedocuments",
+				"display": "ज्ञान दस्तावेज़"
+			},
+			{
+				"href": "#jsonconfiguration",
+				"display": "JSON कॉन्फ़िगरेशन"
+			},
+			{
+				"href": "#userManagement",
+				"display": "उपयोगकर्ता "
+			},
+			{
+				"href": "#roleManagement",
+				"display": "भूमिकाएं "
+			},
+			{
+				"href": "#organizationManagement",
+				"display": "संगठन "
+			},
+			{
+				"href": "#featuremapping",
+                 "display": "फ़ीचर मैपिंग"
+
+			},
+			{
+                "href": "#featurekeys",
+                "display": "सुविधा कुंजी "
+            },
+
+			{
+				"href": "#IF_buildmapping",
+				"display": "मैपिंग बनाएं "
+			},
+			{
+				"href": "#IF_settingfeature",
+				"display": "विशेषताएं "
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "इंस्ट्रुमेंटेशन",
+		"icon": "icon-docs",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_buildanalysis",
+				"display": "विश्लेषण बनाएं"
+			},
+			{
+				"href": "#IF_impacttestcase",
+				"display": "प्रभाव टेस्टकेस"
+			},
+			{
+				"href": "#IF_analysesummary",
+				"display": "विश्लेषण सारांश"
+			}
+		]
+	},
+{
+		"roles": "^((?!Support).)*$",
+		"title": "ज्ञान स्टोर",
+		"icon": "glyphicon glyphicon-user",
+		"type": "ike",
+		"type_name": "Knowledge",
+		"submenu": [
+			{
+				"href": "#knowledgestore",
+				"display": "ज्ञान स्टोर"
+			},
+			{
+				"href": "#myreviews",
+				"display": "मेरी समीक्षाएं"
+			},
+			{
+				"href": "#myaccomplishments",
+				"display": "मेरे उपलब्धियां"
+			},
+			{
+				"href": "#knowledgereadandedit",
+				"display": "ज्ञान जोड़ें"
+			},
+			{
+				"href": "#knowledgeaddpackage",
+				"display": "ज्ञान पैकेज जोड़ें"
+			},
+			{
+				"href": "#manageknowledgepackage",
+				"display": "ज्ञान पैकेज को प्रबंधित करें"
+			},
+			{
+				"href": "#reportknowledgeassignation",
+				"display": "ज्ञान का महत्व इतिहास"
+			}
+		]
+	},
+	{
+		"roles": "^(Support|Admin)$",
+		"title": "समर्थन",
+		"icon": "icon-earphones-alt",
+		"type": "its",
+		"type_name": "Technical",
+		"submenu": [
+			{
+				"href": "#IF_createcollection",
+				"display": "व्यवस्थापक"
+			},
+			{
+				"href": "#IF_viewconfiguration",
+				"display": "व्यवस्थापक देखें"
+			},
+			{
+				"href": "#itsassist",
+				"display": "इसके सहायक"
+			},
+			{
+				"href": "#itsanalyzesearch",
+				"display": "खोज का विश्लेषण करें"
+			},
+			{
+				"href": "#itsfaqsearch",
+				"display": "स्मार्ट अकसर किये गए सवाल"
+			},			
+			{				
+				"href": "#itssupportinsight",
+				"display": "इनसाइट का समर्थन करें"
+			},
+			{
+				"landingpage": "Support",
+				"href": "#IF_issueidentification",
+				"display": "समस्या पहचान"
+			},
+			{
+				"href": "#IF_patternmatch",
+				"display": "पैटर्न मिलान"
+			},
+			{
+				"href": "#IF_supportforecast",
+				"display": "पूर्वानुमान"
+			},
+			{
+				"href": "#alterJson",
+				"display": "अल्टरजेसन"
+			}
+
+		]
+	}
+]

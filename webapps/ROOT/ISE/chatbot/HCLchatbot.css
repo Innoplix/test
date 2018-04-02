@@ -1,0 +1,94 @@
+/* DIV for status message such as connected ! */
+.HCLBot_green {
+	 border-radius: 3px;
+    text-align: center;
+    background-color: rgba(179, 184, 185, 0.17);
+    color: rgba(23, 24, 25, 0.44);
+    overflow: hidden;
+    margin-bottom: 20px;
+	font-family: "Calibri", "Roboto", sans-serif;
+}
+
+/* DIV for messages that you send ! */
+.HCLBot_red {
+	text-align: left;
+    color: rgba(53, 112, 148, 0.96); 
+    padding: 8px;
+    border-radius: 6px;
+    width: calc(100% - 85px);
+    min-width: 100px; 
+    margin-left: 20px;
+    background-color: rgba(51, 177, 183, 0.2);
+    margin-right: 20px;
+    float: right;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;   
+    font-family: "Calibri", "Roboto", sans-serif;
+	line-height: 1;
+}
+
+/* DIV for messages that you receive from bot ! */
+.HCLBot_blue {
+	line-height: 1;
+	text-align: left;   
+    color: #005851;
+    background-color: rgba(69, 182, 175, 0.59);
+    margin-left: 20px;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 6px;
+    width: calc(100% - 85px);
+    min-width: 100px;
+    position: relative;
+    /* overflow: hidden; */
+    margin-bottom: 20px;
+    font-family: "Calibri", "Roboto", sans-serif;
+
+}
+.HCLBot_img{
+	border-radius: 50%!important;
+    margin-bottom: 2px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    left: -5px;
+	background-color: rgba(69, 182, 175, 1);
+}
+.HCLBotConsole {
+	overflow-y: auto;
+    display: block;
+    width: 100%;
+    height: 88%;
+    font-size: 12pt;  
+}
+
+.HCLBotText {
+	line-height: 2;
+    height: 25px;
+    width: 72%;
+    font-size: 10pt;
+    font-family: Segoe UI,'SegoeUIWF',Arial,sans-serif;
+    border: 1px solid #c2cad8;
+    margin-left: 5px;
+    padding: 5px;
+	margin-right: 5px;
+}
+
+.HCLBotSendButton {
+	line-height: 10px;
+    height: 25px;
+    width: 23%;
+    font-size: 10pt;
+    font-family: Segoe UI,'SegoeUIWF',Arial,sans-serif;
+    color: #fafcfb;
+    background-color: #3379b5;
+    border: 1px solid #3379b5;
+}
+.bottom-ctrl-conatiner{
+    position: absolute;
+    width: 98%;
+    bottom: 14px;
+}

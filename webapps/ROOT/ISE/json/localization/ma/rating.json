@@ -1,0 +1,73 @@
+[
+  {
+    "project": "mozillFirefox1",
+    "formelements": {
+      "questionselements": {
+        "singleselect": [
+          {
+            "type": "radio",
+            "label": "അത് ഉപയോഗിച്ചത്"
+          },
+          {
+            "type": "radio",
+            "label": "അത് ഉപയോഗപ്രദമായ കണ്ടെത്തുക"
+          },
+          {
+            "type": "radio",
+            "label": "കൂടുതൽ നന്നാകാൻ ഉണ്ട്"
+          }
+        ],
+        "commentelement": {
+          "type": "textarea",
+          "label": "നിങ്ങളുടെ അഭിപ്രായങ്ങൾ"
+        }
+      }
+    }
+  },
+  {
+    "project": "iSE1",
+    "formelements": {
+      "questionselements": {
+        "multiselect": [
+          {
+            "type": "checkbox",
+            "label": "അത് ഉപയോഗിച്ചത്"
+          },
+          {
+            "type": "checkbox",
+            "label": "അത് ഉപയോഗപ്രദമായ കണ്ടെത്തുക"
+          },
+          {
+            "type": "checkbox",
+            "label": "കൂടുതൽ നന്നാകാൻ ഉണ്ട്"
+          }
+        ],
+        "commentelement": {
+          "type": "textarea",
+          "label": "നിങ്ങളുടെ അഭിപ്രായങ്ങൾ"
+        }
+      }
+    }
+  },
+  {
+    "project": "default",
+    "formelements": {
+      "questionselements": {
+        "multiselect": [
+          {
+            "type": "checkbox",
+            "label": "അത് ഉപയോഗിച്ചത്"
+          },
+          {
+            "type": "checkbox",
+            "label": "അത് ഉപയോഗപ്രദമായ കണ്ടെത്തുക"
+          }
+        ],
+        "commentelement": {
+          "type": "textarea",
+          "label": "നിങ്ങളുടെ അഭിപ്രായങ്ങൾ"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,64 @@
+<!-- BEGIN PAGE CONTENT-->
+    <div class="row">
+		<div class="col-md-12 ">
+			<!-- BEGIN PORTLET-->
+			<div class="portlet box blue">
+				<div class="portlet-title">
+					<div class="caption">
+						<!--<i class=""></i> -->
+						<i class="fa fa-gift"></i>Defect Test Information
+					</div>
+					<div class="actions">
+						<a class="btn btn-circle btn-icon-only btn-default fullscreen" onclick="general.onFullscreen(general.internalDefectmeter)" href="javascript:;">
+						</a>
+					</div>
+				</div>
+				<div class="portlet-body">
+                               <div class="tab-content">
+									<div class="tab-pane fade active in" id="tab_1_1">
+										<form  class="form-horizontal">
+												<div class="form-body">
+													<div class="form-group">
+														<!--<label class="col-md-3 control-label"
+														 id="similarSearchID"></label> -->
+														 <label class="col-md-2 control-label">Enter the CR Number :</label>
+														<div class="col-md-9">
+															<input type="text" class="form-control input-circle"
+															 id="searchID">		
+														</div>
+														<button type="button" id="submitForm" class="btn green btn-primary">Submit</button>
+														 <a href="#" class="reload"></a>
+													</div>
+												</div>
+												
+											</form>
+									</div>
+									</div>
+              </div> <!-- portlet - body>
+			</div>
+			<!-- END PORTLET-->
+		</div>	
+		
+	</div>
+	<br>
+	<br>
+	
+	 <div class="row hide" id="testinfor_tbl">
+	 <div class="col-md-12">
+						<!-- BEGIN SAMPLE TABLE PORTLET-->
+						<div class="portlet box blue">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="fa fa-comments"></i>Search Results
+								</div>
+								
+							</div>
+							<div class="portlet-body">
+								<div class="table-scrollable" id="testinfor_restable">
+								</div>
+							</div>
+						</div>
+						<!-- END SAMPLE TABLE PORTLET-->
+					</div>
+				</div>
+	

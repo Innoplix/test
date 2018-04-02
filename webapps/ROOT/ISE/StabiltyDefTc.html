@@ -1,0 +1,67 @@
+<div class="portlet box grey-cascade">
+		<div class="portlet-title">
+			<div class="caption">
+				<i class="fa fa-gift"></i>FeatureStability
+			</div>
+			<div class="tools">
+				<a href="javascript:;" class="collapse">
+				</a>
+				<!--<a href="#portlet-config" data-toggle="modal" class="config">-->
+				</a>
+			</div>
+		</div>
+		<div class="portlet-body">
+			
+		<div id="divDefectPopupBackGrd1">
+		</div>
+		<div class="row">			
+			<div class="col-md-12" id="divFeatureTcDefect">
+				</br>
+				<div class="form-group FeatureTcDefectRelease-dropdown">
+					<label class="control-label col-md-3">Selected Releases :</label>				    
+						<select id="cmb_TCDefectReleases" onchange="StabiltyDefTc.OnFeatureTCDefectReleaseChange()" tabindex="4" data-placeholder="Select Releases..." style="height:40px; width: 500px;" class="form-control input-small">
+						</select>		
+				</div>
+               
+        
+		    <div style="height: 400px; width: 100%; overflow: auto;" id="div_canvas_DefectTCGraphs" >
+            <canvas id="canvas_DefectTCGraphs" width="850" height="400" style="margin-left:-140px;"> [No canvas support]</canvas>
+			<table style="width:200px;height:125px;border:1px solid black;margin-left:780px;margin-top:-364px;" id="scatterLegend">
+			<tr><td>
+			 <canvas style="background-color: #B8BEA4;" width="20" height="13" style="border: 1px solid #000000;"></canvas>
+                                <label id="lbl_IntSev1">Stable
+                                </label></td></tr>
+                                &nbsp;
+			<tr><td>					
+			<canvas style="background-color: #E6CCCC;" width="20" height="13" style="border: 1px solid #000000;"></canvas>
+			<label id="lbl_IntSev2">High Defects
+			</label></td></tr>
+			&nbsp;
+			<tr><td>
+			<canvas style="background-color: #CCE6CC;" width="20" height="13" style="border: 1px solid #000000;"></canvas>
+			<label id="lbl_IntSev3">Testcase Insufficiency
+			</label></td></tr>
+			&nbsp;
+			<tr><td>
+			<canvas style="background-color: #FFFFFF;border:1px solid black;" width="20" height="11" style="border: 1px solid #000000;"></canvas>
+			<label id="lbl_IntSev4">Unstable
+			</label>
+			</td></tr>
+			&nbsp;
+			 </table>
+        </div>
+           
+        </div>
+			
+			<!-- END PORTLET-->
+		</div>				
+		</div>
+		
+	</div>
+	
+ <!--Violations Popup-->
+ 
+	
+	<!--generic code strts -->
+	
+							

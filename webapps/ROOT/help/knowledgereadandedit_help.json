@@ -1,0 +1,87 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 6,
+	"tooltips": [
+		{
+			"selector": "#searchLocalDoc",
+			"step": "1",
+			"help": "Here you can search for knowledge trainings completed by you ",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Search for Knowledge "
+		},
+		{
+			"selector": "#myAssignationDropdown",
+			"step": "2",
+			"help": "Use this to filter the training's according to the completion status",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Training Status"
+		},
+		{
+			"selector": "#mkpTitleRow",
+			"step": "3",
+			"help": "This is the training name ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Training Name"
+		},
+		{
+			"selector": "A[href='javascript:;']A:contains('Save')",
+			"step": "4",
+			"help": "Click here to save your training status",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Click here to save"
+		},
+		{
+			"selector": "#addFilesBtn",
+			"step": "2",
+			"help": "You can add different files, visualizations or url with the knowledge document ",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Add Files"
+		},
+		{
+			"selector": "#knowledge_title",
+			"step": "1",
+			"help": "Add the title here",
+			"position": "left top",
+			"positionAt": "center bottom",
+			"title": "Title of Knowledge Document"
+		},
+		{
+			"selector": "#addTagInput",
+			"step": "3",
+			"help": "Add simple tags to search your knowledge documents faster For ex-: #Knowledge",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Add Tags here"
+		},
+		{
+			"selector": "A[href='#streamactivitiesContainer']",
+			"step": "4",
+			"help": "Add any other information that you have it could be domain specific or technology related ",
+			"position": "left bottom",
+			"positionAt": "center top",
+			"title": "Add other information"
+		},
+		{
+			"selector": "A[href='#ReviewdetailsContainer']",
+			"step": "5",
+			"help": "Select your knowledge reviewer here",
+			"position": "left bottom",
+			"positionAt": "center top",
+			"title": "Knowledge reveiwer"
+		},
+		{
+			"selector": "A[href='#SecuritydetailsContainer']",
+			"step": "6",
+			"help": "Select the type of security you want to put on the knowledge asset",
+			"position": "left bottom",
+			"positionAt": "center top",
+			"title": "Security Level"
+		}
+	],
+	"title": "ISE"
+}

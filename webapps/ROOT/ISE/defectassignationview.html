@@ -1,0 +1,241 @@
+<!-- BEGIN PAGE CONTENT-->
+<div class="row" id="searchPortletBody">
+	<div class="col-md-12 ">
+		<!-- BEGIN PORTLET-->
+		<div class="portlet box green">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-gift"></i>Assignation View
+				</div>
+			<div class="actions">
+				<!--<a class="btn btn-circle btn-icon-only btn-default fullscreen" onclick="general.onFullscreen(general.internalDefectmeter)" href="javascript:;">
+				</a>-->
+				<a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="fullscreen" title="fullscreen">
+									</a>
+			</div>
+		</div>
+		<div class="portlet-body">
+			<div class="table-responsive">
+			<div class="alert alert-danger" style="display:none;"><strong>Error!</strong><span class="error-msg"></span> </div>
+				<table class="table table-striped table-bordered table-hover" id="datatable_search">
+					<thead>
+						<tr role="row" class="heading">
+							<th width="20%">
+								Collection
+							</th>
+							<th width="20%">
+								Date&nbsp;Range
+							</th>
+							<th width="20%">
+								Feature
+							</th>
+							<th width="25%">
+								Status
+							</th>
+							<th width="10%">
+								Actions
+							</th>
+						</tr>
+						<tr role="row" class="filter">
+							<td>
+								<select class="form-control form-filter input-sm" id="collectionsData">
+									<option collection-name ="defect_collection" value="defects">Defect</option>
+									<option collection-name ="testcase_collection" value="testcases">Test Case</option>
+								</select>
+							</td>
+							<td>
+								<div class="input-group date date-picker margin-bottom-5" data-date-format="yyyy-mm-dd" id="startDate" >
+												<input type="text" class="form-control form-filter input-sm" readonly placeholder="From">
+												<span class="input-group-btn">
+												<button class="btn btn-sm default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+								</div>
+								<div class="input-group date date-picker" data-date-format="yyyy-mm-dd" id="endDate">
+												<input type="text"  class="form-control form-filter input-sm" readonly placeholder="To">
+												<span class="input-group-btn">
+												<button class="btn btn-sm default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+								</div>
+							</td>
+							<td>
+								<select class="form-control form-filter input-sm" id="featureData">
+												
+								</select>
+							</td>
+							<td>
+								<select class="form-control form-filter input-sm" id="priorityData">
+												
+								</select>
+							</td>
+							
+							<td>
+								<div class="margin-bottom-5">
+												<!--<button class="btn btn-sm yellow filter-submit margin-bottom" id="submitForm" ><i class="fa fa-search"></i> Submit</button>-->
+												<!--<a data-target="#errorMessage" data-toggle="modal" class="btn btn-sm yellow filter-submit margin-bottom" id="submitForm" ><i class="fa fa-search"></i> Submit</a>-->
+												<!-- <a href="javascript:;" data-toggle="modal" class="btn btn-sm yellow filter-submit margin-bottom" id="submitForm" ><i class="fa fa-search"></i> Submit</a> -->
+												<button class="btn btn-sm yellow filter-submit margin-bottom" id="submit-Form" ><i class="fa fa-search"></i>  Submit </button>
+								</div>
+											<button class="btn btn-sm red filter-cancel" id="resetForm" ><i class="fa fa-times"></i>  Reset &nbsp;&nbsp;</button>
+							</td>
+						</tr>
+					</thead>
+				    <tbody>
+									
+					</tbody>
+				</table>
+				<div id="errorMessage" class="modal fade" tabindex="-1" data-width="400">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+								<h4 class="modal-title">
+									<a href="javascript:;" class="btn btn-icon-only btn-circle red">
+										<i class="fa fa-times"></i>
+									</a>
+									ERROR
+								</h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-12" id="errorTable">
+										
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<!-- END PORTLET-->
+	</div>	
+		
+	</div>
+	<div class="clearfix">
+	</div>
+	<div class="row">
+		<div  class="col-md-12" id="searchClusterTable">
+			<div class="portlet box red-intense">
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="fa fa-globe"></i>Defect Cluster
+								</div>
+								<div class="actions" id="execID">
+									<div class="btn-ctrls">
+										<!-- <a class="btn default" href="javascript:;" data-toggle="dropdown">
+										Last Execution's <i class="fa fa-angle-down"></i>
+										</a>
+										<div class="dropdown-menu hold-on-click dropdown-radiobuttons" role="menu" id="executionIDList">
+											
+										</div> -->
+										 
+										  <button type="button" id="viewTable" class="btn btn-default" title="Table View"><i class="fa fa-table"></i></button>
+									 
+										 
+										  <button type="button" id="viewGraph" class="btn btn-default" title="Graph View"><i class="fa fa-bar-chart"></i></button>
+										 
+										<div class="headerDivider"></div>
+										<a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="fullscreen" title="fullscreen">
+										</a>
+									</div>
+									</div>
+							</div>
+							<div class="portlet-body" >
+								<div class="dataTables_scrollBody" id="clusterTableView" style="width: 100%; ">
+										<!-- <table class="table table-striped table-bordered table-hover" id="clusterResultsTable" border="1">
+										<thead class="hide">
+											<tr>
+												<th width="100%">
+												
+												</th>
+										</thead>
+										<tbody id="clusterResultsTableBody">
+								
+										</tbody>
+										</table> -->
+									
+								</div>	
+								<div id="users" align="left" style="padding-top:5px;border-top:0; display:none">
+									<label class="control-label">Select Developer/Tester  </label>
+									<select name="users" class="form-filter input-sm" id="UsersData" style="width:15%;">
+												<option value="">Select...</option>
+									</select>
+									 
+									<!--<button class="btn btn-sm blue filter-submit margin-bottom" id="AssignForm"><i class="fa fa-check"></i> Assign</button>-->
+									<a data-toggle="modal" class="btn btn-sm blue filter-submit margin-bottom disabled" id="AssignForm" ><i class="fa fa-check"></i> Assign</a>
+									<div class="alert alert-danger" style="display: none;">
+                                        <strong>Error!</strong><span class="msg"> </span>
+									</div>
+								</div>
+								<div id="clusterGraphView" class="row" style="width: 100%; height: 500px;">
+									 
+									  <div id="visualization"><div id="inner"></div></div>
+									 
+								</div>	
+								<div id="stack1" class="modal fade" tabindex="-1" data-width="400">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<h4 class="modal-title">Duplicate Defect Details</h4>
+											</div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-12" id="duplicateTable">
+														
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="stack2" class="modal fade" tabindex="-1" data-width="400">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<!--<h4 class="modal-title" id="defectTableHeader">Defect Details</h4>-->
+												<h4 class="modal-title" id="defectTableHeader">
+												</h4>
+											</div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-12" id="defectTable" style="background-color: #edf6fb">
+														
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								 <div id="errorMessage1" class="modal fade" tabindex="-1" data-width="400">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+												<h4 class="modal-title">
+													<a href="javascript:;" class="btn btn-icon-only btn-circle red">
+														<i class="fa fa-times"></i>
+													</a>
+													ERROR
+												</h4>
+											</div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-12" id="errorTable1">
+														
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+		    </div>
+		</div>
+	</div>	    					

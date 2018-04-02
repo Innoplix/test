@@ -1,0 +1,42 @@
+{
+  "TableDetails": {
+    "Visualization": {
+      "displayName": "Visualization",
+      "enable": "yes",
+      "indexName": ".kibana-4",
+      "additionalFilters": "",
+	  "defaultURL": "/DevTest/dashboard/index.html#/visualize/edit/<Visualization-Name>?embed&_g=(time:(from:now%2Fy,mode:quick,to:now%2Fy))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'<Filter-String>')))",
+      "allowedroles": [
+        "Admin",
+        "Test_Manager",
+        "Tester",
+        "Developer"
+      ],
+      "defaultView": [
+        "Title"
+      ],
+      "mobileView": [
+        "Title"
+      ],
+      "Details": {
+        "fields": [
+          {
+            "displayName": "Title",
+            "SourceName": "title",
+            "dervied": "",
+            "enable": "yes",
+            "type": "string",
+            "allowedroles": [
+              "Admin",
+              "Test_Manager",
+              "Tester",
+              "Developer"
+            ],
+            "displayType": "string",
+            "filter": "no"
+          }
+        ]
+      }
+    }
+  }
+}

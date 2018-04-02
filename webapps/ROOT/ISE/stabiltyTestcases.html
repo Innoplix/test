@@ -1,0 +1,65 @@
+<div class="portlet box grey-cascade">
+		<div class="portlet-title">
+			<div class="caption">
+				<i class="fa fa-gift"></i>TestcaseGraph
+			</div>
+			<div class="tools">
+			    <div class="divRefreshBtn_Heatmaps"  style="display: inline;">
+			        <img style="margin-top: -10px;" id="btnRefreshTestCases" onclick="stabiltyTestcases.onRefreshTestCases(false)" onmouseover="stabiltyTestcases.onRefreshImgHover(event)"
+										onmouseout="stabiltyTestcases.onRefreshImgout(event)" alt="" title="Refresh" src="images/refresh_1_16.png" />
+				</div>
+				<a href="javascript:;" class="collapse"></a>				
+				<!--<a href="#portlet-config" data-toggle="modal" class="config"></a>-->				
+			</div>
+		</div>
+		<div class="portlet-body">
+			
+		<div id="divDefectPopupBackGrd1">
+		</div>
+		<div class="row">			
+			<div class="col-md-12 " id="divTestcases">
+			
+				<div style="padding-left: 30px;">							
+					<div class="form-group testcaseRelease-dropdown">
+					    <label class="control-label">Selected Releases :</label>
+						<select id="cmb_TestCaseReleases" tabindex="4" data-placeholder="Select Releases..." style="height:40px; width: 500px;" class="form-control select2" multiple>
+						</select>
+						<button class="btn btn-sm yellow filter-submit margin-bottom pull-right" onclick="stabiltyTestcases.onFilterTestCaseReleasesClick()" style="width: 50px;">
+                    <i class="fa fa-search"></i>Go</button>
+					<button class="btn btn-sm red filter-cancel pull-right" onclick="stabiltyTestcases.onSetDefaultTestCaseReleases()" style="width: 80px;margin-right:10px;">
+						<i class="fa fa-times"></i>Clear</button>
+				</div>				 
+					
+				</div>				 
+				<table id="tbl_Testcases">
+					<tr>
+						<td class="tdGraph">
+							<div style="padding-left: 20px;overflow: auto;display: inline-block;width: 120%;min-height: 400px;max-height:600px;" id="div_Testcases">
+								<canvas id="cvsTestcases" height="500" width="900">[No canvas support]</canvas>
+							</div>
+							<div class="divRefresh_Heatmaps">
+								<div class="divGeneratedOn_Heatmaps">
+									<label class="LblGeneratedOn" style="font-weight: bold">
+										Generated On :</label>
+									<label class="LblGeneratedOn" id="lbl_UpdatedOnDataTestCases">
+									</label>
+								</div>							
+								<!--<br style="background-color:White;border:0px none white;" />-->
+							</div>
+						</td>
+					</tr>
+				</table>	
+			</div>
+			
+			<!-- END PORTLET-->
+		</div>				
+		</div>
+		
+	</div>
+	
+ <!--Violations Popup-->
+ 
+	
+	<!--generic code strts -->
+	
+							

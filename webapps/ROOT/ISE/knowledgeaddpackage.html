@@ -1,0 +1,196 @@
+<!-- BEGIN PAGE CONTENT-->
+<h1 class="page-title display-inline-block"> Knowledge Package</h1>
+<div class="page-toolbar display-inline-block pull-right"></div>
+
+	<div class="row background-white">
+	
+		<div class="col-md-12"> 
+			 
+			<div class="form-group">
+				<label class="control-label">Title</label>
+				<input type="text" class="form-control" id="knowledge_title">
+			</div>
+			<div class="form-group">
+				<label class="control-label">Description</label>
+				<!-- <textarea id="knowledge_description" rows="2" class="form-control"></textarea> -->
+				<div name="summernote" id="knowledge_description"></div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label">Added Knowledge Documents</label>
+				<div id="addRemovePackageCoantainer">
+					 <button type="button" id="addKnowledgeDocument" class="btn blue" data-toggle="modal"><i class="fa fa-plus"></i> ADD KNOWLEDGE DOCUMENTS</button>
+					 <button type="button" id="removeKnowledgeDocument" class="btn blue"><i class="fa fa-remove"></i> REMOVE</button>
+					 <div class="btn-group coloumn-toggler pull-right">
+						<a class="btn default column-toggler-btn" href="javascript:;" data-toggle="dropdown" aria-expanded="false">
+						Columns <i class="fa fa-angle-down"></i>
+						</a>
+						<div id="KPcolumnTogglerDropdown" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right"></div>
+					</div>
+					 
+				</div>
+				
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="col-md-12 margin-top-10 kp-table-conatainer">
+		</div>
+			 
+		 
+	</div>
+	<div class="clearfix">
+	</div>
+	<div class="row background-white">
+		<div class="panel-group accordion col-md-12 margin-top-10" id="historyAssignationContainer">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+					<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#historyAssignationContainer" href="#historyContainer" aria-expanded="false">
+					History </a>
+					</h4>
+				</div>
+				<div id="historyContainer" class="panel-collapse collapse" aria-expanded="false">
+					<div class="panel-body">
+						<div class="history-conatainer">
+							<label class="control-label bold">History</label>
+							 <div class="table-responsive">
+								<table id="historyDataTable" class="table">
+									<thead>
+										<tr>
+											<th>No.</th>
+                                            <th>Modified</th>
+                                            <th>Modified by</th>
+                                            <th>No. of attachments</th>
+                                             <th>Status</th>
+                                            <th>Comments</th
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="package-assignation-history-conatainer margin-top-10">
+							<label class="bold control-label">Package Assignation History</label>
+							 <div class="table-responsive">
+								<table id="packageAssignationHistoryDataTable" class="table">
+									<thead>
+										<tr>
+											<th>No.</th>
+                                            <th> Member Name</th>
+                                            <th> Assigned Date</th>
+                                            <th> Assigned by</th>
+                                            <th>Status</th>
+                                            <th>Comments</th>
+
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+					<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#historyAssignationContainer" href="#assignationContainer">
+					Assignations </a>
+					</h4>
+				</div>
+				<div id="assignationContainer" class="panel-collapse collapse">
+					<div class="panel-body" style="height:200px; overflow-y:auto;">
+						 <label class="control-label bold display-block">Assign to</label>
+						 <!-- <select class="asignee-list-coantainer display-block" multiple="multiple">
+						 </select> -->
+						 <select multiple="multiple" class="asignee-list-holder display-block">
+						 </select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row bottom-ctrl-container">
+		<div class="col-md-12">
+			<div class="pull-right">
+				<button type="button" id="cancelKnowledgePackage" class="btn default" onClick="knowledgeaddpackage._previusscreen()" >Cancel</button>
+				<button type="button" onClick="knowledgeaddpackage.validatePackageData()" class="btn blue">Save</button>
+			</div>
+		</div>
+    </div>
+	<!-- Add knoweledge package popup-->
+		<div class="modal fade in" id="knowledgeAddDocTableModal" tabindex="-1" role="basic" aria-hidden="true" style="display:none;">
+			<div class="modal-dialog">
+				<div class="modal-content col-md-10" style="width: 765px;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+						<h4 class="modal-title">Add Knowledge Documents</h4>
+					</div>
+					<div class="modal-body">
+					<div class="search-comp-container">
+					</div>
+					<div class="btn-group coloumn-toggler pull-right">
+						<a class="btn default column-toggler-btn" href="javascript:;" data-toggle="dropdown" aria-expanded="false">
+						Columns <i class="fa fa-angle-down"></i>
+						</a>
+						<div id="KDAPColumnTogglerDropdown" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right"></div>
+					</div>
+						<div class="table-container">
+							 
+						</div>
+					</div>
+				<div class="modal-footer">
+						<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+						<button type="button" class="btn blue" onclick="knowledgeaddpackage.addKnowledgeDocHandler()">ADD</button>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		</div>
+	
+	 <!-- Add knoweledge package popup-->
+		<div class="modal fade bs-modal-lg" id="knowledgeAddMoreFilterCompModal" tabindex="-1" role="basic" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+						<h4 class="modal-title">Filters</h4>
+					</div>
+					<div class="modal-body">
+					 
+						
+					</div>
+				<!-- <div class="modal-footer">
+						<button type="button" class="btn dark btn-default" data-dismiss="modal">CLOSE</button>
+						<button type="button" class="btn blue" onclick="knowledgeaddpackage.addMoreFilterHandler()">SAVE</button>
+				</div> -->
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		</div>
+		
+		<div class="modal fade bs-modal-lg" id="showMoreTextInfoModal" tabindex="-1" role="basic"  >
+				   <div class="modal-dialog modal-lg">
+					  <div class="modal-content">
+						 <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title" id="moreInfoModalTitle"></h4>
+						 </div>
+						 <div class="modal-body"   >
+							<div id="modelInfo"  style="height:450px;overflow-y:auto;overflow-x:auto" ></div>
+						 </div>
+						 <div class="modal-footer">
+							<button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+						 </div>
+					  </div>
+					  <!-- /.modal-content -->
+				   </div>
+			   <!-- /.modal-dialog -->
+		</div>
+			<!-- END PAGE CONTENT-->	
+<div id="log" style="display:none;">
+  
+</div>
+
+	
+

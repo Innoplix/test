@@ -1,0 +1,506 @@
+<h1 class="page-title display-inline-block"> Recommendation & Optimization</h1>
+<span id="dynamicplan"></span>
+<div class="tabbable-line background-white">
+		<a href="javascript:;" value="Next" class="btn btn-sm blue pull-right ro-next-btn" onclick="regressionOptimization.onNextButtonClick()">NEXT <i class="fa fa-angle-right"></i></a>	
+		<button class="btn blue btn-sm pull-right" id="fetchTestCases" onclick="javascript:regressionOptimization.generateFetchTestcases();"><i class="fa fa-th"></i> FETCH TESTCASES</button>
+		<!-- <a href="javascript:;" value="Export Results" class="btn btn-sm blue pull-right ro-export-btn" onclick="regressionOptimization.exportData('regression')">Export Results <i class="glyphicon glyphicon-share"></i></a>	 -->
+		<div class="btn-group pull-right margin-right-10 ro-export-btn" style="display:none">
+			<a class="btn blue btn-sm" href="javascript:;" data-toggle="dropdown" aria-expanded="false">
+				<i class="glyphicon glyphicon-share"></i> Export Results
+				<i class="fa fa-angle-down"></i>
+			</a>
+			<ul class="dropdown-menu">
+				<!--<li>
+					<a href="javascript:;">
+						<i class="fa fa-file-code-o"></i> Export to CSV </a>
+				</li>-->
+				<li>
+				<a href="javascript:;" onclick="regressionOptimization.exportData()">
+						<i class="fa fa-file-excel-o"></i> Export to Excel </a>
+				</li>
+				<!--<li>
+					<a href="javascript:;" >
+						<i class="fa fa-file-text-o"></i> Export to Table </a>
+				</li>-->
+			</ul>
+		</div>
+        <ul class="nav nav-tabs " id="tabUL">
+            <li class="active">
+               <a href="#inputsSettingsTab" onclick="regressionOptimization.tabChangeEvent('inputsSettingsTab')" data-toggle="tab">
+               1. Input </a>
+            </li>
+            <li>
+               <a href="#recomondationsTab" onclick="regressionOptimization.tabChangeEvent('recomondationsTab')" data-toggle="tab">
+               2. Recommended test cases</a>
+            </li>
+            <li>
+               <a href="#testBedsTab" onclick="regressionOptimization.tabChangeEvent('testBedsTab')"  data-toggle="tab">
+               3. Test beds </a>
+            </li>
+            <li>
+               <a href="#testSettingsTab" onclick="regressionOptimization.tabChangeEvent('testSettingsTab')"  data-toggle="tab">
+               4. Test details</a>
+            </li>
+            <li>
+               <a href="#optimizationsTab" onclick="regressionOptimization.tabChangeEvent('optimizationsTab')"  data-toggle="tab">
+               5. Optimized tests</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="inputsSettingsTab">
+              <!--  <div class="row"><a  class="pull-right" style="font-size:15px;margin-right: 14px" onclick="regressionOptimization.clear()">Clear</a></div> -->
+               <div class="row">
+                  <!--<a  style ="margin-left: 370px" onclick="regressionOptimization.clear()">clear</a>-->
+                  <div class="col-md-3">
+                     <div class="portlet light release-builds-container">
+                        <div class="portlet-title">
+                           <div class="caption">
+                              Release/Builds
+                           </div>
+                           <div class="tools">
+								<a class="fa-item btn btn-circle btn-icon-only btn-default" href="javascript:;" onclick="regressionOptimization.clearTreeSelection()" title="Clear">
+									<i class="fa fa-eraser"></i>
+								</a>
+								<button type="button" class="btn btn-sm blue disabled" id="applyBtn">APPLY</button>
+                           </div>
+                        </div>
+                        <div class="portlet-body">
+                           <div id="jstree" class="tree-demo jstree jstree-2 jstree-default jstree-checkbox-selection " role="tree" aria-activedescendant="j2_1" style="overflow: auto; height: 255px; width: 100%;">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+				  <div class="col-md-9">
+					<div class="col-md-12">
+						<div class="portlet light ro-defects-container">
+							<div class="portlet-title">
+							   <div class="caption">
+								  Defects
+								  <span class="badge badge-info"> 0 </span>
+							   </div>
+							   <div class="tools">
+									<div class="input-group input-medium pull-left search-conatainer">
+										<div class="form-group has-feedback has-clear">
+										  <input type="text" class="form-control" placeholder="search..." name="gQuery" id="regsearchDefID">
+										  <span class="form-control-clear glyphicon glyphicon-remove form-control-feedback hidden"></span>
+										</div>
+										<span class="input-group-btn">
+										  <button id="searchDefects" class="btn grey-mint disabled" onclick="regressionOptimization.defectSearchFunc()" type="button">
+												<i class="fa fa-search fa-fw"></i></button>
+										</span>
+									</div>
+									
+									<a class="fa-item btn btn-circle btn-icon-only btn-default" href="javascript:;" onclick="regressionOptimization.clear()" title="Clear">
+										<i class="fa fa-eraser"></i>
+									</a>
+									<a class="fa-item btn btn-circle btn-icon-only btn-default" href="javascript:;" onclick="regressionOptimization.buildQueryForBuildAndReleases();" title="Refresh">
+										<i class="glyphicon glyphicon-refresh"></i>
+									</a> 
+							   </div>
+							</div>
+							<div class="portlet-body">
+								<div id="defsearch_div" class="dataTables_scrollBody">
+								</div>
+								<div id="defects_div" class="dataTables_scrollBody"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="portlet light ro-features-container">
+							<div class="portlet-title">
+							   <div class="caption">
+								<div class="all-features-conatiner"> All Features 
+									<span class="badge badge-info"> 0 </span>
+								</div>
+								<div class="priority-conatiner"> Priority : 
+									<span class="high-data-conatiner">High <span class="badge badge-default"> 0 </span></span>
+									<span class="low-data-conatiner">Low <span class="badge badge-default"> 0 </span></span>
+								</div>
+							   </div>
+							   <div class="tools">
+									<!-- <div class="input-group input-medium pull-left search-conatainer">
+										<input type="text" class="form-control" placeholder="search..." name="fQuery" id="featuresearchID">
+									</div>
+									
+									<a class="fa-item btn btn-circle btn-icon-only btn-default" href="javascript:;" onclick="regressionOptimization.clearText()" title="Clear">
+										<i class="fa fa-eraser"></i>
+									</a>
+									<a class="fa-item btn btn-circle btn-icon-only btn-default" href="javascript:;" onclick="" title="Refresh">
+										<i class="glyphicon glyphicon-refresh"></i>
+									</a>   -->
+							   </div>
+							</div>
+							<div class="portlet-body">
+								<div id="feature_div" class="dataTables_scrollBody" style="overflow: auto; height: 275px; width: 100%;"></div>
+							</div>
+						</div>
+					</div>
+				  </div>
+                   
+               </div>
+               <!-- <input type="button" class="btn blue-hoki" value="Fetch Testcases" onclick="regressionOptimization.generateFetchTestcases();"/> -->
+               <!-- <input type="button" value="Next" class="btn blue-hoki pull-right" onclick="regressionOptimization.onButtonChangeTab('recomondationsTab')"/> -->
+					   
+            </div>
+            <div class="tab-pane" id="recomondationsTab">
+               <!-- SURESH START-->
+               <div class="row">
+                  <div class="col-md-12">
+                     <!-- BEGIN Portlet PORTLET-->
+                     <div class="portlet light recommended-testcases-container">
+                       <!--  <div class="portlet-title">
+                           <div class="caption">
+                              
+                           </div>
+                        </div> -->
+                        <div class="portlet-body recommended-testcases-body-container">
+                           <div class="reg-heading-list-container">
+							   <div class="col-md-4 regression-unq-tcs">
+								  Unique Regression TestCases : <span id='regressionUnqTCs'>0</span>						
+							   </div>
+							   <div class="col-md-4 selected-test-beds text-center">
+								 Selected Testbeds : <span id='selectedTestBeds'>0</span>									
+							   </div>
+							   <div class="col-md-4 posble-test-execs text-right">
+								  Possible Testexecutions : <span id='posbleTestExecs'>0</span>									
+							   </div>
+                           </div>
+                           
+                           <div class="row" id="buckets">
+                           </div>
+                           <!-- <div>
+                              <input type="button" class="btn blue-hoki" value="Export Results" onclick="regressionOptimization.exportData('regression')"/>
+                              <input type="button" value="Next" class="btn blue-hoki pull-right" onclick="regressionOptimization.onButtonChangeTab('testBedsTab')"/>
+                           </div> -->
+                        </div>
+                     </div>
+                  </div>
+                  <!-- END Portlet PORTLET-->
+               </div>
+            </div>
+            <div class="tab-pane" id="testBedsTab">
+			<div class="reg-heading-list-container">
+			   <div class="col-md-4 regression-unq-tcs">
+					Unique Regression TestCases : <span id='regressionUnqTCs'>0</span>						
+			   </div>
+			   <div class="col-md-4 selected-test-beds text-center">
+				    Selected Testbeds : <span id='selectedTestBeds'>0</span>									
+			    </div>
+				<div class="col-md-4 posble-test-execs text-right">
+					Possible Testexecutions : <span id='posbleTestExecs'>0</span>									
+				</div>
+			</div>	
+               <div class="row" id="testbed">
+               </div>
+            </div>
+            <div class="tab-pane" id="testSettingsTab">
+               <div class="row" id="settings">
+                  <div class="col-md-12">
+                     <div class="portlet light test-settings-container">
+                       
+                        <div class="portlet-body test-settings-body-container">
+						   <div class="test-settings-heading-list-container">
+						       <div class="col-md-3 regression-unq-tcs">
+								  Unique Regression TestCases : <span id='regressionUnqTCs'>0</span>						
+							   </div>
+							   <div class="col-md-2 selected-test-beds text-center">
+								 Selected Testbeds : <span id='selectedTestBeds'>0</span>									
+							   </div>
+							   <div class="col-md-3 posble-test-execs text-right">
+								  Possible TestExecutions : <span id='posbleTestExecs'>0</span>									
+							   </div>
+							   <div class="col-md-4 max-test-exec-conatiner">
+								  Max TestExecutions For All Environments : <span id="maxTestExecs">146</span>						
+							   </div>
+                           </div>
+                           <div class="" id="test-settings-data-conatiner">
+						   <h5>Select date range</h5>
+							<form role="form">
+								<div class="form-body">
+									<div class="row">
+									   <div class="col-md-3">
+										  <div class="form-group">
+											 <label class="control-label">From Date</label>
+											 <div class="input-group date date-picker start-date-conatainer" data-date-format="mm/dd/yyyy" data-date-start-date="+0d">
+												<input type="text" class="form-control" name="startDate" id="startDate" readonly="">
+												<span class="input-group-btn">
+												<button class="btn default" type="button">
+												<i class="fa fa-calendar"></i>
+												</button>
+												</span>
+											 </div>
+											 <!-- /input-group -->
+										  </div>
+									   </div>
+									   <div class="col-md-3">
+										  <div class="form-group">
+											 <label class="control-label">To Date</label>                                
+											 <div class="input-group date date-picker end-date-conatainer" data-date-format="mm/dd/yyyy">
+												<input type="text" class="form-control" name="endDate" id="endDate" readonly="">
+												<span class="input-group-btn">
+												<button class="btn default" type="button">
+												<i class="fa fa-calendar"></i>
+												</button>
+												</span>
+											 </div>
+											 <!-- /input-group -->
+										  </div>
+									   </div>
+									   <!--<div class="col-md-3">
+											<div class="form-group">
+												<label class="control-label">&nbsp;&nbsp;</label>
+												<div class="form-control">
+												<label class="mt-checkbox">
+												  <input type="checkbox" name="include_weekdays" id="include_weekdays" onclick="regressionOptimization.calMaxNoOfTestExecutions()"> <span>Include weekend</span>
+												</label>
+												</div>
+											</div>
+									   </div>-->
+									</div> 
+									<div class="row">
+									<div class="col-md-3">
+										<div class="form-group">
+											<label class="control-label">Test engineers</label>
+											<input type="text" class="form-control" name="no_of_resources" id="no_of_resources" onkeyup="regressionOptimization.calMaxNoOfTestExecutions()" value="2"> 
+											 <span class="error1" style="color: Red; display: none">(0-9)</span>
+										</div>
+									</div>
+									<div class="col-md-3">
+											<div class="form-group">
+												<label class="control-label">Execution rate</label>
+												<input type="text" class="form-control" name="testcase_exec_rate_per_each" id="testcase_exec_rate_per_each" onkeyup="regressionOptimization.calMaxNoOfTestExecutions()" value="2"> 
+												 <span class="error2" style="color: Red; display: none">(0-9)</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<label class="control-label">Environment setup Effort</label>
+												<input type="text" class="form-control" name="setup_env" id="setup_env" onkeyup="regressionOptimization.calMaxNoOfTestExecutions()" value="2"> 
+												 <span class="error3" style="color: Red; display: none">(0-9)</span></p>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<label class="control-label">Max Test Executions</label>
+												<input type="text" class="form-control" name="maxNoOfTestCases" id="maxNoOfTestCases"  onkeyup="regressionOptimization.calMaxNoOfTestExecutions()" value="56" disabled=true> 
+												 <span class="error3" style="color: Red; display: none">(0-9)</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-md-12 control-label" id="displayMessage"></label>
+											 </div>
+										</div>
+									</div>									
+								</div>
+								<div class="test-details-footer-container">
+									  <input type="button" class="btn blue" value="Fetch Optimized Testcases" onclick="regressionOptimization.geenerateOptimizationOrder()">
+									
+									  <!-- <a href="javascript:;" value="Next" class="btn blue pull-right" onclick="regressionOptimization.onNextButtonClick()">NEXT <i class="fa fa-angle-right"></i></a> -->
+								</div>
+							</form>
+                           <!-- <form  class="form-horizontal">
+                              <div class="form-body">
+                                 <div class="form-group">
+                                    <label class="control-label col-md-3">Date Range</label>
+                                    <div class="col-md-4">
+                                       <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
+                                          <input type="text" class="form-control" name="startDate" id="startDate"  onchange="regressionOptimization.onSelectStartDate()">
+                                          <span class="input-group-addon">
+                                          to </span>
+                                          <input type="text" class="form-control" name="endDate" id="endDate"  onchange="regressionOptimization.onSelectEndDate()">
+                                       </div>
+                                       <span class="help-block">
+                                       Select date range </span>
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label class="col-md-4 control-label">Include weekend</label>
+                                    <div class="col-md-4">
+                                       <input type="checkbox" class="form-control" 
+                                          name="include_weekdays" id="include_weekdays" onclick="regressionOptimization.maxNoOfTestExecutions()" checked />		
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label title="Number of testers involved in testing" class="col-md-4 control-label">Test Engineers</label>
+                                    <div class="col-md-4">
+                                       <input type="text" class="form-control"
+                                          name="no_of_resources" id="no_of_resources" onkeyup="regressionOptimization.calMaxNoOfTestExecutions()" value="2">
+                                       <span class="error1" style="color: Red; display: none">(0-9)</span>															 
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label class="col-md-4 control-label" title="Number of testcases that can be covered by one engineer per day">Execution rate</label>
+                                    <div class="col-md-4">
+                                       <input type="text" class="form-control" name="testcase_exec_rate_per_each" id="testcase_exec_rate_per_each" onkeyup="regressionOptimization.calMaxNoOfTestExecutions()" value="2"/>
+                                       <span class="error2" style="color: Red; display: none">(0-9)</span></p>															
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label class="col-md-4 control-label" title="Effort require to setup a Testbed/Environment(in days)">Environment setup Effort</label>
+                                    <div class="col-md-4">
+                                       <input type="text" class="form-control" name="setup_env" id="setup_env"  onkeyup="regressionOptimization.calMaxNoOfTestExecutions()" value="2"/>					
+                                       <span class="error3" style="color: Red; display: none">(0-9)</span></p>
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label class="col-md-4 control-label" title="Maximum number of test executions that can be covered with in time period !">Max Test Executions</label>
+                                    <div class="col-md-4">
+                                       <input type="text" class="form-control" name="maxNoOfTestCases" id="maxNoOfTestCases"  onkeyup="regressionOptimization.calMaxNoOfTestExecutions()" value="56" disabled=true>					
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label class="col-md-12 control-label" id="displayMessage"></label>
+                                 </div>
+                              </div>
+                           </form>  -->  
+                        </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            <div class="tab-pane" id="optimizationsTab">
+               <div class="row">
+                  <div class="col-md-12">
+                     <!-- BEGIN Portlet PORTLET-->
+                     <div class="portlet light optimized-testcase-container">
+                        <div class="portlet-body optimized-testcase-body-container">
+                            
+                           <div class="optimized-testcase-heading-list-container">
+						       <div class="col-md-2 regression-unq-tcs">
+								  Unique Regression TestCases : <span id='regressionUnqTCs'>0</span>						
+							   </div>
+							   <div class="col-md-2 selected-test-beds text-left">
+								 Selected Testbeds : <span id='selectedTestBeds'>0</span>									
+							   </div>
+							   <div class="col-md-2 posble-test-execs text-left">
+								  Possible Testexecutions : <span id='posbleTestExecs'>0</span>									
+							   </div>
+							   <div class="col-md-3 max-test-exec-conatiner">
+								  Max TestExecutions For All Environments : <span id="maxTestExecs">146</span>						
+							   </div>
+							   <div class="col-md-3 unique-test-exec-conatiner">
+								  Unique TestExecutions : <span id="UnqTestExecs">0</span>						
+							   </div>
+                           </div>
+                           <div class="row" id="opt_buckets">
+                           </div>
+                        </div>
+                     </div>
+                     <div>
+                        <!-- <input type="button" value="Export Results" class="btn blue-hoki" onclick="regressionOptimization.exportData('optimize')"/> -->								
+                     </div>
+                  </div>
+                  <!-- END Portlet PORTLET-->
+               </div>
+            </div>
+         </div>
+      </div>
+<!-- <div class="portlet box grey-cascade">
+   <div class="portlet-title">
+      <div class="caption">
+         <i class="fa fa-gift"></i>Recommendation & Optimization
+      </div>
+      <div class="tools">
+         <a href="javascript:;" class="collapse">
+         </a>
+         <a href="#portlet-config" data-toggle="modal" class="config">
+         </a>
+      </div>
+   </div>
+   <div class="portlet-body">
+      
+   </div>
+</div> -->
+<div class="modal fade bs-modal-md" id="addTestBedsModel" tabindex="-1" role="dialog" aria-hidden="true" style="display:none;">
+   <div class="modal-dialog modal-md">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title">Add Testbeds</h4>
+         </div>
+         <div id="addTestBedstbl" class="modal-body">
+			 <div id="configs">
+			 
+			 </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn default" data-dismiss="modal">CLOSE</button>
+            <button type="button" id="addTestBedsFromPopup" onclick="javascript:regressionOptimization.generateTestBeds();" class="btn blue">ADD</button>
+         </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<div class="modal fade bs-modal-lg" id="large" class="large-popup-modal" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title">Modal Title</h4>
+         </div>
+         <div id="tblTCList" class="modal-body" style="overflow: hidden;">
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn default" data-dismiss="modal">Close</button>
+            <!--<button type="button" class="btn blue">Save changes</button>-->
+         </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<div class="modal fade bs-modal-sm" id="small" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h4 class="modal-title">Edit</h4>
+         </div>
+         <div class="modal-body">
+            <div class="form-group form-md-line-input has-info">
+               <input type="text" class="form-control input-sm" id="settingsEdit">
+               <input type="hidden" class="form-control input-sm" id="settingshdnEdit">
+               <label for="settingsEdit"></label>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn blue" onclick="regressionOptimization.submitChanges();">Apply</button>
+         </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+<!-- SURESH END-->
+<!-- create plan pop up-->
+<div class="modal fade bs-modal-lg" id="largePlan" class="large-popup-modal" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" id="planPopupCloseCrossBtn" aria-hidden="true"></button>
+            <h4 class="modal-title">Create Plan</h4>
+         </div>
+         <div id="createPlanList" class="modal-body" style="overflow: hidden;">
+		    <!-- <div id="">
+			  <span><input type="radio" value="New Paln" name="planRadio"/>New Paln</span>
+			  <span><input type="radio" value="Copy from existing plan" name="planRadio"/>Copy from existing plan</span>
+			</div> -->
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn default" id="planPopupCloseBtn" data-dismiss="modal">Close</button>
+            <!--<button type="button" class="btn blue">Save changes</button>-->
+         </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>

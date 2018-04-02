@@ -1,0 +1,653 @@
+<!-- BEGIN PAGE CONTENT-->
+    <div class="row">
+		<div class="col-md-12 ">
+			<!-- BEGIN PORTLET-->
+			<div class="portlet box blue">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class=""></i>
+					</div>
+					<div class="actions">
+						<a class="btn btn-circle btn-icon-only btn-default fullscreen" onclick="general.onFullscreen(general.internalDefectmeter)" href="javascript:;">
+						</a>
+
+					</div>
+				</div>
+				
+				
+				
+		<div class="portlet-body">
+			<div class="table-responsive" style="overflow-x:visible;">
+				<table class="table table-striped table-bordered table-hover" id="datatable_search">
+					<thead>
+						
+						<tr role="row" class="heading">
+							<th width="30px">
+								Date&nbsp;Range
+							</th>
+							
+							<th width="120px">
+								Build
+							</th>
+							<th width="80px">
+								Release
+							</th>
+							<th width="150px">
+								Feature
+							</th>
+							<th width="150px">
+								Defect&nbsp;Search
+							</th>
+							<th width="180px">
+								Defect&nbsp;Id
+							</th>
+							<th width="100px">
+								Actions
+							</th>
+						</tr>
+						<tr role="row" class="filter">
+							<td>
+								<div class="input-group date date-picker margin-bottom-5" data-date-format="yyyy-mm-dd">
+												<input type="text" id="startDate" class="form-control form-filter input-sm" readonly placeholder="From">
+												<span class="input-group-btn">
+												<button class="btn btn-sm default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+								</div>
+								<div class="input-group date date-picker" data-date-format="yyyy-mm-dd">
+												<input type="text" id="endDate" class="form-control form-filter input-sm" readonly placeholder="To">
+												<span class="input-group-btn">
+												<button class="btn btn-sm default" type="button"><i class="fa fa-calendar"></i></button>
+												</span>
+								</div>
+							</td>
+							<td>
+								
+								<div class="form-group">
+											<!--<label class="control-label col-md-3">Multi-Value Select</label>-->
+											<div class="col-md-30" style="width:180px">
+										
+												<select id="buildsDropdown" class="form-control select2" multiple>
+													</select>
+											
+											</div>
+										</div>
+							</td>
+							<td>
+								
+									<div class="form-group">
+											<!--<label class="control-label col-md-3">Multi-Value Select</label>-->
+											<div class="col-md-30" style="width:80px">
+												<select id="releaseDropdown" class="form-control select2" multiple>
+												</select>
+											</div>
+										</div>
+							</td>
+							<td>
+								
+										<div class="form-group">
+											<!--<label class="control-label col-md-3">Multi-Value Select</label>-->
+											<div class="col-md-30" style="width:150px">
+												<select id="featuresDropdown" class="form-control select2" multiple>
+													</select>
+											</div>
+										</div>									
+							</td>
+							<td style="width:350px">
+								<input type="text" class="form-control form-filter input-sm" id="defect_searchDesc"  onFocus="this.value=''" onblur="this.value=!this.value?'Defect Search':this.value;"></input>
+											
+							</td>
+							<td style="width:50px">
+								<input type="text" class="form-control form-filter input-sm" id="defect_searchDefectID"  onFocus="this.value=''" onblur="this.value=!this.value?'Defect Id':this.value;"></input>
+											
+							</td>
+							<td>
+								<div class="margin-bottom-5">
+												<button class="btn btn-sm yellow filter-submit margin-bottom" id="submitForm" ><i class="fa fa-search"></i> Submit</button>
+								</div>
+											<button class="btn btn-sm red filter-cancel" id="resetForm" ><i class="fa fa-times"></i>  Reset &nbsp;&nbsp;</button>
+							</td>
+						</tr>
+					</thead>
+				    <tbody>
+									
+					</tbody>
+				</table>
+				
+				<table class="" id="datatable_search">
+					<thead>
+						
+						<tr>
+							<td>
+								<label>
+									<input  id="myDefectsId" type="checkbox" class="md-col-4">MyBugs
+								</label>
+							</td>
+						</tr>
+				</thead>
+				    <tbody>
+									
+					</tbody>
+				</table>
+				
+			</div> 
+		</div>
+				
+				
+				
+				
+				
+				
+				<div class="portlet-body">
+					<div class="tab-content">
+						<div class="tab-pane fade active in" id="dl_table">
+							<form  class="form-horizontal">
+									<div class="form-body">
+										<div class="form-group hide" id="titleFormGroup_dl">
+											<label class="col-md-3 control-label">Title</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control input-circle"
+												id="defect_searchDefectTitle">										
+											</div>
+										</div>
+										
+										<div class="form-group hide" id="descriptionFormGroup_dl">
+											<label class="col-md-3 control-label">Description</label>
+											<div class="col-md-9">
+												<textarea id="defect_searchDefectDes" class="form-control" 
+												 style="height:180px"></textarea>				
+											</div>
+										</div>	
+
+										
+									</div>
+								</form>
+						</div>
+						<div class="tab-pane fade" id="dl_tab_1_2">
+							
+						</div>
+						
+					</div>							
+					
+				</div>
+			</div>
+			<!-- END PORTLET-->
+		</div>	
+		
+	</div>
+	<div class="clearfix">
+	</div>
+	<div class="row">
+		<div  class="col-md-12 hide" id="searchResultsTable_dl">
+			<div class="portlet box red-intense">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="fa"></i>Search Results
+					</div>
+					<div class="actions">
+						<div class="btn-group">
+							<a class="btn default" href="javascript:;" data-toggle="dropdown">
+							Columns <i class="fa fa-angle-down"></i>
+							</a>
+							<div id="searchFilterDropdown_dl" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+								
+							</div>
+						</div>
+						<a class="btn btn-circle btn-icon-only btn-default fullscreen" onclick="general.onFullscreen(general.internalDefectmeter)" href="javascript:;">
+						</a>
+					</div>
+				</div>
+			
+				<!--<div class="portlet-body">
+					<table class="table table-striped table-bordered table-hover" id="dl_Methods">
+						<thead >
+							<tr>
+								
+								<th id="defectIDHeader">										
+									</th>
+									
+									<th id="featureHeader">
+										
+									</th>
+									<th id="dateHeader">
+										
+									</th>
+									<th id="severityHeader">
+										
+									</th>
+									<th id="priorityHeader">
+										
+									</th>
+									<th id="defectyypeHeader">
+										
+									</th>
+									
+									<th id="statusHeader">
+										
+									</th>
+									
+									<th id="titleHeader">
+										
+									</th>
+									
+									
+									<th id="viewHeader">
+										
+									</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody">							
+				
+						</tbody>
+					</table>
+				</div>-->
+					<div class="portlet-body">
+
+								<ul class="nav nav-tabs" id="dl_searchResultsTabs">							
+								</ul>
+							
+
+		                        <div class="tab-content" id="dl_resultTabContent">		                        
+								</div>
+
+							</div>
+		    </div>
+		</div>		
+	 </div>
+	 
+	 <div class="clearfix">
+	 </div>
+		
+		<div class="row">
+		<div  class="col-md-12 hide" id="dl_searchResultsTable1">
+				<div class="portlet box red-intense" >
+					<div class="portlet-title">
+						<div class="caption" id="MethodNameCaption">
+							<i class="fa"></i>File Changes
+						</div>
+				   </div>
+	<div class="portlet-body">				   
+		
+		<table class="table table-striped table-bordered table-hover" id="dl_Methods">
+							<thead >
+								<tr>
+									
+									<th id="defectIDHeader">	Files									
+									</th>
+									
+									<th id="featureHeader"> Updated By
+										
+									</th>
+									<th id="featureHeader"> Defects Count
+										
+									</th>
+									<th id="featureHeader"> Date
+										
+									</th>
+									<th id="featureHeader"> Release
+										
+									</th>
+									<th id="featureHeader"> Feature
+										
+									</th>
+									<th id="featureHeader"> Path
+										
+									</th>
+										
+								</tr>
+							</thead>
+				
+							<tbody id="tableBody1">							
+							</tbody>
+							
+						</table>
+							
+						<!--<table class="table table-striped table-bordered table-hover hide" id="methodPathTable">
+							<thead >
+							<br>
+							
+							</thead>
+							<tbody id="tableBody2">							
+							</tbody>
+						
+						</table>-->
+						</div>
+				</div>
+			</div>
+	
+			<div  class="col-md-12 hide" id="dl_searchResultsTableMethod">
+				<div class="portlet box red-intense" >
+					<div class="portlet-title">
+						<div class="caption" id="MethodNameCaption">
+							<i class="fa"></i>Method Changes
+						</div>
+						<div class="actions">
+							<div class="btn-group">
+								<a class="btn default" href="javascript:;" data-toggle="dropdown">
+								Columns <i class="fa fa-angle-down"></i>
+								</a>
+								<div id="sample_4_column_toggler_dl" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+									
+								</div>
+							</div>
+							<a class="btn btn-circle btn-icon-only btn-default fullscreen" onclick="general.onFullscreen(general.internalDefectmeter)" href="javascript:;">
+							</a>
+						</div>
+					</div>
+					
+					<div class="portlet-body">
+						<table class="table table-striped table-bordered table-hover" id="dl_sample_41_1">
+						
+						<tbody id="tableBodySearch">
+						
+						</tbody>
+						
+						</table>
+						
+						<div class="portlet-body">
+						<table class="table table-striped table-bordered table-hover" id="dl_sample_41_1">
+						
+						<tbody id="tableBodySearch1">
+						
+						<tr>
+						
+						<td>
+						
+							<div class="col-md-10">
+								<div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+									<input type="text" id="defStartDate" class="form-control" name="product[available_from]" placeholder="Start Date">
+									<span class="input-group-addon">
+									to </span>
+									<input type="text" id="defEndDate" class="form-control" name="product[available_to]" placeholder="End Date">
+								</div>
+															
+							</div>
+						</td>
+						
+						<td>
+						
+						<select class="table-group-action-input form-control input-medium"  id="selectDays" name="product[tax_class]">
+							<option value="30">Last 30 days</option>
+							<option value="60">Last 60 days</option>
+							<option value="90">Last 90 days</option>
+							<option value="120">Last 120 days</option>
+							<option value="150">Last 150 days</option>
+						</select>
+						
+						</td>
+						
+						<td>
+							<label>
+									<input  id="selectFeaturesChk" type="checkbox" checked="checked" class="">Show All Methods
+							</label>
+						</td>
+						
+						<td>
+						<button class="" id="submitFormDefects" ><i class="fa fa-search"></i> Submit</button>
+						</td>
+						
+						
+						</tr>
+						
+						</tbody>
+						
+						</table>
+						</div>
+					
+						<table class="table table-striped table-bordered table-hover" id="dl_Methods">
+							<thead >
+								<tr>
+									
+									<th id="defectIDHeader">	Method Name									
+									</th>
+									
+									<th id="featureHeader"> Updated By
+										
+									</th>
+									<th id="dateHeader"> Defects Count	
+										
+									</th>
+									
+									<th id="severityHeader"> Last Updated Date
+										
+									</th>
+									
+									
+									<th id="severityHeader"> Build Name
+										
+									</th>
+									<th id="priorityHeader"> Feature
+										
+									</th>
+									
+									<th id="defectyypeHeader"> Method Path
+										
+									</th>
+										
+								</tr>
+							</thead>
+				
+							<tbody id="methodTablebody">							
+							</tbody>
+							
+						</table>
+							
+						<table class="table table-striped table-bordered table-hover hide" id="methodPathTable">
+							<thead >
+							<br>
+							
+								
+							</thead>
+							<tbody id="tableBody2">							
+							</tbody>
+						
+						</table>
+							
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		<div class="clearfix">
+		</div>
+		
+		<div class="row">
+		</div>	
+
+	<div class="clearfix">
+	 </div>
+		
+		<div class="row">
+	
+			<div  class="col-md-12 hide" id="searchResultsTableTest">
+				<div class="portlet box red-intense" >
+					<div class="portlet-title">
+						<div class="caption" id="MethodNameCaption">
+							<i class="fa"></i>Test Method Names
+						</div>
+						<div class="actions">
+							<div class="btn-group">
+								<a class="btn default" href="javascript:;" data-toggle="dropdown">
+								Columns <i class="fa fa-angle-down"></i>
+								</a>
+								<div id="sample_4_column_toggler_dl" class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+									
+								</div>
+							</div>
+							<a class="btn btn-circle btn-icon-only btn-default fullscreen" onclick="general.onFullscreen(general.internalDefectmeter)" href="javascript:;">
+							</a>
+						</div>
+					</div>
+					
+					<div class="portlet-body">
+						<table class="table table-striped table-bordered table-hover" id="dl_sample_41_2">
+						
+						<tbody id="tableBodyTestSearch">
+						
+						</tbody>
+						
+						</table>
+						
+					<div class="portlet-body">
+						<table class="table table-striped table-bordered table-hover" id="dl_sample_41_2">
+						
+						<tbody id="tableBodySearch1">
+						
+						<tr>
+						
+						<td>
+						
+							<div class="col-md-10">
+								<div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+									<input type="text" id="tcStartDate" class="form-control" name="product[available_from]" placeholder="Start Date">
+									<span class="input-group-addon">
+									to </span>
+									<input type="text" id="tcEndDate" class="form-control" name="product[available_to]" placeholder="End Date">
+								</div>
+															
+							</div>
+						</td>
+						
+						<td>
+						
+						<select class="table-group-action-input form-control input-medium" id="selectTCDays" name="product[tax_class]">
+							<option value="30">Last 30 days</option>
+							<option value="60">Last 60 days</option>
+							<option value="90">Last 90 days</option>
+							<option value="120">Last 120 days</option>
+							<option value="150">Last 150 days</option>
+						</select>
+						
+						</td>
+						
+						<td>
+							<label>
+									<input  id="selectFeaturestestChk" type="checkbox"  checked="checked" class="">Show All Methods
+							</label>
+						</td>
+						
+						<td>
+						<button class="" id="submitFormTestcases" ><i class="fa fa-search"></i> Submit</button>
+						</td>
+						
+						
+						</tr>
+						
+						</tbody>
+						
+					</table>
+				</div>
+					
+						<table class="table table-striped table-bordered table-hover" id="dl_Methods">
+							<thead >
+								<tr>
+									
+									<th id="defectIDHeader">	Execution Date									
+									</th>
+									
+									<th id="featureHeader"> Status
+										
+									</th>
+									<th id="dateHeader"> Build	
+										
+									</th>
+									<th id="severityHeader"> Release
+										
+									</th>
+									<th id="priorityHeader"> Feature
+										
+									</th>		
+								</tr>
+							</thead>
+				
+							<tbody id="tableBodyTest">							
+							</tbody>
+						</table>
+							
+						<table class="table table-striped table-bordered table-hover hide" id="methodTableTest">
+							<thead >
+								<tr>
+									
+									<th id="defectIDHeader">	Method Name									
+									</th>
+									
+									<th id="featureHeader"> Updated By
+										
+									</th>
+									<th id="dateHeader"> Defects Count	
+										
+									</th>
+									
+									<th id="severityHeader"> Last Updated Date
+										
+									</th>
+									
+									<th id="severityHeader"> Build Name
+										
+									</th>
+									<th id="priorityHeader"> Feature
+										
+									</th>
+									<th id="defectyypeHeader"> Method Path
+										
+									</th>
+										
+								</tr>
+							</thead>
+							<tbody id="tableBodyTest2">							
+							</tbody>
+						
+						</table>
+						
+						<table class="table table-striped table-bordered table-hover hide" id="methodPathTableTest">
+							<thead >
+							<br>
+							<!--<tr>
+								<th id="defectIDHeader"> Method Path									
+								</th>
+								
+								<th id="dateHeader"> Defects Count	
+								</th>
+							</tr>-->
+								
+							</thead>
+							<tbody id="tableBodyPathTable">							
+							</tbody>
+						
+						</table>
+							
+							
+					</div>
+				</div>
+			</div>
+		</div>	
+
+<!--
+	<div class="modal fade in "  tabindex="-1" role="basic" id="defectLocallizationModal1" aria-hidden="true" >
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                   
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>
+                                                        NO Data
+                                                    </p>
+                                                    
+                                                   
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline sbold red" data-dismiss="modal">Close</button>                                                  
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                     
+                                    </div>		-->
+									
+									
+									

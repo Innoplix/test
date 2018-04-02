@@ -1,0 +1,50 @@
+{
+    "admin": [{
+        "displayName": "Admin",
+        "dicplayIcon": "icon-user-follow"
+       
+    },{
+        "displayName": "Developer",
+         "dicplayIcon": "icon-user"
+      
+    },{
+        "displayName": "Test_Manager",
+         "dicplayIcon": "icon-user"
+        
+    },{
+        "displayName": "Tester",
+         "dicplayIcon": "icon-magnifier-add"
+        
+    }],
+    "test_manager": [{
+        "displayName": "Test_Manager",
+        "dicplayIcon": "icon-user"
+      
+    }, {
+        "displayName": "Tester",
+         "dicplayIcon": "icon-magnifier-add"
+      
+    }, {
+        "displayName": "Support",
+        "dicplayIcon": "icon-earphones-alt"
+       
+    }],
+    "tester": [{
+        "displayName": "Tester",
+         "dicplayIcon": "icon-magnifier-add"
+       
+    }, {
+        "displayName": "Support",
+        "dicplayIcon": "icon-earphones-alt"
+      
+    }],
+	"developer": [{
+        "displayName": "Developer",
+         "dicplayIcon": "icon-magnifier-add"
+       
+    }, {
+        "displayName": "Support",
+        "dicplayIcon": "icon-earphones-alt"
+      
+    }]
+}

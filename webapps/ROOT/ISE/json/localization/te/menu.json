@@ -1,0 +1,410 @@
+[
+	{
+		"icon": "icon-home",
+		"title": "డాష్బోర్డ్",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#general",
+				"landingpage": "Admin",
+				"tooltip": "General graphs",
+				"display": "జనరల్"
+			},
+			{
+				"href": "#DSB_defectsinsight",
+				"landingpage": "Developer",
+				"display": "నా బగ్స్"
+			},
+			{
+				"href": "#DSB_defectsinsightrep",
+				"display": "నా రిపోర్ట్ బగ్స్"
+			},
+			{
+				"href": "#DSB_defectsinsightopen",
+				"landingpage": "Admin",
+				"display": "ఓపెన్ బగ్స్"
+			},
+			{
+				"href": "#DSB_defectsinsightclosed",
+				"display": "క్లోజ్డ్ బగ్స్"
+			},	
+			{
+				"href": "#DSB_defectsinsighteamcont",
+				"display": "టీమ్ కాంట్రిబ్యూషన్"
+			},				
+			{
+				"href": "#DSB_defectsinsightall",
+				"landingpage": "Test_Manager",								
+				"display": "అన్ని బగ్స్"
+			},				
+			{
+				"display": "స్టెబిలిటీ",
+				"submenu": [
+					{
+						"href": "#stabilityDefects",
+						"display": "లోపాలు గ్రాఫ్ "
+					},
+					{
+						"href": "#stabilityDefectsDetail",
+						"display": "వివరణాత్మక లోపాలు గ్రాఫ్ "
+					},
+					{
+						"href": "#stabiltyTestcases",
+						"display": "టెస్ట్ కేసు గ్రాఫ్ "
+					},
+					{
+						"href": "#StabiltyDefTc",
+						"display": "ఫీచర్ Stabilty "
+					}
+				]
+			},
+			{
+				"href": "#IF_sourcemetrics",
+				"display": "మూల మెట్రిక్స్"
+			},
+			{
+				"href": "#IF_casadashboard",
+				"display": "స్టాటిక్ విశ్లేషణ"
+			},
+			{
+				"href": "#IF_grading",
+				"landingpage": "Test_Manager",
+				"display": "రిసోర్స్ గ్రేడింగ్"
+			},
+			{
+				"href": "#testingmetrics",
+				"display": "మెట్రిక్స్",
+				"submenu": [
+					{
+						"display": "Testing",
+						"submenu": [
+							{
+								"href": "#releasevstestcases",
+								"display": "విడుదల Vs పరీక్ష కేసులు"
+							},
+							{
+								"href": "#IF_testbankgrowthrate",
+								"display": "టెస్ట్ బ్యాంకు వృద్ధి రేటు"
+							},
+							{
+								"href": "#IF_featurewisetestcasedistribution",
+								"display": "ఫీచర్ వారీగా పరీక్ష కేసు పంపిణీ"
+							},
+							{
+								"href": "#IF_testprogresstrend",
+								"display": "టెస్ట్ పురోగతి ధోరణి"
+							},
+							{
+								"href": "#IF_featurewisetestresults",
+								"display": "తెలివైన పరీక్ష ఫలితాలు ఫీచర్"
+							}
+						]
+					},
+					{
+						"display": "లోపాలు",
+						"submenu": [
+							{
+								"href": "#IF_defectsprioritydistribution",
+								"display": "లోపాలు ప్రాధాన్యత పంపిణీ (ధోరణి మరియు అన్ని విడుదలలు)"
+							},
+							{
+								"href": "#IF_internalandexternalbugstrend",
+								"display": "అంతర్గత మరియు బాహ్య దోషాలు ధోరణి"
+							},
+							{
+								"href": "#IF_defectsseveritydistribution",
+								"display": " లోపాలు తీవ్రత పంపిణీ (ధోరణి మరియు అన్ని విడుదలలు)"
+							},
+							{
+								"href": "#IF_defectdistibutionbydetection",
+								"display": " గుర్తింపు డిఫెక్ట్ distibution (ధోరణి మరియు అన్ని విడుదలలు)"
+							},
+							{
+								"href": "#IF_defectcausedistribution",
+								"display": "  లోపము కారణం పంపిణీ (ధోరణి మరియు అన్ని విడుదలలు)"
+							}
+						]
+					},
+					{
+						"href": "#IF_oldgraphs",
+						"display": "పాత గ్రాఫ్స్"
+					}
+				]
+			},
+			
+			{
+				"href": "#devdashboard",
+				"display": "దేవ్ డాష్బోర్డ్"
+			}
+		]
+	},{
+		"roles": "^((?!Support).)*$",
+		"title": "అభివృద్ధి",
+		"icon": "glyphicon glyphicon-wrench",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_analysechanges",
+				"display": "మార్పులు విశ్లేషించండి"
+			},
+			{
+				"href": "#sourcebrowse",
+				"display": "మూల బ్రౌజ్"
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"icon": "glyphicon glyphicon-search",
+		"title": "టెస్టింగ్",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_testbuilds",
+				"display": "టెస్ట్ తయారుచేయబడును"
+			},
+			{
+				"href": "#regressionOptimization",
+				"display": "తిరోగమన ఆప్టిమైజేషన్",
+				"landingpage": "Tester"
+			},
+			{
+				"href": "#IF_teststep",
+				"display": "టెస్ట్ దశ ఆప్టిమైజేషన్"
+			},
+			{
+				"href": "#testinformation",
+				"display": "టెస్ట్ సమాచారం"
+			}
+		]
+	},
+	{
+		"icon": "glyphicon glyphicon-adjust",
+		"title": "లోపాలు",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#defectsearch",
+				"landingpage": "Developer",
+				"display": "డిఫెక్ట్ శోధన"
+			},
+			{
+				"href": "#defectsLocalization",
+				"display": "డిఫెక్ట్ స్థానికీకరణ"
+			},
+			{
+				"href": "#orphans",
+				"display": "అనాధ లోపాలు"
+			},
+			{
+				"href": "#bugpriotization",
+				"display": "బగ్ ప్రధాన్యత"
+			},
+			{
+				"href": "#defectcount",
+				"display": "సూచన"
+			},
+			{
+				"href": "#defectassignationview",
+				"display": "ఇలాంటి / నకిలీ లోపాలు సంకేతము చూడండి"
+			}
+		]
+	},
+	{
+		"roles": "^(Admin)$",
+		"title": "సెట్టింగులు",
+		"icon": "icon-settings",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#projectManagement",
+				"display": "ప్రాజెక్ట్ "
+			},
+			{
+				"href": "#ontology",
+				"display": "అస్తిత్వం "
+			},
+			{
+				"href": "#fileupload",
+				"display": "ఫైల్ ఎక్కించుట"
+			},
+			{
+				"href": "#IF_import",
+				"display": "దిగుమతి "
+			},
+			{
+				"href": "#jsonconfiguration",
+				"display": "JSON ఆకృతీకరణ"
+			},
+			{
+				"display": "వాడుక & డేటా",
+				"submenu": [
+					{
+						"href": "#IF_usageevents",
+						"display": " ఈవెంట్ విశ్లేషణ"
+					},
+					{
+						"href": "#IF_dataanalysis",
+						"display": " డేటా విశ్లేషణ"
+					}
+				]
+			},
+			{
+				"href": "#IF_dashboardadmin",
+				"display": "డాష్బోర్డ్ అడ్మినిస్ట్రేషన్"
+			},
+			{
+				"href": "#knowledgedocuments",
+				"display": "నాలెడ్జ్ పత్రాలు"
+			},
+			{
+				"href": "#jsonconfiguration",
+				"display": "JSON ఆకృతీకరణ"
+			},
+			{
+				"href": "#userManagement",
+				"display": "వాడుకరి "
+			},
+			{
+				"href": "#roleManagement",
+				"display": "పాత్రలు "
+			},
+			{
+				"href": "#organizationManagement",
+				"display": "సంస్థ "
+			},
+			{
+				"href": "#featuremapping",
+                 "display": "ఫీచర్ మ్యాపింగ్"
+
+			},
+			{
+                "href": "#featurekeys",
+                "display": "ఫీచర్ కీస్ "
+            },
+
+			{
+				"href": "#IF_buildmapping",
+				"display": "మ్యాపింగ్ బిల్డ్ "
+			},
+			{
+				"href": "#IF_settingfeature",
+				"display": "లక్షణాలు "
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "ఇన్స్ట్రుమెంటేషన్",
+		"icon": "icon-docs",
+		"type": "ise",
+		"type_name": "Sustenance",
+		"submenu": [
+			{
+				"href": "#IF_buildanalysis",
+				"display": "విశ్లేషణ బిల్డ్"
+			},
+			{
+				"href": "#IF_impacttestcase",
+				"display": "ఇంపాక్ట్ టెస్ట్ కేసు"
+			},
+			{
+				"href": "#IF_analysesummary",
+				"display": "విశ్లేషణ సారాంశం"
+			}
+		]
+	},
+	{
+		"roles": "^((?!Support).)*$",
+		"title": "నాలెడ్జ్ స్టోర్",
+		"icon": "glyphicon glyphicon-user",
+		"type": "ike",
+		"type_name": "Knowledge",
+		"submenu": [
+			{
+				"href": "#knowledgestore",
+				"display": "నాలెడ్జ్ స్టోర్"
+			},
+			{
+				"href": "#myreviews",
+				"display": "నా సమీక్షలు"
+			},
+			{
+				"href": "#myaccomplishments",
+				"display": "నా విజయాలు"
+			},
+			{
+				"href": "#knowledgereadandedit",
+				"display": "నాలెడ్జ్ జోడించండి"
+			},
+			{
+				"href": "#knowledgeaddpackage",
+				"display": "నాలెడ్జ్ ప్యాకేజీ జోడించండి"
+			},
+			{
+				"href": "#manageknowledgepackage",
+				"display": "నాలెడ్జ్ ప్యాకేజీ నిర్వహించండి"
+			},
+			{
+				"href": "#reportknowledgeassignation",
+				"display": "నాలెడ్జ్ సంకేతము చరిత్ర"
+			}
+		]
+	},
+	{
+		"roles": "^(Support|Admin)$",
+		"title": "మద్దతు",
+		"icon": "icon-earphones-alt",
+		"type": "its",
+		"type_name": "Technical",
+		"submenu": [
+			{
+				"href": "#IF_createcollection",
+				"display": "అడ్మిన్"
+			},
+			{
+				"href": "#IF_viewconfiguration",
+				"display": "అడ్మిన్ చూడండి"
+			},
+			{
+				"href": "#itsassist",
+				"display": "దాని అసిస్ట్"
+			},
+			{
+				"href": "#itsanalyzesearch",
+				"display": "శోధన విశ్లేషించండి"
+			},
+			{
+				"href": "#itsfaqsearch",
+				"display": "స్మార్ట్ FAQ"
+			},			
+			{				
+				"href": "#itssupportinsight",
+				"display": "మద్దతు ఇన్సైట్"
+			},
+			{
+				"landingpage": "Support",
+				"href": "#IF_issueidentification",
+				"display": "ఇష్యూ గుర్తింపు"
+			},
+			{
+				"href": "#IF_patternmatch",
+				"display": "సరళి మ్యాచ్"
+			},
+			{
+				"href": "#IF_supportforecast",
+				"display": "Forecast"
+			},
+			{
+				"href": "#alterJson",
+				"display": "AlterJson"
+			}
+
+		]
+	}
+]

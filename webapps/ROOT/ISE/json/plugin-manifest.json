@@ -1,0 +1,44 @@
+{
+	"version"		  	: 37,
+	"pluginBase"	  	: "<iseBase>/plugin",
+	"helpBase"	  		: "<iseBase>/help",
+	"importScripts" 	: { 
+							"jquery"			: "<iseBase>/metronics/global/plugins/jquery.min.js",
+							"qtip"				: "<pluginBase>/jquery.qtip.min.js",
+							"helpInject"		: "<pluginBase>/setToolTip.js",
+							"sony"				: "<pluginBase>/sony.js",
+							"getInfoBugzilla"	: "<pluginBase>/bugzillaScript.js",
+							"getInfoMyHCL"		: "<pluginBase>/myHCLScript.js",
+							"util"				: "<pluginBase>/util.js",
+							"getInfoJIRA"		: "<pluginBase>/cqScript.js",
+							"popup"				: "<pluginBase>/cessPopup.js",
+							"myBg"				: "<pluginBase>/myBg.js"
+							},
+	"importCSS" 		: { 
+							"mycss" 			: "<pluginBase>/jquery.qtip.min.css"
+							},
+	"importHTML"		: {
+							"popup" 			: "<pluginBase>/cessPopup.html"
+							},
+	"bgScripts"			: ["myBg"],
+	"hostFilters"		: { 
+							"bugzilla/show_bug|bugzilla/enter_bug" 	:	{
+																	"contentScripts" 	: ["jquery","getInfoBugzilla","util","qtip","helpInject"],
+																	"contentStyles"		: ["mycss"],
+																	"settings"			: { "helpURL" : "<helpBase>/$filename$.json","timer" : 300 },
+																	"unhideMenus"		: ["iseSimilarSearch"]
+																},
+							"/www.myhcl.com/" 		: 	{
+																	"contentScripts" 	: ["getInfoMyHCL","util"],
+																	"settings" 			: {"helpURL" : "<helpBase>/$hash$.json"}
+																},
+							"/jira.sony.com/" 		:	{
+																	"contentScripts" 	: ["sony","getInfoJIRA","util","jquery","qtip","helpInject"],
+																	"settings"			: {"helpURL" : "<helpBase>/$filename$.json"}
+																},
+							"." 					:	{
+																	"contentScripts" 	: ["util"]
+																}
+	
+							}
+}

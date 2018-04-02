@@ -1,0 +1,89 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 3,
+	"tooltips": [
+		{
+			"selector": "#reloadDefIntGraph I",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "right bottom"
+		},
+		{
+			"selector": "#reloadDefIntGraph",
+			"step": "1",
+			"help": "This graph shows the status the internal defects. You now know how many of the defects are open/closed",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "Internal Defects Status"
+		},
+		{
+			"selector": "#reloadTestExeGraph",
+			"step": "2",
+			"help": "This graph shows the details of test executions. How many of them have passed/not passed can be known",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Test Execution Status"
+		},
+		{
+			"selector": "#reloadDefExtGraph",
+			"step": "3",
+			"help": "This graph shows us the details of the Customer Reported Defects. The status of  how many of those are closed/open can be seen",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "External Defects Page"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > a",
+			"help": "Fullscreen",
+			"position": "left bottom",
+			"positionAt": "right top"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > a",
+			"step": "4",
+			"help": "These graph shows the trend of the defects across various releases",
+			"position": "left bottom",
+			"positionAt": "right top",
+			"title": "Defects Distribution Graph"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > a",
+			"help": "Fullscreen",
+			"position": "right bottom",
+			"positionAt": "left top"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > a",
+			"help": "TODO .. Please fill your content ",
+			"position": "left bottom",
+			"positionAt": "right top"
+		},
+		{
+			"selector": "html > body > div:nth-child(4) > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(2) > a:nth-child(2)",
+			"help": "Fullscreen",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "#reloadTestExeGraph",
+			"help": "TODO .. Please fill your content ",
+			"position": "right top",
+			"positionAt": "left bottom"
+		},
+		{
+			"selector": "#reloadTestExeGraph",
+			"step": "2",
+			"help": "This graph shows us the details of the status of how many of test executions are passed/not passed.",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Test Execution Graph"
+		},
+		{
+			"selector": "#graph1 A[title='Fullscreen']A:contains('\n\t\t\t\t\t\t')",
+			"help": "Fullscreen",
+			"position": "right top",
+			"positionAt": "left bottom"
+		}
+	],
+	"title": "ISE"
+}

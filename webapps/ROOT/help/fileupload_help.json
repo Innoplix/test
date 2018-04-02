@@ -1,0 +1,47 @@
+{
+	"footer": "'<hr/> <small>Context help injected by iSE</small>",
+	"steps": 0,
+	"tooltips": [
+		{
+			"selector": "#filetype",
+			"step": "1",
+			"help": "Select FileType that you want to upload from dropdown",
+			"position": "left top",
+			"positionAt": "right bottom",
+			"title": "SeletFileType_DropDown_FileUpload"
+		},
+		
+		{
+			"selector": "#file",
+                        "step": "5",
+			"help": "TODO .. Please fill your content ",
+			"position": "left top",
+			"positionAt": "center bottom"
+		},
+		{
+			"selector": "#uploadBtnId",
+			"step": "2",
+			"help": "Click on upload button to upload the file",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Upload_Button_FileUpload"
+		},
+		{
+			"selector": "#modeltype",
+			"step": "3",
+			"help": "Select Model that you want to create collection",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "SelectModel_DropDown_FileUpload"
+		},
+		{
+			"selector": "#modBtnId",
+			"step": "4",
+			"help": "Click on Modelbutton to create collection",
+			"position": "right top",
+			"positionAt": "left bottom",
+			"title": "Model_Button_FileUpload"
+		}
+	],
+	"title": "ISE"
+}

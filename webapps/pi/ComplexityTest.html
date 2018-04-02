@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>jQuery UI Accordion - Default functionality</title>
+
+
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+ShowCASAData('build/pymake/tests/pathdir/src/pathtest.cpp');
+});
+
+
+
+function ShowCASAData(file) {
+        getParams("Mozilla_CPP:" + file);
+    }
+
+
+function getParams(key) {
+        //alert(key);
+        var u = '/api/resources?metrics=lines,statements,files,classes,functions,function_complexity,file_complexity,complexity&resource=' + key;
+        var M = eval('(' + readSonarURL(u) + ')');
+        var lang = M[0].lang;
+        var version = M[0].version;
+        var met = M[0].msr;
+        for (var i = 0; i < met.length; i++) {
+            var e = met[i];
+            document.getElementById(e.key).innerHTML = e.frmt_val;
+        }
+    }
+
+function readSonarURL(url) {
+        var xmlhttp;
+        var ret = "";
+        url = "/pi/casa" + url;
+		//alert(url);
+        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else { // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+
+
+
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                ret = xmlhttp.responseText;
+            }
+
+        }
+        xmlhttp.open("GET", url, false);
+        xmlhttp.setRequestHeader('Authorization', 'Basic U3VyZXNobmFpZHVwOjEyMzQ1Ng==');
+		xmlhttp.send();
+        return ret;
+    }
+</script>
+</head>
+<body>
+	<div  id="casaData" style="display:block;">  
+                    <a href="#">Code measures</a>
+                        <div>
+                            <table id="measures">
+                                <tr><td>Lines of code</td><td id="lines"></td></tr>
+                                <tr><td>Non Commented Lines of code</td><td id="ncloc"></td></tr>
+                                <tr><td>Number of Classes</td><td id="classes"></td></tr>
+                                <tr><td>Number of Files</td><td id="files"></td></tr>
+                                <tr><td>Number of Methods</td><td id="functions"></td></tr>
+                                <tr><td>Number of Statements</td><td id="statements"></td></tr>
+                                <tr><td>Public Apis</td><td id="public_api"></td></tr>
+                            </table>
+                        </div>
+                        <a href="#">Cyclomatic Complexity</a>
+                        <div>
+                            <table id="cycocomplexity">
+                                <tr><td>Project Complexity</td><td id="complexity"></td></tr>
+                                <tr><td>Average file level complexity</td><td id="file_complexity"></td></tr>
+                                <tr><td>Average class level complexity</td><td id="class_complexity"></td></tr>
+                                <tr><td>Average method level complexity</td><td id="function_complexity"></td></tr>
+                            </table>
+                        </div>
+                        <a href="#">Duplications</a>
+                        <div>
+                            <table id="duplication">
+                                <tr><td>Duplicated Files</td><td id="duplicated_files"></td></tr>
+                                <tr><td>Duplicated Blocks</td><td id="duplicated_blocks"></td></tr>
+                                <tr><td>Duplicated Lines</td><td id="duplicated_lines"></td></tr>
+                            </table>
+                        </div>
+    </div>
+</body>
+</html>

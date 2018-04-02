@@ -1,0 +1,18 @@
+{
+"elasticsearchHost"	: "/DevTest/EP",
+ "sizeValue" : 15,
+ "pre_tags" : ["<span style='background-color:YELLOW'>"],
+ "post_tags" : ["</span>"],
+ "min_term_freq" : 1,
+ "max_query_terms" : 25,
+ "minboost" : 1,
+ "maxboost":3,
+ "min_doc_freq" :1,
+ "min_word_len" :0,
+ "max_word_len" :0,
+ "analyzer" :"stop",
+ "stopWords" : ["\"ise\"","\"ise\""],
+ "istestbedsJSON":true,
+ "environement_fields":["environment"],
+ "configurationType":"Mozilla"
+}

@@ -1,0 +1,208 @@
+{
+	"TableDetails": {
+		"assignation_collection": {
+			"displayName": "assignation",
+			"enable": "yes",
+			"indexName": "assignation_collection",
+			"additionalFilters":"",
+			"allowedroles": [
+				"Admin",
+				"Test_Manager",
+				"Tester","Developer"
+			],
+			"defaultView": [		
+				"Title",
+				"Start-Date",
+				"End-Date",
+				"Training-Mode",
+				"Evaluation-Mode",
+				"Reviewer",
+				"Status",
+				"Completeness",
+				"Remarks",
+				"Save"	
+			],
+			"mobileView": [
+				"Title",
+				"Start-Date",
+				"End-Date",
+				"Training-Mode",
+				"Evaluation-Mode",
+				"Reviewer",	
+				"Status",
+				"Completeness",
+				"Remarks",
+				"Save"
+			],
+			"Details": {
+				"fields": [
+					{
+						"displayName": "Title",
+						"SourceName": "title",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "url",
+						"filter": "no"
+					},
+					{
+						"displayName": "Start-Date",
+						"SourceName": "startDate",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+	},	
+					{
+						"displayName": "End-Date",
+						"SourceName": "endDate",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+					},
+					{
+						"displayName": "Training-Mode",
+						"SourceName": "trainingMode",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "array",
+						"filter": "no"
+					},					
+					{
+						"displayName": "Evaluation-Mode",
+						"SourceName": "evaluationMode",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "array",
+						"filter": "no"
+					},
+					{
+						"displayName": "Reviewer",
+						"SourceName": "reviewerName",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+					},
+					{
+						"displayName": "Assigned-To",
+						"SourceName": "assignedto",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+							"Admin",
+							"Test_Manager",
+							"Tester",
+							"Developer"
+						],
+						"displayType": "string",
+						"filter": "no"
+					},
+					{
+						"displayName": "Status",
+						"SourceName": "status",
+						"dervied": "",
+						"enable": "yes",
+						"type": "combo",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+						],
+						"displayType": "combo",
+						"filter": "no"
+          },
+		  {
+						"displayName": "Completeness",
+						"SourceName": "completeness",
+						"dervied": "",
+						"enable": "yes",
+						"type": "combo",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+            ],
+            "displayType": "combo",
+            "filter": "no"
+					},
+		  {
+						"displayName": "Remarks",
+						"SourceName": "remarks",
+						"dervied": "",
+						"enable": "yes",
+						"type": "string",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+						],
+						"displayType": "richTextBox",
+						"filter": "no"
+					},
+					{
+						"displayName": "Save",
+						"SourceName": "save",
+						"dervied": "",
+						"enable": "yes",
+						"type": "combo",
+						"allowedroles": [
+						"Admin",
+						"Test_Manager",
+						"Tester",
+						"Developer"
+            ],
+						"displayType": "button",
+            "filter": "no"
+          }					
+				]
+			}
+		}
+	}
+}
